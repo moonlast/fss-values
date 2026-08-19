@@ -1067,7 +1067,7 @@
                 origin: "Robux Limited",
                 tier: "tier4",
                 image: "https://tr.rbxcdn.com/180DAY-621badb24bf45075901a5b96afd87717/420/420/BackAccessory/Webp/noFilter",
-                numericValue: 3000000
+                numericValue: 0
             }, {
                 name: "Developer's Set",
                 stability: "Stable",
@@ -1077,9 +1077,9 @@
                 tier: "tier4",
                 isDual: true,
                 items: [{ name: "Developer Card", value: "O/C", image: "https://tr.rbxcdn.com/180DAY-bd42c4eda9559444942f01160e622be2/420/420/Image/Webp/noFilter",
-                        numericValue: 2000000 }, { name: "Developer Frame", value: "O/C",
+                        numericValue: 0 }, { name: "Developer Frame", value: "O/C",
                         image: "https://tr.rbxcdn.com/180DAY-5fef143e8a4e1a3bb8d7d5c12effa7ab/420/420/Image/Png/noFilter",
-                        numericValue: 2000000 }]
+                        numericValue: 0 }]
             }, {
                 name: "Super League Frame",
                 value: "O/C",
@@ -1090,7 +1090,7 @@
                 origin: "Winning SL #5",
                 tier: "tier4",
                 image: "https://tr.rbxcdn.com/180DAY-59fd9472e20d348d8f861a718e08fb88/420/420/Image/Png/noFilter",
-                numericValue: 2000000
+                numericValue: 0
             }, {
                 name: "Developer's Wristband",
                 value: "1.55M",
@@ -1999,33 +1999,39 @@
         }
 
         function populateCalcDropdowns() {
-            const selects = document.querySelectorAll('.calc-item-select');
-            const itemNames = [];
-            ITEMS.forEach(item => {
-                if (item.isDual) {
-                    item.items.forEach(sub => {
-                        if (!itemNames.includes(sub.name)) itemNames.push(sub.name);
-                    });
-                } else {
-                    if (!itemNames.includes(item.name)) itemNames.push(item.name);
+    const selects = document.querySelectorAll('.calc-item-select');
+    const itemNames = [];
+    ITEMS.forEach(item => {
+        if (item.isDual) {
+            item.items.forEach(sub => {
+                // Only add if numericValue exists and is > 0
+                if (sub.numericValue !== undefined && sub.numericValue > 0) {
+                    if (!itemNames.includes(sub.name)) itemNames.push(sub.name);
                 }
             });
-            itemNames.sort();
-
-            selects.forEach(select => {
-                const currentVal = select.value;
-                select.innerHTML = '<option value="">Select item...</option>';
-                itemNames.forEach(name => {
-                    const opt = document.createElement('option');
-                    opt.value = name;
-                    opt.textContent = name;
-                    select.appendChild(opt);
-                });
-                if (currentVal && itemNames.includes(currentVal)) {
-                    select.value = currentVal;
-                }
-            });
+        } else {
+            // Only add if numericValue exists and is > 0
+            if (item.numericValue !== undefined && item.numericValue > 0) {
+                if (!itemNames.includes(item.name)) itemNames.push(item.name);
+            }
         }
+    });
+    itemNames.sort();
+
+    selects.forEach(select => {
+        const currentVal = select.value;
+        select.innerHTML = '<option value="">Select item...</option>';
+        itemNames.forEach(name => {
+            const opt = document.createElement('option');
+            opt.value = name;
+            opt.textContent = name;
+            select.appendChild(opt);
+        });
+        if (currentVal && itemNames.includes(currentVal)) {
+            select.value = currentVal;
+        }
+    });
+}
 
         function addCalcRow(btn) {
             const row = btn.closest('.calc-item-row');
