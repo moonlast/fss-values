@@ -49,6 +49,12 @@
             --underpaid-color: #d99a9a;
             --doingwell-bg: #1f3a2f;
             --doingwell-color: #80d0aa;
+            --rising-bg: #c8f0d8;
+            --rising-color: #1a7a3a;
+            --unstable-bg: #f0e6c8;
+            --unstable-color: #b08a2a;
+            --dropping-bg: #f0d0d0;
+            --dropping-color: #b04a4a;
             --set-badge-bg: #2a2a55;
             --set-badge-color: #b0c0ee;
             --set-badge-border: #444477;
@@ -483,6 +489,9 @@
         .overpaid { background: var(--overpaid-bg); color: var(--overpaid-color); }
         .underpaid { background: var(--underpaid-bg); color: var(--underpaid-color); }
         .doingwell { background: var(--doingwell-bg); color: var(--doingwell-color); }
+	    .rising { background: var(--rising-bg); color: var(--rising-color); }
+	    .unstable { background: var(--unstable-bg); color: var(--unstable-color); }
+	    .dropping { background: var(--dropping-bg); color: var(--dropping-color); }
 
         .item-demand {
             font-weight: 700;
@@ -880,7 +889,7 @@
                 <small>trusted · made by moon & ccc</small>
             </div>
             <div class="header-right">
-                <span>📅 Updated: Aug 19, 2026</span>
+                <span>📅 Updated: Aug 20, 2026</span>
                 <span class="tag">#1 value list</span>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="toggle-label">🌙</span>
@@ -923,13 +932,16 @@
                 <option value="low">Low</option>
             </select>
             <select id="stabilityFilter">
-                <option value="all">Stability</option>
-                <option value="Stable">Stable</option>
-                <option value="Fluctuating">Fluctuating</option>
-                <option value="Overpaid">Overpaid</option>
-                <option value="Underpaid">Underpaid</option>
-                <option value="Doing Well">Doing Well</option>
-            </select>
+    <option value="all">Stability</option>
+    <option value="Rising">Rising</option>
+    <option value="Overpaid">Overpaid</option>
+    <option value="Doing Well">Doing Well</option>
+    <option value="Fluctuating">Fluctuating</option>
+    <option value="Stable">Stable</option>
+    <option value="Unstable">Unstable</option>
+    <option value="Underpaid">Underpaid</option>
+    <option value="Dropping">Dropping</option>
+</select>
             <input type="text" id="searchInput" placeholder="Search item...">
             <button class="reset-btn" id="resetFiltersBtn">✕ Reset</button>
         </div>
@@ -1010,12 +1022,25 @@
 
         <!-- ===== CHANGELOG ===== -->
         <div class="changelog">
-            <h3>📋 Recent updates</h3>
-            <ul>
-                <li>Value List Created</li>
-                <li>Be sure to report any bugs to us!</li>
-            </ul>
-        </div>
+    <h3>📋 Recent updates</h3>
+    <ul>
+        <li>📈 WC26 Backwards Celebration 100K → 105K, Demand 4 → 5</li>
+        <li>📈 Flip 95K → 100K</li>
+        <li>📉 67 95K → 90K</li>
+        <li>📈 Penguin Dance 110K → 120K</li>
+        <li>📈 Orange Dance 120K → 125K</li>
+        <li>📈 Penguin Slide 125K → 130K</li>
+        <li>📈 Super Dodge 130K → 135K</li>
+        <li>🔧 Panther 35K → 32.5K (corrected)</li>
+        <li>🔧 WC26 Trophy Celebration 95K → 105K (corrected)</li>
+        <li>🔧 Helm of Opulentum 45K → 35K (corrected)</li>
+        <li>🔧 Devil's Gift 40K → 35K (corrected)</li>
+        <li>🔧 Horned Bucket 30K → 7.5K (corrected)</li>
+        <li>🔧 Red Bandana of SQL 40K → 8K (corrected)</li>
+        <li>🔧 MATSbxb Dev Frame 120K → 110K (corrected)</li>
+        <li>🔧 Fixed item origins</li>
+    </ul>
+</div>
 
         <!-- ===== CREDITS ===== -->
         <div class="credits">
@@ -1061,7 +1086,7 @@
                 name: "FCWC Back Trophy",
                 value: "O/C",
                 range: "[N/A]",
-                stability: "Overpaid",
+                stability: "Rising",
                 demand: 5,
                 rarity: 11,
                 origin: "Robux Limited",
@@ -1195,9 +1220,9 @@
                 isDual: true,
                 items: [{ name: "MATSbxb Signature Dev Card", value: "220K",
                         image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                        numericValue: 220000 }, { name: "MATSbxb Signature Dev Frame", value: "120K",
+                        numericValue: 220000 }, { name: "MATSbxb Signature Dev Frame", value: "110K",
                         image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                        numericValue: 120000 }]
+                        numericValue: 110000 }]
             }, {
                 name: "Crown of Opulentum",
                 value: "250K",
@@ -1205,7 +1230,7 @@
                 stability: "Underpaid",
                 demand: 2,
                 rarity: 7,
-                origin: "Early Access Reward",
+                origin: "2.5M Coins in SLS 1.0 Reward",
                 tier: "high",
                 image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/crown.png",
                 numericValue: 250000
@@ -1244,7 +1269,7 @@
                 numericValue: 145000
             }, {
                 name: "Super Dodge",
-                value: "130K",
+                value: "135K",
                 range: "[N/A]",
                 stability: "Doing Well",
                 demand: 4,
@@ -1252,10 +1277,10 @@
                 origin: "Robux Pack",
                 tier: "high",
                 image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
-                numericValue: 130000
+                numericValue: 135000
             }, {
                 name: "Penguin Slide",
-                value: "125K",
+                value: "130K",
                 range: "[N/A]",
                 stability: "Doing Well",
                 demand: 5,
@@ -1263,10 +1288,10 @@
                 origin: "Robux Pack",
                 tier: "high",
                 image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
-                numericValue: 125000
+                numericValue: 130000
             }, {
                 name: "Orange Dance",
-                value: "120K",
+                value: "125K",
                 range: "[N/A]",
                 stability: "Doing Well",
                 demand: 4,
@@ -1274,10 +1299,10 @@
                 origin: "Robux Pack",
                 tier: "high",
                 image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
-                numericValue: 120000
+                numericValue: 125000
             }, {
                 name: "Penguin Dance",
-                value: "110K",
+                value: "120K",
                 range: "[N/A]",
                 stability: "Doing Well",
                 demand: 5,
@@ -1285,7 +1310,7 @@
                 origin: "Robux Pack",
                 tier: "high",
                 image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-                numericValue: 110000
+                numericValue: 120000
             }, {
                 name: "Front Flip",
                 value: "110K",
@@ -1346,15 +1371,15 @@
                 numericValue: 100000
             }, {
                 name: "67",
-                value: "95K",
+                value: "90K",
                 range: "[N/A]",
-                stability: "Underpaid",
+                stability: "Dropping",
                 demand: 3,
                 rarity: 5,
                 origin: "Robux Pack",
                 tier: "mid",
                 image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
-                numericValue: 95000
+                numericValue: 90000
             }, {
                 name: "Dragon Shoes",
                 value: "85K",
@@ -1390,17 +1415,6 @@
                         image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
                         numericValue: 35000 }]
             }, {
-                name: "Helm of Opulentum",
-                value: "40K",
-                range: "[N/A]",
-                stability: "Stable",
-                demand: 3,
-                rarity: 3,
-                origin: "Early Access Reward",
-                tier: "mid",
-                image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter",
-                numericValue: 40000
-            }, {
                 name: "Lightning Wolf Shoes",
                 value: "40K",
                 range: "[N/A]",
@@ -1413,7 +1427,7 @@
                 numericValue: 40000
             }, {
                 name: "Devil's Gift",
-                value: "40K",
+                value: "35K",
                 range: "[N/A]",
                 stability: "Stable",
                 demand: 2,
@@ -1421,7 +1435,18 @@
                 origin: "Limited Quantity Code",
                 tier: "mid",
                 image: "https://tr.rbxcdn.com/180DAY-f8e88b6cda656f7f9b01157bb86b1d26/420/420/Decal/Webp/noFilter",
-                numericValue: 40000
+                numericValue: 35000
+            }, {
+                name: "Helm of Opulentum",
+                value: "35K",
+                range: "[N/A]",
+                stability: "Unstable",
+                demand: 3,
+                rarity: 3,
+                origin: "1M Coins in SLS 1.0 Reward",
+                tier: "mid",
+                image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter",
+                numericValue: 35000
             }, {
                 name: "WC26 Valkyrie",
                 value: "35K",
@@ -1470,7 +1495,7 @@
                         numericValue: 40000 }]
             }, {
                 name: "The Panther",
-                value: "30K",
+                value: "32.5K",
                 range: "[N/A]",
                 stability: "Doing Well",
                 demand: 5,
@@ -1478,7 +1503,7 @@
                 origin: "Prehistoric Battlepass",
                 tier: "mid",
                 image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter",
-                numericValue: 30000
+                numericValue: 32500
             }, {
                 name: "WC26 Argentina Sun Card",
                 value: "30K",
@@ -1489,17 +1514,6 @@
                 origin: "WC26 Event",
                 tier: "mid",
                 image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/suncard.png",
-                numericValue: 30000
-            }, {
-                name: "Horned Bucket",
-                value: "30K",
-                range: "[N/A]",
-                stability: "Stable",
-                demand: 3,
-                rarity: 4,
-                origin: "From Packs on Release",
-                tier: "mid",
-                image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
                 numericValue: 30000
             }, {
                 name: "FCWC Dominus",
@@ -1557,7 +1571,7 @@
                 items: [{ name: "Leaves Card", value: "15K", image: "https://tr.rbxcdn.com/180DAY-2b5cde95564906b08473d1bbfbafd938/420/420/Image/Webp/noFilter",
                         numericValue: 15000 }, { name: "Leaves Frame", value: "15K",
                         image: "https://tr.rbxcdn.com/180DAY-acace68531049c2d38efc4504e62147b/420/420/Image/Png/noFilter",
-                        numericValue: 15000 }]
+                        numericValue: 20000 }]
             }, {
                 name: "FCWC Valkyrie",
                 value: "17.5K",
@@ -1736,6 +1750,17 @@
                 tier: "low",
                 image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/fur.png",
                 numericValue: 8000
+            }, {
+                name: "Horned Bucket",
+                value: "7.5K",
+                range: "[N/A]",
+                stability: "Stable",
+                demand: 3,
+                rarity: 4,
+                origin: "From Packs on Release",
+                tier: "low",
+                image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
+                numericValue: 7500
             }, {
                 name: "Evil Pumpkin",
                 value: "7K",
