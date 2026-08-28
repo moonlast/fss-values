@@ -21,7 +21,7 @@
                 <small>trusted · made by moon & ccc</small>
             </div>
             <div class="header-right">
-                <span>📅 Updated: Aug 27, 2026</span>
+                <span>📅 Updated: Aug 28, 2026</span>
                 <span class="tag">#1 value list</span>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="toggle-label">🌙</span>
@@ -62,13 +62,36 @@
             </a>
         </div>
 
-        <!-- ===== TRADE ADS PAGE ===== -->
+        <!-- ===== TRADE ADS ===== -->
         <div class="trade-ads-section">
-            <h3>🔄 Trade Ads</h3>
-            <p style="color:var(--text-muted);text-align:center;padding:60px 0;font-size:1.1rem;">
-                🚀 Trade Ads coming soon!<br>
-                <span style="font-size:0.9rem;color:var(--text-muted);">Post your trades and connect with other players.</span>
-            </p>
+            <div class="section-header">
+                <h3>🔄 Trade Ads</h3>
+                <div class="post-ad-info">
+                    <span>📢 Want to post a trade ad?</span>
+                    <strong>Message <span class="discord-user">@wm5m</span> on Discord</strong>
+                    <small>Price: 50K Tokens</small>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="ads-filter-bar">
+    <input type="text" id="adSearchInput" placeholder="Search ads..." oninput="renderTradeAds()">
+</div>
+
+            <div class="ads-grid" id="adsGrid">
+                <!-- Ads will be rendered here -->
+            </div>
+        </div>
+
+        <!-- ===== VIEW AD MODAL ===== -->
+        <div class="modal-overlay" id="viewAdModal">
+            <div class="modal-content view-ad-content">
+                <div class="modal-header">
+                    <h3>Trade Ad</h3>
+                    <button class="modal-close" onclick="closeViewAd()">✕</button>
+                </div>
+                <div id="viewAdContent"></div>
+            </div>
         </div>
 
         <div class="footer-note">
