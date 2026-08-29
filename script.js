@@ -811,6 +811,18 @@ const TRADE_ADS = [{
     timestamp: new Date('2026-08-28T14:30:00').getTime(),
     offeringTotal: 0,
     lookingTotal: 0
+}, {
+    id: 4,
+    username: "rwzula",
+    avatar: "https://cdn.discordapp.com/avatars/1079005307184889876/83cf6141db9af59e5b36d2f75d11272a.png",
+    offering: [
+        { name: "Tokens", qty: 130000, image: "", value: "130K" }
+    ],
+    looking_for: "offers",
+    notes: "Discord is @zzzsleepy._.",
+    timestamp: new Date('2026-08-28T14:30:00').getTime(),
+    offeringTotal: 0,
+    lookingTotal: 0
 }];
 
 // =============================================================
@@ -1018,12 +1030,16 @@ function renderTradeAds() {
     let ads = [...TRADE_ADS];
 
     ads.forEach(ad => {
-        ad.offeringTotal = ad.offering.reduce((total, adItem) => {
-            const item = ITEMS.find(i => i.name.toLowerCase() === adItem.name.toLowerCase());
-            return total + ((item?.numericValue || 0) * (adItem.qty || 1));
-        }, 0);
-        ad.lookingTotal = 0;
-    });
+    ad.offeringTotal = ad.offering.reduce((total, adItem) => {
+        // Handle tokens separately
+        if (adItem.name === "Tokens") {
+            return total + (adItem.qty || 0);
+        }
+        const item = ITEMS.find(i => i.name.toLowerCase() === adItem.name.toLowerCase());
+        return total + ((item?.numericValue || 0) * (adItem.qty || 1));
+    }, 0);
+    ad.lookingTotal = 0;
+});
 
     const search = document.getElementById('adSearchInput')?.value.toLowerCase().trim() || '';
 
@@ -1051,20 +1067,22 @@ function renderTradeAds() {
         card.className = 'ad-card';
 
         let offeringHtml = '';
-        if (ad.offering.length > 0) {
-            offeringHtml = `
-                <div class="ad-label">🟢 Offering:</div>
-                <div class="ad-items-grid-display">
-                    ${ad.offering.map(i => `
-                        <div class="ad-item-display">
-                            <img src="${i.image || ''}" alt="${i.name}" loading="lazy">
-                            ${i.qty > 1 ? `<span class="ad-item-qty-display">${i.qty}</span>` : ''}
-                            <div class="ad-item-name-display">${i.name}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+if (ad.offering.length > 0) {
+    offeringHtml = `
+        <div class="ad-label">🟢 Offering:</div>
+        <div class="ad-items-grid-display">
+            ${ad.offering.map(i => `
+    <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+        ${i.name === "Tokens" ? 
+            `<div style="font-size:2.5rem;padding:4px;">🪙</div>` :
+            `<img src="${i.image || getItemImage(i.name)}" alt="${i.name}" style="width:48px;height:48px;object-fit:contain;border-radius:8px;border:1px solid var(--border-card);padding:4px;background:var(--bg-body);">`
         }
+        <div style="font-size:0.65rem;font-weight:700;color:var(--text-secondary);text-align:center;">${i.name}${i.name === "Tokens" ? ` (${i.qty.toLocaleString()})` : i.qty > 1 ? ` ×${i.qty}` : ''}</div>
+    </div>
+`).join('')}
+        </div>
+    `;
+}
 
         let lookingHtml = `
             <div class="ad-label">🔵 Looking For:</div>
