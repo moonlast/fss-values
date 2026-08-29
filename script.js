@@ -115,7 +115,7 @@ const ITEMS = [
         value: "565K",
         range: "[N/A]",
         stability: "Underpaid",
-        demand: 4,
+        demand: 2,
         rarity: 8,
         origin: "Mystic Pack",
         tier: "high",
