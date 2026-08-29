@@ -504,6 +504,30 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter",
         numericValue: 20000
     }, {
+        name: "The Chosen One",
+        value: "20K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/chosen.png",
+        numericValue: 20000
+    }, {
+        name: "Dragon Fang Cleats",
+        value: "20K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/cleats.png",
+        numericValue: 20000
+    }, {
         name: "Leaves Set",
         stability: "Stable",
         demand: 2,
@@ -579,7 +603,6 @@ const ITEMS = [
         rarity: 1,
         origin: "Robux Item",
         tier: "low",
-        new: true,
         image: "/images/unfinished.png",
         numericValue: 10000
     }, {
@@ -758,7 +781,6 @@ const ITEMS = [
         rarity: 1,
         origin: "Robux Item",
         tier: "low",
-        new: true,
         image: "/images/pshoes.png",
         numericValue: 3000
     },
@@ -808,18 +830,6 @@ const TRADE_ADS = [{
     ],
     looking_for: "offers",
     notes: "Discord is @volant_2",
-    timestamp: new Date('2026-08-28T14:30:00').getTime(),
-    offeringTotal: 0,
-    lookingTotal: 0
-}, {
-    id: 4,
-    username: "rwzula",
-    avatar: "https://cdn.discordapp.com/avatars/1079005307184889876/83cf6141db9af59e5b36d2f75d11272a.png",
-    offering: [
-        { name: "Tokens", qty: 130000, image: "", value: "130K" }
-    ],
-    looking_for: "offers",
-    notes: "Discord is @zzzsleepy._.",
     timestamp: new Date('2026-08-28T14:30:00').getTime(),
     offeringTotal: 0,
     lookingTotal: 0
