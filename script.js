@@ -35,7 +35,7 @@ const ITEMS = [
         rarity: 10,
         origin: "Developer Gift",
         tier: "tier4",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/devband.png",
+        image: "/images/devband.png",
         numericValue: 1500000
     }, {
         name: "Bunny Set",
@@ -165,7 +165,7 @@ const ITEMS = [
         rarity: 7,
         origin: "2.5M Coins in SLS 1.0 Reward",
         tier: "high",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/crown.png",
+        image: "/images/crown.png",
         numericValue: 225000
     }, {
         name: "FCWC Shoes Red/Black",
@@ -275,7 +275,7 @@ const ITEMS = [
         rarity: 4,
         origin: "1.0 SLS Clans Reward",
         tier: "high",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/goldb.png",
+        image: "/images/goldb.png",
         numericValue: 115000
     },
 
@@ -311,7 +311,7 @@ const ITEMS = [
         rarity: 4,
         origin: "Robux Pack",
         tier: "mid",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/shark.png",
+        image: "/images/shark.png",
         numericValue: 75000
     }, {
         name: "67",
@@ -344,7 +344,7 @@ const ITEMS = [
         rarity: 5,
         origin: "1.0 Christmas Event",
         tier: "mid",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/grinch.png",
+        image: "/images/grinch.png",
         numericValue: 50000
     }, {
         name: "Kawaii Set",
@@ -378,7 +378,7 @@ const ITEMS = [
         rarity: 4,
         origin: "Prehistoric Battlepass",
         tier: "mid",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/leather.png",
+        image: "/images/leather.png",
         numericValue: 32500
     }, {
         name: "Lightning Wolf Shoes",
@@ -400,7 +400,7 @@ const ITEMS = [
         rarity: 3,
         origin: "WC26 Event",
         tier: "mid",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/wcvalk.png",
+        image: "/images/wcvalk.png",
         numericValue: 32500
     }, {
         name: "Dragon Set",
@@ -457,7 +457,7 @@ const ITEMS = [
         rarity: 3,
         origin: "WC26 Event",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/suncard.png",
+        image: "/images/suncard.png",
         numericValue: 30000
     },
 
@@ -470,7 +470,7 @@ const ITEMS = [
         rarity: 3,
         origin: "1.0 SLS Clans Reward",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/goldl.png",
+        image: "/images/goldl.png",
         numericValue: 25000
     }, {
         name: "Dino Shoes",
@@ -480,7 +480,7 @@ const ITEMS = [
         rarity: 3,
         origin: "Prehistoric Battlepass",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/dinos.png",
+        image: "/images/dinos.png",
         numericValue: 22500
     }, {
         name: "Gold Champion Band [R]",
@@ -490,7 +490,7 @@ const ITEMS = [
         rarity: 3,
         origin: "1.0 SLS Clans Reward",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/goldr.png",
+        image: "/images/goldr.png",
         numericValue: 22500
     }, {
         name: "La Roja Inferno Goal Explosion",
@@ -557,7 +557,7 @@ const ITEMS = [
         rarity: 3,
         origin: "WC26 Event",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/amplify.png",
+        image: "/images/amplify.png",
         numericValue: 15000
     }, {
         name: "T-Rex",
@@ -580,7 +580,7 @@ const ITEMS = [
         origin: "Robux Item",
         tier: "low",
         new: true,
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/unfinished.png",
+        image: "/images/unfinished.png",
         numericValue: 10000
     }, {
         name: "ESP Sagrada Crown",
@@ -591,7 +591,7 @@ const ITEMS = [
         rarity: 1,
         origin: "ESP WC Event",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/sagrada.png",
+        image: "/images/sagrada.png",
         numericValue: 10000
     }, {
         name: "Silver Arm Bracelet [B]",
@@ -602,7 +602,7 @@ const ITEMS = [
         rarity: 2,
         origin: "1.0 SLS Clans Reward",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/silverb.png",
+        image: "/images/silverb.png",
         numericValue: 10000
     }, {
         name: "Antlers",
@@ -692,7 +692,7 @@ const ITEMS = [
         rarity: 2,
         origin: "Prehistoric Battlepass",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/fur.png",
+        image: "/images/fur.png",
         numericValue: 8000
     }, {
         name: "Evil Pumpkin",
@@ -747,7 +747,7 @@ const ITEMS = [
         rarity: 2,
         origin: "1.0 SLS Clans Reward",
         tier: "low",
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/bronzeb.png",
+        image: "/images/bronzeb.png",
         numericValue: 5000
     }, {
         name: "Rivalry Soccer Shoes",
@@ -759,7 +759,7 @@ const ITEMS = [
         origin: "Robux Item",
         tier: "low",
         new: true,
-        image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/pshoes.png",
+        image: "/images/pshoes.png",
         numericValue: 3000
     },
 ];
@@ -776,7 +776,7 @@ const TRADE_ADS = [{
         { name: "Penguin Dance", qty: 2, image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter", value: "142.5K" },
         { name: "Penguin Slide", qty: 1, image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter", value: "140K" },
         { name: "Front Flip", qty: 1, image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter", value: "125K" },
-        { name: "Gold Band [B]", qty: 1, image: "https://raw.githubusercontent.com/moonlast/fss-values/refs/heads/main/goldb.png", value: "115K" },
+        { name: "Gold Band [B]", qty: 1, image: "/images/goldb.png", value: "115K" },
         { name: "Flip", qty: 1, image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter", value: "92.5K" },
         { name: "Dragon Shoes", qty: 2, image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter", value: "85K" },
         { name: "Devil's Gift", qty: 1, image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter", value: "60K" }
@@ -787,31 +787,31 @@ const TRADE_ADS = [{
     offeringTotal: 0,
     lookingTotal: 0
 }, {
-            id: 2,
-            username: "DontTalkPeasant",
-            avatar: "https://cdn.discordapp.com/avatars/635129135865266178/571f75d7532b3b7b8d42f22b1dff3a24.png",
-            offering: [
-                { name: "Mimimimi", qty: 1, image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter", value: "950K" },
-                { name: "Float", qty: 5, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "430K" }
-            ],
-            looking_for: "offers",
-            notes: "Discord is @c3141",
-            timestamp: new Date('2026-08-28T14:30:00').getTime(),
-            offeringTotal: 0,
-            lookingTotal: 0
-        }, {
-            id: 3,
-            username: "Dadmonke82nd",
-            avatar: "https://cdn.discordapp.com/avatars/1539727698077950046/7c4e7d26fa510c920ef1c36abab1dd0f.png",
-            offering: [
-                { name: "Ghosdeeri", qty: 1, image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", value: "575K" }
-            ],
-            looking_for: "offers",
-            notes: "Discord is @volant_2",
-            timestamp: new Date('2026-08-28T14:30:00').getTime(),
-            offeringTotal: 0,
-            lookingTotal: 0
-        }];
+    id: 2,
+    username: "DontTalkPeasant",
+    avatar: "https://cdn.discordapp.com/avatars/635129135865266178/571f75d7532b3b7b8d42f22b1dff3a24.png",
+    offering: [
+        { name: "Mimimimi", qty: 1, image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter", value: "950K" },
+        { name: "Float", qty: 5, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "430K" }
+    ],
+    looking_for: "offers",
+    notes: "Discord is @c3141",
+    timestamp: new Date('2026-08-28T14:30:00').getTime(),
+    offeringTotal: 0,
+    lookingTotal: 0
+}, {
+    id: 3,
+    username: "Dadmonke82nd",
+    avatar: "https://cdn.discordapp.com/avatars/1539727698077950046/7c4e7d26fa510c920ef1c36abab1dd0f.png",
+    offering: [
+        { name: "Ghosdeeri", qty: 1, image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", value: "575K" }
+    ],
+    looking_for: "offers",
+    notes: "Discord is @volant_2",
+    timestamp: new Date('2026-08-28T14:30:00').getTime(),
+    offeringTotal: 0,
+    lookingTotal: 0
+}];
 
 // =============================================================
 // 3. RENDER ITEMS
