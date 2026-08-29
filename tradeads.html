@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changelog · FSS Values</title>
+    <title>Trade Ads · FSS Values</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
@@ -13,15 +12,21 @@
 </head>
 <body>
     <div class="main-wrapper">
-
-        <!-- ===== HEADER ===== -->
+        <!-- HEADER -->
         <div class="header-area">
             <div class="logo">
                 <h1>◈ FSS Values</h1>
                 <small>trusted · made by moon & ccc</small>
             </div>
             <div class="header-right">
-                <span>📅 Updated: Aug 27, 2026</span>
+                <div class="nav-buttons">
+                    <a href="/" class="nav-link">📊 Values</a>
+                    <a href="/calculator" class="nav-link">🧮 Calculator</a>
+                    <a href="/tradeads" class="nav-link active">🔄 Trade Ads</a>
+                    <a href="/changelog" class="nav-link">📋 Changelog</a>
+                    <a href="/credits" class="nav-link">👤 Credits</a>
+                </div>
+                <span>📅 Updated: Aug 29, 2026</span>
                 <span class="tag">#1 value list</span>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="toggle-label">🌙</span>
@@ -33,16 +38,7 @@
             </div>
         </div>
 
-        <!-- ===== BIG NAV BAR ===== -->
-        <div class="nav-bar">
-            <a href="/" class="nav-link">📊 Values</a>
-            <a href="/calculator" class="nav-link">🧮 Calculator</a>
-            <a href="/tradeads" class="nav-link">🔄 Trade Ads</a>
-            <a href="/changelog" class="nav-link active">📋 Changelog</a>
-            <a href="/credits" class="nav-link">👤 Credits</a>
-        </div>
-
-        <!-- ===== DISCORD BANNER ===== -->
+        <!-- DISCORD BANNER -->
         <div class="discord-banner">
             <div class="discord-banner-left">
                 <div class="discord-icon">
@@ -62,31 +58,41 @@
             </a>
         </div>
 
-        <!-- ===== CHANGELOG ===== -->
-        <div class="changelog">
-            <h3>📋 Recent updates</h3>
-            <ul>
-                <li>📈 Bunny Card 1.3M → 1.45M · Bunny Frame 1.3M → 1.45M (Tier 4)</li>
-                <li>📈 LMT Card 1.15M → 1.3M (Tier 4)</li>
-                <li>📈 Super League Card 1.1M → 1.25M · Super League Frame 1.2M → 1.35M (Tier 4)</li>
-                <li>📈 Event Host Card 1.05M → 1.2M (Tier 4)</li>
-                <li>📈 Penguin Dance 140K → 142.5K (High Tier)</li>
-                <li>📈 WC26 Trophy Dribble 6K → 7K (Low Tier)</li>
-                <li>📈 Evil Pumpkin 7K → 8K (Low Tier)</li>
-                <li>📈 Horned Bucket 7.5K → 8.5K (Low Tier)</li>
-                <li>📈 Red Bandana of SQL 8K → 10K (Low Tier)</li>
-                <li>📉 Leather Boots 35K → 32.5K (Mid Tier)</li>
-                <li>📉 Rivalry Soccer Shoes 5K → 4K (Low Tier)</li>
-                <li>✅ Flip Stability: Stable (Mid Tier)</li>
-            </ul>
+        <!-- TRADE ADS -->
+        <div class="trade-ads-section">
+            <h3>🔄 Trade Ads</h3>
+            <div style="background: var(--bg-body); border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; border: 1px solid var(--border-card); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span style="color: var(--text-secondary); font-weight: 700; font-size: 0.9rem;">📢 Want to post a trade ad?</span>
+                <span style="color: var(--text-primary); font-weight: 800;">Message <span style="color: #7fc9f0;">@wm5m</span> on Discord</span>
+                <span style="color: var(--text-muted); font-weight: 700; font-size: 0.85rem; background: var(--bg-value); padding: 4px 14px; border-radius: 20px; border: 1px solid var(--border-card);"></span>
+            </div>
+            <div class="ads-filter-bar">
+                <input type="text" id="adSearchInput" placeholder="Search ads..." oninput="renderTradeAds()">
+            </div>
+            <div class="ads-grid" id="adsGrid"></div>
+        </div>
+
+        <!-- VIEW AD MODAL -->
+        <div class="modal-overlay" id="viewAdModal">
+            <div class="modal-content view-ad-content">
+                <div class="modal-header">
+                    <h3>Trade Ad</h3>
+                    <button class="modal-close" onclick="closeViewAd()">✕</button>
+                </div>
+                <div id="viewAdContent"></div>
+            </div>
         </div>
 
         <div class="footer-note">
             ⚡ values made by moon & ccc · FSS Value List
         </div>
-
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTradeAds();
+        });
+    </script>
 </body>
 </html>

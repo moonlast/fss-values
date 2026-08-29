@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator · FSS Values</title>
@@ -13,15 +12,21 @@
 </head>
 <body>
     <div class="main-wrapper">
-
-        <!-- ===== HEADER ===== -->
+        <!-- HEADER -->
         <div class="header-area">
             <div class="logo">
                 <h1>◈ FSS Values</h1>
                 <small>trusted · made by moon & ccc</small>
             </div>
             <div class="header-right">
-                <span>📅 Updated: Aug 27, 2026</span>
+                <div class="nav-buttons">
+                    <a href="/" class="nav-link">📊 Values</a>
+                    <a href="/calculator" class="nav-link active">🧮 Calculator</a>
+                    <a href="/tradeads" class="nav-link">🔄 Trade Ads</a>
+                    <a href="/changelog" class="nav-link">📋 Changelog</a>
+                    <a href="/credits" class="nav-link">👤 Credits</a>
+                </div>
+                <span>📅 Updated: Aug 29, 2026</span>
                 <span class="tag">#1 value list</span>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="toggle-label">🌙</span>
@@ -33,16 +38,7 @@
             </div>
         </div>
 
-        <!-- ===== BIG NAV BAR ===== -->
-        <div class="nav-bar">
-            <a href="/" class="nav-link">📊 Values</a>
-            <a href="/calculator" class="nav-link active">🧮 Calculator</a>
-            <a href="/tradeads" class="nav-link">🔄 Trade Ads</a>
-            <a href="/changelog" class="nav-link">📋 Changelog</a>
-            <a href="/credits" class="nav-link">👤 Credits</a>
-        </div>
-
-        <!-- ===== DISCORD BANNER ===== -->
+        <!-- DISCORD BANNER -->
         <div class="discord-banner">
             <div class="discord-banner-left">
                 <div class="discord-icon">
@@ -62,38 +58,29 @@
             </a>
         </div>
 
-        <!-- ===== TRADE CALCULATOR ===== -->
+        <!-- CALCULATOR -->
         <div class="calc-section">
             <h3>📊 Trade Calculator</h3>
             <div class="calc-grid">
-                <!-- Left side: Your items -->
                 <div class="calc-side">
                     <div class="calc-header">
                         <span class="calc-label">🟢 You</span>
                         <span class="calc-total" id="calcYourTotal">0</span>
                     </div>
-                    <div class="calc-items-grid" id="calcYourItems">
-                        <!-- Items will be rendered here -->
-                    </div>
+                    <div class="calc-items-grid" id="calcYourItems"></div>
                     <div class="calc-token-row">
                         <label>🪙 Tokens:</label>
                         <input type="number" id="calcYourTokens" value="0" min="0" step="1">
                     </div>
                     <button class="calc-add-item-btn" onclick="openItemPicker('your')">+ Add Item</button>
                 </div>
-
-                <!-- VS -->
                 <div class="calc-vs">⚔️</div>
-
-                <!-- Right side: Their items -->
                 <div class="calc-side">
                     <div class="calc-header">
                         <span class="calc-label">🔴 Them</span>
                         <span class="calc-total" id="calcTheirTotal">0</span>
                     </div>
-                    <div class="calc-items-grid" id="calcTheirItems">
-                        <!-- Items will be rendered here -->
-                    </div>
+                    <div class="calc-items-grid" id="calcTheirItems"></div>
                     <div class="calc-token-row">
                         <label>🪙 Tokens:</label>
                         <input type="number" id="calcTheirTokens" value="0" min="0" step="1">
@@ -106,7 +93,7 @@
             </div>
         </div>
 
-        <!-- ===== ITEM PICKER MODAL ===== -->
+        <!-- ITEM PICKER MODAL -->
         <div class="modal-overlay" id="itemPickerModal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -116,18 +103,21 @@
                 <div class="modal-search">
                     <input type="text" id="modalSearchInput" placeholder="Search items..." oninput="filterModalItems()">
                 </div>
-                <div class="modal-grid" id="modalGrid">
-                    <!-- Items will be rendered here -->
-                </div>
+                <div class="modal-grid" id="modalGrid"></div>
             </div>
         </div>
 
         <div class="footer-note">
             ⚡ values made by moon & ccc · FSS Value List
         </div>
-
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCalcItems();
+            updateCalcTotals();
+        });
+    </script>
 </body>
 </html>

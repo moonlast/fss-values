@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        { "source": "/calculator", "destination": "/calculator.html" },
+        { "source": "/tradeads", "destination": "/tradeads.html" },
+        { "source": "/changelog", "destination": "/changelog.html" },
+        { "source": "/credits", "destination": "/credits.html" }
+    ]
+}
