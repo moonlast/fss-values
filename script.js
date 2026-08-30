@@ -599,7 +599,7 @@ const ITEMS = [
         value: "10K",
         range: "[N/A]",
         stability: "Unstable",
-        demand: 2,
+        demand: 1,
         rarity: 1,
         origin: "Robux Item",
         tier: "low",
