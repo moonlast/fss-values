@@ -504,30 +504,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter",
         numericValue: 20000
     }, {
-        name: "The Chosen One",
-        value: "20K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/chosen.png",
-        numericValue: 20000
-    }, {
-        name: "Dragon Fang Cleats",
-        value: "20K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/cleats.png",
-        numericValue: 20000
-    }, {
         name: "Leaves Set",
         stability: "Stable",
         demand: 2,
@@ -583,6 +559,30 @@ const ITEMS = [
         tier: "low",
         image: "/images/amplify.png",
         numericValue: 15000
+    }, {
+        name: "The Chosen One",
+        value: "12K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/chosen.png",
+        numericValue: 12000
+    }, {
+        name: "Dragon Fang Cleats",
+        value: "12K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/cleats.png",
+        numericValue: 12000
     }, {
         name: "T-Rex",
         value: "12K",
