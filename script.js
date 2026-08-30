@@ -28,15 +28,15 @@ const ITEMS = [
                 numericValue: 0 }]
     }, {
         name: "Developer's Wristband",
-        value: "1.5M",
+        value: "1.65M",
         range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
+        stability: "Overpaid",
+        demand: 5,
         rarity: 10,
         origin: "Developer Gift",
         tier: "tier4",
         image: "/images/devband.png",
-        numericValue: 1500000
+        numericValue: 1650000
     }, {
         name: "Bunny Set",
         stability: "Rising",
@@ -227,7 +227,7 @@ const ITEMS = [
         value: "132.5K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 4,
+        demand: 5,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
@@ -337,7 +337,7 @@ const ITEMS = [
         numericValue: 67500
     }, {
         name: "Grinch Shoes",
-        value: "50K",
+        value: "45K",
         range: "[N/A]",
         stability: "Stable",
         demand: 2,
@@ -345,7 +345,7 @@ const ITEMS = [
         origin: "1.0 Christmas Event",
         tier: "mid",
         image: "/images/grinch.png",
-        numericValue: 50000
+        numericValue: 45000
     }, {
         name: "Kawaii Set",
         stability: "Stable",
@@ -560,30 +560,6 @@ const ITEMS = [
         image: "/images/amplify.png",
         numericValue: 15000
     }, {
-        name: "The Chosen One",
-        value: "14K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/chosen.png",
-        numericValue: 14000
-    }, {
-        name: "Dragon Fang Cleats",
-        value: "12K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/cleats.png",
-        numericValue: 12000
-    }, {
         name: "Biohazard Set",
         stability: "Underpaid",
         demand: 2,
@@ -606,6 +582,30 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
         numericValue: 12000
+    }, {
+        name: "The Chosen One",
+        value: "13K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/chosen.png",
+        numericValue: 13000
+    }, {
+        name: "Dragon Fang Cleats",
+        value: "10K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/cleats.png",
+        numericValue: 10000
     }, {
         name: "Unfinished Business",
         value: "10K",
