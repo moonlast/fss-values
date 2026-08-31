@@ -786,6 +786,43 @@ const ITEMS = [
     },
 ];
 
+
+// =============================================================
+// 1.5 TOKEN CALCULATIONS
+// =============================================================
+
+// Default token multipliers
+function getTokenMultiplier(numericValue) {
+    if (numericValue >= 65000) {
+        return 1.45;
+    } else {
+        return 1.2;
+    }
+}
+
+// Token icon URL (fallback if image doesn't load)
+const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
+const TOKEN_EMOJI = "🪙";
+
+// Function to calculate token value for an item
+function getTokenValue(item) {
+    if (!item.numericValue || item.numericValue === 0) {
+        return null;
+    }
+    const multiplier = getTokenMultiplier(item.numericValue);
+    return Math.round(item.numericValue * multiplier);
+}
+
+// Function to format token value with K/M suffix
+function formatTokenValue(val) {
+    if (val >= 1000000) {
+        return (val / 1000000).toFixed(1) + 'M';
+    } else if (val >= 1000) {
+        return (val / 1000).toFixed(1) + 'K';
+    }
+    return val.toString();
+}
+
 // =============================================================
 // 2. TRADE ADS DATA
 // =============================================================
@@ -901,9 +938,48 @@ function createCard(item) {
             }
             entry.appendChild(icon);
             const valSpan = document.createElement('span');
-            valSpan.className = 'item-value';
-            valSpan.textContent = subItem.value;
-            entry.appendChild(valSpan);
+valSpan.className = 'item-value';
+valSpan.textContent = subItem.value;
+entry.appendChild(valSpan);
+
+// Add token value for dual items
+if (subItem.numericValue && subItem.numericValue > 0) {
+    const tokenVal = getTokenValue(subItem);
+    if (tokenVal) {
+        const tokenSpan = document.createElement('span');
+        tokenSpan.style.cssText = `
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            background: rgba(255, 200, 0, 0.15);
+            border: 1.5px solid #f0c040;
+            border-radius: 20px;
+            padding: 0 8px;
+            font-weight: 900;
+            font-size: 0.7rem;
+            color: #f0c040;
+            margin-left: 4px;
+        `;
+        const tokenIcon = document.createElement('img');
+        tokenIcon.src = TOKEN_ICON;
+        tokenIcon.alt = '🪙';
+        tokenIcon.style.cssText = 'width:14px;height:14px;object-fit:contain;';
+        tokenIcon.onerror = function() {
+            this.style.display = 'none';
+            const fallback = document.createElement('span');
+            fallback.textContent = TOKEN_EMOJI;
+            fallback.style.cssText = 'font-size:0.8rem;';
+            this.parentNode.insertBefore(fallback, this.nextSibling);
+        };
+        tokenSpan.appendChild(tokenIcon);
+        
+        const tokenText = document.createElement('span');
+        tokenText.textContent = formatTokenValue(tokenVal);
+        tokenSpan.appendChild(tokenText);
+        
+        entry.appendChild(tokenSpan);
+    }
+}
             dualContainer.appendChild(entry);
         });
 
@@ -966,11 +1042,59 @@ function createCard(item) {
     info.appendChild(name);
     const meta = document.createElement('div');
     meta.className = 'item-meta';
-    const valSpan = document.createElement('span');
-    valSpan.className = 'item-value';
-    valSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
-        item.range !== '[N/A]' ? ` (${item.range})` : '');
-    meta.appendChild(valSpan);
+    // Create a container for value and token
+const valueContainer = document.createElement('span');
+valueContainer.style.display = 'flex';
+valueContainer.style.alignItems = 'center';
+valueContainer.style.gap = '6px';
+
+// Base value
+const valSpan = document.createElement('span');
+valSpan.className = 'item-value';
+valSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
+    item.range !== '[N/A]' ? ` (${item.range})` : '');
+valueContainer.appendChild(valSpan);
+
+// Token value (only if numericValue > 0)
+if (item.numericValue && item.numericValue > 0) {
+    const tokenVal = getTokenValue(item);
+    if (tokenVal) {
+        const tokenSpan = document.createElement('span');
+        tokenSpan.style.cssText = `
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            background: rgba(255, 200, 0, 0.15);
+            border: 1.5px solid #f0c040;
+            border-radius: 20px;
+            padding: 0 10px;
+            font-weight: 900;
+            font-size: 0.8rem;
+            color: #f0c040;
+        `;
+        // Try to use image, fallback to emoji
+        const tokenIcon = document.createElement('img');
+        tokenIcon.src = TOKEN_ICON;
+        tokenIcon.alt = '🪙';
+        tokenIcon.style.cssText = 'width:16px;height:16px;object-fit:contain;';
+        tokenIcon.onerror = function() {
+            this.style.display = 'none';
+            const fallback = document.createElement('span');
+            fallback.textContent = TOKEN_EMOJI;
+            fallback.style.cssText = 'font-size:0.9rem;';
+            this.parentNode.insertBefore(fallback, this.nextSibling);
+        };
+        tokenSpan.appendChild(tokenIcon);
+        
+        const tokenText = document.createElement('span');
+        tokenText.textContent = formatTokenValue(tokenVal);
+        tokenSpan.appendChild(tokenText);
+        
+        valueContainer.appendChild(tokenSpan);
+    }
+}
+
+meta.appendChild(valueContainer);
     const stabSpan = document.createElement('span');
     stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
     stabSpan.textContent = item.stability;
