@@ -362,7 +362,7 @@ const ITEMS = [
         name: "The Panther",
         value: "37.5K",
         range: "[N/A]",
-        stability: "Stable",
+        stability: "Doing Well",
         demand: 5,
         rarity: 3,
         origin: "Prehistoric Battlepass",
