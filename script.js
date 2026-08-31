@@ -238,7 +238,7 @@ const ITEMS = [
         value: "125K",
         range: "[N/A]",
         stability: "Doing Well",
-        demand: 5,
+        demand: 6,
         rarity: 4,
         origin: "Robux Pack",
         tier: "high",
@@ -336,6 +336,18 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
         numericValue: 67500
     }, {
+        name: "Kawaii Set",
+        stability: "Stable",
+        demand: 3,
+        rarity: 4,
+        origin: "OG Premium Card",
+        tier: "mid",
+        isDual: true,
+        items: [{ name: "Kawaii Card", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter",
+                numericValue: 50000 }, { name: "Kawaii Frame", value: "40K",
+                image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
+                numericValue: 40000 }]
+    }, {
         name: "Grinch Shoes",
         value: "45K",
         range: "[N/A]",
@@ -346,18 +358,6 @@ const ITEMS = [
         tier: "mid",
         image: "/images/grinch.png",
         numericValue: 45000
-    }, {
-        name: "Kawaii Set",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "OG Premium Card",
-        tier: "mid",
-        isDual: true,
-        items: [{ name: "Kawaii Card", value: "40K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter",
-                numericValue: 40000 }, { name: "Kawaii Frame", value: "30K",
-                image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
-                numericValue: 30000 }]
     }, {
         name: "The Panther",
         value: "37.5K",
@@ -399,10 +399,10 @@ const ITEMS = [
         origin: "OG Premium Card",
         tier: "mid",
         isDual: true,
-        items: [{ name: "Dragon Card", value: "30K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter",
-                numericValue: 30000 }, { name: "Dragon Frame", value: "35K",
+        items: [{ name: "Dragon Card", value: "35K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter",
+                numericValue: 35000 }, { name: "Dragon Frame", value: "40K",
                 image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter",
-                numericValue: 35000 }]
+                numericValue: 40000 }]
     }, {
         name: "Royal Fleur De Lis Set",
         stability: "Stable",
@@ -411,10 +411,21 @@ const ITEMS = [
         origin: "OG Premium Card",
         tier: "mid",
         isDual: true,
-        items: [{ name: "Royal Card", value: "20K", image: "https://tr.rbxcdn.com/180DAY-2778c242d027070bf587227354109420/420/420/Image/Png/noFilter",
-                numericValue: 20000 }, { name: "Royal Frame", value: "40K",
+        items: [{ name: "Royal Card", value: "30K", image: "https://tr.rbxcdn.com/180DAY-2778c242d027070bf587227354109420/420/420/Image/Png/noFilter",
+                numericValue: 30000 }, { name: "Royal Frame", value: "50K",
                 image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
-                numericValue: 40000 }]
+                numericValue: 50000 }]
+    }, {
+        name: "Candy Cane Shoes",
+        value: "30K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 5,
+        origin: "1.0 Christmas Event",
+        tier: "mid",
+        image: "/images/candycane.png",
+        numericValue: 30000
     }, {
         name: "Leather Boots",
         value: "30K",
@@ -463,14 +474,36 @@ const ITEMS = [
 
     // LOW TIER
     {
+        name: "Leaves Set",
+        stability: "Stable",
+        demand: 2,
+        rarity: 4,
+        origin: "Prehistoric Battlepass",
+        tier: "low",
+        isDual: true,
+        items: [{ name: "Leaves Card", value: "25K", image: "https://tr.rbxcdn.com/180DAY-2b5cde95564906b08473d1bbfbafd938/420/420/Image/Webp/noFilter",
+                numericValue: 25000 }, { name: "Leaves Frame", value: "30K",
+                image: "https://tr.rbxcdn.com/180DAY-acace68531049c2d38efc4504e62147b/420/420/Image/Png/noFilter",
+                numericValue: 30000 }]
+    }, {
         name: "Gold Champion Band [L]",
-        value: "25K",
+        value: "27.5K",
         stability: "Stable",
         demand: 2,
         rarity: 3,
         origin: "1.0 SLS Clans Reward",
         tier: "low",
         image: "/images/goldl.png",
+        numericValue: 27500
+    }, {
+        name: "Gold Champion Band [R]",
+        value: "25K",
+        stability: "Stable",
+        demand: 2,
+        rarity: 3,
+        origin: "1.0 SLS Clans Reward",
+        tier: "low",
+        image: "/images/goldr.png",
         numericValue: 25000
     }, {
         name: "Dino Shoes",
@@ -483,18 +516,8 @@ const ITEMS = [
         image: "/images/dinos.png",
         numericValue: 22500
     }, {
-        name: "Gold Champion Band [R]",
-        value: "22.5K",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/goldr.png",
-        numericValue: 22500
-    }, {
         name: "Wild Dance",
-        value: "20K",
+        value: "22K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -502,7 +525,7 @@ const ITEMS = [
         origin: "Prehistoric Battlepass",
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
-        numericValue: 20000
+        numericValue: 22000
     }, {
         name: "La Roja Inferno Goal Explosion",
         value: "20K",
@@ -515,18 +538,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter",
         numericValue: 20000
     }, {
-        name: "Leaves Set",
-        stability: "Stable",
-        demand: 2,
-        rarity: 4,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "Leaves Card", value: "20K", image: "https://tr.rbxcdn.com/180DAY-2b5cde95564906b08473d1bbfbafd938/420/420/Image/Webp/noFilter",
-                numericValue: 20000 }, { name: "Leaves Frame", value: "25K",
-                image: "https://tr.rbxcdn.com/180DAY-acace68531049c2d38efc4504e62147b/420/420/Image/Png/noFilter",
-                numericValue: 25000 }]
-    }, {
         name: "FCWC Valkyrie",
         value: "17.5K",
         range: "[N/A]",
@@ -537,6 +548,17 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
         numericValue: 17500
+    }, {
+        name: "Unfinished Business",
+        value: "15K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 1,
+        origin: "Robux Item",
+        tier: "low",
+        image: "/images/unfinished.png",
+        numericValue: 15000
     }, {
         name: "Tentacles",
         value: "15K",
@@ -582,41 +604,6 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
         numericValue: 12000
-    }, {
-        name: "The Chosen One",
-        value: "13K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/chosen.png",
-        numericValue: 13000
-    }, {
-        name: "Dragon Fang Cleats",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 2,
-        new: true,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/cleats.png",
-        numericValue: 10000
-    }, {
-        name: "Unfinished Business",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 1,
-        rarity: 1,
-        origin: "Robux Item",
-        tier: "low",
-        image: "/images/unfinished.png",
-        numericValue: 10000
     }, {
         name: "ESP Sagrada Crown",
         value: "10K",
@@ -751,6 +738,18 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter",
         numericValue: 7000
     }, {
+        name: "The Chosen One",
+        value: "6.5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/chosen.png",
+        numericValue: 6500
+    }, {
         name: "Bloxy Cola Hat",
         value: "6K",
         range: "[N/A]",
@@ -761,6 +760,18 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-d7b33881eec5f0f59db5efad0e852596/420/420/Hat/Webp/noFilter",
         numericValue: 6000
+    },  {
+        name: "Dragon Fang Cleats",
+        value: "5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 2,
+        new: true,
+        origin: "Powers V2 Pack",
+        tier: "low",
+        image: "/images/cleats.png",
+        numericValue: 5000
     }, {
         name: "Bronze Champion Band [B]",
         value: "5K",
@@ -793,10 +804,12 @@ const ITEMS = [
 
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 65000) {
-        return 1.45;
+    if (numericValue >= 900000) {
+        return 1.55;  // Higher multiplier for 900K+
+    } else if (numericValue >= 65000) {
+        return 1.45;  // Normal multiplier for 65K - 900K
     } else {
-        return 1.2;
+        return 1.2;   // Low tier multiplier
     }
 }
 
@@ -805,9 +818,14 @@ const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a4
 const TOKEN_EMOJI = "🪙";
 
 // Function to calculate token value for an item
+// Function to calculate token value for an item
 function getTokenValue(item) {
     if (!item.numericValue || item.numericValue === 0) {
         return null;
+    }
+    // Check if there's a custom token value for this item
+    if (CUSTOM_TOKEN_VALUES[item.name]) {
+        return CUSTOM_TOKEN_VALUES[item.name];
     }
     const multiplier = getTokenMultiplier(item.numericValue);
     return Math.round(item.numericValue * multiplier);
@@ -872,6 +890,11 @@ const TRADE_ADS = [{
     lookingTotal: 0
 }];
 
+
+const CUSTOM_TOKEN_VALUES = {
+    "Float": 650000
+};
+
 // =============================================================
 // 3. RENDER ITEMS
 // =============================================================
@@ -913,109 +936,141 @@ function createCard(item) {
     card.className = 'item-card';
 
     if (item.isDual) {
-        card.classList.add('dual-item');
-        const leftContainer = document.createElement('div');
-        leftContainer.style.display = 'flex';
-        leftContainer.style.flexDirection = 'column';
-        leftContainer.style.gap = '6px';
-        leftContainer.style.alignItems = 'center';
+    card.classList.add('dual-item');
+    const leftContainer = document.createElement('div');
+    leftContainer.style.display = 'flex';
+    leftContainer.style.flexDirection = 'column';
+    leftContainer.style.gap = '6px';
+    leftContainer.style.alignItems = 'center';
 
-        const dualContainer = document.createElement('div');
-        dualContainer.className = 'dual-items-container';
+    const dualContainer = document.createElement('div');
+    dualContainer.className = 'dual-items-container';
 
-        item.items.forEach(subItem => {
-            const entry = document.createElement('div');
-            entry.className = 'dual-item-entry';
-            const icon = document.createElement('div');
-            icon.className = 'item-icon';
-            if (subItem.image) {
-                const img = document.createElement('img');
-                img.src = subItem.image;
-                img.alt = subItem.name;
-                icon.appendChild(img);
-            } else {
-                icon.textContent = '✦';
-            }
-            entry.appendChild(icon);
-            const valSpan = document.createElement('span');
-valSpan.className = 'item-value';
-valSpan.textContent = subItem.value;
-entry.appendChild(valSpan);
-
-// Add token value for dual items
-if (subItem.numericValue && subItem.numericValue > 0) {
-    const tokenVal = getTokenValue(subItem);
-    if (tokenVal) {
-        const tokenSpan = document.createElement('span');
-        tokenSpan.style.cssText = `
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-            background: rgba(255, 200, 0, 0.15);
-            border: 1.5px solid #f0c040;
-            border-radius: 20px;
-            padding: 0 8px;
-            font-weight: 900;
-            font-size: 0.7rem;
-            color: #f0c040;
-            margin-left: 4px;
-        `;
-        const tokenIcon = document.createElement('img');
-        tokenIcon.src = TOKEN_ICON;
-        tokenIcon.alt = '🪙';
-        tokenIcon.style.cssText = 'width:14px;height:14px;object-fit:contain;';
-        tokenIcon.onerror = function() {
-            this.style.display = 'none';
-            const fallback = document.createElement('span');
-            fallback.textContent = TOKEN_EMOJI;
-            fallback.style.cssText = 'font-size:0.8rem;';
-            this.parentNode.insertBefore(fallback, this.nextSibling);
-        };
-        tokenSpan.appendChild(tokenIcon);
+    item.items.forEach(subItem => {
+        const entry = document.createElement('div');
+        entry.className = 'dual-item-entry';
         
-        const tokenText = document.createElement('span');
-        tokenText.textContent = formatTokenValue(tokenVal);
-        tokenSpan.appendChild(tokenText);
-        
-        entry.appendChild(tokenSpan);
-    }
-}
-            dualContainer.appendChild(entry);
-        });
-
-        leftContainer.appendChild(dualContainer);
-
-        const info = document.createElement('div');
-        info.className = 'item-info';
-        const name = document.createElement('div');
-        name.className = 'item-name';
-        name.innerHTML = `${item.name} <span class="dual-set-badge">SET</span>`;
-        if (item.new) {
-            const newBadge = document.createElement('span');
-            newBadge.className = 'item-new-badge';
-            newBadge.textContent = 'NEW!';
-            name.appendChild(newBadge);
+        // ICON - always show the image first
+        const icon = document.createElement('div');
+        icon.className = 'item-icon';
+        if (subItem.image) {
+            const img = document.createElement('img');
+            img.src = subItem.image;
+            img.alt = subItem.name;
+            icon.appendChild(img);
+        } else {
+            icon.textContent = '✦';
         }
-        info.appendChild(name);
-        const meta = document.createElement('div');
-        meta.className = 'item-meta';
-        const stabSpan = document.createElement('span');
-        stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
-        stabSpan.textContent = item.stability;
-        meta.appendChild(stabSpan);
-        const demSpan = document.createElement('span');
-        demSpan.className = 'item-demand';
-        demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
-        meta.appendChild(demSpan);
-        const originSpan = document.createElement('span');
-        originSpan.className = 'item-origin';
-        originSpan.textContent = item.origin;
-        meta.appendChild(originSpan);
-        info.appendChild(meta);
-        card.appendChild(leftContainer);
-        card.appendChild(info);
-        return card;
+        entry.appendChild(icon);
+
+        // Create a container for the text info
+        const infoContainer = document.createElement('div');
+        infoContainer.style.display = 'flex';
+        infoContainer.style.flexDirection = 'column';
+        infoContainer.style.gap = '2px';
+
+        // Item name (Card / Frame)
+        const nameSpan = document.createElement('span');
+        nameSpan.style.cssText = 'font-size:0.7rem;font-weight:800;color:var(--text-secondary);';
+        nameSpan.textContent = subItem.name;
+        infoContainer.appendChild(nameSpan);
+
+        // Value row: Base value + Token badge (tiny, to the right)
+        const valueRow = document.createElement('div');
+        valueRow.style.display = 'flex';
+        valueRow.style.alignItems = 'center';
+        valueRow.style.gap = '6px';
+
+        // Base value
+        const baseValSpan = document.createElement('span');
+        baseValSpan.className = 'item-value';
+        baseValSpan.style.cssText = 'height:1.8em;line-height:1.8;box-sizing:border-box;font-size:0.8rem;padding:0 8px;';
+        baseValSpan.textContent = subItem.value;
+        valueRow.appendChild(baseValSpan);
+
+        // Token badge (tiny pill, to the right of base value)
+        if (subItem.numericValue && subItem.numericValue > 0) {
+            const tokenVal = getTokenValue(subItem);
+            if (tokenVal) {
+                const tokenBadge = document.createElement('span');
+                tokenBadge.style.cssText = `
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 1px;
+                    background: rgba(255, 200, 0, 0.12);
+                    border: 1px solid #f0c040;
+                    border-radius: 12px;
+                    padding: 0 6px;
+                    font-weight: 800;
+                    font-size: 0.6rem;
+                    color: #f0c040;
+                    height: 1.6em;
+                    line-height: 1.6;
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                `;
+                
+                const tokenIcon = document.createElement('img');
+                tokenIcon.src = TOKEN_ICON;
+                tokenIcon.alt = '🪙';
+                tokenIcon.style.cssText = 'width:12px;height:12px;object-fit:contain;';
+                tokenIcon.onerror = function() {
+                    this.style.display = 'none';
+                    const fallback = document.createElement('span');
+                    fallback.textContent = TOKEN_EMOJI;
+                    fallback.style.cssText = 'font-size:0.7rem;';
+                    this.parentNode.insertBefore(fallback, this.nextSibling);
+                };
+                tokenBadge.appendChild(tokenIcon);
+                
+                const tokenText = document.createElement('span');
+                tokenText.textContent = formatTokenValue(tokenVal);
+                tokenBadge.appendChild(tokenText);
+                
+                valueRow.appendChild(tokenBadge);
+            }
+        }
+
+        infoContainer.appendChild(valueRow);
+        entry.appendChild(infoContainer);
+
+        dualContainer.appendChild(entry);
+    });
+
+    leftContainer.appendChild(dualContainer);
+
+    const info = document.createElement('div');
+    info.className = 'item-info';
+    const name = document.createElement('div');
+    name.className = 'item-name';
+    name.innerHTML = `${item.name} <span class="dual-set-badge">SET</span>`;
+    if (item.new) {
+        const newBadge = document.createElement('span');
+        newBadge.className = 'item-new-badge';
+        newBadge.textContent = 'NEW!';
+        name.appendChild(newBadge);
     }
+    info.appendChild(name);
+    const meta = document.createElement('div');
+meta.className = 'item-meta';
+// Add stability badge back
+const stabSpan = document.createElement('span');
+stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
+stabSpan.textContent = item.stability;
+meta.appendChild(stabSpan);
+const demSpan = document.createElement('span');
+demSpan.className = 'item-demand';
+demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
+meta.appendChild(demSpan);
+const originSpan = document.createElement('span');
+originSpan.className = 'item-origin';
+originSpan.textContent = item.origin;
+meta.appendChild(originSpan);
+info.appendChild(meta);
+    card.appendChild(leftContainer);
+    card.appendChild(info);
+    return card;
+}
 
     const icon = document.createElement('div');
     icon.className = 'item-icon';
@@ -1042,20 +1097,16 @@ if (subItem.numericValue && subItem.numericValue > 0) {
     info.appendChild(name);
     const meta = document.createElement('div');
     meta.className = 'item-meta';
-    // Create a container for value and token
+    
+// Create a container for value and token
+// Create a container for value, token, and stability
 const valueContainer = document.createElement('span');
 valueContainer.style.display = 'flex';
 valueContainer.style.alignItems = 'center';
 valueContainer.style.gap = '6px';
+valueContainer.style.height = '100%';
 
-// Base value
-const valSpan = document.createElement('span');
-valSpan.className = 'item-value';
-valSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
-    item.range !== '[N/A]' ? ` (${item.range})` : '');
-valueContainer.appendChild(valSpan);
-
-// Token value (only if numericValue > 0)
+// Token value (only if numericValue > 0) - placed FIRST
 if (item.numericValue && item.numericValue > 0) {
     const tokenVal = getTokenValue(item);
     if (tokenVal) {
@@ -1071,6 +1122,10 @@ if (item.numericValue && item.numericValue > 0) {
             font-weight: 900;
             font-size: 0.8rem;
             color: #f0c040;
+            height: 100%;
+            min-height: 1.8em;
+            line-height: 1.8;
+            box-sizing: border-box;
         `;
         // Try to use image, fallback to emoji
         const tokenIcon = document.createElement('img');
@@ -1094,11 +1149,35 @@ if (item.numericValue && item.numericValue > 0) {
     }
 }
 
+// Base value - placed SECOND
+const baseValSpan = document.createElement('span');
+baseValSpan.className = 'item-value';
+baseValSpan.style.cssText = 'height:100%;min-height:1.8em;line-height:1.8;box-sizing:border-box;';
+baseValSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
+    item.range !== '[N/A]' ? ` (${item.range})` : '');
+valueContainer.appendChild(baseValSpan);
+
+// Stability badge - placed THIRD (right after base value)
+const stabSpan = document.createElement('span');
+stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
+stabSpan.style.cssText = `
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    min-height: 1.8em;
+    line-height: 1.8;
+    box-sizing: border-box;
+`;
+stabSpan.textContent = item.stability;
+valueContainer.appendChild(stabSpan);
+
 meta.appendChild(valueContainer);
-    const stabSpan = document.createElement('span');
-    stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
-    stabSpan.textContent = item.stability;
-    meta.appendChild(stabSpan);
     const demSpan = document.createElement('span');
     demSpan.className = 'item-demand';
     demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
@@ -1411,7 +1490,13 @@ function renderModalItems(search = '') {
         
         const valueSpan = document.createElement('span');
         valueSpan.className = 'modal-item-value';
-        valueSpan.textContent = item.value;
+        // Show both base and token value
+        let valueText = item.value;
+        const tokenVal = getTokenValue(item);
+        if (tokenVal) {
+            valueText += ` · 🪙${formatTokenValue(tokenVal)}`;
+        }
+        valueSpan.textContent = valueText;
         div.appendChild(valueSpan);
         
         grid.appendChild(div);
@@ -1467,6 +1552,7 @@ function renderCalcItems() {
                 img.alt = item.name;
                 div.appendChild(img);
                 
+                // Tooltip on hover
                 const tooltip = document.createElement('div');
                 tooltip.className = 'item-tooltip';
                 tooltip.textContent = `${item.name} · ${item.value}`;
@@ -1487,23 +1573,40 @@ function renderCalcItems() {
 
 function updateCalcTotals() {
     let yourTotal = 0;
+    let yourTokenTotal = 0;
     calcItems.your.forEach(item => {
         yourTotal += item.numericValue * (item.qty || 1);
+        const tokenVal = getTokenValue(item);
+        if (tokenVal) {
+            yourTokenTotal += tokenVal * (item.qty || 1);
+        }
     });
     const yourTokens = parseInt(document.getElementById('calcYourTokens')?.value || 0);
     yourTotal += yourTokens;
+    yourTokenTotal += yourTokens;
     
     let theirTotal = 0;
+    let theirTokenTotal = 0;
     calcItems.their.forEach(item => {
         theirTotal += item.numericValue * (item.qty || 1);
+        const tokenVal = getTokenValue(item);
+        if (tokenVal) {
+            theirTokenTotal += tokenVal * (item.qty || 1);
+        }
     });
     const theirTokens = parseInt(document.getElementById('calcTheirTokens')?.value || 0);
     theirTotal += theirTokens;
+    theirTokenTotal += theirTokens;
     
     const yourTotalEl = document.getElementById('calcYourTotal');
     const theirTotalEl = document.getElementById('calcTheirTotal');
+    const yourTokenEl = document.getElementById('calcYourTokenTotal');
+    const theirTokenEl = document.getElementById('calcTheirTokenTotal');
+    
     if (yourTotalEl) yourTotalEl.textContent = formatValue(yourTotal);
     if (theirTotalEl) theirTotalEl.textContent = formatValue(theirTotal);
+    if (yourTokenEl) yourTokenEl.innerHTML = `🪙 ${formatValue(yourTokenTotal)}`;
+    if (theirTokenEl) theirTokenEl.innerHTML = `🪙 ${formatValue(theirTokenTotal)}`;
     
     const resultEl = document.getElementById('calcResult');
     if (!resultEl) return;
@@ -1514,6 +1617,7 @@ function updateCalcTotals() {
         return;
     }
     
+    // Calculate win/lose based on BASE VALUE (not tokens)
     const diff = yourTotal - theirTotal;
     const diffPercent = theirTotal > 0 ? (diff / theirTotal) * 100 : 0;
     
@@ -1534,6 +1638,7 @@ function updateCalcTotals() {
     resultEl.innerHTML = `
         <div>${verdict}</div>
         <div class="diff">${formatValue(yourTotal)} vs ${formatValue(theirTotal)} · ${diffStr}</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">🪙 ${formatValue(yourTokenTotal)} vs 🪙 ${formatValue(theirTokenTotal)}</div>
     `;
 }
 
