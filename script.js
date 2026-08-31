@@ -805,11 +805,11 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 900000) {
-        return 1.55;  // Higher multiplier for 900K+
+        return 1.75;
     } else if (numericValue >= 65000) {
-        return 1.45;  // Normal multiplier for 65K - 900K
+        return 1.65;
     } else {
-        return 1.2;   // Low tier multiplier
+        return 1.35;
     }
 }
 
@@ -892,7 +892,7 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Float": 650000
+    "Float": 800000
 };
 
 // =============================================================
