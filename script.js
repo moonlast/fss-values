@@ -169,7 +169,7 @@ const ITEMS = [
         numericValue: 225000
     }, {
         name: "FCWC Shoes Red/Black",
-        value: "160K",
+        value: "162.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 5,
@@ -177,10 +177,10 @@ const ITEMS = [
         origin: "FCWC Event",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 160000
+        numericValue: 162500
     }, {
         name: "Party Time",
-        value: "152.5K",
+        value: "155K",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -188,7 +188,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 152500
+        numericValue: 155000
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -235,15 +235,15 @@ const ITEMS = [
         numericValue: 132500
     }, {
         name: "WC26 Backwards Celebration",
-        value: "125K",
+        value: "127.5K",
         range: "[N/A]",
-        stability: "Doing Well",
+        stability: "Overpaid",
         demand: 6,
         rarity: 4,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 125000
+        numericValue: 127500
     }, {
         name: "Front Flip",
         value: "122.5K",
@@ -805,11 +805,11 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 900000) {
-        return 1.95;
+        return 2.5;
     } else if (numericValue >= 65000) {
-        return 1.7;
+        return 2;
     } else {
-        return 1.35;
+        return 1.4;
     }
 }
 
@@ -892,7 +892,7 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Float": 850000
+    "Float": 920000
 };
 
 // =============================================================
