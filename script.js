@@ -112,21 +112,21 @@ const ITEMS = [
         numericValue: 575000
     }, {
         name: "Telamon's Chicken Hat",
-        value: "550K",
+        value: "535K",
         range: "[N/A]",
         stability: "Underpaid",
         demand: 2,
-        rarity: 8,
+        rarity: 7,
         origin: "Mystic Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
-        numericValue: 550000
+        numericValue: 535000
     }, {
         name: "Float",
         value: "430K",
         range: "[N/A]",
         stability: "Overpaid",
-        demand: 10,
+        demand: 8,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
@@ -134,15 +134,15 @@ const ITEMS = [
         numericValue: 430000
     }, {
         name: "Hava Nagila",
-        value: "400K",
+        value: "425K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 4,
-        rarity: 7,
+        rarity: 8,
         origin: "Developer Gift",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
-        numericValue: 400000
+        numericValue: 425000
     }, {
         name: "MATSbxb Developer Set",
         stability: "Doing Well",
@@ -153,9 +153,9 @@ const ITEMS = [
         isDual: true,
         items: [{ name: "MATSbxb Signature Dev Card", value: "250K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 250000 }, { name: "MATSbxb Signature Dev Frame", value: "110K",
+                numericValue: 250000 }, { name: "MATSbxb Signature Dev Frame", value: "117.5K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 110000 }]
+                numericValue: 117500 }]
     }, {
         name: "Crown of Opulentum",
         value: "225K",
@@ -224,26 +224,37 @@ const ITEMS = [
         numericValue: 142500
     }, {
         name: "Orange Dance",
-        value: "132.5K",
+        value: "137.5K",
         range: "[N/A]",
-        stability: "Stable",
+        stability: "Doing Well",
         demand: 5,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
-        numericValue: 132500
+        numericValue: 137500
     }, {
         name: "WC26 Backwards Celebration",
-        value: "127.5K",
+        value: "135K",
         range: "[N/A]",
         stability: "Overpaid",
-        demand: 6,
+        demand: 7,
         rarity: 4,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 127500
+        numericValue: 135000
+    }, {
+        name: "WC26 Trophy Celebration",
+        value: "125K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 4,
+        origin: "Robux Pack",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
+        numericValue: 125000
     }, {
         name: "Front Flip",
         value: "122.5K",
@@ -255,17 +266,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
         numericValue: 122500
-    }, {
-        name: "WC26 Trophy Celebration",
-        value: "120K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 120000
     }, {
         name: "Gold Champion Band [B]",
         value: "115K",
@@ -282,7 +282,7 @@ const ITEMS = [
     // MID TIER
     {
         name: "Flip",
-        value: "90K",
+        value: "87.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -290,7 +290,18 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter",
-        numericValue: 90000
+        numericValue: 87500
+    }, {
+        name: "Devil's Gift",
+        value: "85K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 6,
+        origin: "Limited Quantity Code",
+        tier: "mid",
+        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
+        numericValue: 85000
     }, {
         name: "Dragon Shoes",
         value: "80K",
@@ -302,17 +313,6 @@ const ITEMS = [
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter",
         numericValue: 80000
-    }, {
-        name: "Devil's Gift",
-        value: "75K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 75000
     }, {
         name: "Shark Shoes",
         value: "72.5K",
@@ -348,19 +348,8 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
                 numericValue: 40000 }]
     }, {
-        name: "Grinch Shoes",
-        value: "45K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "1.0 Christmas Event",
-        tier: "mid",
-        image: "/images/grinch.png",
-        numericValue: 45000
-    }, {
         name: "The Panther",
-        value: "37.5K",
+        value: "40K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -368,7 +357,18 @@ const ITEMS = [
         origin: "Prehistoric Battlepass",
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter",
-        numericValue: 37500
+        numericValue: 40000
+    }, {
+        name: "Grinch Shoes",
+        value: "40K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 5,
+        origin: "1.0 Christmas Event",
+        tier: "mid",
+        image: "/images/grinch.png",
+        numericValue: 40000
     }, {
         name: "Lightning Wolf Shoes",
         value: "35K",
@@ -805,11 +805,11 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 900000) {
-        return 2.5;
+        return 2.8;
     } else if (numericValue >= 65000) {
-        return 2;
+        return 2.15;
     } else {
-        return 1.4;
+        return 1.35;
     }
 }
 
@@ -849,14 +849,7 @@ const TRADE_ADS = [{
     username: "WM5M",
     avatar: "https://cdn.discordapp.com/avatars/896367467834789938/5bfdb20b5aad84ab655fd756013ac0ef.png?size=512",
     offering: [
-        { name: "Float", qty: 1, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "430K" },
-        { name: "Penguin Dance", qty: 2, image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter", value: "142.5K" },
-        { name: "Penguin Slide", qty: 1, image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter", value: "140K" },
-        { name: "Front Flip", qty: 1, image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter", value: "125K" },
-        { name: "Gold Band [B]", qty: 1, image: "/images/goldb.png", value: "115K" },
-        { name: "Flip", qty: 1, image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter", value: "92.5K" },
-        { name: "Dragon Shoes", qty: 2, image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter", value: "85K" },
-        { name: "Devil's Gift", qty: 1, image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter", value: "60K" }
+        { name: "Float", qty: 1, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "430K" }
     ],
     looking_for: "offers",
     notes: "Discord is @wm5m",
@@ -892,7 +885,8 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Float": 920000
+    "Telamon's Chicken Hat": 1100000,
+    "Float": 1000000
 };
 
 // =============================================================
@@ -1050,6 +1044,12 @@ function createCard(item) {
         newBadge.textContent = 'NEW!';
         name.appendChild(newBadge);
     }
+    if (item.fire) {
+    const fireBadge = document.createElement('span');
+    fireBadge.className = 'item-fire-badge';
+    fireBadge.textContent = '🔥';
+    name.appendChild(fireBadge);
+}
     info.appendChild(name);
     const meta = document.createElement('div');
 meta.className = 'item-meta';
@@ -1094,6 +1094,12 @@ info.appendChild(meta);
         newBadge.textContent = 'NEW!';
         name.appendChild(newBadge);
     }
+    if (item.fire) {
+    const fireBadge = document.createElement('span');
+    fireBadge.className = 'item-fire-badge';
+    fireBadge.textContent = '🔥';
+    name.appendChild(fireBadge);
+}
     info.appendChild(name);
     const meta = document.createElement('div');
     meta.className = 'item-meta';

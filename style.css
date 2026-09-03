@@ -529,6 +529,18 @@ body {
     }
 }
 
+.item-fire-badge {
+    background: rgba(255, 100, 0, 0.2);
+    color: #ff6b00;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
 /* ===== STABILITY BADGES ===== */
 .item-stability {
     font-size: 0.75rem;
