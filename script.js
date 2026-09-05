@@ -370,6 +370,18 @@ const ITEMS = [
         image: "/images/grinch.png",
         numericValue: 40000
     }, {
+        name: "Fallen Angel Mantle",
+        value: "40K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/angel.png",
+        numericValue: 40000
+    }, {
         name: "Lightning Wolf Shoes",
         value: "35K",
         range: "[N/A]",
@@ -415,6 +427,19 @@ const ITEMS = [
                 numericValue: 30000 }, { name: "Royal Frame", value: "50K",
                 image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
                 numericValue: 50000 }]
+    }, {
+        name: "Admin Abuse Set",
+        stability: "Unstable",
+        demand: 3,
+        rarity: 3,
+        origin: "Robux Pack",
+        tier: "mid",
+        new: true,
+        isDual: true,
+        items: [{ name: "Admin Abuse Card", value: "30K", image: "/images/admincard.png",
+                numericValue: 30000 }, { name: "Admin Abuse Frame", value: "30K",
+                image: "/images/adminframe.png",
+                numericValue: 30000 }]
     }, {
         name: "Candy Cane Shoes",
         value: "30K",
@@ -470,19 +495,6 @@ const ITEMS = [
         tier: "low",
         image: "/images/suncard.png",
         numericValue: 30000
-    }, {
-        name: "Admin Abuse Set",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Robux Pack",
-        tier: "mid",
-        new: true,
-        isDual: true,
-        items: [{ name: "Admin Abuse Card", value: "30K", image: "/images/admincard.png",
-                numericValue: 30000 }, { name: "Admin Abuse Frame", value: "30K",
-                image: "/images/adminframe.png",
-                numericValue: 30000 }]
     },
 
     // LOW TIER
