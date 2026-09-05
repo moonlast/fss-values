@@ -629,17 +629,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
         numericValue: 12000
     }, {
-        name: "Fur Cape",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 2,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/fur.png",
-        numericValue: 10000
-    }, {
         name: "ESP Sagrada Crown",
         value: "12K",
         range: "[N/A]",
@@ -650,6 +639,17 @@ const ITEMS = [
         tier: "low",
         image: "/images/sagrada.png",
         numericValue: 12000
+    }, {
+        name: "Fur Cape",
+        value: "10K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 3,
+        rarity: 2,
+        origin: "Prehistoric Battlepass",
+        tier: "low",
+        image: "/images/fur.png",
+        numericValue: 10000
     }, {
         name: "Antlers",
         value: "10K",
