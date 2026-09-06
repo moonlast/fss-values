@@ -539,19 +539,6 @@ const ITEMS = [
         image: "/images/dinos.png",
         numericValue: 22500
     }, {
-        name: "Admin Abuse Set",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Robux Pack",
-        tier: "low",
-        new: true,
-        isDual: true,
-        items: [{ name: "Admin Abuse Card", value: "20K", image: "/images/admincard.png",
-                numericValue: 20000 }, { name: "Admin Abuse Frame", value: "20K",
-                image: "/images/adminframe.png",
-                numericValue: 20000 }]
-    }, {
         name: "La Roja Inferno Goal Explosion",
         value: "20K",
         range: "[N/A]",
@@ -573,6 +560,19 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
         numericValue: 17500
+    }, {
+        name: "Admin Abuse Set",
+        stability: "Unstable",
+        demand: 3,
+        rarity: 2,
+        origin: "Robux Pack",
+        tier: "low",
+        new: true,
+        isDual: true,
+        items: [{ name: "Admin Abuse Card", value: "15K", image: "/images/admincard.png",
+                numericValue: 15000 }, { name: "Admin Abuse Frame", value: "15K",
+                image: "/images/adminframe.png",
+                numericValue: 15000 }]
     }, {
         name: "Unfinished Business",
         value: "15K",
