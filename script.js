@@ -829,7 +829,7 @@ const ITEMS = [
 
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 900000) {
+    if (numericValue >= 951000) {
         return 2.8;
     } else if (numericValue >= 91000) {
         return 2.35;
