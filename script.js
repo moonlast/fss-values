@@ -736,10 +736,10 @@ const ITEMS = [
         tier: "low",
         new: true,
         isDual: true,
-        items: [{ name: "Admin Abuse Card", value: "7K", image: "/images/admincard.png",
-                numericValue: 7000 }, { name: "Admin Abuse Frame", value: "5K",
+        items: [{ name: "Admin Abuse Card", value: "7.5K", image: "/images/admincard.png",
+                numericValue: 7500 }, { name: "Admin Abuse Frame", value: "3K",
                 image: "/images/adminframe.png",
-                numericValue: 5000 }]
+                numericValue: 3000 }]
     }, {
         name: "WC26 Trophy Dribble",
         value: "7.5K",
