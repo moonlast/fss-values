@@ -529,6 +529,9 @@ body {
     }
 }
 
+.tier-bottom .tier-heading { color: #6a7a9a; }
+.tier-bottom .tier-heading span { background: #1a1a2a; color: #6a7a9a; }
+
 .item-fire-badge {
     background: rgba(255, 100, 0, 0.2);
     color: #ff6b00;
