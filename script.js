@@ -737,9 +737,9 @@ const ITEMS = [
         new: true,
         isDual: true,
         items: [{ name: "Admin Abuse Card", value: "7.5K", image: "/images/admincard.png",
-                numericValue: 7500 }, { name: "Admin Abuse Frame", value: "3K",
+                numericValue: 7500 }, { name: "Admin Abuse Frame", value: "1K",
                 image: "/images/adminframe.png",
-                numericValue: 3000 }]
+                numericValue: 1000 }]
     }, {
         name: "WC26 Trophy Dribble",
         value: "7.5K",
