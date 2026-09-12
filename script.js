@@ -235,7 +235,7 @@ const ITEMS = [
         numericValue: 142500
     }, {
         name: "Super Dodge",
-        value: "140K",
+        value: "137.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -243,7 +243,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
-        numericValue: 140000
+        numericValue: 137500
     }, {
         name: "WC26 Trophy Celebration",
         value: "130K",
