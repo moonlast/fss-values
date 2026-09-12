@@ -1518,14 +1518,11 @@ function renderModalItems(search = '') {
         !searchLower || item.name.toLowerCase().includes(searchLower)
     );
     
-    // Sort by tier order: tier4 first, then high, mid, low
     const tierOrder = { tier4: 0, high: 1, mid: 2, low: 3 };
     filtered.sort((a, b) => {
         const tierA = tierOrder[a.tier] !== undefined ? tierOrder[a.tier] : 999;
         const tierB = tierOrder[b.tier] !== undefined ? tierOrder[b.tier] : 999;
-        // Sort by tier first
         if (tierA !== tierB) return tierA - tierB;
-        // Then by numeric value (highest first) within each tier
         return b.numericValue - a.numericValue;
     });
     
@@ -1546,7 +1543,6 @@ function renderModalItems(search = '') {
         
         const valueSpan = document.createElement('span');
         valueSpan.className = 'modal-item-value';
-        // Show both base and token value
         let valueText = item.value;
         const tokenVal = getTokenValue(item);
         if (tokenVal) {
@@ -1608,7 +1604,6 @@ function renderCalcItems() {
                 img.alt = item.name;
                 div.appendChild(img);
                 
-                // Tooltip on hover
                 const tooltip = document.createElement('div');
                 tooltip.className = 'item-tooltip';
                 tooltip.textContent = `${item.name} · ${item.value}`;
@@ -1628,54 +1623,61 @@ function renderCalcItems() {
 }
 
 function updateCalcTotals() {
-    let yourTotal = 0;
+    // ---- BASE VALUES (no tokens counted here) ----
+    let yourBaseTotal = 0;
+    calcItems.your.forEach(item => {
+        yourBaseTotal += item.numericValue * (item.qty || 1);
+    });
+
+    let theirBaseTotal = 0;
+    calcItems.their.forEach(item => {
+        theirBaseTotal += item.numericValue * (item.qty || 1);
+    });
+
+    // ---- TOKEN VALUES (items + tokens input) ----
     let yourTokenTotal = 0;
     calcItems.your.forEach(item => {
-        yourTotal += item.numericValue * (item.qty || 1);
         const tokenVal = getTokenValue(item);
         if (tokenVal) {
             yourTokenTotal += tokenVal * (item.qty || 1);
         }
     });
-    const yourTokens = parseInt(document.getElementById('calcYourTokens')?.value || 0);
-    yourTotal += yourTokens;
-    yourTokenTotal += yourTokens;
-    
-    let theirTotal = 0;
+    const yourTokensInput = parseInt(document.getElementById('calcYourTokens')?.value || 0);
+    yourTokenTotal += yourTokensInput; // tokens add ONLY to token total
+
     let theirTokenTotal = 0;
     calcItems.their.forEach(item => {
-        theirTotal += item.numericValue * (item.qty || 1);
         const tokenVal = getTokenValue(item);
         if (tokenVal) {
             theirTokenTotal += tokenVal * (item.qty || 1);
         }
     });
-    const theirTokens = parseInt(document.getElementById('calcTheirTokens')?.value || 0);
-    theirTotal += theirTokens;
-    theirTokenTotal += theirTokens;
-    
+    const theirTokensInput = parseInt(document.getElementById('calcTheirTokens')?.value || 0);
+    theirTokenTotal += theirTokensInput; // tokens add ONLY to token total
+
+    // ---- DISPLAY ----
     const yourTotalEl = document.getElementById('calcYourTotal');
     const theirTotalEl = document.getElementById('calcTheirTotal');
     const yourTokenEl = document.getElementById('calcYourTokenTotal');
     const theirTokenEl = document.getElementById('calcTheirTokenTotal');
     
-    if (yourTotalEl) yourTotalEl.textContent = formatValue(yourTotal);
-    if (theirTotalEl) theirTotalEl.textContent = formatValue(theirTotal);
+    if (yourTotalEl) yourTotalEl.textContent = formatValue(yourBaseTotal);
+    if (theirTotalEl) theirTotalEl.textContent = formatValue(theirBaseTotal);
     if (yourTokenEl) yourTokenEl.innerHTML = `🪙 ${formatValue(yourTokenTotal)}`;
     if (theirTokenEl) theirTokenEl.innerHTML = `🪙 ${formatValue(theirTokenTotal)}`;
     
+    // ---- VERDICT (based on TOKEN VALUE now) ----
     const resultEl = document.getElementById('calcResult');
     if (!resultEl) return;
     
-    if (yourTotal === 0 && theirTotal === 0) {
+    if (yourTokenTotal === 0 && theirTokenTotal === 0) {
         resultEl.textContent = 'Add items to both sides to calculate';
         resultEl.className = 'calc-result';
         return;
     }
     
-    // Calculate win/lose based on BASE VALUE (not tokens)
-    const diff = yourTotal - theirTotal;
-    const diffPercent = theirTotal > 0 ? (diff / theirTotal) * 100 : 0;
+    const diff = yourTokenTotal - theirTokenTotal;
+    const diffPercent = theirTokenTotal > 0 ? (diff / theirTokenTotal) * 100 : 0;
     
     let verdict, className;
     if (diff < 0 && Math.abs(diffPercent) > 5) {
@@ -1693,8 +1695,8 @@ function updateCalcTotals() {
     resultEl.className = `calc-result ${className}`;
     resultEl.innerHTML = `
         <div>${verdict}</div>
-        <div class="diff">${formatValue(yourTotal)} vs ${formatValue(theirTotal)} · ${diffStr}</div>
-        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">🪙 ${formatValue(yourTokenTotal)} vs 🪙 ${formatValue(theirTokenTotal)}</div>
+        <div class="diff">🪙 ${formatValue(yourTokenTotal)} vs 🪙 ${formatValue(theirTokenTotal)} · ${diffStr}</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">Base: ${formatValue(yourBaseTotal)} vs ${formatValue(theirBaseTotal)}</div>
     `;
 }
 
