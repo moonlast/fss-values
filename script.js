@@ -151,9 +151,9 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         isDual: true,
-        items: [{ name: "MATSbxb Signature Dev Card", value: "270K",
+        items: [{ name: "MATSbxb Signature Dev Card", value: "275K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 270000 }, { name: "MATSbxb Signature Dev Frame", value: "⚠️ Unsafe",
+                numericValue: 275000 }, { name: "MATSbxb Signature Dev Frame", value: "⚠️ Unsafe",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
                 numericValue: 0 }]
     }, {
@@ -169,29 +169,29 @@ const ITEMS = [
         numericValue: 200000
     }, {
         name: "FCWC Shoes Red/Black",
-        value: "162.5K",
+        value: "160K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 5,
+        demand: 4,
         rarity: 5,
         origin: "FCWC Event",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 162500
+        numericValue: 160000
     }, {
         name: "Party Time",
-        value: "155K",
+        value: "157.5K",
         range: "[N/A]",
         stability: "Doing Well",
-        demand: 4,
+        demand: 5,
         rarity: 6,
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 155000
+        numericValue: 157500
     }, {
         name: "WC26 Backwards Celebration",
-        value: "152.5K",
+        value: "155K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -199,7 +199,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 152500
+        numericValue: 155000
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -212,6 +212,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
         numericValue: 145000
     }, {
+        name: "Orange Dance",
+        value: "142.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 5,
+        origin: "Robux Pack",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
+        numericValue: 142500
+    }, {
         name: "Penguin Slide",
         value: "142.5K",
         range: "[N/A]",
@@ -222,17 +233,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 142500
-    }, {
-        name: "Orange Dance",
-        value: "140K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
-        numericValue: 140000
     }, {
         name: "Super Dodge",
         value: "140K",
@@ -246,7 +246,7 @@ const ITEMS = [
         numericValue: 140000
     }, {
         name: "WC26 Trophy Celebration",
-        value: "127.5K",
+        value: "130K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -254,7 +254,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 127500
+        numericValue: 130000
     }, {
         name: "Front Flip",
         value: "117.5K",
@@ -706,6 +706,18 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
         numericValue: 8500
     }, {
+        name: "Rivalry Dribble",
+        value: "8K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Chosen One Pack",
+        tier: "low",
+        new: true,
+        image: "/images/rivalrydrib.png",
+        numericValue: 8000
+    }, {
         name: "adidas Taunt",
         value: "8K",
         range: "[N/A]",
@@ -730,7 +742,7 @@ const ITEMS = [
     }, {
         name: "Admin Abuse Set",
         stability: "Unstable",
-        demand: 3,
+        demand: 2,
         rarity: 1,
         origin: "Robux Pack",
         tier: "low",
@@ -775,16 +787,16 @@ const ITEMS = [
         numericValue: 6000
     }, {
         name: "The Chosen One",
-        value: "5.5K",
+        value: "4K",
         range: "[N/A]",
         stability: "Unstable",
         demand: 2,
-        rarity: 2,
+        rarity: 1,
         new: true,
         origin: "Powers V2 Pack",
         tier: "low",
         image: "/images/chosen.png",
-        numericValue: 6500
+        numericValue: 4000
     }, {
         name: "Bronze Champion Band [B]",
         value: "5K",
@@ -809,16 +821,16 @@ const ITEMS = [
         numericValue: 4000
     }, {
         name: "Dragon Fang Cleats",
-        value: "3.5K",
+        value: "2K",
         range: "[N/A]",
         stability: "Unstable",
         demand: 2,
-        rarity: 2,
+        rarity: 1,
         new: true,
         origin: "Powers V2 Pack",
         tier: "low",
         image: "/images/cleats.png",
-        numericValue: 5000
+        numericValue: 2000
     },
 ];
 
@@ -830,9 +842,11 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 2.8;
+        return 3;
+    } else if (numericValue >= 125000) {
+        return 2.65;
     } else if (numericValue >= 91000) {
-        return 2.45;
+        return 2.35;
     }
     else if (numericValue >= 65000) {
         return 2.15;
@@ -913,8 +927,8 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Hava Nagila": 1200000,
-    "MATSbxb Signature Dev Frame": 0
+    "Kawaii Card": 107500,
+    "Kawaii Frame": 86000
 };
 
 // =============================================================
