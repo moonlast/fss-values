@@ -975,8 +975,8 @@ const SECRET_ITEMS = [
         origin: "Unreleased",
         tier: "secret",
         isDual: true,
-        items: [{ name: "EzraArcanum Signature Dev Card", value: "Idk", image: "/images/ezracard.png",
-                numericValue: 0 }, { name: "EzraArcanum Signature Dev Frame", value: "no clue",
+        items: [{ name: "EzraArcanum Card", value: "idk", image: "/images/ezracard.png",
+                numericValue: 0 }, { name: "EzraArcanum Frame", value: "idk",
                 image: "/images/ezraframe.png",
                 numericValue: 0 }]
     },
