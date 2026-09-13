@@ -936,7 +936,7 @@ const SECRET_ITEMS = [
         name: "WC26 Ball Frame",
         value: "999M+",
         range: "[N/A]",
-        stability: "Stable",
+        stability: "Rising",
         demand: 11,
         rarity: 11,
         origin: "sent from the heavens",
