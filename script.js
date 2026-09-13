@@ -933,6 +933,18 @@ const CUSTOM_TOKEN_VALUES = {
 
 const SECRET_ITEMS = [
     {
+        name: "WC26 Ball Frame",
+        value: "999M+",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 11,
+        rarity: 11,
+        origin: "sent from the heavens",
+        tier: "secret",
+        image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter",
+        numericValue: 0
+    },
+    {
         name: "Ski Goggles",
         value: "O/C",
         range: "[N/A]",
@@ -956,7 +968,7 @@ const SECRET_ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter",
         numericValue: 0
     }, {
-        name: "EzraArcanum Dev Signature Set",
+        name: "EzraArcanum Developer Set",
         stability: "Stable",
         demand: 4,
         rarity: 9,
