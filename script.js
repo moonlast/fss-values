@@ -220,7 +220,7 @@ const ITEMS = [
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
+        image: "/images/orange.png",
         numericValue: 142500
     }, {
         name: "Penguin Slide",
@@ -526,7 +526,7 @@ const ITEMS = [
         rarity: 2,
         origin: "Prehistoric Battlepass",
         tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-106d9f12b2c7e5fdb7423a58197a2a03/420/420/Image/Webp/noFilter",
+        image: "/images/wild.png",
         numericValue: 22500
     }, {
         name: "Dino Shoes",
@@ -931,6 +931,73 @@ const CUSTOM_TOKEN_VALUES = {
     "Kawaii Frame": 86000
 };
 
+const SECRET_ITEMS = [
+    {
+        name: "Ski Goggles",
+        value: "O/C",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 1,
+        rarity: 11,
+        origin: "Developer Gift",
+        tier: "secret",
+        image: "/images/skigogs.png",
+        numericValue: 0
+    },
+    {
+        name: "SL Hall of Fame",
+        value: "O/C",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 5,
+        rarity: 11,
+        origin: "Art Contest",
+        tier: "secret",
+        image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter",
+        numericValue: 0
+    }, {
+        name: "EzraArcanum Dev Signature Set",
+        stability: "Stable",
+        demand: 4,
+        rarity: 9,
+        origin: "Unreleased",
+        tier: "secret",
+        isDual: true,
+        items: [{ name: "EzraArcanum Signature Dev Card", value: "Idk", image: "/images/ezracard.png",
+                numericValue: 0 }, { name: "EzraArcanum Signature Dev Frame", value: "no clue",
+                image: "/images/ezraframe.png",
+                numericValue: 0 }]
+    },
+    {
+        name: "SL Glory",
+        value: "Idk",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 3,
+        rarity: 9,
+        origin: "Art Contest Gift",
+        tier: "secret",
+        image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter",
+        numericValue: 0
+    },
+    {
+        name: "El Skullcito",
+        value: "500K",
+        range: "[N/A]",
+        stability: "Fluctuating",
+        demand: 4,
+        rarity: 9,
+        origin: "Gift from Sei",
+        tier: "secret",
+        image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter",
+        numericValue: 0
+    },
+];
+
+// Mimimimi click counter
+let mimimimiClicks = 0;
+let secretTierUnlocked = false;
+
 // =============================================================
 // 3. RENDER ITEMS
 // =============================================================
@@ -939,6 +1006,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     const highGrid = document.getElementById('highGrid');
     const midGrid = document.getElementById('midGrid');
     const lowGrid = document.getElementById('lowGrid');
+    const secretGrid = document.getElementById('secretGrid');
     
     if (!tier4Grid || !highGrid || !midGrid || !lowGrid) return;
     
@@ -946,6 +1014,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     highGrid.innerHTML = '';
     midGrid.innerHTML = '';
     lowGrid.innerHTML = '';
+    if (secretGrid) secretGrid.innerHTML = '';
 
     const searchLower = search.toLowerCase().trim();
 
@@ -965,6 +1034,15 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     high.forEach(item => highGrid.appendChild(createCard(item)));
     mid.forEach(item => midGrid.appendChild(createCard(item)));
     low.forEach(item => lowGrid.appendChild(createCard(item)));
+
+    // Secret tier - only renders if unlocked
+    if (secretGrid && secretTierUnlocked) {
+        const secretFiltered = SECRET_ITEMS.filter(item => {
+            const matchSearch = !searchLower || item.name.toLowerCase().includes(searchLower);
+            return matchSearch;
+        });
+        secretFiltered.forEach(item => secretGrid.appendChild(createCard(item)));
+    }
 }
 
 function createCard(item) {
@@ -1763,3 +1841,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// =============================================================
+// MIMIMIMI EASTER EGG
+// =============================================================
+document.addEventListener('click', function(e) {
+    // Check if clicked element or its parent is a Mimimimi card
+    const card = e.target.closest('.item-card');
+    if (!card) return;
+    
+    const nameEl = card.querySelector('.item-name');
+    if (!nameEl) return;
+    
+    // Check if the card name starts with "Mimimimi"
+    if (nameEl.textContent.trim().toLowerCase().startsWith('mimimimi')) {
+        mimimimiClicks++;
+        console.log('Mimimimi clicks:', mimimimiClicks);
+        
+        if (mimimimiClicks >= 5 && !secretTierUnlocked) {
+            unlockSecretTier();
+        }
+    }
+});
+
+function unlockSecretTier() {
+    secretTierUnlocked = true;
+    
+    // Play the sound
+    try {
+        const audio = new Audio('/mimi.ogg');
+        audio.volume = 0.5;
+        audio.play().catch(err => console.log('Audio play failed:', err));
+    } catch (err) {
+        console.log('Audio error:', err);
+    }
+    
+    // Show the secret tier with animation
+    const secretTier = document.getElementById('secretTier');
+    if (secretTier) {
+        secretTier.style.display = 'block';
+        secretTier.style.opacity = '0';
+        secretTier.style.transition = 'opacity 0.5s ease-in';
+        setTimeout(() => {
+            secretTier.style.opacity = '1';
+        }, 50);
+        
+        // Scroll to it
+        setTimeout(() => {
+            secretTier.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+    }
+    
+    // Re-render items to include secret tier
+    renderItems(
+        document.getElementById('tierFilter')?.value || 'all',
+        document.getElementById('stabilityFilter')?.value || 'all',
+        document.getElementById('searchInput')?.value || ''
+    );
+}

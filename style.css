@@ -528,6 +528,14 @@ body {
         letter-spacing: 0.2px;
     }
 }
+.tier-secret .tier-heading { 
+    color: #b388ff; 
+    text-shadow: 0 0 10px rgba(179, 136, 255, 0.5);
+}
+.tier-secret .tier-heading span { 
+    background: #2a1a4a; 
+    color: #b388ff; 
+}
 
 .tier-bottom .tier-heading { color: #6a7a9a; }
 .tier-bottom .tier-heading span { background: #1a1a2a; color: #6a7a9a; }
