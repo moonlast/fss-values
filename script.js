@@ -28,7 +28,7 @@ const ITEMS = [
                 numericValue: 0 }]
     }, {
         name: "Developer's Wristband",
-        value: "1.75M",
+        value: "1.55M",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 5,
@@ -36,7 +36,7 @@ const ITEMS = [
         origin: "Developer Gift",
         tier: "tier4",
         image: "/images/devband.png",
-        numericValue: 1750000
+        numericValue: 1550000
     }, {
         name: "Bunny Set",
         stability: "Rising",
@@ -45,10 +45,10 @@ const ITEMS = [
         origin: "2025 Easter Puzzle",
         tier: "tier4",
         isDual: true,
-        items: [{ name: "Bunny Card", value: "1.45M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter",
-                numericValue: 1450000 }, { name: "Bunny Frame", value: "1.45M",
+        items: [{ name: "Bunny Card", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter",
+                numericValue: 1300000 }, { name: "Bunny Frame", value: "1.3M",
                 image: "https://tr.rbxcdn.com/180DAY-0c33b2d8786b0bbf6ab9d0292905f6ea/420/420/Image/Png/noFilter",
-                numericValue: 1450000 }]
+                numericValue: 1300000 }]
     }, {
         name: "LMT Set",
         stability: "Rising",
@@ -57,10 +57,10 @@ const ITEMS = [
         origin: "Being LMT",
         tier: "tier4",
         isDual: true,
-        items: [{ name: "LMT Card", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-c75c35cef5c1fce57bd108871c51ce7d/420/420/Image/Webp/noFilter",
-                numericValue: 1300000 }, { name: "LMT Frame", value: "O/C",
+        items: [{ name: "LMT Card", value: "1.15M", image: "https://tr.rbxcdn.com/180DAY-c75c35cef5c1fce57bd108871c51ce7d/420/420/Image/Webp/noFilter",
+                numericValue: 1150000 }, { name: "LMT Frame", value: "1.05M",
                 image: "https://tr.rbxcdn.com/180DAY-7946ec03151612a29574177dc29bde00/420/420/Image/Png/noFilter",
-                numericValue: 0 }]
+                numericValue: 1050000 }]
     }, {
         name: "Super League Set",
         stability: "Rising",
@@ -69,10 +69,10 @@ const ITEMS = [
         origin: "Winning SL #5",
         tier: "tier4",
         isDual: true,
-        items: [{ name: "Super League Card", value: "1.25M", image: "https://tr.rbxcdn.com/180DAY-b5c7e5c916e6f2eab6aa604d2f132e9d/420/420/Image/Webp/noFilter",
-                numericValue: 1250000 }, { name: "Super League Frame", value: "1.2M",
+        items: [{ name: "Super League Card", value: "1.05M", image: "https://tr.rbxcdn.com/180DAY-b5c7e5c916e6f2eab6aa604d2f132e9d/420/420/Image/Webp/noFilter",
+                numericValue: 1050000 }, { name: "Super League Frame", value: "950K",
                 image: "https://tr.rbxcdn.com/180DAY-59fd9472e20d348d8f861a718e08fb88/420/420/Image/Png/noFilter",
-                numericValue: 1200000 }]
+                numericValue: 950000 }]
     }, {
         name: "Event Host Set",
         stability: "Rising",
@@ -81,10 +81,10 @@ const ITEMS = [
         origin: "Being Event Host",
         tier: "tier4",
         isDual: true,
-        items: [{ name: "Event Host Card", value: "1.2M", image: "https://tr.rbxcdn.com/180DAY-42040034932f0021659ac34a5bc728a4/420/420/Image/Webp/noFilter",
-                numericValue: 1200000 }, { name: "Event Host Frame", value: "O/C",
+        items: [{ name: "Event Host Card", value: "750K", image: "https://tr.rbxcdn.com/180DAY-42040034932f0021659ac34a5bc728a4/420/420/Image/Webp/noFilter",
+                numericValue: 750000 }, { name: "Event Host Frame", value: "750K",
                 image: "https://tr.rbxcdn.com/180DAY-80329426b5b175a5e33cd89b6ddf4bb3/420/420/Image/Png/noFilter",
-                numericValue: 0 }]
+                numericValue: 750000 }]
     }, {
         name: "Mimimimi",
         value: "950K",
@@ -151,14 +151,14 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         isDual: true,
-        items: [{ name: "MATSbxb Signature Dev Card", value: "275K",
+        items: [{ name: "MATSbxb Signature Dev Card", value: "280K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 275000 }, { name: "MATSbxb Signature Dev Frame", value: "⚠️ Unsafe",
+                numericValue: 280000 }, { name: "MATSbxb Signature Dev Frame", value: "60K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 0 }]
+                numericValue: 60000 }]
     }, {
         name: "Crown of Opulentum",
-        value: "200K",
+        value: "185K",
         range: "[N/A]",
         stability: "Underpaid",
         demand: 1,
@@ -166,21 +166,10 @@ const ITEMS = [
         origin: "2.5M Coins in SLS 1.0 Reward",
         tier: "high",
         image: "/images/crown.png",
-        numericValue: 200000
-    }, {
-        name: "FCWC Shoes Red/Black",
-        value: "160K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 5,
-        origin: "FCWC Event",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 160000
+        numericValue: 185000
     }, {
         name: "Party Time",
-        value: "157.5K",
+        value: "160K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -188,10 +177,10 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 157500
+        numericValue: 160000
     }, {
         name: "WC26 Backwards Celebration",
-        value: "155K",
+        value: "157.5K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -199,7 +188,29 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
+        numericValue: 157500
+    }, {
+        name: "FCWC Shoes Red/Black",
+        value: "155K",
+        range: "[N/A]",
+        stability: "Underpaid",
+        demand: 4,
+        rarity: 5,
+        origin: "FCWC Event",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 155000
+    }, {
+        name: "Orange Dance",
+        value: "145K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 5,
+        origin: "Robux Pack",
+        tier: "high",
+        image: "/images/orange.png",
+        numericValue: 145000
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -211,17 +222,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
         numericValue: 145000
-    }, {
-        name: "Orange Dance",
-        value: "142.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "/images/orange.png",
-        numericValue: 142500
     }, {
         name: "Penguin Slide",
         value: "142.5K",
@@ -257,7 +257,7 @@ const ITEMS = [
         numericValue: 130000
     }, {
         name: "Front Flip",
-        value: "117.5K",
+        value: "115K",
         range: "[N/A]",
         stability: "Stable",
         demand: 5,
@@ -265,10 +265,10 @@ const ITEMS = [
         origin: "Robux Battlepass",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
-        numericValue: 117500
+        numericValue: 115000
     }, {
         name: "Gold Champion Band [B]",
-        value: "115K",
+        value: "112.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -276,7 +276,7 @@ const ITEMS = [
         origin: "1.0 SLS Clans Reward",
         tier: "high",
         image: "/images/goldb.png",
-        numericValue: 115000
+        numericValue: 112500
     },
 
     // MID TIER
@@ -348,6 +348,17 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
                 numericValue: 40000 }]
     }, {
+        name: "Lightning Wolf Shoes",
+        value: "41.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 4,
+        rarity: 3,
+        origin: "Robux Battlepass Reward",
+        tier: "mid",
+        image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
+        numericValue: 41500
+    }, {
         name: "The Panther",
         value: "40K",
         range: "[N/A]",
@@ -369,17 +380,6 @@ const ITEMS = [
         tier: "mid",
         image: "/images/grinch.png",
         numericValue: 40000
-    }, {
-        name: "Lightning Wolf Shoes",
-        value: "37.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 3,
-        origin: "Robux Battlepass Reward",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
-        numericValue: 37500
     }, {
         name: "Dragon Set",
         stability: "Stable",
@@ -416,18 +416,6 @@ const ITEMS = [
         image: "/images/wcvalk.png",
         numericValue: 32500
     }, {
-        name: "Fallen Angel Mantle",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 3,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/angel.png",
-        numericValue: 30000
-    }, {
         name: "Candy Cane Shoes",
         value: "30K",
         range: "[N/A]",
@@ -457,7 +445,7 @@ const ITEMS = [
         demand: 3,
         rarity: 3,
         origin: "WC26 Event",
-        tier: "low",
+        tier: "mid",
         image: "/images/suncard.png",
         numericValue: 30000
     },
@@ -516,6 +504,18 @@ const ITEMS = [
         origin: "1.0 SLS Clans Reward",
         tier: "low",
         image: "/images/goldr.png",
+        numericValue: 25000
+    }, {
+        name: "Fallen Angel Mantle",
+        value: "25K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Credit Shop",
+        tier: "low",
+        new: true,
+        image: "/images/angel.png",
         numericValue: 25000
     }, {
         name: "Wild Dance",
@@ -844,11 +844,11 @@ function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
         return 3;
     } else if (numericValue >= 125000) {
-        return 2.65;
+        return 2.75;
     } else if (numericValue >= 91000) {
         return 2.35;
     }
-    else if (numericValue >= 65000) {
+    else if (numericValue >= 65001) {
         return 2.15;
     } else {
         return 1.4;
@@ -933,18 +933,6 @@ const CUSTOM_TOKEN_VALUES = {
 
 const SECRET_ITEMS = [
     {
-        name: "WC26 Ball Frame",
-        value: "999M+",
-        range: "[N/A]",
-        stability: "Rising",
-        demand: 11,
-        rarity: 11,
-        origin: "sent from the heavens",
-        tier: "secret",
-        image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter",
-        numericValue: 0
-    },
-    {
         name: "Ski Goggles",
         value: "O/C",
         range: "[N/A]",
@@ -975,14 +963,14 @@ const SECRET_ITEMS = [
         origin: "Unreleased",
         tier: "secret",
         isDual: true,
-        items: [{ name: "EzraArcanum Card", value: "idk", image: "/images/ezracard.png",
-                numericValue: 0 }, { name: "EzraArcanum Frame", value: "idk",
+        items: [{ name: "EzraArcanum Card", value: "N/A", image: "/images/ezracard.png",
+                numericValue: 0 }, { name: "EzraArcanum Frame", value: "N/A",
                 image: "/images/ezraframe.png",
                 numericValue: 0 }]
     },
     {
         name: "SL Glory",
-        value: "Idk",
+        value: "N/A",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -994,7 +982,7 @@ const SECRET_ITEMS = [
     },
     {
         name: "El Skullcito",
-        value: "500K",
+        value: "600K",
         range: "[N/A]",
         stability: "Fluctuating",
         demand: 4,
@@ -1002,6 +990,17 @@ const SECRET_ITEMS = [
         origin: "Gift from Sei",
         tier: "secret",
         image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter",
+        numericValue: 0
+    }, {
+        name: "WC26 Ball Frame",
+        value: "0",
+        range: "[N/A]",
+        stability: "Dropping",
+        demand: 0,
+        rarity: 0,
+        origin: "straight from hell",
+        tier: "secret",
+        image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter",
         numericValue: 0
     },
 ];
