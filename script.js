@@ -235,7 +235,7 @@ const ITEMS = [
         numericValue: 140000
     }, {
         name: "Super Dodge",
-        value: "137.5K",
+        value: "135K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -243,7 +243,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
-        numericValue: 137500
+        numericValue: 135000
     }, {
         name: "WC26 Trophy Celebration",
         value: "130K",
@@ -941,6 +941,7 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
+    "Hava Nagila": 1650000,
     "Flip": 200000,
     "Shark Shoes": 175000,
     "Wild Dance": 35000,
