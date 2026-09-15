@@ -562,7 +562,64 @@ body {
 
 .tier-bottom .tier-heading { color: #6a7a9a; }
 .tier-bottom .tier-heading span { background: #1a1a2a; color: #6a7a9a; }
+/* ===== BASE VALUE TOGGLE ===== */
+.base-value-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: auto;
+}
 
+.base-value-toggle .base-value-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+.base-value-toggle .base-value-track {
+    width: 44px;
+    height: 24px;
+    background: var(--toggle-bg);
+    border-radius: 30px;
+    position: relative;
+    transition: background 0.3s;
+    border: 1px solid var(--border-card);
+    flex-shrink: 0;
+}
+
+.base-value-toggle .base-value-dot {
+    width: 18px;
+    height: 18px;
+    background: var(--toggle-dot);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.base-value-toggle .base-value-dot.active {
+    transform: translateX(20px);
+}
+/* ===== ITEM BOTTOM ROW (demand + rarity + origin) ===== */
+.item-bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .base-value-toggle {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
 .item-fire-badge {
     background: rgba(255, 100, 0, 0.2);
     color: #ff6b00;

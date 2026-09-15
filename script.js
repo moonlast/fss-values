@@ -151,9 +151,9 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         isDual: true,
-        items: [{ name: "MATSbxb Signature Dev Card", value: "280K",
+        items: [{ name: "MATSbxb Card", value: "280K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 280000 }, { name: "MATSbxb Signature Dev Frame", value: "60K",
+                numericValue: 280000 }, { name: "MATSbxb Frame", value: "60K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
                 numericValue: 60000 }]
     }, {
@@ -190,17 +190,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
         numericValue: 157500
     }, {
-        name: "FCWC Shoes Red/Black",
-        value: "155K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 4,
-        rarity: 5,
-        origin: "FCWC Event",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 155000
-    }, {
         name: "Orange Dance",
         value: "145K",
         range: "[N/A]",
@@ -234,6 +223,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 142500
     }, {
+        name: "FCWC Shoes Red/Black",
+        value: "140K",
+        range: "[N/A]",
+        stability: "Underpaid",
+        demand: 3,
+        rarity: 5,
+        origin: "FCWC Event",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
+        numericValue: 140000
+    }, {
         name: "Super Dodge",
         value: "137.5K",
         range: "[N/A]",
@@ -256,17 +256,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
         numericValue: 130000
     }, {
-        name: "Front Flip",
-        value: "115K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 5,
-        rarity: 4,
-        origin: "Robux Battlepass",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
-        numericValue: 115000
-    }, {
         name: "Gold Champion Band [B]",
         value: "112.5K",
         range: "[N/A]",
@@ -277,6 +266,17 @@ const ITEMS = [
         tier: "high",
         image: "/images/goldb.png",
         numericValue: 112500
+    }, {
+        name: "Front Flip",
+        value: "110K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 5,
+        rarity: 4,
+        origin: "Robux Battlepass",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
+        numericValue: 110000
     },
 
     // MID TIER
@@ -349,7 +349,7 @@ const ITEMS = [
                 numericValue: 40000 }]
     }, {
         name: "Lightning Wolf Shoes",
-        value: "41.5K",
+        value: "43.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 4,
@@ -357,7 +357,7 @@ const ITEMS = [
         origin: "Robux Battlepass Reward",
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
-        numericValue: 41500
+        numericValue: 43500
     }, {
         name: "The Panther",
         value: "40K",
@@ -371,7 +371,7 @@ const ITEMS = [
         numericValue: 40000
     }, {
         name: "Grinch Shoes",
-        value: "40K",
+        value: "37.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 2,
@@ -379,7 +379,7 @@ const ITEMS = [
         origin: "1.0 Christmas Event",
         tier: "mid",
         image: "/images/grinch.png",
-        numericValue: 40000
+        numericValue: 37500
     }, {
         name: "Dragon Set",
         stability: "Stable",
@@ -416,6 +416,18 @@ const ITEMS = [
         image: "/images/wcvalk.png",
         numericValue: 32500
     }, {
+        name: "Sakura Spirit",
+        value: "30K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 3,
+        rarity: 3,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 30000
+    }, {
         name: "Candy Cane Shoes",
         value: "30K",
         range: "[N/A]",
@@ -430,7 +442,7 @@ const ITEMS = [
         name: "Helm of Opulentum",
         value: "30K",
         range: "[N/A]",
-        stability: "Unstable",
+        stability: "Stable",
         demand: 3,
         rarity: 3,
         origin: "1M Coins in SLS 1.0 Reward",
@@ -441,7 +453,7 @@ const ITEMS = [
         name: "WC26 Argentina Sun Card",
         value: "30K",
         range: "[N/A]",
-        stability: "Unstable",
+        stability: "Stable",
         demand: 3,
         rarity: 3,
         origin: "WC26 Event",
@@ -530,14 +542,14 @@ const ITEMS = [
         numericValue: 22500
     }, {
         name: "Dino Shoes",
-        value: "22.5K",
+        value: "21.5K",
         stability: "Stable",
         demand: 1,
         rarity: 3,
         origin: "Prehistoric Battlepass",
         tier: "low",
         image: "/images/dinos.png",
-        numericValue: 22500
+        numericValue: 21500
     }, {
         name: "La Roja Inferno Goal Explosion",
         value: "20K",
@@ -550,6 +562,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter",
         numericValue: 20000
     }, {
+        name: "FCWC Valkyrie",
+        value: "20K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 3,
+        rarity: 3,
+        origin: "FCWC Event",
+        tier: "low",
+        image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
+        numericValue: 20000
+    }, {
         name: "Unfinished Business",
         value: "17.5K",
         range: "[N/A]",
@@ -559,17 +582,6 @@ const ITEMS = [
         origin: "Robux Item",
         tier: "low",
         image: "/images/unfinished.png",
-        numericValue: 17500
-    }, {
-        name: "FCWC Valkyrie",
-        value: "17.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "FCWC Event",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
         numericValue: 17500
     }, {
         name: "Tentacles",
@@ -842,14 +854,16 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 3;
+        return 3.8;
     } else if (numericValue >= 125000) {
-        return 2.75;
+        return 3.35;
     } else if (numericValue >= 91000) {
-        return 2.35;
+        return 2.5;
     }
     else if (numericValue >= 65001) {
-        return 2.15;
+        return 2.25;
+    } else if (numericValue >= 33000) {
+        return 1.6;
     } else {
         return 1.4;
     }
@@ -927,8 +941,11 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 107500,
-    "Kawaii Frame": 86000
+    "Flip": 200000,
+    "Shark Shoes": 175000,
+    "Wild Dance": 35000,
+    "Kawaii Card": 112500,
+    "Kawaii Frame": 90000
 };
 
 const SECRET_ITEMS = [
@@ -1008,6 +1025,7 @@ const SECRET_ITEMS = [
 // Mimimimi click counter
 let mimimimiClicks = 0;
 let secretTierUnlocked = false;
+let showBaseValue = false;
 
 // =============================================================
 // 3. RENDER ITEMS
@@ -1107,11 +1125,16 @@ function createCard(item) {
         valueRow.style.gap = '6px';
 
         // Base value
-        const baseValSpan = document.createElement('span');
-        baseValSpan.className = 'item-value';
-        baseValSpan.style.cssText = 'height:1.8em;line-height:1.8;box-sizing:border-box;font-size:0.8rem;padding:0 8px;';
-        baseValSpan.textContent = subItem.value;
-        valueRow.appendChild(baseValSpan);
+        // Base value (only if toggle is on)
+// Base value - always shown for O/C items, otherwise respects toggle
+const subHasTokenValue = subItem.numericValue && subItem.numericValue > 0 && getTokenValue(subItem);
+if (showBaseValue || !subHasTokenValue) {
+    const baseValSpan = document.createElement('span');
+    baseValSpan.className = 'item-value';
+    baseValSpan.style.cssText = 'height:1.8em;line-height:1.8;box-sizing:border-box;font-size:0.8rem;padding:0 8px;';
+    baseValSpan.textContent = subItem.value;
+    valueRow.appendChild(baseValSpan);
+}
 
         // Token badge (tiny pill, to the right of base value)
         if (subItem.numericValue && subItem.numericValue > 0) {
@@ -1184,23 +1207,30 @@ function createCard(item) {
     info.appendChild(name);
     const meta = document.createElement('div');
 meta.className = 'item-meta';
-// Add stability badge back
 const stabSpan = document.createElement('span');
 stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
 stabSpan.textContent = item.stability;
 meta.appendChild(stabSpan);
+info.appendChild(meta);
+
+// Bottom row: demand + rarity, then origin
+const bottomRow = document.createElement('div');
+bottomRow.className = 'item-bottom-row';
+
 const demSpan = document.createElement('span');
 demSpan.className = 'item-demand';
 demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
-meta.appendChild(demSpan);
+bottomRow.appendChild(demSpan);
+
 const originSpan = document.createElement('span');
 originSpan.className = 'item-origin';
 originSpan.textContent = item.origin;
-meta.appendChild(originSpan);
-info.appendChild(meta);
-    card.appendChild(leftContainer);
-    card.appendChild(info);
-    return card;
+bottomRow.appendChild(originSpan);
+
+info.appendChild(bottomRow);
+card.appendChild(leftContainer);
+card.appendChild(info);
+return card;
 }
 
     const icon = document.createElement('div');
@@ -1287,12 +1317,16 @@ if (item.numericValue && item.numericValue > 0) {
 }
 
 // Base value - placed SECOND
-const baseValSpan = document.createElement('span');
-baseValSpan.className = 'item-value';
-baseValSpan.style.cssText = 'height:100%;min-height:1.8em;line-height:1.8;box-sizing:border-box;';
-baseValSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
-    item.range !== '[N/A]' ? ` (${item.range})` : '');
-valueContainer.appendChild(baseValSpan);
+// Base value - always shown for O/C items, otherwise respects toggle
+const hasTokenValue = item.numericValue && item.numericValue > 0 && getTokenValue(item);
+if (showBaseValue || !hasTokenValue) {
+    const baseValSpan = document.createElement('span');
+    baseValSpan.className = 'item-value';
+    baseValSpan.style.cssText = 'height:100%;min-height:1.8em;line-height:1.8;box-sizing:border-box;';
+    baseValSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
+        item.range !== '[N/A]' ? ` (${item.range})` : '');
+    valueContainer.appendChild(baseValSpan);
+}
 
 // Stability badge - placed THIRD (right after base value)
 const stabSpan = document.createElement('span');
@@ -1315,18 +1349,26 @@ stabSpan.textContent = item.stability;
 valueContainer.appendChild(stabSpan);
 
 meta.appendChild(valueContainer);
-    const demSpan = document.createElement('span');
-    demSpan.className = 'item-demand';
-    demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
-    meta.appendChild(demSpan);
-    const originSpan = document.createElement('span');
-    originSpan.className = 'item-origin';
-    originSpan.textContent = item.origin;
-    meta.appendChild(originSpan);
-    info.appendChild(meta);
-    card.appendChild(icon);
-    card.appendChild(info);
-    return card;
+info.appendChild(meta);
+
+// Bottom row: demand + rarity, then origin
+const bottomRow = document.createElement('div');
+bottomRow.className = 'item-bottom-row';
+
+const demSpan = document.createElement('span');
+demSpan.className = 'item-demand';
+demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
+bottomRow.appendChild(demSpan);
+
+const originSpan = document.createElement('span');
+originSpan.className = 'item-origin';
+originSpan.textContent = item.origin;
+bottomRow.appendChild(originSpan);
+
+info.appendChild(bottomRow);
+card.appendChild(icon);
+card.appendChild(info);
+return card;
 }
 
 // =============================================================
@@ -1368,6 +1410,29 @@ function setTheme(theme) {
         }
     }
     localStorage.setItem('fss-theme', theme);
+}
+// =============================================================
+// BASE VALUE TOGGLE
+// =============================================================
+function setBaseValueVisibility(show) {
+    showBaseValue = show;
+    localStorage.setItem('fss-show-base', show ? 'true' : 'false');
+    
+    const dot = document.getElementById('baseValueDot');
+    if (dot) {
+        if (show) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    }
+    
+    // Re-render items to apply the change
+    renderItems(
+        document.getElementById('tierFilter')?.value || 'all',
+        document.getElementById('stabilityFilter')?.value || 'all',
+        document.getElementById('searchInput')?.value || ''
+    );
 }
 
 // =============================================================
@@ -1819,6 +1884,23 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         setTheme('dark');
     }
+    // Base value toggle
+const baseValueToggle = document.getElementById('baseValueToggle');
+if (baseValueToggle) {
+    baseValueToggle.addEventListener('click', function() {
+        setBaseValueVisibility(!showBaseValue);
+    });
+}
+
+// Load saved base value preference
+const savedBaseValue = localStorage.getItem('fss-show-base');
+if (savedBaseValue === 'true') {
+    showBaseValue = true;
+    const dot = document.getElementById('baseValueDot');
+    if (dot) dot.classList.add('active');
+} else {
+    showBaseValue = false;
+}
 
     // Filter listeners (only if they exist on the page)
     const tierFilter = document.getElementById('tierFilter');
