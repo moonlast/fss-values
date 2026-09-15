@@ -226,7 +226,7 @@ const ITEMS = [
         name: "FCWC Shoes Red/Black",
         value: "140K",
         range: "[N/A]",
-        stability: "Underpaid",
+        stability: "Dropping",
         demand: 3,
         rarity: 5,
         origin: "FCWC Event",
