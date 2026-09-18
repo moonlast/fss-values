@@ -941,7 +941,9 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "WC26 Backwards Celebration": 600000
+    "WC26 Backwards Celebration": 600000,
+    "Kawaii Card": 117500,
+    "Kawaii Frame": 94000
 };
 
 const SECRET_ITEMS = [
