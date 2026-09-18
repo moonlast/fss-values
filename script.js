@@ -153,9 +153,9 @@ const ITEMS = [
         isDual: true,
         items: [{ name: "MATSbxb Card", value: "280K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 280000 }, { name: "MATSbxb Frame", value: "60K",
+                numericValue: 280000 }, { name: "MATSbxb Frame", value: "72.5K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 60000 }]
+                numericValue: 72500 }]
     }, {
         name: "Crown of Opulentum",
         value: "185K",
@@ -168,6 +168,17 @@ const ITEMS = [
         image: "/images/crown.png",
         numericValue: 185000
     }, {
+        name: "WC26 Backwards Celebration",
+        value: "160K",
+        range: "[N/A]",
+        stability: "Overpaid",
+        demand: 7,
+        rarity: 5,
+        origin: "Robux Pack",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
+        numericValue: 160000
+    }, {
         name: "Party Time",
         value: "160K",
         range: "[N/A]",
@@ -178,17 +189,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
         numericValue: 160000
-    }, {
-        name: "WC26 Backwards Celebration",
-        value: "157.5K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 7,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 157500
     }, {
         name: "Orange Dance",
         value: "145K",
@@ -315,7 +315,7 @@ const ITEMS = [
         numericValue: 80000
     }, {
         name: "Shark Shoes",
-        value: "72.5K",
+        value: "75K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -323,7 +323,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "mid",
         image: "/images/shark.png",
-        numericValue: 72500
+        numericValue: 75000
     }, {
         name: "67",
         value: "67.5K",
@@ -854,18 +854,18 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 3.8;
+        return 3.9;
     } else if (numericValue >= 125000) {
-        return 3.35;
+        return 3.575;
     } else if (numericValue >= 91000) {
-        return 2.5;
+        return 2.6;
     }
     else if (numericValue >= 65001) {
-        return 2.25;
+        return 2.35;
     } else if (numericValue >= 33000) {
-        return 1.6;
+        return 1.7;
     } else {
-        return 1.4;
+        return 1.5;
     }
 }
 
@@ -941,12 +941,7 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "Hava Nagila": 1650000,
-    "Flip": 200000,
-    "Shark Shoes": 175000,
-    "Wild Dance": 35000,
-    "Kawaii Card": 112500,
-    "Kawaii Frame": 90000
+    "WC26 Backwards Celebration": 600000
 };
 
 const SECRET_ITEMS = [
@@ -988,22 +983,22 @@ const SECRET_ITEMS = [
     },
     {
         name: "SL Glory",
-        value: "N/A",
+        value: "800K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 3,
+        demand: 4,
         rarity: 9,
         origin: "Art Contest Gift",
         tier: "secret",
         image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter",
-        numericValue: 0
+        numericValue: 800000
     },
     {
         name: "El Skullcito",
         value: "600K",
         range: "[N/A]",
-        stability: "Fluctuating",
-        demand: 4,
+        stability: "Unstable",
+        demand: 3,
         rarity: 9,
         origin: "Gift from Sei",
         tier: "secret",
@@ -1026,7 +1021,7 @@ const SECRET_ITEMS = [
 // Mimimimi click counter
 let mimimimiClicks = 0;
 let secretTierUnlocked = false;
-let showBaseValue = false;
+let showBaseValue = true;
 
 // =============================================================
 // 3. RENDER ITEMS
@@ -1893,14 +1888,16 @@ if (baseValueToggle) {
     });
 }
 
-// Load saved base value preference
+// Load saved base value preference (defaults to true)
 const savedBaseValue = localStorage.getItem('fss-show-base');
-if (savedBaseValue === 'true') {
+if (savedBaseValue === 'false') {
+    showBaseValue = false;
+    const dot = document.getElementById('baseValueDot');
+    if (dot) dot.classList.remove('active');
+} else {
     showBaseValue = true;
     const dot = document.getElementById('baseValueDot');
     if (dot) dot.classList.add('active');
-} else {
-    showBaseValue = false;
 }
 
     // Filter listeners (only if they exist on the page)
