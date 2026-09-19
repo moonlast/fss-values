@@ -282,7 +282,7 @@ const ITEMS = [
     // MID TIER
     {
         name: "Devil's Gift",
-        value: "92.5K",
+        value: "95K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -290,7 +290,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 92500
+        numericValue: 95000
     }, {
         name: "Flip",
         value: "87.5K",
