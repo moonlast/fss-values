@@ -191,15 +191,15 @@ const ITEMS = [
         numericValue: 160000
     }, {
         name: "Orange Dance",
-        value: "145K",
+        value: "147.5K",
         range: "[N/A]",
         stability: "Doing Well",
-        demand: 5,
+        demand: 6,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "/images/orange.png",
-        numericValue: 145000
+        numericValue: 147500
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -758,7 +758,6 @@ const ITEMS = [
         rarity: 1,
         origin: "Robux Pack",
         tier: "low",
-        new: true,
         isDual: true,
         items: [{ name: "Admin Abuse Card", value: "5K", image: "/images/admincard.png",
                 numericValue: 5000 }, { name: "Admin Abuse Frame", value: "1K",
@@ -804,7 +803,6 @@ const ITEMS = [
         stability: "Unstable",
         demand: 2,
         rarity: 1,
-        new: true,
         origin: "Powers V2 Pack",
         tier: "low",
         image: "/images/chosen.png",
@@ -838,7 +836,6 @@ const ITEMS = [
         stability: "Unstable",
         demand: 2,
         rarity: 1,
-        new: true,
         origin: "Powers V2 Pack",
         tier: "low",
         image: "/images/cleats.png",
@@ -1029,14 +1026,16 @@ let showBaseValue = true;
 // 3. RENDER ITEMS
 // =============================================================
 function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
+    const newGrid = document.getElementById('newGrid');
     const tier4Grid = document.getElementById('tier4Grid');
     const highGrid = document.getElementById('highGrid');
     const midGrid = document.getElementById('midGrid');
     const lowGrid = document.getElementById('lowGrid');
     const secretGrid = document.getElementById('secretGrid');
-    
+
     if (!tier4Grid || !highGrid || !midGrid || !lowGrid) return;
-    
+
+    if (newGrid) newGrid.innerHTML = '';
     tier4Grid.innerHTML = '';
     highGrid.innerHTML = '';
     midGrid.innerHTML = '';
@@ -1052,11 +1051,29 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
         return matchTier && matchStab && matchSearch;
     });
 
-    const tier4 = filtered.filter(i => i.tier === 'tier4');
-    const high = filtered.filter(i => i.tier === 'high');
-    const mid = filtered.filter(i => i.tier === 'mid');
-    const low = filtered.filter(i => i.tier === 'low');
+    // NEW ITEMS — only shows on "all" tier view and no stability filter
+    const newItems = (filterTier === 'all' && filterStab === 'all')
+        ? filtered.filter(i => i.new)
+        : [];
 
+    const tier4 = filtered.filter(i => i.tier === 'tier4' && !i.new);
+    const high = filtered.filter(i => i.tier === 'high' && !i.new);
+    const mid = filtered.filter(i => i.tier === 'mid' && !i.new);
+    const low = filtered.filter(i => i.tier === 'low' && !i.new);
+
+    // Hide new tier section if empty
+    const newTierSection = document.getElementById('newTier');
+    if (newTierSection) {
+        if (newItems.length === 0) {
+            newTierSection.style.display = 'none';
+        } else {
+            newTierSection.style.display = 'block';
+        }
+    }
+
+    if (newGrid) {
+        newItems.forEach(item => newGrid.appendChild(createCard(item)));
+    }
     tier4.forEach(item => tier4Grid.appendChild(createCard(item)));
     high.forEach(item => highGrid.appendChild(createCard(item)));
     mid.forEach(item => midGrid.appendChild(createCard(item)));
@@ -1065,7 +1082,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     // Secret tier - only renders if unlocked
     if (secretGrid && secretTierUnlocked) {
         const secretFiltered = SECRET_ITEMS.filter(item => {
-            const matchSearch = !searchLower || item.name.toLowerCase().includes(searchLower);
+            const matchSearch = !searchLower || item.name.toLowerCase().includes(searchStr(item.name, searchLower));
             return matchSearch;
         });
         secretFiltered.forEach(item => secretGrid.appendChild(createCard(item)));
