@@ -417,6 +417,18 @@ const ITEMS = [
         numericValue: 32500
     }, {
         name: "Sakura Spirit",
+        value: "35K",
+        range: "[N/A]",
+        stability: "Fluctuating",
+        demand: 3,
+        rarity: 3,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 35000
+    }, {
+        name: "Solar Monarch",
         value: "30K",
         range: "[N/A]",
         stability: "Unstable",
@@ -425,7 +437,7 @@ const ITEMS = [
         origin: "Credit Shop",
         tier: "mid",
         new: true,
-        image: "/images/sakuraspirit.png",
+        image: "/images/solarmonarch.png",
         numericValue: 30000
     }, {
         name: "Candy Cane Shoes",
@@ -521,7 +533,7 @@ const ITEMS = [
         name: "Fallen Angel Mantle",
         value: "25K",
         range: "[N/A]",
-        stability: "Unstable",
+        stability: "Stable",
         demand: 2,
         rarity: 3,
         origin: "Credit Shop",
@@ -707,6 +719,42 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-2404f845aaf3294d21af4c90d3661154/420/420/Image/Webp/noFilter",
         numericValue: 10000
     }, {
+        name: "Rivalry Dribble",
+        value: "10K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 3,
+        origin: "Chosen One Pack",
+        tier: "low",
+        new: true,
+        image: "/images/rivalrydrib.png",
+        numericValue: 10000
+    }, {
+        name: "Crimson Gaze",
+        value: "10K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 3,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/crimsongaze.png",
+        numericValue: 10000
+    }, {
+        name: "Crimson Flame",
+        value: "10K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 3,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/crimsonflame.png",
+        numericValue: 10000
+    }, {
         name: "Horned Bucket",
         value: "8.5K",
         range: "[N/A]",
@@ -717,18 +765,6 @@ const ITEMS = [
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
         numericValue: 8500
-    }, {
-        name: "Rivalry Dribble",
-        value: "8K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 3,
-        origin: "Chosen One Pack",
-        tier: "low",
-        new: true,
-        image: "/images/rivalrydrib.png",
-        numericValue: 8000
     }, {
         name: "adidas Taunt",
         value: "8K",
@@ -763,6 +799,30 @@ const ITEMS = [
                 numericValue: 5000 }, { name: "Admin Abuse Frame", value: "1K",
                 image: "/images/adminframe.png",
                 numericValue: 1000 }]
+    }, {
+        name: "Raijin",
+        value: "7.5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/raijin.png",
+        numericValue: 7500
+    }, {
+        name: "Eternality",
+        value: "7.5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/eternality.png",
+        numericValue: 7500
     }, {
         name: "WC26 Trophy Dribble",
         value: "7.5K",
