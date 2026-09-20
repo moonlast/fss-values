@@ -153,9 +153,9 @@ const ITEMS = [
         isDual: true,
         items: [{ name: "MATSbxb Card", value: "280K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 280000 }, { name: "MATSbxb Frame", value: "72.5K",
+                numericValue: 280000 }, { name: "MATSbxb Frame", value: "77.5K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 72500 }]
+                numericValue: 77500 }]
     }, {
         name: "Crown of Opulentum",
         value: "185K",
@@ -191,15 +191,15 @@ const ITEMS = [
         numericValue: 160000
     }, {
         name: "Orange Dance",
-        value: "147.5K",
+        value: "152.5K",
         range: "[N/A]",
-        stability: "Doing Well",
+        stability: "Overpaid",
         demand: 6,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "/images/orange.png",
-        numericValue: 147500
+        numericValue: 152500
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -223,17 +223,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 142500
     }, {
-        name: "FCWC Shoes Red/Black",
-        value: "140K",
-        range: "[N/A]",
-        stability: "Dropping",
-        demand: 3,
-        rarity: 5,
-        origin: "FCWC Event",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 140000
-    }, {
         name: "Super Dodge",
         value: "135K",
         range: "[N/A]",
@@ -243,6 +232,17 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
+        numericValue: 135000
+    }, {
+        name: "FCWC Shoes Red/Black",
+        value: "135K",
+        range: "[N/A]",
+        stability: "Underpaid",
+        demand: 3,
+        rarity: 5,
+        origin: "FCWC Event",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 135000
     }, {
         name: "WC26 Trophy Celebration",
@@ -543,7 +543,7 @@ const ITEMS = [
         numericValue: 25000
     }, {
         name: "Wild Dance",
-        value: "22.5K",
+        value: "23.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -551,6 +551,17 @@ const ITEMS = [
         origin: "Prehistoric Battlepass",
         tier: "low",
         image: "/images/wild.png",
+        numericValue: 23500
+    }, {
+        name: "WC26 Amplify Card",
+        value: "22.5K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 4,
+        origin: "WC26 Event",
+        tier: "low",
+        image: "/images/amplify.png",
         numericValue: 22500
     }, {
         name: "Dino Shoes",
@@ -605,17 +616,6 @@ const ITEMS = [
         origin: "From Packs on Release",
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-71f12a44de07f11c88a8f4dcd454cf30/420/420/Hat/Webp/noFilter",
-        numericValue: 15000
-    }, {
-        name: "WC26 Amplify Card",
-        value: "15K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "WC26 Event",
-        tier: "low",
-        image: "/images/amplify.png",
         numericValue: 15000
     }, {
         name: "Biohazard Set",
@@ -857,6 +857,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-d7b33881eec5f0f59db5efad0e852596/420/420/Hat/Webp/noFilter",
         numericValue: 6000
     }, {
+        name: "Scythe Spin",
+        value: "5K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 1,
+        origin: "Halloween Item",
+        tier: "low",
+        image: "https://tr.rbxcdn.com/180DAY-b36061ef8f0cfb293ff4e3dd6541c01e/420/420/Image/Webp/noFilter",
+        numericValue: 5000
+    }, {
         name: "The Chosen One",
         value: "4K",
         range: "[N/A]",
@@ -911,18 +922,20 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 3.9;
+        return 4.05;
+    } else if (numericValue >= 141000) {
+        return 4;
     } else if (numericValue >= 125000) {
-        return 3.575;
+        return 3.75;
     } else if (numericValue >= 91000) {
-        return 2.6;
+        return 2.9;
     }
     else if (numericValue >= 65001) {
-        return 2.35;
+        return 2.75;
     } else if (numericValue >= 33000) {
-        return 1.7;
+        return 2;
     } else {
-        return 1.5;
+        return 1.65;
     }
 }
 
@@ -998,9 +1011,9 @@ const TRADE_ADS = [{
 
 
 const CUSTOM_TOKEN_VALUES = {
-    "WC26 Backwards Celebration": 600000,
-    "Kawaii Card": 117500,
-    "Kawaii Frame": 94000
+    // "WC26 Backwards Celebration": 600000,
+    "Kawaii Card": 137500,
+    "Kawaii Frame": 110000
 };
 
 const SECRET_ITEMS = [
@@ -1011,7 +1024,7 @@ const SECRET_ITEMS = [
         stability: "Stable",
         demand: 1,
         rarity: 11,
-        origin: "Developer Gift",
+        origin: "1.0 Christmas Battlepass",
         tier: "secret",
         image: "/images/skigogs.png",
         numericValue: 0
