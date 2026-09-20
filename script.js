@@ -922,11 +922,11 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 4.05;
+        return 4.7;
     } else if (numericValue >= 141000) {
-        return 4;
+        return 4.3;
     } else if (numericValue >= 125000) {
-        return 3.75;
+        return 4;
     } else if (numericValue >= 91000) {
         return 2.9;
     }
