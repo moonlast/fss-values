@@ -111,19 +111,8 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
         numericValue: 575000
     }, {
-        name: "Telamon's Chicken Hat",
-        value: "535K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 7,
-        origin: "Mystic Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
-        numericValue: 535000
-    }, {
         name: "Hava Nagila",
-        value: "450K",
+        value: "465K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 4,
@@ -131,7 +120,18 @@ const ITEMS = [
         origin: "Developer Gift",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
-        numericValue: 450000
+        numericValue: 465000
+    }, {
+        name: "Telamon's Chicken Hat",
+        value: "465K",
+        range: "[N/A]",
+        stability: "Underpaid",
+        demand: 2,
+        rarity: 7,
+        origin: "Mystic Pack",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
+        numericValue: 465000
     }, {
         name: "Float",
         value: "435K",
@@ -169,7 +169,7 @@ const ITEMS = [
         numericValue: 185000
     }, {
         name: "WC26 Backwards Celebration",
-        value: "160K",
+        value: "162.5K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -177,10 +177,10 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 160000
+        numericValue: 162500
     }, {
         name: "Party Time",
-        value: "160K",
+        value: "162.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -188,7 +188,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 160000
+        numericValue: 162500
     }, {
         name: "Orange Dance",
         value: "152.5K",
@@ -223,6 +223,29 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 142500
     }, {
+        name: "Sakura Spirit",
+        value: "135K",
+        range: "[N/A]",
+        stability: "Overpaid",
+        demand: 6,
+        rarity: 6,
+        origin: "Credit Shop",
+        tier: "high",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 135000
+    }, {
+        name: "WC26 Trophy Celebration",
+        value: "135K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 4,
+        origin: "Robux Pack",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
+        numericValue: 135000
+    }, {
         name: "Super Dodge",
         value: "135K",
         range: "[N/A]",
@@ -238,23 +261,12 @@ const ITEMS = [
         value: "135K",
         range: "[N/A]",
         stability: "Underpaid",
-        demand: 3,
+        demand: 2,
         rarity: 5,
         origin: "FCWC Event",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 135000
-    }, {
-        name: "WC26 Trophy Celebration",
-        value: "130K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 130000
     }, {
         name: "Gold Champion Band [B]",
         value: "112.5K",
@@ -277,21 +289,21 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
         numericValue: 110000
-    },
-
-    // MID TIER
-    {
+    }, {
         name: "Devil's Gift",
-        value: "95K",
+        value: "100K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
         rarity: 6,
         origin: "Limited Quantity Code",
-        tier: "mid",
+        tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 95000
-    }, {
+        numericValue: 100000
+    },
+
+    // MID TIER
+    {
         name: "Flip",
         value: "87.5K",
         range: "[N/A]",
@@ -324,6 +336,18 @@ const ITEMS = [
         tier: "mid",
         image: "/images/shark.png",
         numericValue: 75000
+    }, {
+        name: "Solar Monarch",
+        value: "72.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 4,
+        rarity: 6,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/solarmonarch.png",
+        numericValue: 72500
     }, {
         name: "67",
         value: "67.5K",
@@ -416,30 +440,6 @@ const ITEMS = [
         image: "/images/wcvalk.png",
         numericValue: 32500
     }, {
-        name: "Sakura Spirit",
-        value: "35K",
-        range: "[N/A]",
-        stability: "Fluctuating",
-        demand: 3,
-        rarity: 3,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 35000
-    }, {
-        name: "Solar Monarch",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/solarmonarch.png",
-        numericValue: 30000
-    }, {
         name: "Candy Cane Shoes",
         value: "30K",
         range: "[N/A]",
@@ -531,16 +531,16 @@ const ITEMS = [
         numericValue: 25000
     }, {
         name: "Fallen Angel Mantle",
-        value: "25K",
+        value: "27.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 2,
-        rarity: 3,
+        rarity: 5,
         origin: "Credit Shop",
         tier: "low",
         new: true,
         image: "/images/angel.png",
-        numericValue: 25000
+        numericValue: 27500
     }, {
         name: "Wild Dance",
         value: "23.5K",
@@ -1155,7 +1155,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     // Secret tier - only renders if unlocked
     if (secretGrid && secretTierUnlocked) {
         const secretFiltered = SECRET_ITEMS.filter(item => {
-            const matchSearch = !searchLower || item.name.toLowerCase().includes(searchStr(item.name, searchLower));
+            const matchSearch = !searchLower || item.name.toLowerCase().includes(searchLower);
             return matchSearch;
         });
         secretFiltered.forEach(item => secretGrid.appendChild(createCard(item)));
