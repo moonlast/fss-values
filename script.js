@@ -168,6 +168,18 @@ const ITEMS = [
         image: "/images/crown.png",
         numericValue: 185000
     }, {
+        name: "Sakura Spirit",
+        value: "165K",
+        range: "[N/A]",
+        stability: "Overpaid",
+        demand: 6,
+        rarity: 7,
+        origin: "Credit Shop",
+        tier: "high",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 165000
+    }, {
         name: "WC26 Backwards Celebration",
         value: "162.5K",
         range: "[N/A]",
@@ -222,18 +234,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 142500
-    }, {
-        name: "Sakura Spirit",
-        value: "135K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 6,
-        rarity: 6,
-        origin: "Credit Shop",
-        tier: "high",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 135000
     }, {
         name: "WC26 Trophy Celebration",
         value: "135K",
@@ -630,6 +630,18 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-09b2307f7cf33dc4e0e59b23b5a4ea3c/420/420/Image/Webp/noFilter",
                 numericValue: 10500 }]
     }, {
+        name: "Rivalry Dribble",
+        value: "12.5K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 3,
+        origin: "Chosen One Pack",
+        tier: "low",
+        new: true,
+        image: "/images/rivalrydrib.png",
+        numericValue: 12500
+    }, {
         name: "Silver Arm Bracelet [B]",
         value: "12K",
         range: "[N/A]",
@@ -717,18 +729,6 @@ const ITEMS = [
         origin: "adidas Event",
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-2404f845aaf3294d21af4c90d3661154/420/420/Image/Webp/noFilter",
-        numericValue: 10000
-    }, {
-        name: "Rivalry Dribble",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "Chosen One Pack",
-        tier: "low",
-        new: true,
-        image: "/images/rivalrydrib.png",
         numericValue: 10000
     }, {
         name: "Crimson Gaze",
