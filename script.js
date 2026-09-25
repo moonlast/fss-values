@@ -157,8 +157,20 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
                 numericValue: 77500 }]
     }, {
+        name: "Sakura Spirit",
+        value: "225K",
+        range: "[N/A]",
+        stability: "Rising",
+        demand: 7,
+        rarity: 7,
+        origin: "Credit Shop",
+        tier: "high",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 225000
+    }, {
         name: "Crown of Opulentum",
-        value: "185K",
+        value: "180K",
         range: "[N/A]",
         stability: "Underpaid",
         demand: 1,
@@ -166,19 +178,7 @@ const ITEMS = [
         origin: "2.5M Coins in SLS 1.0 Reward",
         tier: "high",
         image: "/images/crown.png",
-        numericValue: 185000
-    }, {
-        name: "Sakura Spirit",
-        value: "165K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 6,
-        rarity: 7,
-        origin: "Credit Shop",
-        tier: "high",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 165000
+        numericValue: 180000
     }, {
         name: "WC26 Backwards Celebration",
         value: "162.5K",
@@ -258,18 +258,18 @@ const ITEMS = [
         numericValue: 135000
     }, {
         name: "FCWC Shoes Red/Black",
-        value: "135K",
+        value: "127.5K",
         range: "[N/A]",
-        stability: "Underpaid",
+        stability: "Stable",
         demand: 2,
         rarity: 5,
         origin: "FCWC Event",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 135000
+        numericValue: 127500
     }, {
         name: "Gold Champion Band [B]",
-        value: "112.5K",
+        value: "110K",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -277,21 +277,10 @@ const ITEMS = [
         origin: "1.0 SLS Clans Reward",
         tier: "high",
         image: "/images/goldb.png",
-        numericValue: 112500
-    }, {
-        name: "Front Flip",
-        value: "110K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 5,
-        rarity: 4,
-        origin: "Robux Battlepass",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
         numericValue: 110000
     }, {
         name: "Devil's Gift",
-        value: "100K",
+        value: "105K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -299,7 +288,18 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 100000
+        numericValue: 105000
+    }, {
+        name: "Front Flip",
+        value: "105K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 5,
+        rarity: 4,
+        origin: "Robux Battlepass",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
+        numericValue: 105000
     },
 
     // MID TIER
@@ -327,7 +327,7 @@ const ITEMS = [
         numericValue: 80000
     }, {
         name: "Shark Shoes",
-        value: "75K",
+        value: "77.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -335,19 +335,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "mid",
         image: "/images/shark.png",
-        numericValue: 75000
-    }, {
-        name: "Solar Monarch",
-        value: "72.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 4,
-        rarity: 6,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/solarmonarch.png",
-        numericValue: 72500
+        numericValue: 77500
     }, {
         name: "67",
         value: "67.5K",
@@ -359,6 +347,18 @@ const ITEMS = [
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
         numericValue: 67500
+    }, {
+        name: "Solar Monarch",
+        value: "65K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 3,
+        rarity: 5,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/solarmonarch.png",
+        numericValue: 65000
     }, {
         name: "Kawaii Set",
         stability: "Stable",
@@ -429,6 +429,17 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
                 numericValue: 50000 }]
     }, {
+        name: "Helm of Opulentum",
+        value: "32.5K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 3,
+        rarity: 3,
+        origin: "1M Coins in SLS 1.0 Reward",
+        tier: "mid",
+        image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter",
+        numericValue: 32500
+    }, {
         name: "WC26 Valkyrie",
         value: "32.5K",
         range: "[N/A]",
@@ -449,17 +460,6 @@ const ITEMS = [
         origin: "1.0 Christmas Event",
         tier: "mid",
         image: "/images/candycane.png",
-        numericValue: 30000
-    }, {
-        name: "Helm of Opulentum",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "1M Coins in SLS 1.0 Reward",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter",
         numericValue: 30000
     }, {
         name: "WC26 Argentina Sun Card",
@@ -891,7 +891,7 @@ const ITEMS = [
         numericValue: 5000
     }, {
         name: "Rivalry Soccer Shoes",
-        value: "4K",
+        value: "3.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 1,
@@ -899,7 +899,7 @@ const ITEMS = [
         origin: "Robux Item",
         tier: "low",
         image: "/images/pshoes.png",
-        numericValue: 4000
+        numericValue: 3500
     }, {
         name: "Dragon Fang Cleats",
         value: "2K",
@@ -922,18 +922,20 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 5.7;
+        return 6.7;
     } else if (numericValue >= 141000) {
-        return 5.3;
-    } else if (numericValue >= 125000) {
-        return 5;
+        return 6.3;
+    } else if (numericValue >= 130000) {
+        return 6;
     } else if (numericValue >= 91000) {
-        return 3.9;
+        return 4.9;
     }
-    else if (numericValue >= 65001) {
-        return 3.75;
-    } else if (numericValue >= 33000) {
-        return 3;
+    else if (numericValue >= 64999) {
+        return 4.75;
+    } else if (numericValue >= 35001) {
+        return 4;
+    } else if (numericValue >= 33001) {
+        return 3.4;
     } else {
         return 1.85;
     }
@@ -1012,8 +1014,8 @@ const TRADE_ADS = [{
 
 const CUSTOM_TOKEN_VALUES = {
     // "WC26 Backwards Celebration": 600000,
-    "Kawaii Card": 187500,
-    "Kawaii Frame": 150000
+    "Kawaii Card": 237500,
+    "Kawaii Frame": 190000
 };
 
 const SECRET_ITEMS = [
@@ -1129,10 +1131,11 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
         ? filtered.filter(i => i.new)
         : [];
 
-    const tier4 = filtered.filter(i => i.tier === 'tier4' && !i.new);
-    const high = filtered.filter(i => i.tier === 'high' && !i.new);
-    const mid = filtered.filter(i => i.tier === 'mid' && !i.new);
-    const low = filtered.filter(i => i.tier === 'low' && !i.new);
+    // All tiers now include new items (no more `!i.new`)
+    const tier4 = filtered.filter(i => i.tier === 'tier4');
+    const high = filtered.filter(i => i.tier === 'high');
+    const mid = filtered.filter(i => i.tier === 'mid');
+    const low = filtered.filter(i => i.tier === 'low');
 
     // Hide new tier section if empty
     const newTierSection = document.getElementById('newTier');
