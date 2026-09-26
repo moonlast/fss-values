@@ -294,7 +294,7 @@ const ITEMS = [
         value: "105K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 5,
+        demand: 4,
         rarity: 4,
         origin: "Robux Battlepass",
         tier: "high",
@@ -1739,15 +1739,39 @@ function getAllItemsForPicker() {
 }
 
 // Special items that appear only when a secret search term is typed
-const SECRET_CALC_SEARCH = "Developer123zzzzz";
+const SECRET_CALC_SEARCH = "devitemslol";
 
 function getSpecialCalcItems() {
     const specials = [];
+
+    // 1) All SECRET_ITEMS
+    SECRET_ITEMS.forEach(item => {
+        if (item.isDual) {
+            item.items.forEach(sub => {
+                specials.push({
+                    name: sub.name,
+                    value: sub.value,
+                    numericValue: sub.numericValue || 0,
+                    image: sub.image,
+                    tier: item.tier
+                });
+            });
+        } else {
+            specials.push({
+                name: item.name,
+                value: item.value,
+                numericValue: item.numericValue || 0,
+                image: item.image,
+                tier: item.tier
+            });
+        }
+    });
+
+    // 2) Developer Card + Developer Frame (pulled from ITEMS)
     ITEMS.forEach(item => {
         if (item.isDual) {
             item.items.forEach(sub => {
-                // Include O/C or 0-value items only (Developer Card / Developer Frame)
-                if (sub.numericValue === 0 || sub.numericValue === undefined) {
+                if (sub.name === "Developer Card" || sub.name === "Developer Frame" || sub.name === "FCWC Back Trophy") {
                     specials.push({
                         name: sub.name,
                         value: sub.value,
@@ -1757,18 +1781,9 @@ function getSpecialCalcItems() {
                     });
                 }
             });
-        } else {
-            if (item.numericValue === 0 || item.numericValue === undefined) {
-                specials.push({
-                    name: item.name,
-                    value: item.value,
-                    numericValue: 0,
-                    image: item.image,
-                    tier: item.tier
-                });
-            }
         }
     });
+
     return specials;
 }
 
@@ -1799,29 +1814,22 @@ function renderModalItems(search = '') {
     grid.innerHTML = '';
 
     const searchLower = search.toLowerCase().trim();
-    const isSecretSearch = searchLower.includes("developer123zzzzz");
-
-    // Build the item pool
-    let allItems = getAllItemsForPicker();
-
-    // If the secret search was typed, add the special O/C items
-    if (isSecretSearch) {
-        allItems = allItems.concat(getSpecialCalcItems());
-    }
+    const isSecretSearch = searchLower.includes("devitemslol");
 
     let filtered;
+
     if (isSecretSearch) {
-        // Show ONLY Developer Card + Developer Frame
-        filtered = allItems.filter(item =>
-            item.name === "Developer Card" || item.name === "Developer Frame"
-        );
+        // Show ONLY the secret items — skip the normal pool entirely
+        filtered = getSpecialCalcItems();
     } else {
+        // Normal search — normal pool only
+        const allItems = getAllItemsForPicker();
         filtered = allItems.filter(item =>
             !searchLower || item.name.toLowerCase().includes(searchLower)
         );
     }
 
-    const tierOrder = { tier4: 0, high: 1, mid: 2, low: 3 };
+    const tierOrder = { tier4: 0, high: 1, mid: 2, low: 3, secret: 4 };
     filtered.sort((a, b) => {
         const tierA = tierOrder[a.tier] !== undefined ? tierOrder[a.tier] : 999;
         const tierB = tierOrder[b.tier] !== undefined ? tierOrder[b.tier] : 999;
