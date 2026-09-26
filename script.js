@@ -181,7 +181,7 @@ const ITEMS = [
         numericValue: 180000
     }, {
         name: "WC26 Backwards Celebration",
-        value: "162.5K",
+        value: "165K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -189,10 +189,10 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 162500
+        numericValue: 165000
     }, {
         name: "Party Time",
-        value: "162.5K",
+        value: "165K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -200,10 +200,10 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 162500
+        numericValue: 165000
     }, {
         name: "Orange Dance",
-        value: "152.5K",
+        value: "157.5K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 6,
@@ -211,7 +211,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "/images/orange.png",
-        numericValue: 152500
+        numericValue: 157500
     }, {
         name: "Penguin Dance",
         value: "145K",
@@ -268,6 +268,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 127500
     }, {
+        name: "Devil's Gift",
+        value: "112.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 6,
+        origin: "Limited Quantity Code",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
+        numericValue: 112500
+    }, {
         name: "Gold Champion Band [B]",
         value: "110K",
         range: "[N/A]",
@@ -278,17 +289,6 @@ const ITEMS = [
         tier: "high",
         image: "/images/goldb.png",
         numericValue: 110000
-    }, {
-        name: "Devil's Gift",
-        value: "105K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 105000
     }, {
         name: "Front Flip",
         value: "105K",
@@ -1738,6 +1738,40 @@ function getAllItemsForPicker() {
     return items;
 }
 
+// Special items that appear only when a secret search term is typed
+const SECRET_CALC_SEARCH = "Developer123zzzzz";
+
+function getSpecialCalcItems() {
+    const specials = [];
+    ITEMS.forEach(item => {
+        if (item.isDual) {
+            item.items.forEach(sub => {
+                // Include O/C or 0-value items only (Developer Card / Developer Frame)
+                if (sub.numericValue === 0 || sub.numericValue === undefined) {
+                    specials.push({
+                        name: sub.name,
+                        value: sub.value,
+                        numericValue: 0,
+                        image: sub.image,
+                        tier: item.tier
+                    });
+                }
+            });
+        } else {
+            if (item.numericValue === 0 || item.numericValue === undefined) {
+                specials.push({
+                    name: item.name,
+                    value: item.value,
+                    numericValue: 0,
+                    image: item.image,
+                    tier: item.tier
+                });
+            }
+        }
+    });
+    return specials;
+}
+
 function openItemPicker(side) {
     currentPickerSide = side;
     const modal = document.getElementById('itemPickerModal');
@@ -1763,14 +1797,30 @@ function renderModalItems(search = '') {
     const grid = document.getElementById('modalGrid');
     if (!grid) return;
     grid.innerHTML = '';
-    
-    const allItems = getAllItemsForPicker();
+
     const searchLower = search.toLowerCase().trim();
-    
-    const filtered = allItems.filter(item => 
-        !searchLower || item.name.toLowerCase().includes(searchLower)
-    );
-    
+    const isSecretSearch = searchLower.includes("developer123zzzzz");
+
+    // Build the item pool
+    let allItems = getAllItemsForPicker();
+
+    // If the secret search was typed, add the special O/C items
+    if (isSecretSearch) {
+        allItems = allItems.concat(getSpecialCalcItems());
+    }
+
+    let filtered;
+    if (isSecretSearch) {
+        // Show ONLY Developer Card + Developer Frame
+        filtered = allItems.filter(item =>
+            item.name === "Developer Card" || item.name === "Developer Frame"
+        );
+    } else {
+        filtered = allItems.filter(item =>
+            !searchLower || item.name.toLowerCase().includes(searchLower)
+        );
+    }
+
     const tierOrder = { tier4: 0, high: 1, mid: 2, low: 3 };
     filtered.sort((a, b) => {
         const tierA = tierOrder[a.tier] !== undefined ? tierOrder[a.tier] : 999;
@@ -1778,22 +1828,22 @@ function renderModalItems(search = '') {
         if (tierA !== tierB) return tierA - tierB;
         return b.numericValue - a.numericValue;
     });
-    
+
     filtered.forEach(item => {
         const div = document.createElement('div');
         div.className = 'modal-item';
         div.onclick = () => addItemToCalc(currentPickerSide, item);
-        
+
         const img = document.createElement('img');
         img.src = item.image || '';
         img.alt = item.name;
         div.appendChild(img);
-        
+
         const nameSpan = document.createElement('span');
         nameSpan.className = 'modal-item-name';
         nameSpan.textContent = item.name;
         div.appendChild(nameSpan);
-        
+
         const valueSpan = document.createElement('span');
         valueSpan.className = 'modal-item-value';
         let valueText = item.value;
@@ -1803,10 +1853,10 @@ function renderModalItems(search = '') {
         }
         valueSpan.textContent = valueText;
         div.appendChild(valueSpan);
-        
+
         grid.appendChild(div);
     });
-    
+
     if (filtered.length === 0) {
         const empty = document.createElement('div');
         empty.style.cssText = 'grid-column:1/-1;text-align:center;color:var(--text-muted);padding:30px 0;';
