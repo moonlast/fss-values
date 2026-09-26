@@ -348,18 +348,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
         numericValue: 67500
     }, {
-        name: "Solar Monarch",
-        value: "65K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 3,
-        rarity: 5,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/solarmonarch.png",
-        numericValue: 65000
-    }, {
         name: "Kawaii Set",
         stability: "Stable",
         demand: 3,
@@ -371,6 +359,18 @@ const ITEMS = [
                 numericValue: 50000 }, { name: "Kawaii Frame", value: "40K",
                 image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
                 numericValue: 40000 }]
+    }, {
+        name: "Solar Monarch",
+        value: "60K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 3,
+        rarity: 5,
+        origin: "Credit Shop",
+        tier: "mid",
+        new: true,
+        image: "/images/solarmonarch.png",
+        numericValue: 60000
     }, {
         name: "Lightning Wolf Shoes",
         value: "43.5K",
@@ -1065,7 +1065,7 @@ const SECRET_ITEMS = [
     },
     {
         name: "SL Glory",
-        value: "800K",
+        value: "700K",
         range: "[N/A]",
         stability: "Stable",
         demand: 4,
@@ -1073,7 +1073,7 @@ const SECRET_ITEMS = [
         origin: "Art Contest Gift",
         tier: "secret",
         image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter",
-        numericValue: 800000
+        numericValue: 700000
     },
     {
         name: "El Skullcito",
