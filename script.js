@@ -144,6 +144,18 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
         numericValue: 435000
     }, {
+        name: "Sakura Spirit",
+        value: "335K",
+        range: "[N/A]",
+        stability: "Rising",
+        demand: 8,
+        rarity: 7,
+        origin: "Credit Shop",
+        tier: "high",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 335000
+    }, {
         name: "MATSbxb Developer Set",
         stability: "Doing Well",
         demand: 6,
@@ -153,21 +165,9 @@ const ITEMS = [
         isDual: true,
         items: [{ name: "MATSbxb Card", value: "280K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 280000 }, { name: "MATSbxb Frame", value: "77.5K",
+                numericValue: 280000 }, { name: "MATSbxb Frame", value: "82.5K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 77500 }]
-    }, {
-        name: "Sakura Spirit",
-        value: "225K",
-        range: "[N/A]",
-        stability: "Rising",
-        demand: 7,
-        rarity: 7,
-        origin: "Credit Shop",
-        tier: "high",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 225000
+                numericValue: 82500 }]
     }, {
         name: "Crown of Opulentum",
         value: "180K",
@@ -520,16 +520,6 @@ const ITEMS = [
         image: "/images/goldl.png",
         numericValue: 27500
     }, {
-        name: "Gold Champion Band [R]",
-        value: "25K",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/goldr.png",
-        numericValue: 25000
-    }, {
         name: "Fallen Angel Mantle",
         value: "27.5K",
         range: "[N/A]",
@@ -541,6 +531,16 @@ const ITEMS = [
         new: true,
         image: "/images/angel.png",
         numericValue: 27500
+    }, {
+        name: "Gold Champion Band [R]",
+        value: "25K",
+        stability: "Stable",
+        demand: 2,
+        rarity: 3,
+        origin: "1.0 SLS Clans Reward",
+        tier: "low",
+        image: "/images/goldr.png",
+        numericValue: 25000
     }, {
         name: "Wild Dance",
         value: "23.5K",
@@ -944,6 +944,14 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
+const LAST_UPDATED = "Sep 26, 2026";
+
+function updateLastUpdatedDisplay() {
+    const el = document.getElementById('lastUpdated');
+    if (el) {
+        el.textContent = `📅 Updated: ${LAST_UPDATED}`;
+    }
+}
 
 // Function to calculate token value for an item
 // Function to calculate token value for an item
@@ -1982,6 +1990,8 @@ if (baseValueToggle) {
         setBaseValueVisibility(!showBaseValue);
     });
 }
+
+updateLastUpdatedDisplay();
 
 // Load saved base value preference (defaults to true)
 const savedBaseValue = localStorage.getItem('fss-show-base');
