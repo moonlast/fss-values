@@ -1085,7 +1085,7 @@ const SECRET_ITEMS = [
         origin: "Gift from Sei",
         tier: "secret",
         image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter",
-        numericValue: 0
+        numericValue: 600000
     }, {
         name: "WC26 Ball Frame",
         value: "0",
