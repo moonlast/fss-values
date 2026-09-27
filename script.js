@@ -145,7 +145,7 @@ const ITEMS = [
         numericValue: 435000
     }, {
         name: "Sakura Spirit",
-        value: "335K",
+        value: "400K",
         range: "[N/A]",
         stability: "Rising",
         demand: 8,
@@ -154,7 +154,7 @@ const ITEMS = [
         tier: "high",
         new: true,
         image: "/images/sakuraspirit.png",
-        numericValue: 335000
+        numericValue: 400000
     }, {
         name: "MATSbxb Developer Set",
         stability: "Doing Well",
@@ -944,7 +944,7 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Sep 26, 2026";
+const LAST_UPDATED = "Sep 27, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
