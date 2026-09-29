@@ -33,7 +33,7 @@ const ITEMS = [
         stability: "Overpaid",
         demand: 5,
         rarity: 10,
-        origin: "Developer Gift",
+        origin: "Being Developer",
         tier: "tier4",
         image: "/images/devband.png",
         numericValue: 1550000
@@ -73,18 +73,18 @@ const ITEMS = [
                 numericValue: 1050000 }, { name: "Super League Frame", value: "950K",
                 image: "https://tr.rbxcdn.com/180DAY-59fd9472e20d348d8f861a718e08fb88/420/420/Image/Png/noFilter",
                 numericValue: 950000 }]
-    }, {
-        name: "Event Host Set",
-        stability: "Rising",
-        demand: 5,
-        rarity: 9,
-        origin: "Being Event Host",
-        tier: "tier4",
-        isDual: true,
-        items: [{ name: "Event Host Card", value: "750K", image: "https://tr.rbxcdn.com/180DAY-42040034932f0021659ac34a5bc728a4/420/420/Image/Webp/noFilter",
-                numericValue: 750000 }, { name: "Event Host Frame", value: "750K",
-                image: "https://tr.rbxcdn.com/180DAY-80329426b5b175a5e33cd89b6ddf4bb3/420/420/Image/Png/noFilter",
-                numericValue: 750000 }]
+    // }, {
+    //     name: "Event Host Set",
+    //     stability: "Rising",
+    //     demand: 5,
+    //     rarity: 9,
+    //     origin: "Being Event Host",
+    //     tier: "tier4",
+    //     isDual: true,
+    //     items: [{ name: "Event Host Card", value: "750K", image: "https://tr.rbxcdn.com/180DAY-42040034932f0021659ac34a5bc728a4/420/420/Image/Webp/noFilter",
+    //             numericValue: 750000 }, { name: "Event Host Frame", value: "750K",
+    //             image: "https://tr.rbxcdn.com/180DAY-80329426b5b175a5e33cd89b6ddf4bb3/420/420/Image/Png/noFilter",
+    //             numericValue: 750000 }]
     }, {
         name: "Mimimimi",
         value: "950K",
@@ -111,6 +111,18 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
         numericValue: 575000
     }, {
+        name: "Sakura Spirit",
+        value: "500K",
+        range: "[N/A]",
+        stability: "Rising",
+        demand: 8,
+        rarity: 7,
+        origin: "Credit Shop",
+        tier: "high",
+        new: true,
+        image: "/images/sakuraspirit.png",
+        numericValue: 500000
+    }, {
         name: "Hava Nagila",
         value: "465K",
         range: "[N/A]",
@@ -120,17 +132,6 @@ const ITEMS = [
         origin: "Developer Gift",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
-        numericValue: 465000
-    }, {
-        name: "Telamon's Chicken Hat",
-        value: "465K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 7,
-        origin: "Mystic Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
         numericValue: 465000
     }, {
         name: "Float",
@@ -144,17 +145,16 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
         numericValue: 435000
     }, {
-        name: "Sakura Spirit",
-        value: "400K",
+        name: "Telamon's Chicken Hat",
+        value: "350K",
         range: "[N/A]",
-        stability: "Rising",
-        demand: 8,
-        rarity: 7,
-        origin: "Credit Shop",
+        stability: "Underpaid",
+        demand: 2,
+        rarity: 6,
+        origin: "Mystic Pack",
         tier: "high",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 400000
+        image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
+        numericValue: 350000
     }, {
         name: "MATSbxb Developer Set",
         stability: "Doing Well",
@@ -163,11 +163,11 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         isDual: true,
-        items: [{ name: "MATSbxb Card", value: "280K",
+        items: [{ name: "MATSbxb Card", value: "285K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 280000 }, { name: "MATSbxb Frame", value: "82.5K",
+                numericValue: 285000 }, { name: "MATSbxb Frame", value: "90K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 82500 }]
+                numericValue: 90000 }]
     }, {
         name: "Crown of Opulentum",
         value: "180K",
@@ -181,7 +181,7 @@ const ITEMS = [
         numericValue: 180000
     }, {
         name: "WC26 Backwards Celebration",
-        value: "165K",
+        value: "170K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -189,10 +189,10 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 165000
+        numericValue: 170000
     }, {
         name: "Party Time",
-        value: "165K",
+        value: "167.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -200,10 +200,10 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 165000
+        numericValue: 167500
     }, {
         name: "Orange Dance",
-        value: "157.5K",
+        value: "162.5K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 6,
@@ -211,10 +211,10 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "/images/orange.png",
-        numericValue: 157500
+        numericValue: 162500
     }, {
         name: "Penguin Dance",
-        value: "145K",
+        value: "147.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -222,7 +222,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-        numericValue: 145000
+        numericValue: 147500
     }, {
         name: "Penguin Slide",
         value: "142.5K",
@@ -257,6 +257,17 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
         numericValue: 135000
     }, {
+        name: "Devil's Gift",
+        value: "127.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 6,
+        origin: "Limited Quantity Code",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
+        numericValue: 127500
+    }, {
         name: "FCWC Shoes Red/Black",
         value: "127.5K",
         range: "[N/A]",
@@ -267,17 +278,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 127500
-    }, {
-        name: "Devil's Gift",
-        value: "112.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 112500
     }, {
         name: "Gold Champion Band [B]",
         value: "110K",
@@ -532,6 +532,17 @@ const ITEMS = [
         image: "/images/angel.png",
         numericValue: 27500
     }, {
+        name: "Wild Dance",
+        value: "25.5K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 5,
+        rarity: 2,
+        origin: "Prehistoric Battlepass",
+        tier: "low",
+        image: "/images/wild.png",
+        numericValue: 25500
+    }, {
         name: "Gold Champion Band [R]",
         value: "25K",
         stability: "Stable",
@@ -541,17 +552,6 @@ const ITEMS = [
         tier: "low",
         image: "/images/goldr.png",
         numericValue: 25000
-    }, {
-        name: "Wild Dance",
-        value: "23.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 2,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/wild.png",
-        numericValue: 23500
     }, {
         name: "WC26 Amplify Card",
         value: "22.5K",
@@ -922,29 +922,29 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 6.7;
+        return 13.4;
     } else if (numericValue >= 141000) {
-        return 6.3;
+        return 12.6;
     } else if (numericValue >= 130000) {
-        return 6;
+        return 12;
     } else if (numericValue >= 91000) {
-        return 4.9;
+        return 9.8;
     }
     else if (numericValue >= 64999) {
-        return 4.75;
+        return 9.5;
     } else if (numericValue >= 35001) {
-        return 4;
+        return 7.5;
     } else if (numericValue >= 33001) {
-        return 3.4;
+        return 6.4;
     } else {
-        return 1.85;
+        return 2.77;
     }
 }
 
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Sep 27, 2026";
+const LAST_UPDATED = "Sep 29, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
@@ -1082,7 +1082,7 @@ const SECRET_ITEMS = [
         stability: "Unstable",
         demand: 3,
         rarity: 9,
-        origin: "Gift from Sei",
+        origin: "Gift from Sei-chan >.<",
         tier: "secret",
         image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter",
         numericValue: 600000
