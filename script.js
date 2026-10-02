@@ -114,8 +114,8 @@ const ITEMS = [
         name: "Sakura Spirit",
         value: "500K",
         range: "[N/A]",
-        stability: "Rising",
-        demand: 8,
+        stability: "Overpaid",
+        demand: 7,
         rarity: 7,
         origin: "Credit Shop",
         tier: "high",
@@ -135,15 +135,15 @@ const ITEMS = [
         numericValue: 465000
     }, {
         name: "Float",
-        value: "435K",
+        value: "400K",
         range: "[N/A]",
-        stability: "Overpaid",
-        demand: 8,
+        stability: "Doing Well",
+        demand: 6,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
-        numericValue: 435000
+        numericValue: 400000
     }, {
         name: "Telamon's Chicken Hat",
         value: "350K",
@@ -236,7 +236,7 @@ const ITEMS = [
         numericValue: 142500
     }, {
         name: "WC26 Trophy Celebration",
-        value: "135K",
+        value: "137.5K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -244,7 +244,7 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 135000
+        numericValue: 137500
     }, {
         name: "Super Dodge",
         value: "135K",
@@ -258,7 +258,7 @@ const ITEMS = [
         numericValue: 135000
     }, {
         name: "Devil's Gift",
-        value: "127.5K",
+        value: "130K",
         range: "[N/A]",
         stability: "Doing Well",
         demand: 5,
@@ -266,7 +266,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 127500
+        numericValue: 130000
     }, {
         name: "FCWC Shoes Red/Black",
         value: "127.5K",
@@ -304,6 +304,17 @@ const ITEMS = [
 
     // MID TIER
     {
+        name: "Shark Shoes",
+        value: "90K",
+        range: "[N/A]",
+        stability: "Doing Well",
+        demand: 4,
+        rarity: 4,
+        origin: "Robux Pack",
+        tier: "mid",
+        image: "/images/shark.png",
+        numericValue: 90000
+    }, {
         name: "Flip",
         value: "87.5K",
         range: "[N/A]",
@@ -325,17 +336,6 @@ const ITEMS = [
         tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter",
         numericValue: 80000
-    }, {
-        name: "Shark Shoes",
-        value: "77.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "mid",
-        image: "/images/shark.png",
-        numericValue: 77500
     }, {
         name: "67",
         value: "67.5K",
@@ -944,7 +944,7 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Sep 29, 2026";
+const LAST_UPDATED = "Oct 2, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
