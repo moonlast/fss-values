@@ -115,7 +115,7 @@ const ITEMS = [
         value: "500K",
         range: "[N/A]",
         stability: "Overpaid",
-        demand: 7,
+        demand: 6,
         rarity: 7,
         origin: "Credit Shop",
         tier: "high",
