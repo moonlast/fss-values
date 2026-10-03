@@ -927,7 +927,7 @@ function getTokenMultiplier(numericValue) {
         return 12.6;
     } else if (numericValue >= 130000) {
         return 12;
-    } else if (numericValue >= 91000) {
+    } else if (numericValue >= 100001) {
         return 9.8;
     }
     else if (numericValue >= 64999) {
@@ -1022,8 +1022,8 @@ const TRADE_ADS = [{
 
 const CUSTOM_TOKEN_VALUES = {
     // "WC26 Backwards Celebration": 600000,
-    "Kawaii Card": 237500,
-    "Kawaii Frame": 190000
+    "Kawaii Card": 475000,
+    "Kawaii Frame": 380000
 };
 
 const SECRET_ITEMS = [
