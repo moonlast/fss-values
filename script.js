@@ -361,7 +361,7 @@ const ITEMS = [
                 numericValue: 40000 }]
     }, {
         name: "Solar Monarch",
-        value: "60K",
+        value: "55K",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -370,7 +370,7 @@ const ITEMS = [
         tier: "mid",
         new: true,
         image: "/images/solarmonarch.png",
-        numericValue: 60000
+        numericValue: 55000
     }, {
         name: "Lightning Wolf Shoes",
         value: "43.5K",
