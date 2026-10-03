@@ -411,6 +411,7 @@ const ITEMS = [
         stability: "Fluctuating",
         demand: 3,
         rarity: 3,
+        new: true,
         origin: "Robux Item",
         tier: "mid",
         image: "/images/verity.png",
