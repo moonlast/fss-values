@@ -135,15 +135,15 @@ const ITEMS = [
         numericValue: 465000
     }, {
         name: "Float",
-        value: "400K",
+        value: "395K",
         range: "[N/A]",
-        stability: "Doing Well",
+        stability: "Stable",
         demand: 6,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
-        numericValue: 400000
+        numericValue: 395000
     }, {
         name: "Telamon's Chicken Hat",
         value: "350K",
@@ -180,8 +180,19 @@ const ITEMS = [
         image: "/images/crown.png",
         numericValue: 175000
     }, {
+        name: "Party Time",
+        value: "200K",
+        range: "[N/A]",
+        stability: "Overpaid",
+        demand: 7,
+        rarity: 6,
+        origin: "Limited Quantity Code",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
+        numericValue: 200000
+    }, {
         name: "WC26 Backwards Celebration",
-        value: "170K",
+        value: "195K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -189,21 +200,10 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 170000
-    }, {
-        name: "Party Time",
-        value: "170K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 5,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 170000
+        numericValue: 195000
     }, {
         name: "Orange Dance",
-        value: "165K",
+        value: "190K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 6,
@@ -211,18 +211,18 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "/images/orange.png",
-        numericValue: 162500
+        numericValue: 190000
     }, {
         name: "Penguin Dance",
-        value: "150K",
+        value: "152.5K",
         range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
+        stability: "Overpaid",
+        demand: 6,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-        numericValue: 150000
+        numericValue: 152500
     }, {
         name: "Penguin Slide",
         value: "145K",
@@ -247,7 +247,7 @@ const ITEMS = [
         numericValue: 142500
     }, {
         name: "Devil's Gift",
-        value: "137.5K",
+        value: "140K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 5,
@@ -255,7 +255,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 137500
+        numericValue: 140000
     }, {
         name: "Super Dodge",
         value: "135K",
@@ -968,7 +968,7 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Oct 3, 2026";
+const LAST_UPDATED = "Oct 4, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
@@ -1052,12 +1052,39 @@ const CUSTOM_TOKEN_VALUES = {
 
 const SECRET_ITEMS = [
     {
-        name: "Tech Visor",
-        value: "999M+",
+        name: "Shinigami Mantle",
+        value: "O/C",
         range: "[N/A]",
         stability: "Rising",
         fire: true,
-        demand: 11,
+        new: true,
+        demand: 10,
+        rarity: 999,
+        origin: "Unreleased",
+        tier: "secret",
+        image: "/images/shinigami.png",
+        numericValue: 0
+    }, {
+        name: "Shogun Halo",
+        value: "O/C",
+        range: "[N/A]",
+        stability: "Rising",
+        fire: true,
+        new: true,
+        demand: 10,
+        rarity: 999,
+        origin: "Unreleased",
+        tier: "secret",
+        image: "/images/shogun.png",
+        numericValue: 0
+    }, 
+    {
+        name: "Tech Visor",
+        value: "O/C",
+        range: "[N/A]",
+        stability: "Stable",
+        fire: true,
+        demand: 1,
         rarity: 11,
         origin: "gift from feller",
         tier: "secret",
