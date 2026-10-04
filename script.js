@@ -169,17 +169,6 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
                 numericValue: 92500 }]
     }, {
-        name: "Crown of Opulentum",
-        value: "175K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 1,
-        rarity: 7,
-        origin: "2.5M Coins in SLS 1.0 Reward",
-        tier: "high",
-        image: "/images/crown.png",
-        numericValue: 175000
-    }, {
         name: "Party Time",
         value: "200K",
         range: "[N/A]",
@@ -212,6 +201,17 @@ const ITEMS = [
         tier: "high",
         image: "/images/orange.png",
         numericValue: 190000
+    }, {
+        name: "Crown of Opulentum",
+        value: "175K",
+        range: "[N/A]",
+        stability: "Underpaid",
+        demand: 1,
+        rarity: 7,
+        origin: "2.5M Coins in SLS 1.0 Reward",
+        tier: "high",
+        image: "/images/crown.png",
+        numericValue: 175000
     }, {
         name: "Penguin Dance",
         value: "152.5K",
