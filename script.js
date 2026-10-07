@@ -405,18 +405,6 @@ const ITEMS = [
         image: "/images/grinch.png",
         numericValue: 37500
     }, {
-        name: "Innocent Smiley",
-        value: "35K",
-        range: "[N/A]",
-        stability: "Fluctuating",
-        demand: 3,
-        rarity: 3,
-        new: true,
-        origin: "Robux Item",
-        tier: "mid",
-        image: "/images/verity.png",
-        numericValue: 35000
-    }, {
         name: "Dragon Set",
         stability: "Stable",
         demand: 4,
@@ -462,6 +450,18 @@ const ITEMS = [
         tier: "mid",
         image: "/images/wcvalk.png",
         numericValue: 32500
+    }, {
+        name: "Innocent Smiley",
+        value: "30K",
+        range: "[N/A]",
+        stability: "Fluctuating",
+        demand: 3,
+        rarity: 3,
+        new: true,
+        origin: "Robux Item",
+        tier: "mid",
+        image: "/images/verity.png",
+        numericValue: 30000
     }, {
         name: "Candy Cane Shoes",
         value: "30K",
@@ -966,7 +966,7 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Oct 6, 2026";
+const LAST_UPDATED = "Oct 7, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
