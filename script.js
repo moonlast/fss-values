@@ -168,7 +168,7 @@ const ITEMS = [
         { name: "Admin Abuse Card", value: "5K", image: "/images/admincard.png", numericValue: 5000 },
         { name: "Admin Abuse Frame", value: "1K", image: "/images/adminframe.png", numericValue: 1000 }
       ] },
-    { name: "Crimson Gaze", value: "7.5K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/crimsongaze.png", numericValue: 75000 },
+    { name: "Crimson Gaze", value: "7.5K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/crimsongaze.png", numericValue: 7500 },
     { name: "Crimson Flame", value: "7.5K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/crimsonflame.png", numericValue: 7500 },
     { name: "Rudolph", value: "7.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 2, rarity: "Exotic", origin: "1.0 SLS Reward", tier: "low", image: "https://tr.rbxcdn.com/180DAY-3b46430b8a8741f6182e446ae267b219/420/420/Image/Webp/noFilter", numericValue: 7500 },
     { name: "Raijin", value: "6.5K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/raijin.png", numericValue: 6500 },
