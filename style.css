@@ -1743,20 +1743,54 @@ body {
     }
 }
 @media (max-width: 600px) {
+    /* Force exactly 2 columns — kills the "1 per row" behaviour */
     .grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
+
+    /* Reduce card padding so 2 cards fit comfortably */
     .item-card {
-        padding: 12px 10px;
-        min-height: 320px;
+        padding: 10px 8px;
+        min-height: 300px;
+        border-radius: 14px;
     }
-    .item-card .card-value { font-size: 1.5rem; }
-    .item-card .card-name { font-size: 0.9rem; }
-    .item-card .card-artwork { margin-bottom: 8px; }
-    .item-card .dual-stack { margin-bottom: 8px; }
+    .item-card .card-value { font-size: 1.35rem; }
+    .item-card .card-value .token-icon { width: 18px; height: 18px; }
+    .item-card .card-name { font-size: 0.8rem; }
+    .item-card .card-artwork { margin-bottom: 8px; border-radius: 10px; padding: 6px; }
+    .item-card .dual-stack { margin-bottom: 8px; border-radius: 10px; }
+
+    /* Progress bars + metadata need tighter spacing on mobile */
+    .item-card .card-progress-group { gap: 6px; margin-bottom: 8px; }
+    .item-card .progress-label { width: 42px; font-size: 0.55rem; }
+    .item-card .progress-value { font-size: 0.6rem; min-width: 22px; }
+    .item-card .card-stability { font-size: 0.6rem; padding: 3px 8px; }
+    .item-card .meta-label { font-size: 0.55rem; }
+    .item-card .meta-value { font-size: 0.65rem; }
+    .item-card .meta-value.origin-value { font-size: 0.6rem; }
+    .item-card .rarity-badge { font-size: 0.5rem; padding: 3px 8px; top: 8px; right: 8px; }
+
+    /* NEW ITEMS: shrink padding so the grid has room for 2 columns */
+    .tier-new {
+        padding: 10px 10px 14px 10px;
+        border-radius: 14px;
+        margin-bottom: 16px;
+    }
+    .tier-new .tier-heading {
+        font-size: 1.3rem;
+        margin: 0 0 10px 4px;
+    }
+
+    /* Other tiers' headings — keep tight too */
+    .tier-heading {
+        font-size: 1.4rem;
+        margin: 28px 0 12px 4px;
+    }
+
     .header-area { flex-direction: column; align-items: start; gap: 8px; }
     .filter-bar { border-radius: 20px; }
+
     .calc-items-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 6px;
