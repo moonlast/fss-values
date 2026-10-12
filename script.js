@@ -101,15 +101,15 @@ const ITEMS = [
     // HIGH TIER
     {
         name: "Ghosdeeri",
-        value: "575K",
+        value: "560K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 6,
+        demand: 5,
         rarity: 6,
         origin: "Mystic Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
-        numericValue: 575000
+        numericValue: 560000
     }, {
         name: "Hava Nagila",
         value: "465K",
@@ -135,15 +135,15 @@ const ITEMS = [
         numericValue: 435000
     }, {
         name: "Float",
-        value: "380K",
+        value: "365K",
         range: "[N/A]",
         stability: "Stable",
-        demand: 6,
+        demand: 5,
         rarity: 5,
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
-        numericValue: 380000
+        numericValue: 365000
     }, {
         name: "MATSbxb Developer Set",
         stability: "Doing Well",
@@ -152,14 +152,14 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         isDual: true,
-        items: [{ name: "MATSbxb Card", value: "285K",
+        items: [{ name: "MATSbxb Card", value: "290K",
                 image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 285000 }, { name: "MATSbxb Frame", value: "95K",
+                numericValue: 290000 }, { name: "MATSbxb Frame", value: "100K",
                 image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 95000 }]
+                numericValue: 100000 }]
     }, {
         name: "Telamon's Chicken Hat",
-        value: "325K",
+        value: "285K",
         range: "[N/A]",
         stability: "Underpaid",
         demand: 2,
@@ -167,10 +167,10 @@ const ITEMS = [
         origin: "Mystic Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
-        numericValue: 325000
+        numericValue: 285000
     }, {
         name: "Party Time",
-        value: "220K",
+        value: "235K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 7,
@@ -178,7 +178,7 @@ const ITEMS = [
         origin: "Limited Quantity Code",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 220000
+        numericValue: 235000
     }, {
         name: "WC26 Backwards Celebration",
         value: "215K",
@@ -214,7 +214,7 @@ const ITEMS = [
         numericValue: 175000
     }, {
         name: "Penguin Dance",
-        value: "152.5K",
+        value: "155K",
         range: "[N/A]",
         stability: "Overpaid",
         demand: 6,
@@ -222,7 +222,18 @@ const ITEMS = [
         origin: "Robux Pack",
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-        numericValue: 152500
+        numericValue: 155000
+    }, {
+        name: "Devil's Gift",
+        value: "147.5K",
+        range: "[N/A]",
+        stability: "Overpaid",
+        demand: 6,
+        rarity: 6,
+        origin: "Limited Quantity Code",
+        tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
+        numericValue: 147500
     }, {
         name: "Penguin Slide",
         value: "145K",
@@ -234,17 +245,6 @@ const ITEMS = [
         tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 145000
-    }, {
-        name: "Devil's Gift",
-        value: "142.5K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 5,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 142500
     }, {
         name: "WC26 Trophy Celebration",
         value: "142.5K",
@@ -280,7 +280,7 @@ const ITEMS = [
         numericValue: 127500
     }, {
         name: "Gold Champion Band [B]",
-        value: "105K",
+        value: "102.5K",
         range: "[N/A]",
         stability: "Stable",
         demand: 3,
@@ -288,7 +288,7 @@ const ITEMS = [
         origin: "1.0 SLS Clans Reward",
         tier: "high",
         image: "/images/goldb.png",
-        numericValue: 105000
+        numericValue: 102500
     }, {
         name: "Front Flip",
         value: "100K",
@@ -429,6 +429,18 @@ const ITEMS = [
                 image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
                 numericValue: 50000 }]
     }, {
+        name: "Innocent Smiley",
+        value: "32.5K",
+        range: "[N/A]",
+        stability: "Fluctuating",
+        demand: 3,
+        rarity: 3,
+        new: true,
+        origin: "Robux Item",
+        tier: "mid",
+        image: "/images/verity.png",
+        numericValue: 32500
+    }, {
         name: "Helm of Opulentum",
         value: "32.5K",
         range: "[N/A]",
@@ -450,18 +462,6 @@ const ITEMS = [
         tier: "mid",
         image: "/images/wcvalk.png",
         numericValue: 32500
-    }, {
-        name: "Innocent Smiley",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Fluctuating",
-        demand: 3,
-        rarity: 3,
-        new: true,
-        origin: "Robux Item",
-        tier: "mid",
-        image: "/images/verity.png",
-        numericValue: 30000
     }, {
         name: "Candy Cane Shoes",
         value: "30K",
@@ -753,30 +753,6 @@ const ITEMS = [
         image: "https://tr.rbxcdn.com/180DAY-2404f845aaf3294d21af4c90d3661154/420/420/Image/Webp/noFilter",
         numericValue: 10000
     }, {
-        name: "Crimson Gaze",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/crimsongaze.png",
-        numericValue: 10000
-    }, {
-        name: "Crimson Flame",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/crimsonflame.png",
-        numericValue: 10000
-    }, {
         name: "Horned Bucket",
         value: "8.5K",
         range: "[N/A]",
@@ -786,6 +762,17 @@ const ITEMS = [
         origin: "From Packs on Release",
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
+        numericValue: 8500
+    }, {
+        name: "WC26 Trophy Dribble",
+        value: "8.5K",
+        range: "[N/A]",
+        stability: "Stable",
+        demand: 2,
+        rarity: 1,
+        origin: "Robux Battlepass Reward",
+        tier: "low",
+        image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter",
         numericValue: 8500
     }, {
         name: "adidas Taunt",
@@ -822,39 +809,28 @@ const ITEMS = [
                 image: "/images/adminframe.png",
                 numericValue: 1000 }]
     }, {
-        name: "Raijin",
+        name: "Crimson Gaze",
         value: "7.5K",
         range: "[N/A]",
         stability: "Unstable",
-        demand: 2,
+        demand: 3,
         rarity: 3,
         origin: "Power Pack V3",
         tier: "low",
         new: true,
-        image: "/images/raijin.png",
-        numericValue: 7500
+        image: "/images/crimsongaze.png",
+        numericValue: 75000
     }, {
-        name: "Eternality",
+        name: "Crimson Flame",
         value: "7.5K",
         range: "[N/A]",
         stability: "Unstable",
-        demand: 2,
+        demand: 3,
         rarity: 3,
         origin: "Power Pack V3",
         tier: "low",
         new: true,
-        image: "/images/eternality.png",
-        numericValue: 7500
-    }, {
-        name: "WC26 Trophy Dribble",
-        value: "7.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 1,
-        origin: "Robux Battlepass Reward",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter",
+        image: "/images/crimsonflame.png",
         numericValue: 7500
     }, {
         name: "Rudolph",
@@ -866,6 +842,30 @@ const ITEMS = [
         origin: "1.0 SLS Reward",
         tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-3b46430b8a8741f6182e446ae267b219/420/420/Image/Webp/noFilter",
+        numericValue: 7500
+    }, {
+        name: "Raijin",
+        value: "6.5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/raijin.png",
+        numericValue: 7500
+    }, {
+        name: "Eternality",
+        value: "6.5K",
+        range: "[N/A]",
+        stability: "Unstable",
+        demand: 2,
+        rarity: 3,
+        origin: "Power Pack V3",
+        tier: "low",
+        new: true,
+        image: "/images/eternality.png",
         numericValue: 7500
     }, {
         name: "Bloxy Cola Hat",
@@ -944,7 +944,9 @@ const ITEMS = [
 // Default token multipliers
 function getTokenMultiplier(numericValue) {
     if (numericValue >= 951000) {
-        return 20;
+        return 25;
+    } else if (numericValue >= 180000) {
+        return 22.5;
     } else if (numericValue >= 141000) {
         return 18.9;
     } else if (numericValue >= 130000) {
@@ -966,7 +968,7 @@ function getTokenMultiplier(numericValue) {
 // Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Oct 7, 2026";
+const LAST_UPDATED = "Oct 12, 2026";
 
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
@@ -1007,7 +1009,7 @@ const TRADE_ADS = [{
     username: "WM5M",
     avatar: "https://cdn.discordapp.com/avatars/896367467834789938/5bfdb20b5aad84ab655fd756013ac0ef.png?size=512",
     offering: [
-        { name: "Float", qty: 1, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "385K" }
+        { name: "Float", qty: 1, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "365K" }
     ],
     looking_for: "offers",
     notes: "Discord is @wm5m",
@@ -1020,7 +1022,7 @@ const TRADE_ADS = [{
     avatar: "https://cdn.discordapp.com/avatars/635129135865266178/571f75d7532b3b7b8d42f22b1dff3a24.png",
     offering: [
         { name: "Mimimimi", qty: 1, image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter", value: "950K" },
-        { name: "Float", qty: 5, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "385K" }
+        { name: "Float", qty: 5, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "365K" }
     ],
     looking_for: "offers",
     notes: "Discord is @c3141",
@@ -1032,7 +1034,7 @@ const TRADE_ADS = [{
     username: "Dadmonke82nd",
     avatar: "https://cdn.discordapp.com/avatars/1539727698077950046/7c4e7d26fa510c920ef1c36abab1dd0f.png",
     offering: [
-        { name: "Ghosdeeri", qty: 1, image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", value: "575K" }
+        { name: "Ghosdeeri", qty: 1, image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", value: "560K" }
     ],
     looking_for: "offers",
     notes: "Discord is @volant_2",
