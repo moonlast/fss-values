@@ -1,1004 +1,252 @@
 // =============================================================
 // 1. DATA
 // =============================================================
+// Each item uses BOTH:
+//   rarity: "Power" | "Limited" | "Exotic" | "Legendary" | "Epic" | "Uncommon" | "Common"
+//   rarityScore: 1-10
 const ITEMS = [
-    // TIER 4 — Developer items
+    // ===== TIER 4 =====
     {
         name: "FCWC Back Trophy",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Rising",
-        demand: 6,
-        rarity: 11,
-        origin: "Robux Limited",
-        tier: "tier4",
+        value: "O/C", range: "[N/A]", stability: "Rising", demand: 6,
+        rarityScore: 10, rarity: "Limited",
+        origin: "Robux Limited", tier: "tier4",
         image: "https://tr.rbxcdn.com/180DAY-621badb24bf45075901a5b96afd87717/420/420/BackAccessory/Webp/noFilter",
         numericValue: 0
     }, {
         name: "Developer's Set",
-        stability: "Rising",
-        demand: 3,
-        rarity: 11,
-        origin: "Being Developer",
-        tier: "tier4",
-        isDual: true,
-        items: [{ name: "Developer Card", value: "O/C", image: "https://tr.rbxcdn.com/180DAY-bd42c4eda9559444942f01160e622be2/420/420/Image/Webp/noFilter",
-                numericValue: 0 }, { name: "Developer Frame", value: "O/C",
-                image: "https://tr.rbxcdn.com/180DAY-5fef143e8a4e1a3bb8d7d5c12effa7ab/420/420/Image/Png/noFilter",
-                numericValue: 0 }]
+        stability: "Rising", demand: 3,
+        rarityScore: 10, rarity: "Epic",
+        origin: "Being Developer", tier: "tier4", isDual: true,
+        items: [
+            { name: "Developer Card", value: "O/C", image: "https://tr.rbxcdn.com/180DAY-bd42c4eda9559444942f01160e622be2/420/420/Image/Webp/noFilter", numericValue: 0 },
+            { name: "Developer Frame", value: "O/C", image: "https://tr.rbxcdn.com/180DAY-5fef143e8a4e1a3bb8d7d5c12effa7ab/420/420/Image/Png/noFilter", numericValue: 0 }
+        ]
     }, {
         name: "Developer's Wristband",
-        value: "1.55M",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 5,
-        rarity: 10,
-        origin: "Being Developer",
-        tier: "tier4",
-        image: "/images/devband.png",
-        numericValue: 1550000
+        value: "1.55M", range: "[N/A]", stability: "Overpaid", demand: 5,
+        rarityScore: 9, rarity: "Exotic",
+        origin: "Being Developer", tier: "tier4",
+        image: "/images/devband.png", numericValue: 1550000
     }, {
         name: "Bunny Set",
-        stability: "Rising",
-        demand: 7,
-        rarity: 10,
-        origin: "2025 Easter Puzzle",
-        tier: "tier4",
-        isDual: true,
-        items: [{ name: "Bunny Card", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter",
-                numericValue: 1300000 }, { name: "Bunny Frame", value: "1.3M",
-                image: "https://tr.rbxcdn.com/180DAY-0c33b2d8786b0bbf6ab9d0292905f6ea/420/420/Image/Png/noFilter",
-                numericValue: 1300000 }]
+        stability: "Rising", demand: 7,
+        rarityScore: 9, rarity: "Exotic",
+        origin: "2025 Easter Puzzle", tier: "tier4", isDual: true,
+        items: [
+            { name: "Bunny Card", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter", numericValue: 1300000 },
+            { name: "Bunny Frame", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-0c33b2d8786b0bbf6ab9d0292905f6ea/420/420/Image/Png/noFilter", numericValue: 1300000 }
+        ]
     }, {
         name: "LMT Set",
-        stability: "Rising",
-        demand: 5,
-        rarity: 10,
-        origin: "Being LMT",
-        tier: "tier4",
-        isDual: true,
-        items: [{ name: "LMT Card", value: "1.15M", image: "https://tr.rbxcdn.com/180DAY-c75c35cef5c1fce57bd108871c51ce7d/420/420/Image/Webp/noFilter",
-                numericValue: 1150000 }, { name: "LMT Frame", value: "1.05M",
-                image: "https://tr.rbxcdn.com/180DAY-7946ec03151612a29574177dc29bde00/420/420/Image/Png/noFilter",
-                numericValue: 1050000 }]
+        stability: "Rising", demand: 5,
+        rarityScore: 9, rarity: "Legendary",
+        origin: "Being LMT", tier: "tier4", isDual: true,
+        items: [
+            { name: "LMT Card", value: "1.15M", image: "https://tr.rbxcdn.com/180DAY-c75c35cef5c1fce57bd108871c51ce7d/420/420/Image/Webp/noFilter", numericValue: 1150000 },
+            { name: "LMT Frame", value: "1.05M", image: "https://tr.rbxcdn.com/180DAY-7946ec03151612a29574177dc29bde00/420/420/Image/Png/noFilter", numericValue: 1050000 }
+        ]
     }, {
         name: "Super League Set",
-        stability: "Rising",
-        demand: 5,
-        rarity: 10,
-        origin: "Winning SL #5",
-        tier: "tier4",
-        isDual: true,
-        items: [{ name: "Super League Card", value: "1.05M", image: "https://tr.rbxcdn.com/180DAY-b5c7e5c916e6f2eab6aa604d2f132e9d/420/420/Image/Webp/noFilter",
-                numericValue: 1050000 }, { name: "Super League Frame", value: "900K",
-                image: "https://tr.rbxcdn.com/180DAY-59fd9472e20d348d8f861a718e08fb88/420/420/Image/Png/noFilter",
-                numericValue: 900000 }]
-    // }, {
-    //     name: "Event Host Set",
-    //     stability: "Rising",
-    //     demand: 5,
-    //     rarity: 9,
-    //     origin: "Being Event Host",
-    //     tier: "tier4",
-    //     isDual: true,
-    //     items: [{ name: "Event Host Card", value: "750K", image: "https://tr.rbxcdn.com/180DAY-42040034932f0021659ac34a5bc728a4/420/420/Image/Webp/noFilter",
-    //             numericValue: 750000 }, { name: "Event Host Frame", value: "750K",
-    //             image: "https://tr.rbxcdn.com/180DAY-80329426b5b175a5e33cd89b6ddf4bb3/420/420/Image/Png/noFilter",
-    //             numericValue: 750000 }]
+        stability: "Rising", demand: 5,
+        rarityScore: 9, rarity: "Legendary",
+        origin: "Winning SL #5", tier: "tier4", isDual: true,
+        items: [
+            { name: "Super League Card", value: "1.05M", image: "https://tr.rbxcdn.com/180DAY-b5c7e5c916e6f2eab6aa604d2f132e9d/420/420/Image/Webp/noFilter", numericValue: 1050000 },
+            { name: "Super League Frame", value: "900K", image: "https://tr.rbxcdn.com/180DAY-59fd9472e20d348d8f861a718e08fb88/420/420/Image/Png/noFilter", numericValue: 900000 }
+        ]
     }, {
         name: "Mimimimi",
-        value: "950K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 9,
-        origin: "Developer Gift",
-        tier: "tier4",
+        value: "950K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 8, rarity: "Exotic",
+        origin: "Developer Gift", tier: "tier4",
         image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter",
         numericValue: 950000
     },
 
-    // HIGH TIER
-    {
-        name: "Ghosdeeri",
-        value: "560K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 5,
-        rarity: 6,
-        origin: "Mystic Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
-        numericValue: 560000
-    }, {
-        name: "Hava Nagila",
-        value: "465K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 4,
-        rarity: 8,
-        origin: "Developer Gift",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
-        numericValue: 465000
-    }, {
-        name: "Sakura Spirit",
-        value: "435K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 6,
-        rarity: 7,
-        origin: "Credit Shop",
-        tier: "high",
-        new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 435000
-    }, {
-        name: "Float",
-        value: "365K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 5,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
-        numericValue: 365000
-    }, {
-        name: "MATSbxb Developer Set",
-        stability: "Doing Well",
-        demand: 6,
-        rarity: 6,
-        origin: "Robux Pack",
-        tier: "high",
-        isDual: true,
-        items: [{ name: "MATSbxb Card", value: "290K",
-                image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter",
-                numericValue: 290000 }, { name: "MATSbxb Frame", value: "100K",
-                image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter",
-                numericValue: 100000 }]
-    }, {
-        name: "Telamon's Chicken Hat",
-        value: "285K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 6,
-        origin: "Mystic Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter",
-        numericValue: 285000
-    }, {
-        name: "Party Time",
-        value: "235K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 7,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 235000
-    }, {
-        name: "WC26 Backwards Celebration",
-        value: "215K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 7,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 215000
-    }, {
-        name: "Orange Dance",
-        value: "210K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 6,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "/images/orange.png",
-        numericValue: 210000
-    }, {
-        name: "Crown of Opulentum",
-        value: "175K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 1,
-        rarity: 7,
-        origin: "2.5M Coins in SLS 1.0 Reward",
-        tier: "high",
-        image: "/images/crown.png",
-        numericValue: 175000
-    }, {
-        name: "Penguin Dance",
-        value: "155K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 6,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-        numericValue: 155000
-    }, {
-        name: "Devil's Gift",
-        value: "147.5K",
-        range: "[N/A]",
-        stability: "Overpaid",
-        demand: 6,
-        rarity: 6,
-        origin: "Limited Quantity Code",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
-        numericValue: 147500
-    }, {
-        name: "Penguin Slide",
-        value: "145K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
-        numericValue: 145000
-    }, {
-        name: "WC26 Trophy Celebration",
-        value: "142.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 142500
-    }, {
-        name: "Super Dodge",
-        value: "135K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
-        numericValue: 135000
-    }, {
-        name: "FCWC Shoes Red/Black",
-        value: "127.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "FCWC Event",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 127500
-    }, {
-        name: "Gold Champion Band [B]",
-        value: "102.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "1.0 SLS Clans Reward",
-        tier: "high",
-        image: "/images/goldb.png",
-        numericValue: 102500
-    }, {
-        name: "Front Flip",
-        value: "100K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 4,
-        origin: "Robux Battlepass",
-        tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
-        numericValue: 100000
-    },
+    // ===== HIGH TIER =====
+    { name: "Ghosdeeri", value: "560K", range: "[N/A]", stability: "Stable", demand: 5, rarityScore: 6, rarity: "Exotic", origin: "Mystic Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", numericValue: 560000 },
+    { name: "Hava Nagila", value: "465K", range: "[N/A]", stability: "Overpaid", demand: 4, rarityScore: 8, rarity: "Legendary", origin: "Developer Gift", tier: "high", image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter", numericValue: 465000 },
+    { name: "Sakura Spirit", value: "435K", range: "[N/A]", stability: "Doing Well", demand: 6, rarityScore: 7, rarity: "Limited", origin: "Credit Shop", tier: "high", new: true, image: "/images/sakuraspirit.png", numericValue: 435000 },
+    { name: "Float", value: "365K", range: "[N/A]", stability: "Stable", demand: 5, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", numericValue: 365000 },
+    { name: "MATSbxb Developer Set", stability: "Doing Well", demand: 6, rarityScore: 6, rarity: "Limited", origin: "Robux Pack", tier: "high", isDual: true,
+      items: [
+        { name: "MATSbxb Card", value: "290K", image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter", numericValue: 290000 },
+        { name: "MATSbxb Frame", value: "100K", image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter", numericValue: 100000 }
+      ] },
+    { name: "Telamon's Chicken Hat", value: "285K", range: "[N/A]", stability: "Underpaid", demand: 2, rarityScore: 6, rarity: "Exotic", origin: "Mystic Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-811029bf44237ea36da06d104cafe37c/420/420/Hat/Webp/noFilter", numericValue: 285000 },
+    { name: "Party Time", value: "235K", range: "[N/A]", stability: "Overpaid", demand: 7, rarityScore: 6, rarity: "Legendary", origin: "Limited Quantity Code", tier: "high", image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter", numericValue: 235000 },
+    { name: "WC26 Backwards Celebration", value: "215K", range: "[N/A]", stability: "Overpaid", demand: 7, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter", numericValue: 215000 },
+    { name: "Orange Dance", value: "210K", range: "[N/A]", stability: "Overpaid", demand: 6, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "/images/orange.png", numericValue: 210000 },
+    { name: "Crown of Opulentum", value: "175K", range: "[N/A]", stability: "Underpaid", demand: 1, rarityScore: 7, rarity: "Limited", origin: "2.5M Coins in SLS 1.0 Reward", tier: "high", image: "/images/crown.png", numericValue: 175000 },
+    { name: "Penguin Dance", value: "155K", range: "[N/A]", stability: "Overpaid", demand: 6, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter", numericValue: 155000 },
+    { name: "Devil's Gift", value: "147.5K", range: "[N/A]", stability: "Overpaid", demand: 6, rarityScore: 6, rarity: "Exotic", origin: "Limited Quantity Code", tier: "high", image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter", numericValue: 147500 },
+    { name: "Penguin Slide", value: "145K", range: "[N/A]", stability: "Doing Well", demand: 5, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter", numericValue: 145000 },
+    { name: "WC26 Trophy Celebration", value: "142.5K", range: "[N/A]", stability: "Doing Well", demand: 5, rarityScore: 4, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter", numericValue: 142500 },
+    { name: "Super Dodge", value: "135K", range: "[N/A]", stability: "Stable", demand: 4, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "high", image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter", numericValue: 135000 },
+    { name: "FCWC Shoes Red/Black", value: "127.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Epic", origin: "FCWC Event", tier: "high", image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter", numericValue: 127500 },
+    { name: "Gold Champion Band [B]", value: "102.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "high", image: "/images/goldb.png", numericValue: 102500 },
+    { name: "Front Flip", value: "100K", range: "[N/A]", stability: "Stable", demand: 4, rarityScore: 4, rarity: "Limited", origin: "Robux Battlepass", tier: "high", image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter", numericValue: 100000 },
 
-    // MID TIER
-    {
-        name: "Shark Shoes",
-        value: "90K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 4,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "mid",
-        image: "/images/shark.png",
-        numericValue: 90000
-    }, {
-        name: "Flip",
-        value: "87.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 3,
-        origin: "Robux Pack",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter",
-        numericValue: 87500
-    }, {
-        name: "Dragon Shoes",
-        value: "80K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 4,
-        rarity: 4,
-        origin: "Robux Pack",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter",
-        numericValue: 80000
-    }, {
-        name: "67",
-        value: "67.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "Robux Pack",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
-        numericValue: 67500
-    }, {
-        name: "Kawaii Set",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "OG Premium Card",
-        tier: "mid",
-        isDual: true,
-        items: [{ name: "Kawaii Card", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter",
-                numericValue: 50000 }, { name: "Kawaii Frame", value: "40K",
-                image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter",
-                numericValue: 40000 }]
-    }, {
-        name: "Solar Monarch",
-        value: "55K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 5,
-        origin: "Credit Shop",
-        tier: "mid",
-        new: true,
-        image: "/images/solarmonarch.png",
-        numericValue: 55000
-    }, {
-        name: "Lightning Wolf Shoes",
-        value: "45K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 4,
-        rarity: 3,
-        origin: "Robux Battlepass Reward",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
-        numericValue: 45000
-    }, {
-        name: "The Panther",
-        value: "42.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 3,
-        origin: "Prehistoric Battlepass",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter",
-        numericValue: 42500
-    }, {
-        name: "Grinch Shoes",
-        value: "37.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "1.0 Christmas Event",
-        tier: "mid",
-        image: "/images/grinch.png",
-        numericValue: 37500
-    }, {
-        name: "Dragon Set",
-        stability: "Stable",
-        demand: 4,
-        rarity: 4,
-        origin: "OG Premium Card",
-        tier: "mid",
-        isDual: true,
-        items: [{ name: "Dragon Card", value: "35K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter",
-                numericValue: 35000 }, { name: "Dragon Frame", value: "40K",
-                image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter",
-                numericValue: 40000 }]
-    }, {
-        name: "Royal Fleur De Lis Set",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "OG Premium Card",
-        tier: "mid",
-        isDual: true,
-        items: [{ name: "Royal Card", value: "30K", image: "https://tr.rbxcdn.com/180DAY-2778c242d027070bf587227354109420/420/420/Image/Png/noFilter",
-                numericValue: 30000 }, { name: "Royal Frame", value: "50K",
-                image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
-                numericValue: 50000 }]
-    }, {
-        name: "Innocent Smiley",
-        value: "32.5K",
-        range: "[N/A]",
-        stability: "Fluctuating",
-        demand: 3,
-        rarity: 3,
-        new: true,
-        origin: "Robux Item",
-        tier: "mid",
-        image: "/images/verity.png",
-        numericValue: 32500
-    }, {
-        name: "Helm of Opulentum",
-        value: "32.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "1M Coins in SLS 1.0 Reward",
-        tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter",
-        numericValue: 32500
-    }, {
-        name: "WC26 Valkyrie",
-        value: "32.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "WC26 Event",
-        tier: "mid",
-        image: "/images/wcvalk.png",
-        numericValue: 32500
-    }, {
-        name: "Candy Cane Shoes",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "1.0 Christmas Event",
-        tier: "mid",
-        image: "/images/candycane.png",
-        numericValue: 30000
-    }, {
-        name: "WC26 Argentina Sun Card",
-        value: "30K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "WC26 Event",
-        tier: "mid",
-        image: "/images/suncard.png",
-        numericValue: 30000
-    },
+    // ===== MID TIER =====
+    { name: "Shark Shoes", value: "90K", range: "[N/A]", stability: "Doing Well", demand: 4, rarityScore: 4, rarity: "Limited", origin: "Robux Pack", tier: "mid", image: "/images/shark.png", numericValue: 90000 },
+    { name: "Flip", value: "87.5K", range: "[N/A]", stability: "Stable", demand: 4, rarityScore: 3, rarity: "Limited", origin: "Robux Pack", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter", numericValue: 87500 },
+    { name: "Dragon Shoes", value: "80K", range: "[N/A]", stability: "Stable", demand: 4, rarityScore: 4, rarity: "Limited", origin: "Robux Pack", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter", numericValue: 80000 },
+    { name: "67", value: "67.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Limited", origin: "Robux Pack", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter", numericValue: 67500 },
+    { name: "Kawaii Set", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Legendary", origin: "OG Premium Card", tier: "mid", isDual: true,
+      items: [
+        { name: "Kawaii Card", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter", numericValue: 50000 },
+        { name: "Kawaii Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter", numericValue: 40000 }
+      ] },
+    { name: "Solar Monarch", value: "55K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 5, rarity: "Limited", origin: "Credit Shop", tier: "mid", new: true, image: "/images/solarmonarch.png", numericValue: 55000 },
+    { name: "Lightning Wolf Shoes", value: "45K", range: "[N/A]", stability: "Doing Well", demand: 4, rarityScore: 3, rarity: "Exotic", origin: "Robux Battlepass Reward", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter", numericValue: 45000 },
+    { name: "The Panther", value: "42.5K", range: "[N/A]", stability: "Doing Well", demand: 5, rarityScore: 3, rarity: "Legendary", origin: "Prehistoric Battlepass", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter", numericValue: 42500 },
+    { name: "Grinch Shoes", value: "37.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Uncommon", origin: "1.0 Christmas Event", tier: "mid", image: "/images/grinch.png", numericValue: 37500 },
+    { name: "Dragon Set", stability: "Stable", demand: 4, rarityScore: 4, rarity: "Exotic", origin: "OG Premium Card", tier: "mid", isDual: true,
+      items: [
+        { name: "Dragon Card", value: "35K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter", numericValue: 35000 },
+        { name: "Dragon Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter", numericValue: 40000 }
+      ] },
+    { name: "Royal Fleur De Lis Set", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Legendary", origin: "OG Premium Card", tier: "mid", isDual: true,
+      items: [
+        { name: "Royal Card", value: "30K", image: "https://tr.rbxcdn.com/180DAY-2778c242d027070bf587227354109420/420/420/Image/Png/noFilter", numericValue: 30000 },
+        { name: "Royal Frame", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter", numericValue: 50000 }
+      ] },
+    { name: "Innocent Smiley", value: "32.5K", range: "[N/A]", stability: "Fluctuating", demand: 3, rarityScore: 3, rarity: "Limited", new: true, origin: "Robux Item", tier: "mid", image: "/images/verity.png", numericValue: 32500 },
+    { name: "Helm of Opulentum", value: "32.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 3, rarity: "Limited", origin: "1M Coins in SLS 1.0 Reward", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-54e9fa5e35b375c23844939e68945ac0/420/420/Image/Webp/noFilter", numericValue: 32500 },
+    { name: "WC26 Valkyrie Helmet", value: "32.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Limited", origin: "WC26 Event", tier: "mid", image: "/images/wcvalk.png", numericValue: 32500 },
+    { name: "Candy Cane Shoes", value: "30K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Uncommon", origin: "1.0 Christmas Event", tier: "mid", image: "/images/candycane.png", numericValue: 30000 },
+    { name: "WC26 Argentina Sun Card", value: "30K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 3, rarity: "Limited", origin: "WC26 Event", tier: "mid", image: "/images/suncard.png", numericValue: 30000 },
 
-    // LOW TIER
-    {
-        name: "Leaves Set",
-        stability: "Stable",
-        demand: 2,
-        rarity: 4,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "Leaves Card", value: "27.5K", image: "https://tr.rbxcdn.com/180DAY-2b5cde95564906b08473d1bbfbafd938/420/420/Image/Webp/noFilter",
-                numericValue: 27500 }, { name: "Leaves Frame", value: "32.5K",
-                image: "https://tr.rbxcdn.com/180DAY-acace68531049c2d38efc4504e62147b/420/420/Image/Png/noFilter",
-                numericValue: 32500 }]
-    }, {
-        name: "FCWC Dominus",
-        value: "27.5K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 3,
-        rarity: 3,
-        origin: "FCWC Event",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-975ffc2e6e4863b14e797b4249186544/420/420/Image/Webp/noFilter",
-        numericValue: 27500
-    }, {
-        name: "Leather Boots",
-        value: "27.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/leather.png",
-        numericValue: 27500
-    }, {
-        name: "Gold Champion Band [L]",
-        value: "27.5K",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/goldl.png",
-        numericValue: 27500
-    }, {
-        name: "Fallen Angel Mantle",
-        value: "27.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 5,
-        origin: "Credit Shop",
-        tier: "low",
-        image: "/images/angel.png",
-        numericValue: 27500
-    }, {
-        name: "Wild Dance",
-        value: "25.5K",
-        range: "[N/A]",
-        stability: "Doing Well",
-        demand: 5,
-        rarity: 2,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/wild.png",
-        numericValue: 25500
-    }, {
-        name: "Gold Champion Band [R]",
-        value: "25K",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/goldr.png",
-        numericValue: 25000
-    }, {
-        name: "WC26 Amplify Card",
-        value: "22.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 4,
-        origin: "WC26 Event",
-        tier: "low",
-        image: "/images/amplify.png",
-        numericValue: 22500
-    }, {
-        name: "Dino Shoes",
-        value: "21.5K",
-        stability: "Stable",
-        demand: 1,
-        rarity: 3,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/dinos.png",
-        numericValue: 21500
-    }, {
-        name: "Rivalry Dribble",
-        value: "20K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "Chosen One Pack",
-        tier: "low",
-        image: "/images/rivalrydrib.png",
-        numericValue: 20000
-    }, {
-        name: "La Roja Inferno Goal Explosion",
-        value: "20K",
-        range: "[N/A]",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 3,
-        origin: "Robux Pack",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter",
-        numericValue: 20000
-    }, {
-        name: "FCWC Valkyrie",
-        value: "20K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 3,
-        origin: "FCWC Event",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
-        numericValue: 20000
-    }, {
-        name: "Unfinished Business",
-        value: "17.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 2,
-        origin: "Robux Item",
-        tier: "low",
-        image: "/images/unfinished.png",
-        numericValue: 17500
-    }, {
-        name: "Tentacles",
-        value: "15K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-71f12a44de07f11c88a8f4dcd454cf30/420/420/Hat/Webp/noFilter",
-        numericValue: 15000
-    }, {
-        name: "Fairytale Set",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "Credit Shop",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "Fairytale Card", value: "15K", image: "/images/fairycard.png",
-                numericValue: 15000 }, { name: "Fairytale Frame", value: "17.5K",
-                image: "https://tr.rbxcdn.com/180DAY-2dfdaec95d797bf96a661d4b005566c2/420/420/Image/Webp/noFilter",
-                numericValue: 17500 }]
-    }, {
-        name: "Biohazard Set",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 4,
-        origin: "OG Premium Card",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "Biohazard Card", value: "13K", image: "https://tr.rbxcdn.com/180DAY-37b521d2cf6c475f1cd2974832831829/420/420/Image/Png/noFilter",
-                numericValue: 13000 }, { name: "Biohazard Frame", value: "10.5K",
-                image: "https://tr.rbxcdn.com/180DAY-09b2307f7cf33dc4e0e59b23b5a4ea3c/420/420/Image/Webp/noFilter",
-                numericValue: 10500 }]
-    }, {
-        name: "Silver Arm Bracelet [B]",
-        value: "12K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 2,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/silverb.png",
-        numericValue: 12000
-    }, {
-        name: "T-Rex",
-        value: "12K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 2,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
-        numericValue: 12000
-    }, {
-        name: "ESP Sagrada Crown",
-        value: "12K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 1,
-        origin: "ESP WC Event",
-        tier: "low",
-        image: "/images/sagrada.png",
-        numericValue: 12000
-    }, {
-        name: "Fur Cape",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 2,
-        origin: "Prehistoric Battlepass",
-        tier: "low",
-        image: "/images/fur.png",
-        numericValue: 10000
-    }, {
-        name: "Antlers",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 4,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-8b48832f797b839dff715a878c752303/420/420/Hat/Webp/noFilter",
-        numericValue: 10000
-    }, {
-        name: "16-bit Set",
-        stability: "Underpaid",
-        demand: 2,
-        rarity: 3,
-        origin: "OG Premium Card",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "16-bit Card", value: "5K", image: "https://tr.rbxcdn.com/180DAY-7ddc9a070e6405215a27fda8c15707ca/420/420/Image/Png/noFilter",
-                numericValue: 5000 }, { name: "16-bit Frame", value: "10K",
-                image: "https://tr.rbxcdn.com/180DAY-a1ae41adcf571c585779021eecc8d4f1/420/420/Image/Png/noFilter",
-                numericValue: 10000 }]
-    }, {
-        name: "Red Bandana of SQL",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 4,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-00367130035a503d6a99ea0059aa7d4e/420/420/FaceAccessory/Webp/noFilter",
-        numericValue: 10000
-    }, {
-        name: "adidas Celebration",
-        value: "10K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 1,
-        rarity: 3,
-        origin: "adidas Event",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-2404f845aaf3294d21af4c90d3661154/420/420/Image/Webp/noFilter",
-        numericValue: 10000
-    }, {
-        name: "Horned Bucket",
-        value: "8.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 4,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter",
-        numericValue: 8500
-    }, {
-        name: "WC26 Trophy Dribble",
-        value: "8.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 1,
-        origin: "Robux Battlepass Reward",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter",
-        numericValue: 8500
-    }, {
-        name: "adidas Taunt",
-        value: "8K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 1,
-        rarity: 3,
-        origin: "adidas Event",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-ce219eff72405cee76c3947bfeeb1296/420/420/Image/Webp/noFilter",
-        numericValue: 8000
-    }, {
-        name: "Evil Pumpkin",
-        value: "8K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 3,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-3407a0b8348a459e206409d5a6209bcb/420/420/Hat/Webp/noFilter",
-        numericValue: 8000
-    }, {
-        name: "Admin Abuse Set",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 1,
-        origin: "Robux Pack",
-        tier: "low",
-        isDual: true,
-        items: [{ name: "Admin Abuse Card", value: "5K", image: "/images/admincard.png",
-                numericValue: 5000 }, { name: "Admin Abuse Frame", value: "1K",
-                image: "/images/adminframe.png",
-                numericValue: 1000 }]
-    }, {
-        name: "Crimson Gaze",
-        value: "7.5K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/crimsongaze.png",
-        numericValue: 75000
-    }, {
-        name: "Crimson Flame",
-        value: "7.5K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/crimsonflame.png",
-        numericValue: 7500
-    }, {
-        name: "Rudolph",
-        value: "7.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 3,
-        rarity: 2,
-        origin: "1.0 SLS Reward",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-3b46430b8a8741f6182e446ae267b219/420/420/Image/Webp/noFilter",
-        numericValue: 7500
-    }, {
-        name: "Raijin",
-        value: "6.5K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/raijin.png",
-        numericValue: 7500
-    }, {
-        name: "Eternality",
-        value: "6.5K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 3,
-        origin: "Power Pack V3",
-        tier: "low",
-        new: true,
-        image: "/images/eternality.png",
-        numericValue: 7500
-    }, {
-        name: "Bloxy Cola Hat",
-        value: "6K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 1,
-        rarity: 2,
-        origin: "From Packs on Release",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-d7b33881eec5f0f59db5efad0e852596/420/420/Hat/Webp/noFilter",
-        numericValue: 6000
-    }, {
-        name: "Scythe Spin",
-        value: "5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 1,
-        origin: "Halloween Item",
-        tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-b36061ef8f0cfb293ff4e3dd6541c01e/420/420/Image/Webp/noFilter",
-        numericValue: 5000
-    }, {
-        name: "The Chosen One",
-        value: "4K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 1,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/chosen.png",
-        numericValue: 4000
-    }, {
-        name: "Bronze Champion Band [B]",
-        value: "5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 2,
-        rarity: 2,
-        origin: "1.0 SLS Clans Reward",
-        tier: "low",
-        image: "/images/bronzeb.png",
-        numericValue: 5000
-    }, {
-        name: "Rivalry Soccer Shoes",
-        value: "3.5K",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 1,
-        rarity: 1,
-        origin: "Robux Item",
-        tier: "low",
-        image: "/images/pshoes.png",
-        numericValue: 3500
-    }, {
-        name: "Dragon Fang Cleats",
-        value: "2K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 2,
-        rarity: 1,
-        origin: "Powers V2 Pack",
-        tier: "low",
-        image: "/images/cleats.png",
-        numericValue: 2000
-    },
+    // ===== LOW TIER =====
+    { name: "Leaves Set", stability: "Stable", demand: 2, rarityScore: 4, rarity: "Epic", origin: "Prehistoric Battlepass", tier: "low", isDual: true,
+      items: [
+        { name: "Leaves Card", value: "27.5K", image: "https://tr.rbxcdn.com/180DAY-2b5cde95564906b08473d1bbfbafd938/420/420/Image/Webp/noFilter", numericValue: 27500 },
+        { name: "Leaves Frame", value: "32.5K", image: "https://tr.rbxcdn.com/180DAY-acace68531049c2d38efc4504e62147b/420/420/Image/Png/noFilter", numericValue: 32500 }
+      ] },
+    { name: "FCWC Dominus", value: "27.5K", range: "[N/A]", stability: "Underpaid", demand: 3, rarityScore: 3, rarity: "Epic", origin: "FCWC Event", tier: "low", image: "https://tr.rbxcdn.com/180DAY-975ffc2e6e4863b14e797b4249186544/420/420/Image/Webp/noFilter", numericValue: 27500 },
+    { name: "Leather Boots", value: "27.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Exotic", origin: "Prehistoric Battlepass", tier: "low", image: "/images/leather.png", numericValue: 27500 },
+    { name: "Gold Champion Band [L]", value: "27.5K", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/goldl.png", numericValue: 27500 },
+    { name: "Fallen Angel Mantle", value: "27.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Limited", origin: "Credit Shop", tier: "low", image: "/images/angel.png", numericValue: 27500 },
+    { name: "Wild Dance", value: "25.5K", range: "[N/A]", stability: "Doing Well", demand: 5, rarityScore: 2, rarity: "Epic", origin: "Prehistoric Battlepass", tier: "low", image: "/images/wild.png", numericValue: 25500 },
+    { name: "Gold Champion Band [R]", value: "25K", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/goldr.png", numericValue: 25000 },
+    { name: "WC26 Amplify Card", value: "22.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 4, rarity: "Legendary", origin: "WC26 Event", tier: "low", image: "/images/amplify.png", numericValue: 22500 },
+    { name: "Dino Shoes", value: "21.5K", stability: "Stable", demand: 1, rarityScore: 3, rarity: "Uncommon", origin: "Prehistoric Battlepass", tier: "low", image: "/images/dinos.png", numericValue: 21500 },
+    { name: "Rivalry Dribble", value: "20K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 3, rarity: "Limited", origin: "Chosen One Pack", tier: "low", image: "/images/rivalrydrib.png", numericValue: 20000 },
+    { name: "La Roja Inferno Goal Explosion", value: "20K", range: "[N/A]", stability: "Underpaid", demand: 2, rarityScore: 3, rarity: "Limited", origin: "Robux Pack", tier: "low", image: "https://tr.rbxcdn.com/180DAY-9d6a311d5b9b915d3b1e1e90d39a541c/420/420/Image/Webp/noFilter", numericValue: 20000 },
+    { name: "FCWC Valkyrie", value: "20K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 3, rarity: "Epic", origin: "FCWC Event", tier: "low", image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter", numericValue: 20000 },
+    { name: "Unfinished Business", value: "17.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 2, rarity: "Limited", origin: "Robux Item", tier: "low", image: "/images/unfinished.png", numericValue: 17500 },
+    { name: "Tentacles", value: "15K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Exotic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-71f12a44de07f11c88a8f4dcd454cf30/420/420/Hat/Webp/noFilter", numericValue: 15000 },
+    { name: "Fairytale Set", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "Credit Shop", tier: "low", isDual: true,
+      items: [
+        { name: "Fairytale Card", value: "15K", image: "/images/fairycard.png", numericValue: 15000 },
+        { name: "Fairytale Frame", value: "17.5K", image: "https://tr.rbxcdn.com/180DAY-2dfdaec95d797bf96a661d4b005566c2/420/420/Image/Webp/noFilter", numericValue: 17500 }
+      ] },
+    { name: "Biohazard Set", stability: "Underpaid", demand: 2, rarityScore: 4, rarity: "Legendary", origin: "OG Premium Card", tier: "low", isDual: true,
+      items: [
+        { name: "Biohazard Card", value: "13K", image: "https://tr.rbxcdn.com/180DAY-37b521d2cf6c475f1cd2974832831829/420/420/Image/Png/noFilter", numericValue: 13000 },
+        { name: "Biohazard Frame", value: "10.5K", image: "https://tr.rbxcdn.com/180DAY-09b2307f7cf33dc4e0e59b23b5a4ea3c/420/420/Image/Webp/noFilter", numericValue: 10500 }
+      ] },
+    { name: "Silver Arm Bracelet [B]", value: "12K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 2, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/silverb.png", numericValue: 12000 },
+    { name: "T-Rex", value: "12K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 2, rarity: "Epic", origin: "Prehistoric Battlepass", tier: "low", image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter", numericValue: 12000 },
+    { name: "ESP Sagrada Crown", value: "12K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 1, rarity: "Limited", origin: "ESP WC Event", tier: "low", image: "/images/sagrada.png", numericValue: 12000 },
+    { name: "Fur Cape", value: "10K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 2, rarity: "Epic", origin: "Prehistoric Battlepass", tier: "low", image: "/images/fur.png", numericValue: 10000 },
+    { name: "Antlers", value: "10K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 4, rarity: "Exotic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-8b48832f797b839dff715a878c752303/420/420/Hat/Webp/noFilter", numericValue: 10000 },
+    { name: "16-bit Set", stability: "Underpaid", demand: 2, rarityScore: 3, rarity: "Legendary", origin: "OG Premium Card", tier: "low", isDual: true,
+      items: [
+        { name: "16-bit Card", value: "5K", image: "https://tr.rbxcdn.com/180DAY-7ddc9a070e6405215a27fda8c15707ca/420/420/Image/Png/noFilter", numericValue: 5000 },
+        { name: "16-bit Frame", value: "10K", image: "https://tr.rbxcdn.com/180DAY-a1ae41adcf571c585779021eecc8d4f1/420/420/Image/Png/noFilter", numericValue: 10000 }
+      ] },
+    { name: "Red Bandana of SQL", value: "10K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 4, rarity: "Exotic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-00367130035a503d6a99ea0059aa7d4e/420/420/FaceAccessory/Webp/noFilter", numericValue: 10000 },
+    { name: "adidas Celebration", value: "10K", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 3, rarity: "Legendary", origin: "adidas Event", tier: "low", image: "https://tr.rbxcdn.com/180DAY-2404f845aaf3294d21af4c90d3661154/420/420/Image/Webp/noFilter", numericValue: 10000 },
+    { name: "Horned Bucket", value: "8.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Exotic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-cc10d6c928ebbfd0a097313c912f5a2a/420/420/Hat/Webp/noFilter", numericValue: 8500 },
+    { name: "WC26 Trophy Dribble", value: "8.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 1, rarity: "Limited", origin: "Robux Battlepass Reward", tier: "low", image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter", numericValue: 8500 },
+    { name: "adidas Taunt", value: "8K", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 3, rarity: "Legendary", origin: "adidas Event", tier: "low", image: "https://tr.rbxcdn.com/180DAY-ce219eff72405cee76c3947bfeeb1296/420/420/Image/Webp/noFilter", numericValue: 8000 },
+    { name: "Evil Pumpkin", value: "8K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-3407a0b8348a459e206409d5a6209bcb/420/420/Hat/Webp/noFilter", numericValue: 8000 },
+    { name: "Admin Abuse Set", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Limited", origin: "Robux Pack", tier: "low", isDual: true,
+      items: [
+        { name: "Admin Abuse Card", value: "5K", image: "/images/admincard.png", numericValue: 5000 },
+        { name: "Admin Abuse Frame", value: "1K", image: "/images/adminframe.png", numericValue: 1000 }
+      ] },
+    { name: "Crimson Gaze", value: "7.5K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/crimsongaze.png", numericValue: 75000 },
+    { name: "Crimson Flame", value: "7.5K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/crimsonflame.png", numericValue: 7500 },
+    { name: "Rudolph", value: "7.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 2, rarity: "Exotic", origin: "1.0 SLS Reward", tier: "low", image: "https://tr.rbxcdn.com/180DAY-3b46430b8a8741f6182e446ae267b219/420/420/Image/Webp/noFilter", numericValue: 7500 },
+    { name: "Raijin", value: "6.5K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/raijin.png", numericValue: 6500 },
+    { name: "Eternality", value: "6.5K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 3, rarity: "Power", new: true, origin: "Power Pack V3", tier: "low", image: "/images/eternality.png", numericValue: 6500 },
+    { name: "Bloxy Cola Hat", value: "6K", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 2, rarity: "Epic", origin: "From Packs on Release", tier: "low", image: "https://tr.rbxcdn.com/180DAY-d7b33881eec5f0f59db5efad0e852596/420/420/Hat/Webp/noFilter", numericValue: 6000 },
+    { name: "Scythe Spin", value: "5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 1, rarity: "Exotic", origin: "Halloween Item", tier: "low", image: "https://tr.rbxcdn.com/180DAY-b36061ef8f0cfb293ff4e3dd6541c01e/420/420/Image/Webp/noFilter", numericValue: 5000 },
+    { name: "The Chosen One", value: "4K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Power", origin: "Powers V2 Pack", tier: "low", image: "/images/chosen.png", numericValue: 4000 },
+    { name: "Bronze Champion Band [B]", value: "5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 2, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/bronzeb.png", numericValue: 5000 },
+    { name: "Rivalry Soccer Shoes", value: "3.5K", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 1, rarity: "Limited", origin: "Robux Item", tier: "low", image: "/images/pshoes.png", numericValue: 3500 },
+    { name: "Dragon Fang Cleats", value: "2K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Power", origin: "Powers V2 Pack", tier: "low", image: "/images/cleats.png", numericValue: 2000 },
 ];
-
 
 // =============================================================
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
-
-// Default token multipliers
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) {
-        return 25;
-    } else if (numericValue >= 180000) {
-        return 22.5;
-    } else if (numericValue >= 141000) {
-        return 18.9;
-    } else if (numericValue >= 130000) {
-        return 18;
-    } else if (numericValue >= 100000) {
-        return 14.7;
-    }
-    else if (numericValue >= 64999) {
-        return 14.25;
-    } else if (numericValue >= 35001) {
-        return 11.25;
-    } else if (numericValue >= 33001) {
-        return 9.6;
-    } else {
-        return 3.6;
-    }
+    if (numericValue >= 951000) return 25;
+    if (numericValue >= 180000) return 23;
+    if (numericValue >= 141000) return 20;
+    if (numericValue >= 130000) return 18;
+    if (numericValue >= 100000) return 14.7;
+    if (numericValue >= 64999) return 14.25;
+    if (numericValue >= 35001) return 11.25;
+    if (numericValue >= 33001) return 9.6;
+    return 3.6;
 }
 
-// Token icon URL (fallback if image doesn't load)
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
 const LAST_UPDATED = "Oct 12, 2026";
 
+const CUSTOM_TOKEN_VALUES = {
+    "Kawaii Card": 712500,
+    "Kawaii Frame": 570000
+};
+
 function updateLastUpdatedDisplay() {
     const el = document.getElementById('lastUpdated');
-    if (el) {
-        el.textContent = `📅 Updated: ${LAST_UPDATED}`;
-    }
+    if (el) el.textContent = `📅 Updated: ${LAST_UPDATED}`;
 }
 
-// Function to calculate token value for an item
-// Function to calculate token value for an item
 function getTokenValue(item) {
-    if (!item.numericValue || item.numericValue === 0) {
-        return null;
-    }
-    // Check if there's a custom token value for this item
-    if (CUSTOM_TOKEN_VALUES[item.name]) {
-        return CUSTOM_TOKEN_VALUES[item.name];
-    }
+    if (!item.numericValue || item.numericValue === 0) return null;
+    if (CUSTOM_TOKEN_VALUES[item.name]) return CUSTOM_TOKEN_VALUES[item.name];
     const multiplier = getTokenMultiplier(item.numericValue);
     return Math.round(item.numericValue * multiplier);
 }
 
-// Function to format token value with K/M suffix
 function formatTokenValue(val) {
-    if (val >= 1000000) {
-        return (val / 1000000).toFixed(1) + 'M';
-    } else if (val >= 1000) {
-        return (val / 1000).toFixed(1) + 'K';
-    }
+    if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+    if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
     return val.toString();
+}
+
+// =============================================================
+// RARITY HELPERS
+// =============================================================
+const VALID_RARITIES = ["Power", "Limited", "Exotic", "Legendary", "Epic", "Uncommon", "Rare", "Common"];
+
+function getRarityString(item) {
+    if (item && typeof item.rarity === "string" && VALID_RARITIES.includes(item.rarity)) {
+        return item.rarity;
+    }
+    return "Exotic";
+}
+
+function getRarityClass(rarityString) {
+    const map = {
+        "Power": "rarity-power",
+        "Limited": "rarity-limited",
+        "Exotic": "rarity-exotic",
+        "Legendary": "rarity-legendary",
+        "Epic": "rarity-epic",
+        "Uncommon": "rarity-uncommon",
+        "Rare": "rarity-rare",
+        "Common": "rarity-common"
+    };
+    return map[rarityString] || "rarity-fallback";
 }
 
 // =============================================================
@@ -1043,147 +291,35 @@ const TRADE_ADS = [{
     lookingTotal: 0
 }];
 
-
-const CUSTOM_TOKEN_VALUES = {
-    // "WC26 Backwards Celebration": 600000,
-    "Kawaii Card": 712500,
-    "Kawaii Frame": 570000
-};
-
+// =============================================================
+// 3. SECRET ITEMS
+// =============================================================
 const SECRET_ITEMS = [
-    {
-        name: "Helicopter Flip ☠️",
-        value: "10M",
-        range: "[N/A]",
-        stability: "Rising",
-        fire: true,
-        new: true,
-        demand: 999,
-        rarity: 999,
-        origin: "idk",
-        tier: "secret",
-        image: "/images/helicopterflip.png",
-        numericValue: 10000000
-    },
-    {
-        name: "Shinigami Mantle",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Rising",
-        fire: true,
-        new: true,
-        demand: 10,
-        rarity: 999,
-        origin: "Unreleased",
-        tier: "secret",
-        image: "/images/shinigami.png",
-        numericValue: 0
-    }, {
-        name: "Shogun Halo",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Rising",
-        fire: true,
-        new: true,
-        demand: 10,
-        rarity: 999,
-        origin: "Unreleased",
-        tier: "secret",
-        image: "/images/shogun.png",
-        numericValue: 0
-    }, 
-    {
-        name: "Tech Visor",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Stable",
-        fire: true,
-        demand: 1,
-        rarity: 11,
-        origin: "gift from feller",
-        tier: "secret",
-        image: "/images/techvisor.png",
-        numericValue: 0
-    }, {
-        name: "Ski Goggles",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 1,
-        rarity: 11,
-        origin: "1.0 Christmas Battlepass",
-        tier: "secret",
-        image: "/images/skigogs.png",
-        numericValue: 0
-    },
-    {
-        name: "SL Hall of Fame",
-        value: "O/C",
-        range: "[N/A]",
-        stability: "Stable",
-        demand: 5,
-        rarity: 11,
-        origin: "Art Contest",
-        tier: "secret",
-        image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter",
-        numericValue: 0
-    }, {
-        name: "EzraArcanum Developer Set",
-        stability: "Stable",
-        demand: 4,
-        rarity: 9,
-        origin: "Unreleased",
-        tier: "secret",
-        isDual: true,
-        items: [{ name: "EzraArcanum Card", value: "N/A", image: "/images/ezracard.png",
-                numericValue: 0 }, { name: "EzraArcanum Frame", value: "N/A",
-                image: "/images/ezraframe.png",
-                numericValue: 0 }]
-    },
-    {
-        name: "SL Glory",
-        value: "700K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 4,
-        rarity: 9,
-        origin: "Art Contest Gift",
-        tier: "secret",
-        image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter",
-        numericValue: 700000
-    },
-    {
-        name: "El Skullcito",
-        value: "600K",
-        range: "[N/A]",
-        stability: "Unstable",
-        demand: 3,
-        rarity: 9,
-        origin: "Gift from Sei-chan >.<\n Please Stop asking me to update value of this item!!!!",
-        tier: "secret",
-        image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter",
-        numericValue: 600000
-    }, {
-        name: "WC26 Ball Frame",
-        value: "0",
-        range: "[N/A]",
-        stability: "Dropping",
-        demand: 0,
-        rarity: 0,
-        origin: "straight from hell",
-        tier: "secret",
-        image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter",
-        numericValue: 0
-    },
+    { name: "Helicopter Flip ☠️", value: "10M", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 999, rarityScore: 10, rarity: "Limited", origin: "idk", tier: "secret", image: "/images/helicopterflip.png", numericValue: 10000000 },
+    { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
+    { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
+    { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", fire: true, demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
+    { name: "Ski Goggles", value: "O/C", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 10, rarity: "Exotic", origin: "1.0 Christmas Battlepass", tier: "secret", image: "/images/skigogs.png", numericValue: 0 },
+    { name: "SL Hall of Fame", value: "O/C", range: "[N/A]", stability: "Stable", demand: 5, rarityScore: 10, rarity: "Rare", origin: "Art Contest", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter", numericValue: 0 },
+    { name: "EzraArcanum Developer Set", stability: "Stable", demand: 4, rarityScore: 9, rarity: "Exotic", origin: "Unreleased", tier: "secret", isDual: true,
+      items: [
+        { name: "EzraArcanum Card", value: "N/A", image: "/images/ezracard.png", numericValue: 0 },
+        { name: "EzraArcanum Frame", value: "N/A", image: "/images/ezraframe.png", numericValue: 0 }
+      ] },
+    { name: "SL Glory", value: "700K", range: "[N/A]", stability: "Unstable", demand: 4, rarityScore: 9, rarity: "Rare", origin: "Art Contest Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter", numericValue: 700000 },
+    { name: "El Skullcito", value: "600K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 9, rarity: "Rare", origin: "Gift from Sei-chan >.<\n Please Stop asking me to update value of this item!!!!", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", numericValue: 600000 },
+    { name: "WC26 Ball Frame", value: "0", range: "[N/A]", stability: "Dropping", demand: 0, rarityScore: 1, rarity: "Common", origin: "straight from hell", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
 ];
 
-// Mimimimi click counter
+// =============================================================
+// STATE
+// =============================================================
 let mimimimiClicks = 0;
 let secretTierUnlocked = false;
-let showBaseValue = true;
+let showBaseValue = false; // false = tokens by default
 
 // =============================================================
-// 3. RENDER ITEMS
+// RENDER ITEMS
 // =============================================================
 function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     const newGrid = document.getElementById('newGrid');
@@ -1211,36 +347,26 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
         return matchTier && matchStab && matchSearch;
     });
 
-    // NEW ITEMS — only shows on "all" tier view and no stability filter
     const newItems = (filterTier === 'all' && filterStab === 'all')
         ? filtered.filter(i => i.new)
         : [];
 
-    // All tiers now include new items (no more `!i.new`)
     const tier4 = filtered.filter(i => i.tier === 'tier4');
     const high = filtered.filter(i => i.tier === 'high');
     const mid = filtered.filter(i => i.tier === 'mid');
     const low = filtered.filter(i => i.tier === 'low');
 
-    // Hide new tier section if empty
     const newTierSection = document.getElementById('newTier');
     if (newTierSection) {
-        if (newItems.length === 0) {
-            newTierSection.style.display = 'none';
-        } else {
-            newTierSection.style.display = 'block';
-        }
+        newTierSection.style.display = newItems.length === 0 ? 'none' : 'block';
     }
 
-    if (newGrid) {
-        newItems.forEach(item => newGrid.appendChild(createCard(item)));
-    }
+    if (newGrid) newItems.forEach(item => newGrid.appendChild(createCard(item)));
     tier4.forEach(item => tier4Grid.appendChild(createCard(item)));
     high.forEach(item => highGrid.appendChild(createCard(item)));
     mid.forEach(item => midGrid.appendChild(createCard(item)));
     low.forEach(item => lowGrid.appendChild(createCard(item)));
 
-    // Secret tier - only renders if unlocked
     if (secretGrid && secretTierUnlocked) {
         const secretFiltered = SECRET_ITEMS.filter(item => {
             const matchSearch = !searchLower || item.name.toLowerCase().includes(searchLower);
@@ -1250,305 +376,226 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     }
 }
 
+// =============================================================
+// CREATE CARD (vertical, premium — matches index.html design)
+// =============================================================
 function createCard(item) {
     const card = document.createElement('div');
     card.className = 'item-card';
 
-    if (item.isDual) {
-    card.classList.add('dual-item');
-    const leftContainer = document.createElement('div');
-    leftContainer.style.display = 'flex';
-    leftContainer.style.flexDirection = 'column';
-    leftContainer.style.gap = '6px';
-    leftContainer.style.alignItems = 'center';
+    const isDual = item.isDual === true;
+    const rarityString = getRarityString(item);
+    const rarityClass = getRarityClass(rarityString);
 
-    const dualContainer = document.createElement('div');
-    dualContainer.className = 'dual-items-container';
+    // rarity badge
+    const badge = document.createElement('div');
+    badge.className = `rarity-badge ${rarityClass}`;
+    badge.textContent = rarityString;
+    card.appendChild(badge);
 
-    item.items.forEach(subItem => {
-        const entry = document.createElement('div');
-        entry.className = 'dual-item-entry';
-        
-        // ICON - always show the image first
-        const icon = document.createElement('div');
-        icon.className = 'item-icon';
-        if (subItem.image) {
-            const img = document.createElement('img');
-            img.src = subItem.image;
-            img.alt = subItem.name;
-            icon.appendChild(img);
-        } else {
-            icon.textContent = '✦';
+    // artwork
+    if (isDual) {
+        const stack = document.createElement('div');
+        stack.className = 'dual-stack';
+        if (item.items[0] && item.items[0].image) {
+            const cardImg = document.createElement('img');
+            cardImg.className = 'stack-img card-layer';
+            cardImg.src = item.items[0].image;
+            cardImg.alt = item.items[0].name;
+            stack.appendChild(cardImg);
         }
-        entry.appendChild(icon);
-
-        // Create a container for the text info
-        const infoContainer = document.createElement('div');
-        infoContainer.style.display = 'flex';
-        infoContainer.style.flexDirection = 'column';
-        infoContainer.style.gap = '2px';
-
-        // Item name (Card / Frame)
-        const nameSpan = document.createElement('span');
-        nameSpan.style.cssText = 'font-size:0.7rem;font-weight:800;color:var(--text-secondary);';
-        nameSpan.textContent = subItem.name;
-        infoContainer.appendChild(nameSpan);
-
-        // Value row: Base value + Token badge (tiny, to the right)
-        const valueRow = document.createElement('div');
-        valueRow.style.display = 'flex';
-        valueRow.style.alignItems = 'center';
-        valueRow.style.gap = '6px';
-
-        // Base value
-        // Base value (only if toggle is on)
-// Base value - always shown for O/C items, otherwise respects toggle
-const subHasTokenValue = subItem.numericValue && subItem.numericValue > 0 && getTokenValue(subItem);
-if (showBaseValue || !subHasTokenValue) {
-    const baseValSpan = document.createElement('span');
-    baseValSpan.className = 'item-value';
-    baseValSpan.style.cssText = 'height:1.8em;line-height:1.8;box-sizing:border-box;font-size:0.8rem;padding:0 8px;';
-    baseValSpan.textContent = subItem.value;
-    valueRow.appendChild(baseValSpan);
-}
-
-        // Token badge (tiny pill, to the right of base value)
-        if (subItem.numericValue && subItem.numericValue > 0) {
-            const tokenVal = getTokenValue(subItem);
-            if (tokenVal) {
-                const tokenBadge = document.createElement('span');
-                tokenBadge.style.cssText = `
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 1px;
-                    background: rgba(255, 200, 0, 0.12);
-                    border: 1px solid #f0c040;
-                    border-radius: 12px;
-                    padding: 0 6px;
-                    font-weight: 800;
-                    font-size: 0.6rem;
-                    color: #f0c040;
-                    height: 1.6em;
-                    line-height: 1.6;
-                    box-sizing: border-box;
-                    white-space: nowrap;
-                `;
-                
-                const tokenIcon = document.createElement('img');
-                tokenIcon.src = TOKEN_ICON;
-                tokenIcon.alt = '🪙';
-                tokenIcon.style.cssText = 'width:12px;height:12px;object-fit:contain;';
-                tokenIcon.onerror = function() {
-                    this.style.display = 'none';
-                    const fallback = document.createElement('span');
-                    fallback.textContent = TOKEN_EMOJI;
-                    fallback.style.cssText = 'font-size:0.7rem;';
-                    this.parentNode.insertBefore(fallback, this.nextSibling);
-                };
-                tokenBadge.appendChild(tokenIcon);
-                
-                const tokenText = document.createElement('span');
-                tokenText.textContent = formatTokenValue(tokenVal);
-                tokenBadge.appendChild(tokenText);
-                
-                valueRow.appendChild(tokenBadge);
-            }
+        if (item.items[1] && item.items[1].image) {
+            const frameImg = document.createElement('img');
+            frameImg.className = 'stack-img frame-layer';
+            frameImg.src = item.items[1].image;
+            frameImg.alt = item.items[1].name;
+            stack.appendChild(frameImg);
         }
-
-        infoContainer.appendChild(valueRow);
-        entry.appendChild(infoContainer);
-
-        dualContainer.appendChild(entry);
-    });
-
-    leftContainer.appendChild(dualContainer);
-
-    const info = document.createElement('div');
-    info.className = 'item-info';
-    const name = document.createElement('div');
-    name.className = 'item-name';
-    name.innerHTML = `${item.name} <span class="dual-set-badge">SET</span>`;
-    if (item.new) {
-        const newBadge = document.createElement('span');
-        newBadge.className = 'item-new-badge';
-        newBadge.textContent = 'NEW!';
-        name.appendChild(newBadge);
-    }
-    if (item.fire) {
-    const fireBadge = document.createElement('span');
-    fireBadge.className = 'item-fire-badge';
-    fireBadge.textContent = '🔥';
-    name.appendChild(fireBadge);
-}
-    info.appendChild(name);
-    const meta = document.createElement('div');
-meta.className = 'item-meta';
-const stabSpan = document.createElement('span');
-stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
-stabSpan.textContent = item.stability;
-meta.appendChild(stabSpan);
-info.appendChild(meta);
-
-// Bottom row: demand + rarity, then origin
-const bottomRow = document.createElement('div');
-bottomRow.className = 'item-bottom-row';
-
-const demSpan = document.createElement('span');
-demSpan.className = 'item-demand';
-demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
-bottomRow.appendChild(demSpan);
-
-const originSpan = document.createElement('span');
-originSpan.className = 'item-origin';
-originSpan.textContent = item.origin;
-bottomRow.appendChild(originSpan);
-
-info.appendChild(bottomRow);
-card.appendChild(leftContainer);
-card.appendChild(info);
-return card;
-}
-
-    const icon = document.createElement('div');
-    icon.className = 'item-icon';
-    if (item.image) {
-        const img = document.createElement('img');
-        img.src = item.image;
-        img.alt = item.name;
-        icon.appendChild(img);
+        card.appendChild(stack);
     } else {
-        icon.textContent = '✦';
+        const artwork = document.createElement('div');
+        artwork.className = 'card-artwork';
+        if (item.image) {
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.name;
+            artwork.appendChild(img);
+        } else {
+            artwork.textContent = '✦';
+            artwork.style.fontSize = '2rem';
+            artwork.style.color = '#444';
+        }
+        card.appendChild(artwork);
     }
 
-    const info = document.createElement('div');
-    info.className = 'item-info';
-    const name = document.createElement('div');
-    name.className = 'item-name';
-    name.textContent = item.name;
+    // name
+    const nameEl = document.createElement('div');
+    nameEl.className = 'card-name';
+    nameEl.textContent = item.name;
     if (item.new) {
         const newBadge = document.createElement('span');
-        newBadge.className = 'item-new-badge';
+        newBadge.className = 'new-badge';
         newBadge.textContent = 'NEW!';
-        name.appendChild(newBadge);
+        nameEl.appendChild(newBadge);
     }
     if (item.fire) {
-    const fireBadge = document.createElement('span');
-    fireBadge.className = 'item-fire-badge';
-    fireBadge.textContent = '🔥';
-    name.appendChild(fireBadge);
-}
-    info.appendChild(name);
-    const meta = document.createElement('div');
-    meta.className = 'item-meta';
-    
-// Create a container for value and token
-// Create a container for value, token, and stability
-const valueContainer = document.createElement('span');
-valueContainer.style.display = 'flex';
-valueContainer.style.alignItems = 'center';
-valueContainer.style.gap = '6px';
-valueContainer.style.height = '100%';
-
-// Token value (only if numericValue > 0) - placed FIRST
-if (item.numericValue && item.numericValue > 0) {
-    const tokenVal = getTokenValue(item);
-    if (tokenVal) {
-        const tokenSpan = document.createElement('span');
-        tokenSpan.style.cssText = `
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-            background: rgba(255, 200, 0, 0.15);
-            border: 1.5px solid #f0c040;
-            border-radius: 20px;
-            padding: 0 10px;
-            font-weight: 900;
-            font-size: 0.8rem;
-            color: #f0c040;
-            height: 100%;
-            min-height: 1.8em;
-            line-height: 1.8;
-            box-sizing: border-box;
-        `;
-        // Try to use image, fallback to emoji
-        const tokenIcon = document.createElement('img');
-        tokenIcon.src = TOKEN_ICON;
-        tokenIcon.alt = '🪙';
-        tokenIcon.style.cssText = 'width:16px;height:16px;object-fit:contain;';
-        tokenIcon.onerror = function() {
-            this.style.display = 'none';
-            const fallback = document.createElement('span');
-            fallback.textContent = TOKEN_EMOJI;
-            fallback.style.cssText = 'font-size:0.9rem;';
-            this.parentNode.insertBefore(fallback, this.nextSibling);
-        };
-        tokenSpan.appendChild(tokenIcon);
-        
-        const tokenText = document.createElement('span');
-        tokenText.textContent = formatTokenValue(tokenVal);
-        tokenSpan.appendChild(tokenText);
-        
-        valueContainer.appendChild(tokenSpan);
+        const fireBadge = document.createElement('span');
+        fireBadge.className = 'fire-badge';
+        fireBadge.textContent = '🔥';
+        nameEl.appendChild(fireBadge);
     }
-}
+    card.appendChild(nameEl);
 
-// Base value - placed SECOND
-// Base value - always shown for O/C items, otherwise respects toggle
-const hasTokenValue = item.numericValue && item.numericValue > 0 && getTokenValue(item);
-if (showBaseValue || !hasTokenValue) {
-    const baseValSpan = document.createElement('span');
-    baseValSpan.className = 'item-value';
-    baseValSpan.style.cssText = 'height:100%;min-height:1.8em;line-height:1.8;box-sizing:border-box;';
-    baseValSpan.textContent = typeof item.value === 'string' ? item.value : item.value.toLocaleString() + (item.range &&
-        item.range !== '[N/A]' ? ` (${item.range})` : '');
-    valueContainer.appendChild(baseValSpan);
-}
+    // value row
+    const valueRow = document.createElement('div');
+    valueRow.className = 'card-value-row';
 
-// Stability badge - placed THIRD (right after base value)
-const stabSpan = document.createElement('span');
-stabSpan.className = `item-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
-stabSpan.style.cssText = `
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 2px 10px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    min-height: 1.8em;
-    line-height: 1.8;
-    box-sizing: border-box;
-`;
-stabSpan.textContent = item.stability;
-valueContainer.appendChild(stabSpan);
+    if (isDual) {
+        const dualLines = document.createElement('div');
+        dualLines.className = 'dual-value-lines';
 
-meta.appendChild(valueContainer);
-info.appendChild(meta);
+        item.items.forEach(sub => {
+            const line = document.createElement('div');
+            line.className = 'dual-value-line';
 
-// Bottom row: demand + rarity, then origin
-const bottomRow = document.createElement('div');
-bottomRow.className = 'item-bottom-row';
+            const subLabel = document.createElement('span');
+            subLabel.className = 'dual-sub-label';
+            subLabel.textContent = sub.name.includes('Card') ? 'Card' : 'Frame';
+            line.appendChild(subLabel);
 
-const demSpan = document.createElement('span');
-demSpan.className = 'item-demand';
-demSpan.innerHTML = `demand <b>${item.demand}</b> · rarity ${item.rarity}`;
-bottomRow.appendChild(demSpan);
+            const tokenVal = getTokenValue(sub);
+            if (!showBaseValue && tokenVal) {
+                const img = document.createElement('img');
+                img.className = 'token-icon';
+                img.src = TOKEN_ICON;
+                img.alt = 'token';
+                line.appendChild(img);
+                const txt = document.createElement('span');
+                txt.textContent = formatTokenValue(tokenVal);
+                line.appendChild(txt);
+            } else {
+                const txt = document.createElement('span');
+                txt.textContent = sub.value;
+                line.appendChild(txt);
+            }
+            dualLines.appendChild(line);
+        });
+        valueRow.appendChild(dualLines);
+    } else {
+        const valSpan = document.createElement('div');
+        valSpan.className = 'card-value';
+        const tokenVal = getTokenValue(item);
+        if (!showBaseValue && tokenVal) {
+            const img = document.createElement('img');
+            img.className = 'token-icon';
+            img.src = TOKEN_ICON;
+            img.alt = 'token';
+            valSpan.appendChild(img);
+            const txt = document.createElement('span');
+            txt.textContent = formatTokenValue(tokenVal);
+            valSpan.appendChild(txt);
+        } else {
+            valSpan.textContent = item.value;
+        }
+        valueRow.appendChild(valSpan);
+    }
 
-const originSpan = document.createElement('span');
-originSpan.className = 'item-origin';
-originSpan.textContent = item.origin;
-bottomRow.appendChild(originSpan);
+    const stabSpan = document.createElement('span');
+    stabSpan.className = `card-stability ${item.stability.toLowerCase().replace(/ /g, '')}`;
+    stabSpan.textContent = item.stability;
+    valueRow.appendChild(stabSpan);
+    card.appendChild(valueRow);
 
-info.appendChild(bottomRow);
-card.appendChild(icon);
-card.appendChild(info);
-return card;
+    // progress bars
+    const progressGroup = document.createElement('div');
+    progressGroup.className = 'card-progress-group';
+
+    // demand
+    const demandRow = document.createElement('div');
+    demandRow.className = 'progress-row';
+    const demandLabel = document.createElement('span');
+    demandLabel.className = 'progress-label';
+    demandLabel.textContent = 'Demand';
+    demandRow.appendChild(demandLabel);
+    const demandBar = document.createElement('div');
+    demandBar.className = 'progress-bar';
+    const maxDemand = 10;
+    const demandSegments = 10;
+    const filledDemand = Math.min(Math.round((item.demand / maxDemand) * demandSegments), demandSegments);
+    for (let i = 0; i < demandSegments; i++) {
+        const seg = document.createElement('div');
+        seg.className = 'progress-segment' + (i < filledDemand ? ' filled demand-fill' : '');
+        demandBar.appendChild(seg);
+    }
+    demandRow.appendChild(demandBar);
+    const demandVal = document.createElement('span');
+    demandVal.className = 'progress-value';
+    demandVal.textContent = `${item.demand}/10`;
+    demandRow.appendChild(demandVal);
+    progressGroup.appendChild(demandRow);
+
+    // rarity bar (uses rarityScore — independent of rarity string)
+    const rarityRow = document.createElement('div');
+    rarityRow.className = 'progress-row';
+    const rarityLabelEl = document.createElement('span');
+    rarityLabelEl.className = 'progress-label';
+    rarityLabelEl.textContent = 'Rarity';
+    rarityRow.appendChild(rarityLabelEl);
+    const rarityBar = document.createElement('div');
+    rarityBar.className = 'progress-bar';
+    const rarityScore = (typeof item.rarityScore === 'number') ? item.rarityScore : 5;
+    const maxRarity = 10;
+    const raritySegments = 10;
+    const filledRarity = Math.min(Math.round((rarityScore / maxRarity) * raritySegments), raritySegments);
+    for (let i = 0; i < raritySegments; i++) {
+        const seg = document.createElement('div');
+        seg.className = 'progress-segment' + (i < filledRarity ? ' filled rarity-fill' : '');
+        rarityBar.appendChild(seg);
+    }
+    rarityRow.appendChild(rarityBar);
+    const rarityVal = document.createElement('span');
+    rarityVal.className = 'progress-value';
+    rarityVal.textContent = `${rarityScore}/10`;
+    rarityRow.appendChild(rarityVal);
+    progressGroup.appendChild(rarityRow);
+
+    card.appendChild(progressGroup);
+
+    // metadata
+    const meta = document.createElement('div');
+    meta.className = 'card-meta';
+
+    const originRow = document.createElement('div');
+    originRow.className = 'meta-row';
+    const originLabel = document.createElement('span');
+    originLabel.className = 'meta-label';
+    originLabel.textContent = 'Origin';
+    originRow.appendChild(originLabel);
+    const originValue = document.createElement('span');
+    originValue.className = 'meta-value origin-value';
+    originValue.textContent = item.origin;
+    originRow.appendChild(originValue);
+    meta.appendChild(originRow);
+
+    const rarityRowMeta = document.createElement('div');
+    rarityRowMeta.className = 'meta-row';
+    const rarityLabelMeta = document.createElement('span');
+    rarityLabelMeta.className = 'meta-label';
+    rarityLabelMeta.textContent = 'Rarity';
+    rarityRowMeta.appendChild(rarityLabelMeta);
+    const rarityValueMeta = document.createElement('span');
+    rarityValueMeta.className = 'meta-value rarity-text';
+    rarityValueMeta.textContent = rarityString;
+    rarityRowMeta.appendChild(rarityValueMeta);
+    meta.appendChild(rarityRowMeta);
+
+    card.appendChild(meta);
+
+    return card;
 }
 
 // =============================================================
-// 4. FILTER CONTROLS
+// FILTERS
 // =============================================================
 function applyFilters() {
     const tier = document.getElementById('tierFilter')?.value || 'all';
@@ -1561,16 +608,14 @@ function resetFilters() {
     const tierFilter = document.getElementById('tierFilter');
     const stabilityFilter = document.getElementById('stabilityFilter');
     const searchInput = document.getElementById('searchInput');
-    
     if (tierFilter) tierFilter.value = 'all';
     if (stabilityFilter) stabilityFilter.value = 'all';
     if (searchInput) searchInput.value = '';
-    
     renderItems('all', 'all', '');
 }
 
 // =============================================================
-// 5. THEME TOGGLE
+// THEME
 // =============================================================
 let currentTheme = 'dark';
 const toggleDot = document.getElementById('toggleDot');
@@ -1579,31 +624,30 @@ function setTheme(theme) {
     currentTheme = theme;
     document.documentElement.setAttribute('data-theme', theme);
     if (toggleDot) {
-        if (theme === 'light') {
-            toggleDot.classList.add('active');
-        } else {
-            toggleDot.classList.remove('active');
-        }
+        if (theme === 'light') toggleDot.classList.add('active');
+        else toggleDot.classList.remove('active');
     }
     localStorage.setItem('fss-theme', theme);
 }
+
 // =============================================================
-// BASE VALUE TOGGLE
+// VALUE TOGGLE
 // =============================================================
-function setBaseValueVisibility(show) {
-    showBaseValue = show;
-    localStorage.setItem('fss-show-base', show ? 'true' : 'false');
-    
-    const dot = document.getElementById('baseValueDot');
-    if (dot) {
-        if (show) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
+function setValueMode(useBase) {
+    showBaseValue = useBase;
+    localStorage.setItem('fss-show-base', useBase ? 'true' : 'false');
+
+    const vtDot = document.getElementById('vtDot');
+    const labelBase = document.getElementById('vtLabelBase');
+    const labelToken = document.getElementById('vtLabelToken');
+
+    if (vtDot) {
+        if (useBase) vtDot.classList.remove('token-active');
+        else vtDot.classList.add('token-active');
     }
-    
-    // Re-render items to apply the change
+    if (labelBase) labelBase.classList.toggle('active', useBase);
+    if (labelToken) labelToken.classList.toggle('active', !useBase);
+
     renderItems(
         document.getElementById('tierFilter')?.value || 'all',
         document.getElementById('stabilityFilter')?.value || 'all',
@@ -1611,9 +655,19 @@ function setBaseValueVisibility(show) {
     );
 }
 
+// Legacy alias used by some HTML files
+function setBaseValueVisibility(show) {
+    setValueMode(show);
+}
+
 // =============================================================
 // 6. TRADE ADS
 // =============================================================
+function getItemImage(itemName) {
+    const found = ITEMS.find(i => i.name.toLowerCase() === itemName.toLowerCase());
+    return found?.image || '';
+}
+
 function renderTradeAds() {
     const grid = document.getElementById('adsGrid');
     if (!grid) return;
@@ -1621,19 +675,15 @@ function renderTradeAds() {
     let ads = [...TRADE_ADS];
 
     ads.forEach(ad => {
-    ad.offeringTotal = ad.offering.reduce((total, adItem) => {
-        // Handle tokens separately
-        if (adItem.name === "Tokens") {
-            return total + (adItem.qty || 0);
-        }
-        const item = ITEMS.find(i => i.name.toLowerCase() === adItem.name.toLowerCase());
-        return total + ((item?.numericValue || 0) * (adItem.qty || 1));
-    }, 0);
-    ad.lookingTotal = 0;
-});
+        ad.offeringTotal = ad.offering.reduce((total, adItem) => {
+            if (adItem.name === "Tokens") return total + (adItem.qty || 0);
+            const item = ITEMS.find(i => i.name.toLowerCase() === adItem.name.toLowerCase());
+            return total + ((item?.numericValue || 0) * (adItem.qty || 1));
+        }, 0);
+        ad.lookingTotal = 0;
+    });
 
     const search = document.getElementById('adSearchInput')?.value.toLowerCase().trim() || '';
-
     if (search) {
         ads = ads.filter(ad => {
             const usernameMatch = ad.username.toLowerCase().includes(search);
@@ -1643,11 +693,7 @@ function renderTradeAds() {
     }
 
     if (ads.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:40px 0;">
-                No trade ads yet.
-            </div>
-        `;
+        grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:40px 0;">No trade ads yet.</div>`;
         return;
     }
 
@@ -1658,22 +704,21 @@ function renderTradeAds() {
         card.className = 'ad-card';
 
         let offeringHtml = '';
-if (ad.offering.length > 0) {
-    offeringHtml = `
-        <div class="ad-label">🟢 Offering:</div>
-        <div class="ad-items-grid-display">
-            ${ad.offering.map(i => `
-    <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
-        ${i.name === "Tokens" ? 
-            `<div style="font-size:2.5rem;padding:4px;">🪙</div>` :
-            `<img src="${i.image || getItemImage(i.name)}" alt="${i.name}" style="width:48px;height:48px;object-fit:contain;border-radius:8px;border:1px solid var(--border-card);padding:4px;background:var(--bg-body);">`
+        if (ad.offering.length > 0) {
+            offeringHtml = `
+                <div class="ad-label">🟢 Offering:</div>
+                <div class="ad-items-grid-display">
+                    ${ad.offering.map(i => `
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+                            ${i.name === "Tokens"
+                                ? `<div style="font-size:2.5rem;padding:4px;">🪙</div>`
+                                : `<img src="${i.image || getItemImage(i.name)}" alt="${i.name}" style="width:48px;height:48px;object-fit:contain;border-radius:8px;border:1px solid var(--border-card);padding:4px;background:var(--bg-body);">`}
+                            <div style="font-size:0.65rem;font-weight:700;color:var(--text-secondary);text-align:center;">${i.name}${i.name === "Tokens" ? ` (${i.qty.toLocaleString()})` : i.qty > 1 ? ` ×${i.qty}` : ''}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
-        <div style="font-size:0.65rem;font-weight:700;color:var(--text-secondary);text-align:center;">${i.name}${i.name === "Tokens" ? ` (${i.qty.toLocaleString()})` : i.qty > 1 ? ` ×${i.qty}` : ''}</div>
-    </div>
-`).join('')}
-        </div>
-    `;
-}
 
         let lookingHtml = `
             <div class="ad-label">🔵 Looking For:</div>
@@ -1707,11 +752,6 @@ if (ad.offering.length > 0) {
 function viewAd(id) {
     const ad = TRADE_ADS.find(a => a.id === id);
     if (!ad) return;
-
-    const getItemImage = (itemName) => {
-        const found = ITEMS.find(i => i.name.toLowerCase() === itemName.toLowerCase());
-        return found?.image || '';
-    };
 
     const content = document.getElementById('viewAdContent');
     if (!content) return;
@@ -1753,36 +793,28 @@ function viewAd(id) {
 }
 
 function closeViewAd() {
-    document.getElementById('viewAdModal').classList.remove('active');
+    const el = document.getElementById('viewAdModal');
+    if (el) el.classList.remove('active');
 }
 
 function formatTime(timestamp) {
     const date = new Date(timestamp);
     return date.toLocaleString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
+        month: 'short', day: 'numeric', year: 'numeric',
+        hour: '2-digit', minute: '2-digit'
     });
 }
 
 function formatValue(val) {
-    if (val >= 1000000) {
-        return (val / 1000000).toFixed(2) + 'M';
-    } else if (val >= 1000) {
-        return (val / 1000).toFixed(1) + 'K';
-    }
+    if (val >= 1000000) return (val / 1000000).toFixed(2) + 'M';
+    if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
     return val.toLocaleString();
 }
 
 // =============================================================
 // 7. TRADE CALCULATOR
 // =============================================================
-let calcItems = {
-    your: [],
-    their: []
-};
+let calcItems = { your: [], their: [] };
 let currentPickerSide = 'your';
 
 function getAllItemsForPicker() {
@@ -1792,22 +824,18 @@ function getAllItemsForPicker() {
             item.items.forEach(sub => {
                 if (sub.numericValue !== undefined && sub.numericValue > 0) {
                     items.push({
-                        name: sub.name,
-                        value: sub.value,
+                        name: sub.name, value: sub.value,
                         numericValue: sub.numericValue,
-                        image: sub.image,
-                        tier: item.tier
+                        image: sub.image, tier: item.tier
                     });
                 }
             });
         } else {
             if (item.numericValue !== undefined && item.numericValue > 0) {
                 items.push({
-                    name: item.name,
-                    value: item.value,
+                    name: item.name, value: item.value,
                     numericValue: item.numericValue,
-                    image: item.image,
-                    tier: item.tier
+                    image: item.image, tier: item.tier
                 });
             }
         }
@@ -1815,46 +843,36 @@ function getAllItemsForPicker() {
     return items;
 }
 
-// Special items that appear only when a secret search term is typed
 const SECRET_CALC_SEARCH = "devitemslol";
 
 function getSpecialCalcItems() {
     const specials = [];
 
-    // 1) All SECRET_ITEMS
     SECRET_ITEMS.forEach(item => {
         if (item.isDual) {
             item.items.forEach(sub => {
                 specials.push({
-                    name: sub.name,
-                    value: sub.value,
+                    name: sub.name, value: sub.value,
                     numericValue: sub.numericValue || 0,
-                    image: sub.image,
-                    tier: item.tier
+                    image: sub.image, tier: item.tier
                 });
             });
         } else {
             specials.push({
-                name: item.name,
-                value: item.value,
+                name: item.name, value: item.value,
                 numericValue: item.numericValue || 0,
-                image: item.image,
-                tier: item.tier
+                image: item.image, tier: item.tier
             });
         }
     });
 
-    // 2) Developer Card + Developer Frame (pulled from ITEMS)
     ITEMS.forEach(item => {
         if (item.isDual) {
             item.items.forEach(sub => {
                 if (sub.name === "Developer Card" || sub.name === "Developer Frame" || sub.name === "FCWC Back Trophy") {
                     specials.push({
-                        name: sub.name,
-                        value: sub.value,
-                        numericValue: 0,
-                        image: sub.image,
-                        tier: item.tier
+                        name: sub.name, value: sub.value,
+                        numericValue: 0, image: sub.image, tier: item.tier
                     });
                 }
             });
@@ -1894,12 +912,9 @@ function renderModalItems(search = '') {
     const isSecretSearch = searchLower.includes("devitemslol");
 
     let filtered;
-
     if (isSecretSearch) {
-        // Show ONLY the secret items — skip the normal pool entirely
         filtered = getSpecialCalcItems();
     } else {
-        // Normal search — normal pool only
         const allItems = getAllItemsForPicker();
         filtered = allItems.filter(item =>
             !searchLower || item.name.toLowerCase().includes(searchLower)
@@ -1933,9 +948,7 @@ function renderModalItems(search = '') {
         valueSpan.className = 'modal-item-value';
         let valueText = item.value;
         const tokenVal = getTokenValue(item);
-        if (tokenVal) {
-            valueText += ` · 🪙${formatTokenValue(tokenVal)}`;
-        }
+        if (tokenVal) valueText += ` · 🪙${formatTokenValue(tokenVal)}`;
         valueSpan.textContent = valueText;
         div.appendChild(valueSpan);
 
@@ -1952,11 +965,8 @@ function renderModalItems(search = '') {
 
 function addItemToCalc(side, item) {
     const existing = calcItems[side].find(i => i.name === item.name);
-    if (existing) {
-        existing.qty = (existing.qty || 1) + 1;
-    } else {
-        calcItems[side].push({ ...item, qty: 1 });
-    }
+    if (existing) existing.qty = (existing.qty || 1) + 1;
+    else calcItems[side].push({ ...item, qty: 1 });
     closeItemPicker();
     renderCalcItems();
     updateCalcTotals();
@@ -1973,7 +983,7 @@ function renderCalcItems() {
         const grid = document.getElementById(`calc${side.charAt(0).toUpperCase() + side.slice(1)}Items`);
         if (!grid) return;
         grid.innerHTML = '';
-        
+
         if (calcItems[side].length === 0) {
             grid.classList.remove('has-items');
             const empty = document.createElement('div');
@@ -1986,24 +996,23 @@ function renderCalcItems() {
                 const div = document.createElement('div');
                 div.className = 'calc-grid-item';
                 div.onclick = () => removeItemFromCalc(side, index);
-                
+
                 const img = document.createElement('img');
                 img.src = item.image || '';
                 img.alt = item.name;
                 div.appendChild(img);
-                
+
                 const tooltip = document.createElement('div');
                 tooltip.className = 'item-tooltip';
                 tooltip.textContent = `${item.name} · ${item.value}`;
                 div.appendChild(tooltip);
-                
+
                 if (item.qty > 1) {
                     const badge = document.createElement('span');
                     badge.className = 'item-qty-badge';
                     badge.textContent = item.qty;
                     div.appendChild(badge);
                 }
-                
                 grid.appendChild(div);
             });
         }
@@ -2011,7 +1020,6 @@ function renderCalcItems() {
 }
 
 function updateCalcTotals() {
-    // ---- BASE VALUES (no tokens counted here) ----
     let yourBaseTotal = 0;
     calcItems.your.forEach(item => {
         yourBaseTotal += item.numericValue * (item.qty || 1);
@@ -2022,63 +1030,53 @@ function updateCalcTotals() {
         theirBaseTotal += item.numericValue * (item.qty || 1);
     });
 
-    // ---- TOKEN VALUES (items + tokens input) ----
     let yourTokenTotal = 0;
     calcItems.your.forEach(item => {
         const tokenVal = getTokenValue(item);
-        if (tokenVal) {
-            yourTokenTotal += tokenVal * (item.qty || 1);
-        }
+        if (tokenVal) yourTokenTotal += tokenVal * (item.qty || 1);
     });
     const yourTokensInput = parseInt(document.getElementById('calcYourTokens')?.value || 0);
-    yourTokenTotal += yourTokensInput; // tokens add ONLY to token total
+    yourTokenTotal += yourTokensInput;
 
     let theirTokenTotal = 0;
     calcItems.their.forEach(item => {
         const tokenVal = getTokenValue(item);
-        if (tokenVal) {
-            theirTokenTotal += tokenVal * (item.qty || 1);
-        }
+        if (tokenVal) theirTokenTotal += tokenVal * (item.qty || 1);
     });
     const theirTokensInput = parseInt(document.getElementById('calcTheirTokens')?.value || 0);
-    theirTokenTotal += theirTokensInput; // tokens add ONLY to token total
+    theirTokenTotal += theirTokensInput;
 
-    // ---- DISPLAY ----
     const yourTotalEl = document.getElementById('calcYourTotal');
     const theirTotalEl = document.getElementById('calcTheirTotal');
     const yourTokenEl = document.getElementById('calcYourTokenTotal');
     const theirTokenEl = document.getElementById('calcTheirTokenTotal');
-    
+
     if (yourTotalEl) yourTotalEl.textContent = formatValue(yourBaseTotal);
     if (theirTotalEl) theirTotalEl.textContent = formatValue(theirBaseTotal);
     if (yourTokenEl) yourTokenEl.innerHTML = `🪙 ${formatValue(yourTokenTotal)}`;
     if (theirTokenEl) theirTokenEl.innerHTML = `🪙 ${formatValue(theirTokenTotal)}`;
-    
-    // ---- VERDICT (based on TOKEN VALUE now) ----
+
     const resultEl = document.getElementById('calcResult');
     if (!resultEl) return;
-    
+
     if (yourTokenTotal === 0 && theirTokenTotal === 0) {
         resultEl.textContent = 'Add items to both sides to calculate';
         resultEl.className = 'calc-result';
         return;
     }
-    
+
     const diff = yourTokenTotal - theirTokenTotal;
     const diffPercent = theirTokenTotal > 0 ? (diff / theirTokenTotal) * 100 : 0;
-    
+
     let verdict, className;
     if (diff < 0 && Math.abs(diffPercent) > 5) {
-        verdict = '✅ WIN';
-        className = 'win';
+        verdict = '✅ WIN'; className = 'win';
     } else if (diff > 0 && Math.abs(diffPercent) > 5) {
-        verdict = '❌ LOSE';
-        className = 'lose';
+        verdict = '❌ LOSE'; className = 'lose';
     } else {
-        verdict = '⚖️ FAIR';
-        className = 'fair';
+        verdict = '⚖️ FAIR'; className = 'fair';
     }
-    
+
     const diffStr = diff > 0 ? `+${formatValue(diff)}` : formatValue(diff);
     resultEl.className = `calc-result ${className}`;
     resultEl.innerHTML = `
@@ -2111,84 +1109,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('fss-theme');
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else {
-        setTheme('dark');
+    setTheme(savedTheme || 'dark');
+
+    // Value toggle
+    const valueToggle = document.getElementById('valueToggle');
+    if (valueToggle) {
+        valueToggle.addEventListener('click', function() {
+            setValueMode(!showBaseValue);
+        });
     }
-    // Base value toggle
-const baseValueToggle = document.getElementById('baseValueToggle');
-if (baseValueToggle) {
-    baseValueToggle.addEventListener('click', function() {
-        setBaseValueVisibility(!showBaseValue);
-    });
-}
+    const savedBase = localStorage.getItem('fss-show-base');
+    if (savedBase === 'true') {
+        showBaseValue = true;
+        const vtDot = document.getElementById('vtDot');
+        if (vtDot) vtDot.classList.remove('token-active');
+        document.getElementById('vtLabelBase')?.classList.add('active');
+        document.getElementById('vtLabelToken')?.classList.remove('active');
+    } else {
+        showBaseValue = false;
+        const vtDot = document.getElementById('vtDot');
+        if (vtDot) vtDot.classList.add('token-active');
+        document.getElementById('vtLabelBase')?.classList.remove('active');
+        document.getElementById('vtLabelToken')?.classList.add('active');
+    }
 
-updateLastUpdatedDisplay();
+    // Base value toggle (legacy id)
+    const baseValueToggle = document.getElementById('baseValueToggle');
+    if (baseValueToggle) {
+        baseValueToggle.addEventListener('click', function() {
+            setValueMode(!showBaseValue);
+        });
+    }
 
-// Load saved base value preference (defaults to true)
-const savedBaseValue = localStorage.getItem('fss-show-base');
-if (savedBaseValue === 'false') {
-    showBaseValue = false;
-    const dot = document.getElementById('baseValueDot');
-    if (dot) dot.classList.remove('active');
-} else {
-    showBaseValue = true;
-    const dot = document.getElementById('baseValueDot');
-    if (dot) dot.classList.add('active');
-}
+    updateLastUpdatedDisplay();
 
-    // Filter listeners (only if they exist on the page)
-    const tierFilter = document.getElementById('tierFilter');
-    const stabilityFilter = document.getElementById('stabilityFilter');
-    const searchInput = document.getElementById('searchInput');
-    const resetBtn = document.getElementById('resetFiltersBtn');
+    // Filters
+    document.getElementById('tierFilter')?.addEventListener('change', applyFilters);
+    document.getElementById('stabilityFilter')?.addEventListener('change', applyFilters);
+    document.getElementById('searchInput')?.addEventListener('input', applyFilters);
+    document.getElementById('resetFiltersBtn')?.addEventListener('click', resetFilters);
 
-    if (tierFilter) tierFilter.addEventListener('change', applyFilters);
-    if (stabilityFilter) stabilityFilter.addEventListener('change', applyFilters);
-    if (searchInput) searchInput.addEventListener('input', applyFilters);
-    if (resetBtn) resetBtn.addEventListener('click', resetFilters);
-
-    // Calculator listeners
+    // Calculator inputs
     const yourTokens = document.getElementById('calcYourTokens');
     const theirTokens = document.getElementById('calcTheirTokens');
     if (yourTokens) yourTokens.addEventListener('input', updateCalcTotals);
     if (theirTokens) theirTokens.addEventListener('input', updateCalcTotals);
 
-    // Modal overlay click to close
+    // Trade ads search
+    const adSearchInput = document.getElementById('adSearchInput');
+    if (adSearchInput) adSearchInput.addEventListener('input', renderTradeAds);
+
+    // Modal overlay click
     const itemPickerModal = document.getElementById('itemPickerModal');
     if (itemPickerModal) {
         itemPickerModal.addEventListener('click', function(e) {
             if (e.target === this) closeItemPicker();
         });
     }
-
     const viewAdModal = document.getElementById('viewAdModal');
     if (viewAdModal) {
         viewAdModal.addEventListener('click', function(e) {
             if (e.target === this) closeViewAd();
         });
     }
+
+    // Render main items
+    renderItems('all', 'all', '');
+
+    // Render trade ads if container exists
+    if (document.getElementById('adsGrid')) renderTradeAds();
 });
 
 // =============================================================
 // MIMIMIMI EASTER EGG
 // =============================================================
 document.addEventListener('click', function(e) {
-    // Check if clicked element or its parent is a Mimimimi card
     const card = e.target.closest('.item-card');
     if (!card) return;
-    
-    const nameEl = card.querySelector('.item-name');
+    const nameEl = card.querySelector('.card-name');
     if (!nameEl) return;
-    
-    // Check if the card name starts with "Mimimimi"
     if (nameEl.textContent.trim().toLowerCase().startsWith('mimimimi')) {
         mimimimiClicks++;
-        console.log('Mimimimi clicks:', mimimimiClicks);
-        
         if (mimimimiClicks >= 5 && !secretTierUnlocked) {
             unlockSecretTier();
         }
@@ -2197,36 +1199,38 @@ document.addEventListener('click', function(e) {
 
 function unlockSecretTier() {
     secretTierUnlocked = true;
-    
-    // Play the sound
     try {
         const audio = new Audio('/mimi.ogg');
         audio.volume = 0.5;
-        audio.play().catch(err => console.log('Audio play failed:', err));
-    } catch (err) {
-        console.log('Audio error:', err);
-    }
-    
-    // Show the secret tier with animation
+        audio.play().catch(() => {});
+    } catch (e) {}
     const secretTier = document.getElementById('secretTier');
     if (secretTier) {
         secretTier.style.display = 'block';
         secretTier.style.opacity = '0';
         secretTier.style.transition = 'opacity 0.5s ease-in';
-        setTimeout(() => {
-            secretTier.style.opacity = '1';
-        }, 50);
-        
-        // Scroll to it
-        setTimeout(() => {
-            secretTier.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 300);
+        setTimeout(() => { secretTier.style.opacity = '1'; }, 50);
+        setTimeout(() => { secretTier.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
     }
-    
-    // Re-render items to include secret tier
     renderItems(
         document.getElementById('tierFilter')?.value || 'all',
         document.getElementById('stabilityFilter')?.value || 'all',
         document.getElementById('searchInput')?.value || ''
     );
 }
+
+// =============================================================
+// EXPOSE
+// =============================================================
+window.renderItems = renderItems;
+window.applyFilters = applyFilters;
+window.resetFilters = resetFilters;
+window.setTheme = setTheme;
+window.setValueMode = setValueMode;
+window.setBaseValueVisibility = setBaseValueVisibility;
+window.renderTradeAds = renderTradeAds;
+window.viewAd = viewAd;
+window.closeViewAd = closeViewAd;
+window.openItemPicker = openItemPicker;
+window.closeItemPicker = closeItemPicker;
+window.filterModalItems = filterModalItems;

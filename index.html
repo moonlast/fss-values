@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSS Values</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main-wrapper">
         <!-- ===== HEADER ===== -->
-        <!-- ===== HEADER ===== -->
-<div class="header-area">
-    <div class="logo">
-        <h1>◈ FSS Values</h1>
-        <small>trusted · made by moon & ccc</small>
-    </div>
-    <div class="header-right">
-        <div class="nav-buttons">
-            <a href="/" class="nav-link active">📊 Values</a>
-            <a href="/calculator" class="nav-link">🧮 Calculator</a>
-            <a href="/tradeads" class="nav-link">🔄 Trade Ads</a>
-            <a href="/changelog" class="nav-link">📋 Changelog</a>
-            <a href="/credits" class="nav-link">👤 Credits</a>
-        </div>
-        <span id="lastUpdated">📅 Updated: —</span>
-        <span class="tag">#1 value list</span>
-        <div class="theme-toggle" id="themeToggle" title="Toggle theme">
-            <span class="toggle-label">🌙</span>
-            <div class="toggle-track">
-                <div class="toggle-dot" id="toggleDot"></div>
+        <div class="header-area">
+            <div class="logo">
+                <h1>◈ FSS Values</h1>
+                <small>trusted · made by moon & ccc</small>
             </div>
-            <span class="toggle-label">☀️</span>
+            <div class="header-right">
+                <div class="nav-buttons">
+                    <a href="/" class="nav-link active">📊 Values</a>
+                    <a href="/calculator" class="nav-link">🧮 Calculator</a>
+                    <a href="/tradeads" class="nav-link">🔄 Trade Ads</a>
+                    <a href="/changelog" class="nav-link">📋 Changelog</a>
+                    <a href="/credits" class="nav-link">👤 Credits</a>
+                </div>
+                <span id="lastUpdated">📅 Updated: —</span>
+                <span class="tag">#1 value list</span>
+                <div class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <span class="toggle-label">🌙</span>
+                    <div class="toggle-track">
+                        <div class="toggle-dot" id="toggleDot"></div>
+                    </div>
+                    <span class="toggle-label">☀️</span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<!-- ===== DISCLAIMER ===== -->
-<div class="disclaimer-bar">
-    ⚠️ note: this value list is unofficial and not endorsed by FIFA Super Soccer. report any issues to our discord server
-</div>
+        <!-- ===== DISCLAIMER ===== -->
+        <div class="disclaimer-bar">
+            ⚠️ note: this value list is unofficial and not endorsed by FIFA Super Soccer. report any issues to our discord server
+        </div>
 
         <!-- ===== DISCORD BANNER ===== -->
         <div class="discord-banner">
@@ -64,7 +62,7 @@
             </a>
         </div>
 
-        <!-- ===== FILTER BAR ===== -->
+        <!-- ===== FILTER BAR + VALUE TOGGLE ===== -->
         <div class="filter-bar">
             <label>🔍 Filter</label>
             <select id="tierFilter">
@@ -88,19 +86,21 @@
             <input type="text" id="searchInput" placeholder="Search item...">
             <button class="reset-btn" id="resetFiltersBtn">✕ Reset</button>
 
-            <div class="base-value-toggle" id="baseValueToggle" title="Show base value">
-        <span class="base-value-label">Show Base Value</span>
-        <div class="base-value-track">
-            <div class="base-value-dot" id="baseValueDot"></div>
-        </div>
-    </div>
+            <!-- VALUE TOGGLE (base / token) -->
+            <div class="value-toggle-wrap" id="valueToggle" title="Switch between base value and token value">
+                <span class="vt-label active" id="vtLabelBase">Base</span>
+                <div class="vt-track">
+                    <div class="vt-dot" id="vtDot"></div>
+                </div>
+                <span class="vt-label" id="vtLabelToken">Tokens</span>
+            </div>
         </div>
 
-        <!-- ===== NEW ITEMS (flashy) ===== -->
-<div class="tier-new" id="newTier">
-    <div class="tier-heading">✨ NEW ITEMS</div>
-    <div class="grid" id="newGrid"></div>
-</div>
+        <!-- ===== NEW ITEMS ===== -->
+        <div class="tier-new" id="newTier">
+            <div class="tier-heading">✨ NEW ITEMS</div>
+            <div class="grid" id="newGrid"></div>
+        </div>
 
         <!-- ===== TIER 4 ===== -->
         <div class="tier-4">
@@ -108,11 +108,11 @@
             <div class="grid" id="tier4Grid"></div>
         </div>
 
-        <!-- ===== SECRET TIER (hidden by default) ===== -->
-<div class="tier-secret" id="secretTier" style="display: none;">
-    <div class="tier-heading">🔮 SECRET TIER</div>
-    <div class="grid" id="secretGrid"></div>
-</div>
+        <!-- ===== SECRET TIER ===== -->
+        <div class="tier-secret" id="secretTier" style="display: none;">
+            <div class="tier-heading">🔮 SECRET TIER</div>
+            <div class="grid" id="secretGrid"></div>
+        </div>
 
         <!-- ===== HIGH TIER ===== -->
         <div class="tier-high">
@@ -139,14 +139,9 @@
 
     <script src="script.js"></script>
     <script>
-        // Page-specific initialization
         document.addEventListener('DOMContentLoaded', function() {
             renderItems('all', 'all', '');
         });
     </script>
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
