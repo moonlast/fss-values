@@ -178,7 +178,7 @@ const ITEMS = [
     { name: "The Chosen One", value: "4K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Power", origin: "Powers V2 Pack", tier: "low", image: "/images/chosen.png", numericValue: 4000 },
     { name: "Bronze Champion Band [B]", value: "5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 2, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/bronzeb.png", numericValue: 5000 },
     { name: "Rivalry Soccer Shoes", value: "3.5K", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 1, rarity: "Limited", origin: "Robux Item", tier: "low", image: "/images/pshoes.png", numericValue: 3500 },
-    { name: "Dragon Fang Cleats", value: "2K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Power", origin: "Powers V2 Pack", tier: "low", image: "/images/cleats.png", numericValue: 2000 },
+    { name: "Dragon Fang Cleats", value: "2K", range: "[N/A]", stability: "Unstable", demand: 2, rarityScore: 1, rarity: "Power", origin: "Power V2 Pack", tier: "low", image: "/images/cleats.png", numericValue: 2000 },
 ];
 
 // =============================================================
