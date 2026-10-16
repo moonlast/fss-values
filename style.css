@@ -619,7 +619,7 @@ body {
     align-self: flex-end;
 }
 .item-card .card-stability.stable { background: rgba(123, 203, 154, 0.15); color: #7bcb9a; }
-.item-card .card-stability.rising { background: rgba(123, 203, 123, 0.15); color: #7bcb7b; }
+.item-card .card-stability.rising { background: rgba(148, 233, 148, 0.397); color: #c2f3c2; }
 .item-card .card-stability.overpaid { background: rgba(217, 166, 240, 0.15); color: #d9a6f0; }
 .item-card .card-stability.underpaid { background: rgba(217, 154, 154, 0.15); color: #d99a9a; }
 .item-card .card-stability.doingwell { background: rgba(128, 208, 170, 0.15); color: #80d0aa; }
