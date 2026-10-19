@@ -100,6 +100,7 @@ const ITEMS = [
       ] },
     { name: "Lightning Wolf Shoes", value: "45K", range: "[N/A]", stability: "Doing Well", demand: 4, rarityScore: 3, rarity: "Exotic", origin: "Robux Battlepass Reward", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter", numericValue: 45000 },
     { name: "The Panther", value: "42.5K", range: "[N/A]", stability: "Doing Well", demand: 5, rarityScore: 3, rarity: "Legendary", origin: "Prehistoric Battlepass", tier: "mid", image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter", numericValue: 42500 },
+    { name: "Fallen Angel Mantle", value: "42.5K", range: "[N/A]", stability: "Fluctuating", demand: 2, rarityScore: 5, rarity: "Limited", origin: "Credit Shop", tier: "mid", image: "/images/angel.png", numericValue: 42500 },
     { name: "Grinch Shoes", value: "37.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Uncommon", origin: "1.0 Christmas Event", tier: "mid", image: "/images/grinch.png", numericValue: 37500 },
     { name: "Dragon Set", stability: "Stable", demand: 4, rarityScore: 4, rarity: "Exotic", origin: "OG Premium Card", tier: "mid", isDual: true,
       items: [
@@ -128,7 +129,6 @@ const ITEMS = [
     { name: "FCWC Dominus", value: "27.5K", range: "[N/A]", stability: "Underpaid", demand: 3, rarityScore: 3, rarity: "Epic", origin: "FCWC Event", tier: "low", image: "https://tr.rbxcdn.com/180DAY-975ffc2e6e4863b14e797b4249186544/420/420/Image/Webp/noFilter", numericValue: 27500 },
     { name: "Leather Boots", value: "27.5K", range: "[N/A]", stability: "Stable", demand: 3, rarityScore: 4, rarity: "Exotic", origin: "Prehistoric Battlepass", tier: "low", image: "/images/leather.png", numericValue: 27500 },
     { name: "Gold Champion Band [L]", value: "27.5K", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/goldl.png", numericValue: 27500 },
-    { name: "Fallen Angel Mantle", value: "27.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 5, rarity: "Limited", origin: "Credit Shop", tier: "low", image: "/images/angel.png", numericValue: 27500 },
     { name: "Gold Champion Band [R]", value: "25K", stability: "Stable", demand: 2, rarityScore: 3, rarity: "Exotic", origin: "1.0 SLS Clans Reward", tier: "low", image: "/images/goldr.png", numericValue: 25000 },
     { name: "WC26 Amplify Card", value: "22.5K", range: "[N/A]", stability: "Stable", demand: 2, rarityScore: 4, rarity: "Legendary", origin: "WC26 Event", tier: "low", image: "/images/amplify.png", numericValue: 22500 },
     { name: "Dino Shoes", value: "21.5K", stability: "Stable", demand: 1, rarityScore: 3, rarity: "Uncommon", origin: "Prehistoric Battlepass", tier: "low", image: "/images/dinos.png", numericValue: 21500 },
