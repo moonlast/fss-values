@@ -301,7 +301,20 @@ const ITEMS = [
             { name: "Dragon Card", value: "35K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter", numericValue: 35000 },
             { name: "Dragon Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter", numericValue: 40000 }
         ]
-    },
+    }, {
+                name: "Royal Fleur De Lis Set",
+                stability: "Stable",
+                demand: 3,
+                rarityScore: 4,
+                rarity: "Legendary",
+                origin: "OG Premium Card",
+                tier: "mid",
+                isDual: true,
+                items: [{ name: "Royal Card", value: "30K", image: "https://tr.rbxcdn.com/180DAY-2778c242d027070bf587227354109420/420/420/Image/Png/noFilter",
+                        numericValue: 30000 }, { name: "Royal Frame", value: "52.5K",
+                        image: "https://tr.rbxcdn.com/180DAY-6a8dc1bb1da6c3313dd0757a2df5559c/420/420/Image/Png/noFilter",
+                        numericValue: 52500 }]
+            },
     {
         name: "Wild Dance",
         value: "32.5K", range: "[N/A]", stability: "Doing Well", demand: 5,
