@@ -591,8 +591,8 @@ const ITEMS = [
         rarityScore: 1, rarity: "Limited",
         origin: "Robux Pack", tier: "low", isDual: true,
         items: [
-            { name: "Admin Abuse Card", value: "5K", image: "/images/admincard.png", numericValue: 5000 },
-            { name: "Admin Abuse Frame", value: "1K", image: "/images/adminframe.png", numericValue: 1000 }
+            { name: "Admin Abuse Card", value: "7.5K", image: "/images/admincard.png", numericValue: 7500 },
+            { name: "Admin Abuse Frame", value: "1.25K", image: "/images/adminframe.png", numericValue: 1250 }
         ]
     },
     {
