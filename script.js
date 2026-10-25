@@ -169,7 +169,7 @@ const ITEMS = [
     },
     {
         name: "WC26 Trophy Celebration",
-        value: "165K", range: "[N/A]", stability: "Doing Well", demand: 6,
+        value: "165K", range: "[N/A]", stability: "Overpaid", demand: 6,
         rarityScore: 4, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
