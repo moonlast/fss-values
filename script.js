@@ -753,47 +753,6 @@ function getRarityClass(rarityString) {
     return map[rarityString] || "rarity-fallback";
 }
 
-// =============================================================
-// 2. TRADE ADS DATA
-// =============================================================
-const TRADE_ADS = [{
-    id: 1,
-    username: "WM5M",
-    avatar: "https://cdn.discordapp.com/avatars/896367467834789938/5bfdb20b5aad84ab655fd756013ac0ef.png?size=512",
-    offering: [
-        { name: "Float", qty: 1, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "365K" }
-    ],
-    looking_for: "offers",
-    notes: "Discord is @wm5m",
-    timestamp: new Date('2026-08-28T14:30:00').getTime(),
-    offeringTotal: 0,
-    lookingTotal: 0
-}, {
-    id: 2,
-    username: "DontTalkPeasant",
-    avatar: "https://cdn.discordapp.com/avatars/635129135865266178/571f75d7532b3b7b8d42f22b1dff3a24.png",
-    offering: [
-        { name: "Mimimimi", qty: 1, image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter", value: "950K" },
-        { name: "Float", qty: 5, image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter", value: "365K" }
-    ],
-    looking_for: "offers",
-    notes: "Discord is @c3141",
-    timestamp: new Date('2026-08-28T14:30:00').getTime(),
-    offeringTotal: 0,
-    lookingTotal: 0
-}, {
-    id: 3,
-    username: "Dadmonke82nd",
-    avatar: "https://cdn.discordapp.com/avatars/1539727698077950046/7c4e7d26fa510c920ef1c36abab1dd0f.png",
-    offering: [
-        { name: "Ghosdeeri", qty: 1, image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter", value: "560K" }
-    ],
-    looking_for: "offers",
-    notes: "Discord is @volant_2",
-    timestamp: new Date('2026-08-28T14:30:00').getTime(),
-    offeringTotal: 0,
-    lookingTotal: 0
-}];
 
 // =============================================================
 // 3. SECRET ITEMS
@@ -1165,156 +1124,6 @@ function setBaseValueVisibility(show) {
     setValueMode(show);
 }
 
-// =============================================================
-// 6. TRADE ADS
-// =============================================================
-function getItemImage(itemName) {
-    const found = ITEMS.find(i => i.name.toLowerCase() === itemName.toLowerCase());
-    return found?.image || '';
-}
-
-function renderTradeAds() {
-    const grid = document.getElementById('adsGrid');
-    if (!grid) return;
-
-    let ads = [...TRADE_ADS];
-
-    ads.forEach(ad => {
-        ad.offeringTotal = ad.offering.reduce((total, adItem) => {
-            if (adItem.name === "Tokens") return total + (adItem.qty || 0);
-            const item = ITEMS.find(i => i.name.toLowerCase() === adItem.name.toLowerCase());
-            return total + ((item?.numericValue || 0) * (adItem.qty || 1));
-        }, 0);
-        ad.lookingTotal = 0;
-    });
-
-    const search = document.getElementById('adSearchInput')?.value.toLowerCase().trim() || '';
-    if (search) {
-        ads = ads.filter(ad => {
-            const usernameMatch = ad.username.toLowerCase().includes(search);
-            const offeringMatch = ad.offering.some(i => i.name.toLowerCase().includes(search));
-            return usernameMatch || offeringMatch;
-        });
-    }
-
-    if (ads.length === 0) {
-        grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:40px 0;">No trade ads yet.</div>`;
-        return;
-    }
-
-    grid.innerHTML = '';
-
-    ads.forEach(ad => {
-        const card = document.createElement('div');
-        card.className = 'ad-card';
-
-        let offeringHtml = '';
-        if (ad.offering.length > 0) {
-            offeringHtml = `
-                <div class="ad-label">🟢 Offering:</div>
-                <div class="ad-items-grid-display">
-                    ${ad.offering.map(i => `
-                        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
-                            ${i.name === "Tokens"
-                                ? `<div style="font-size:2.5rem;padding:4px;">🪙</div>`
-                                : `<img src="${i.image || getItemImage(i.name)}" alt="${i.name}" style="width:48px;height:48px;object-fit:contain;border-radius:8px;border:1px solid var(--border-card);padding:4px;background:var(--bg-body);">`}
-                            <div style="font-size:0.65rem;font-weight:700;color:var(--text-secondary);text-align:center;">${i.name}${i.name === "Tokens" ? ` (${i.qty.toLocaleString()})` : i.qty > 1 ? ` ×${i.qty}` : ''}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
-        let lookingHtml = `
-            <div class="ad-label">🔵 Looking For:</div>
-            <div class="offers-badge">
-                <span class="offers-icon">↗</span>
-                <span>Offers</span>
-            </div>
-        `;
-
-        card.innerHTML = `
-            <div class="ad-user">
-                <img src="${ad.avatar || 'https://cdn.discordapp.com/embed/avatars/0.png'}" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid var(--border-icon);">
-                ${ad.username}
-            </div>
-            ${offeringHtml}
-            ${lookingHtml}
-            ${ad.notes ? `<div style="color:var(--text-muted);font-size:0.8rem;margin-top:6px;">📝 ${ad.notes}</div>` : ''}
-            <div class="ad-value-total">
-                Offering: ${formatValue(ad.offeringTotal)} · Looking For: Offers
-            </div>
-            <div class="ad-time">${formatTime(ad.timestamp)}</div>
-            <div class="ad-actions">
-                <button class="view-btn" onclick="viewAd(${ad.id})">📋 View</button>
-            </div>
-        `;
-
-        grid.appendChild(card);
-    });
-}
-
-function viewAd(id) {
-    const ad = TRADE_ADS.find(a => a.id === id);
-    if (!ad) return;
-
-    const content = document.getElementById('viewAdContent');
-    if (!content) return;
-
-    content.innerHTML = `
-        <div class="ad-detail-user">
-            <img src="${ad.avatar || 'https://cdn.discordapp.com/embed/avatars/0.png'}" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--border-icon);">
-            <div class="user-name">${ad.username}</div>
-        </div>
-        ${ad.offering.length > 0 ? `
-            <div class="ad-detail-items">
-                <div class="side-label">🟢 Offering:</div>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
-                    ${ad.offering.map(i => `
-                        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
-                            <img src="${i.image || getItemImage(i.name)}" alt="${i.name}" style="width:48px;height:48px;object-fit:contain;border-radius:8px;border:1px solid var(--border-card);padding:4px;background:var(--bg-body);">
-                            <div style="font-size:0.65rem;font-weight:700;color:var(--text-secondary);text-align:center;">${i.name}${i.qty > 1 ? ` ×${i.qty}` : ''}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        ` : ''}
-        <div class="ad-detail-items">
-            <div class="side-label">🔵 Looking For:</div>
-            <div style="padding:8px 12px;background:var(--bg-card-hover);border-radius:6px;font-weight:700;color:var(--text-secondary);">↗ Offers</div>
-        </div>
-        <div class="ad-detail-total">
-            Offering: ${formatValue(ad.offeringTotal)} · Looking For: Offers
-        </div>
-        ${ad.notes ? `<div class="ad-detail-notes">📝 ${ad.notes}</div>` : ''}
-        <div class="ad-detail-roblox">
-            🎮 Roblox Username: <a href="https://www.roblox.com/users/search?keyword=${encodeURIComponent(ad.username)}" target="_blank">${ad.username}</a>
-        </div>
-        <div style="text-align:center;color:var(--text-muted);font-size:0.8rem;margin-top:8px;">
-            Posted: ${formatTime(ad.timestamp)}
-        </div>
-    `;
-    document.getElementById('viewAdModal').classList.add('active');
-}
-
-function closeViewAd() {
-    const el = document.getElementById('viewAdModal');
-    if (el) el.classList.remove('active');
-}
-
-function formatTime(timestamp) {
-    const date = new Date(timestamp);
-    return date.toLocaleString('en-US', {
-        month: 'short', day: 'numeric', year: 'numeric',
-        hour: '2-digit', minute: '2-digit'
-    });
-}
-
-function formatValue(val) {
-    if (val >= 1000000) return (val / 1000000).toFixed(2) + 'M';
-    if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
-    return val.toLocaleString();
-}
 
 // =============================================================
 // 7. TRADE CALCULATOR
@@ -1597,7 +1406,6 @@ function updateCalcTotals() {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeItemPicker();
-        closeViewAd();
     }
 });
 
@@ -1661,9 +1469,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yourTokens) yourTokens.addEventListener('input', updateCalcTotals);
     if (theirTokens) theirTokens.addEventListener('input', updateCalcTotals);
 
-    // Trade ads search
-    const adSearchInput = document.getElementById('adSearchInput');
-    if (adSearchInput) adSearchInput.addEventListener('input', renderTradeAds);
 
     // Modal overlay click
     const itemPickerModal = document.getElementById('itemPickerModal');
@@ -1672,18 +1477,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target === this) closeItemPicker();
         });
     }
-    const viewAdModal = document.getElementById('viewAdModal');
-    if (viewAdModal) {
-        viewAdModal.addEventListener('click', function(e) {
-            if (e.target === this) closeViewAd();
-        });
-    }
 
     // Render main items
     renderItems('all', 'all', '');
-
-    // Render trade ads if container exists
-    if (document.getElementById('adsGrid')) renderTradeAds();
 });
 
 // =============================================================
@@ -1733,9 +1529,6 @@ window.resetFilters = resetFilters;
 window.setTheme = setTheme;
 window.setValueMode = setValueMode;
 window.setBaseValueVisibility = setBaseValueVisibility;
-window.renderTradeAds = renderTradeAds;
-window.viewAd = viewAd;
-window.closeViewAd = closeViewAd;
 window.openItemPicker = openItemPicker;
 window.closeItemPicker = closeItemPicker;
 window.filterModalItems = filterModalItems;
