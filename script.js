@@ -1124,6 +1124,11 @@ function setBaseValueVisibility(show) {
     setValueMode(show);
 }
 
+function formatValue(val) {
+    if (val >= 1000000) return (val / 1000000).toFixed(2) + 'M';
+    if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
+    return val.toLocaleString();
+}
 
 // =============================================================
 // 7. TRADE CALCULATOR
