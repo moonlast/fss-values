@@ -4,15 +4,85 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Every FSS Values update: value changes, stability moves and tier changes, newest first.">
     <title>Changelog · FSS Values</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .cl{--up:#3ddc84;--down:#ff6b6b;--warn:#eac47a;--move:#82b1ff;margin-top:8px}
+        [data-theme="light"] .cl{--up:#14894a;--down:#d12f48;--warn:#9a6a05;--move:#4455c9}
+        .cl [hidden]{display:none!important}
+        .cl-intro{margin:6px 4px 16px}
+        .cl-intro h2{font-size:1.8rem;font-weight:900;letter-spacing:-.3px;color:var(--text-name)}
+        .cl-intro p{color:var(--text-muted);font-weight:700;font-size:.9rem;margin-top:2px}
+        .cl-bar{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center}
+        .cl-search{flex:1 1 220px;min-width:180px;background:var(--bg-input);border:1px solid var(--border-card);color:var(--text-primary);padding:9px 16px;border-radius:12px;font:700 .9rem 'Nunito',sans-serif}
+        .cl-chips{display:flex;flex-wrap:wrap;gap:6px}
+        .fbtn{background:var(--bg-body);border:1px solid var(--border-card);color:var(--text-secondary);padding:7px 14px;border-radius:30px;font:800 .78rem 'Nunito',sans-serif;cursor:pointer;transition:.15s}
+        .fbtn:hover{border-color:#7a8aff;color:var(--text-primary)}
+        .fbtn[aria-pressed="true"]{background:rgba(127,201,240,.15);border-color:#7fc9f0;color:var(--text-primary)}
+        .cl :focus-visible{outline:2px solid #7a8aff;outline-offset:2px}
+        .cl-status{color:var(--text-muted);font-weight:700;font-size:.82rem;margin:12px 4px 14px}
+        .cl-list{position:relative;display:flex;flex-direction:column;gap:14px;padding-left:26px}
+        .cl-list::before{content:"";position:absolute;left:7px;top:14px;bottom:14px;width:2px;background:var(--border-card)}
+        .u{position:relative}
+        .u::before{content:"";position:absolute;left:-26px;top:20px;width:16px;height:16px;border-radius:50%;background:var(--bg-body);border:3px solid var(--border-card)}
+        .u.latest::before{border-color:var(--up)}
+        .u-card{background:var(--bg-card);border:1px solid var(--border-card);border-radius:16px;overflow:hidden}
+        .u-title{margin:0}
+        .u-head{width:100%;display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;padding:16px 18px;background:none;border:0;color:var(--text-name);font:inherit;text-align:left;cursor:pointer}
+        .u-head:hover .u-date{text-decoration:underline;text-decoration-color:var(--border-icon);text-underline-offset:4px}
+        .u-date{font-size:1.25rem;font-weight:900;letter-spacing:-.3px}
+        .u-new{font-size:.7rem;font-weight:900;color:var(--up);border:1px solid currentColor;padding:1px 9px;border-radius:20px}
+        .u-sum{display:flex;flex-wrap:wrap;gap:4px 14px;margin-left:auto}
+        .u-sum span{font-size:.78rem;font-weight:800;color:var(--c);display:inline-flex;align-items:center;gap:6px}
+        .u-sum i,.grp-h i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+        .chev{width:9px;height:9px;border-right:2px solid var(--text-muted);border-bottom:2px solid var(--text-muted);transform:rotate(45deg);transition:transform .25s;margin:0 4px 3px 2px}
+        .u.open .chev{transform:rotate(-135deg) translate(-2px,-2px)}
+        .up{--c:var(--up)}.down{--c:var(--down)}.adj{--c:var(--warn)}
+        .u-panel{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .3s ease,visibility 0s linear .3s}
+        .u.open .u-panel{grid-template-rows:1fr;visibility:visible;transition-delay:0s}
+        .u-inner{overflow:hidden;min-height:0}
+        .u-body{padding:2px 18px 18px}
+        .grp+.grp{margin-top:16px}
+        .grp-h{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:900;color:var(--text-secondary);margin:0 2px 8px}
+        .grp-h b{font-size:.75rem;color:var(--text-muted)}
+        .rows{list-style:none;display:flex;flex-direction:column;gap:8px}
+        .row{display:grid;grid-template-columns:52px 1fr auto;gap:6px 14px;align-items:center;background:var(--bg-body);border:1px solid var(--border-card);border-left:3px solid var(--c);border-radius:12px;padding:10px 14px 10px 12px}
+        .row.no-val{grid-template-columns:52px 1fr}
+        .thumb{width:52px;height:52px;border-radius:10px;background:var(--bg-icon);border:1px solid var(--border-icon);display:flex;align-items:center;justify-content:center;overflow:hidden;font-weight:900;color:var(--text-muted)}
+        .thumb img{width:100%;height:100%;object-fit:contain;padding:4px}
+        .r-name{font-weight:900;font-size:1.02rem;color:var(--text-name);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+        .tier-tag{font-size:.65rem;font-weight:800;color:var(--text-muted);border:1px solid var(--border-card);padding:1px 8px;border-radius:20px}
+        .r-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+        .tag{--t:var(--text-secondary);display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:20px;color:var(--t);background:color-mix(in srgb,var(--t) 13%,transparent);border:1px solid color-mix(in srgb,var(--t) 30%,transparent)}
+        .tag .k,.tag .o{opacity:.7;font-weight:700}
+        .tag-up{--t:var(--up)}.tag-down{--t:var(--down)}.tag-move{--t:var(--move)}
+        .st-stable{--t:#3fae6a}.st-rising{--t:#4fbf4f}.st-overpaid{--t:#c58ae6}.st-underpaid{--t:#e08a8a}.st-doingwell{--t:#3dbb8d}.st-fluctuating,.st-unstable{--t:#e0b04a}.st-dropping{--t:#e08a8a}
+        [data-theme="light"] .st-stable{--t:#1f8a54}[data-theme="light"] .st-rising{--t:#2b8a2b}[data-theme="light"] .st-overpaid{--t:#8e44b8}[data-theme="light"] .st-underpaid,[data-theme="light"] .st-dropping{--t:#b84a4a}[data-theme="light"] .st-doingwell{--t:#1d8a63}[data-theme="light"] .st-fluctuating,[data-theme="light"] .st-unstable{--t:#9a6a05}
+        .r-val{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+        .r-vals{display:flex;align-items:baseline;gap:8px;font-weight:900}
+        .r-old{color:var(--text-muted);font-size:.9rem;text-decoration:line-through;text-decoration-thickness:1.5px}
+        .r-ar{color:var(--text-muted);font-size:.85rem}
+        .r-new{color:var(--c);font-size:1.5rem;letter-spacing:-.5px;line-height:1}
+        .delta{color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:900;white-space:nowrap}
+        .cl-empty{text-align:center;color:var(--text-muted);font-weight:700;padding:30px 0}
+        @media (max-width:600px){
+            .u-sum{margin-left:0;width:100%}
+            .row{grid-template-columns:44px 1fr}
+            .row.no-val{grid-template-columns:44px 1fr}
+            .thumb{width:44px;height:44px}
+            .r-val{grid-column:1/-1;flex-direction:row;align-items:baseline;justify-content:space-between}
+            .cl-list{padding-left:20px}.cl-list::before{left:4px}.u::before{left:-20px;width:14px;height:14px}
+        }
+        @media (prefers-reduced-motion:reduce){.u-panel,.chev,.fbtn{transition:none}}
+    </style>
 </head>
 <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="dc" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83,97.68,97.68,0,0,0-36.69,0A72.37,72.37,0,0,0,38.17,0,105.15,105.15,0,0,0,11.86,8.07C2,24.92-1.36,41.43.49,57.72A105.89,105.89,0,0,0,32.4,93.38a70.77,70.77,0,0,0,8.62-6.18,65.6,65.6,0,0,1-13.74-6.52,49.75,49.75,0,0,0,3.32-2.86,78.61,78.61,0,0,0,68.48,0,49.75,49.75,0,0,0,3.32,2.86,65.6,65.6,0,0,1-13.74,6.52,70.77,70.77,0,0,0,8.62,6.18,105.89,105.89,0,0,0,31.91-35.66C126.12,41.43,122.76,24.92,107.7,8.07ZM42.54,68.44c-6.89,0-12.58-6.2-12.58-13.82S35.56,40.8,42.54,40.8s12.58,6.2,12.58,13.82S49.43,68.44,42.54,68.44Zm34.2,0c-6.89,0-12.58-6.2-12.58-13.82S69.75,40.8,76.74,40.8s12.58,6.2,12.58,13.82S83.63,68.44,76.74,68.44Z"/></symbol></svg>
     <div class="main-wrapper">
-        <!-- HEADER -->
         <div class="header-area">
             <div class="logo">
                 <h1>◈ FSS Values</h1>
@@ -26,66 +96,246 @@
                     <a href="/credits" class="nav-link">👤 Credits</a>
                 </div>
                 <span id="lastUpdated">📅 Updated: —</span>
-                <span class="tag">#1 value list</span>
+                <span class="tag-top tag">#1 value list</span>
                 <div class="theme-toggle" id="themeToggle" title="Toggle theme">
                     <span class="toggle-label">🌙</span>
-                    <div class="toggle-track">
-                        <div class="toggle-dot" id="toggleDot"></div>
-                    </div>
+                    <div class="toggle-track"><div class="toggle-dot" id="toggleDot"></div></div>
                     <span class="toggle-label">☀️</span>
                 </div>
             </div>
         </div>
         <div class="disclaimer-bar">
-    ⚠️ note: this value list is unofficial and not endorsed by FIFA Super Soccer. report any issues to our discord server
-</div>
-
-        <!-- DISCORD BANNER -->
+            ⚠️ note: this value list is unofficial and not endorsed by FIFA Super Soccer. report any issues to our discord server
+        </div>
         <div class="discord-banner">
             <div class="discord-banner-left">
-                <div class="discord-icon">
-                    <svg viewBox="0 0 127.14 96.36">
-                        <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83,97.68,97.68,0,0,0-36.69,0A72.37,72.37,0,0,0,38.17,0,105.15,105.15,0,0,0,11.86,8.07C2,24.92-1.36,41.43.49,57.72A105.89,105.89,0,0,0,32.4,93.38a70.77,70.77,0,0,0,8.62-6.18,65.6,65.6,0,0,1-13.74-6.52,49.75,49.75,0,0,0,3.32-2.86,78.61,78.61,0,0,0,68.48,0,49.75,49.75,0,0,0,3.32,2.86,65.6,65.6,0,0,1-13.74,6.52,70.77,70.77,0,0,0,8.62,6.18,105.89,105.89,0,0,0,31.91-35.66C126.12,41.43,122.76,24.92,107.7,8.07ZM42.54,68.44c-6.89,0-12.58-6.2-12.58-13.82S35.56,40.8,42.54,40.8s12.58,6.2,12.58,13.82S49.43,68.44,42.54,68.44Zm34.2,0c-6.89,0-12.58-6.2-12.58-13.82S69.75,40.8,76.74,40.8s12.58,6.2,12.58,13.82S83.63,68.44,76.74,68.44Z"/>
-                    </svg>
-                </div>
-                <div class="discord-text">
-                    📢 Join our <span>Discord Server</span> for trading, updates, and community!
-                </div>
+                <div class="discord-icon"><svg viewBox="0 0 127.14 96.36"><use href="#dc"/></svg></div>
+                <div class="discord-text">📢 Join our <span>Discord Server</span> for trading, updates, and community!</div>
             </div>
             <a href="https://discord.gg/MjRAeNZEvE" target="_blank" class="discord-invite">
-                <svg viewBox="0 0 127.14 96.36" style="width:18px;height:18px;">
-                    <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83,97.68,97.68,0,0,0-36.69,0A72.37,72.37,0,0,0,38.17,0,105.15,105.15,0,0,0,11.86,8.07C2,24.92-1.36,41.43.49,57.72A105.89,105.89,0,0,0,32.4,93.38a70.77,70.77,0,0,0,8.62-6.18,65.6,65.6,0,0,1-13.74-6.52,49.75,49.75,0,0,0,3.32-2.86,78.61,78.61,0,0,0,68.48,0,49.75,49.75,0,0,0,3.32,2.86,65.6,65.6,0,0,1-13.74,6.52,70.77,70.77,0,0,0,8.62,6.18,105.89,105.89,0,0,0,31.91-35.66C126.12,41.43,122.76,24.92,107.7,8.07ZM42.54,68.44c-6.89,0-12.58-6.2-12.58-13.82S35.56,40.8,42.54,40.8s12.58,6.2,12.58,13.82S49.43,68.44,42.54,68.44Zm34.2,0c-6.89,0-12.58-6.2-12.58-13.82S69.75,40.8,76.74,40.8s12.58,6.2,12.58,13.82S83.63,68.44,76.74,68.44Z"/>
-                </svg>
+                <svg viewBox="0 0 127.14 96.36" style="width:18px;height:18px;"><use href="#dc"/></svg>
                 Join Discord
             </a>
         </div>
 
-        <!-- CHANGELOG -->
-        <div class="changelog">
-    <h3>📋 Recent updates</h3>
-    <ul>
-        <li>📈 Party Time 265K → 270K (High Tier)</li>
-        <li>📈 Penguin Dance 172.5K → 177.5K (High Tier)</li>
-        <li>📈 Devil's Gift 165K → 170K (High Tier)</li>
-        <li>📈 WC26 Trophy Celebration 160K → 165K, Stability Overpaid, Rarity 4→5 (High Tier)</li>
-        <li>📈 Shark Shoes 90K → 92.5K (Mid Tier)</li>
-        <li>📈 67 85K → 92.5K, Demand 4→5 (Mid Tier)</li>
-        <li>📈 Wild Dance 32.5K → 35K (Low Tier)</li>
-        <li>📉 Mimimimi 950K → 875K (Dev Tier)</li>
-        <li>📉 Ghosdeeri 400K → 305K (High Tier)</li>
-        <li>📉 Float 185K → 175K (High Tier)</li>
-        <li>📉 Super Dodge 135K → 132.5K (High Tier)</li>
-        <li>📉 Gold Champion Band [B] 102.5K → 100K (High Tier)</li>
-        <li>📉 Front Flip 100K → 97.5K, Downgraded to Mid Tier</li>
-        <li>⚠️ WC26 Backwards Celebration Stability: Fluctuating, Demand 7→6 (High Tier)</li>
-        <li>🔧 FCWC Shoes Red/Black Demand 2→3 (High Tier)</li>
-    </ul>
-</div>
-        <div class="footer-note">
-            ⚡ values made by moon & ccc · FSS Value List
-        </div>
+        <section class="cl">
+            <div class="cl-intro">
+                <h2>Changelog</h2>
+                <p>Every value change, newest first. Open an update to see the details.</p>
+            </div>
+            <div class="cl-bar">
+                <input class="cl-search" id="clSearch" type="search" placeholder="Search an item..." aria-label="Search the changelog by item name">
+                <div class="cl-chips" role="group" aria-label="Filter changes">
+                    <button class="fbtn" data-f="all" aria-pressed="true">All</button>
+                    <button class="fbtn" data-f="up" aria-pressed="false">Raised</button>
+                    <button class="fbtn" data-f="down" aria-pressed="false">Lowered</button>
+                    <button class="fbtn" data-f="stability" aria-pressed="false">Stability</button>
+                    <button class="fbtn" data-f="tier" aria-pressed="false">Tier moves</button>
+                </div>
+                <div class="cl-chips">
+                    <button class="fbtn" id="expandAll">Expand all</button>
+                    <button class="fbtn" id="collapseAll">Collapse all</button>
+                </div>
+            </div>
+            <p class="cl-status" id="clStatus" aria-live="polite"></p>
+            <div class="cl-list" id="clList"></div>
+            <div class="cl-empty" id="clEmpty" hidden>
+                No changes match that search.
+                <button class="fbtn" id="clClear" style="margin-left:8px">Clear filters</button>
+            </div>
+        </section>
+
+        <div class="footer-note">⚡ values made by moon & ccc · FSS Value List</div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+    /* =========================================================
+       HOW TO ADD A NEW UPDATE
+       Copy the top block below, put it FIRST in CHANGELOG, change the date,
+       and list what changed. Fields (all optional except item):
+         item:      exact item name from script.js (used to find the image)
+         name:      display name if different from item
+         from / to: old and new value, e.g. "175K" -> "170K"
+         stability: ["Old","New"]  (or just "New")
+         demand / rarity: [old, new]
+         tier:      "Dev" | "High" | "Mid" | "Low"  (current tier)
+         tierMove:  ["Mid","High"] when an item changes tier
+         note:      short extra text    image: override image URL
+       ========================================================= */
+    const CHANGELOG = [
+        { date: "2026-10-29", entries: [
+            { item: "MATSbxb Card", name: "MATSbxb Dev Card", from: "290K", to: "325K", stability: ["Doing Well", "Overpaid"], tier: "High" },
+            { item: "Orange Dance", from: "230K", to: "235K", tier: "High" },
+            { item: "Penguin Dance", from: "177.5K", to: "180K", tier: "High" },
+            { item: "Devil's Gift", from: "165K", to: "170K", tier: "High" },
+            { item: "WC26 Trophy Celebration", from: "165K", to: "167.5K", tier: "High" },
+            { item: "67", from: "92.5K", to: "100K", tier: "High", tierMove: ["Mid", "High"] },
+            { item: "Shark Shoes", from: "92.5K", to: "95K", tier: "Mid" },
+            { item: "Innocent Smiley", from: "32.5K", to: "35K", stability: ["Fluctuating", "Doing Well"], demand: [3, 4], tier: "Mid" },
+            { item: "Ghosdeeri", from: "305K", to: "260K", demand: [4, 3], tier: "High" },
+            { item: "WC26 Backwards Celebration", from: "235K", to: "230K", tier: "High" },
+            { item: "Float", from: "175K", to: "170K", stability: ["Underpaid", "Unstable"], tier: "High" },
+            { item: "Telamon's Chicken Hat", from: "175K", to: "165K", tier: "High" },
+            { item: "Crown of Opulentum", from: "175K", to: "160K", tier: "High" },
+            { item: "FCWC Shoes Red/Black", from: "122.5K", to: "120K", tier: "High" },
+            { item: "Flip", from: "87.5K", to: "85K", tier: "Mid" },
+            { item: "Sakura Spirit", stability: ["Unstable", "Stable"], tier: "High" }
+        ]}
+    ];
+
+    (function () {
+        const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+        const parseVal = s => { const m = String(s).replace(/,/g, '').trim().match(/^([\d.]+)\s*([km]?)/i); if (!m) return NaN; return parseFloat(m[1]) * ({ k: 1e3, m: 1e6 }[m[2].toLowerCase()] || 1); };
+        const trim = (x, d) => String(parseFloat(x.toFixed(d)));
+        const fmt = n => { const a = Math.abs(n); return a >= 1e6 ? trim(a / 1e6, 2) + 'M' : a >= 1e3 ? trim(a / 1e3, 2) + 'K' : String(Math.round(a)); };
+        const stClass = s => 'st-' + String(s).toLowerCase().replace(/[^a-z]/g, '');
+        const dateLabel = d => { const [y, m, dd] = d.split('-').map(Number); return new Date(y, m - 1, dd).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); };
+
+        function lookupImage(key) {
+            if (typeof ITEMS === 'undefined') return '';
+            const k = key.toLowerCase();
+            for (const it of ITEMS) {
+                if (it.name.toLowerCase() === k) return it.isDual ? (it.items[0] || {}).image || '' : it.image || '';
+                if (it.isDual) for (const s of it.items) if (s.name.toLowerCase() === k) return s.image || '';
+            }
+            return '';
+        }
+
+        function tag(cls, key, oldV, newV) {
+            const t = el('span', 'tag ' + cls);
+            t.appendChild(el('span', 'k', key));
+            if (oldV != null) { t.appendChild(el('span', 'o', oldV)); t.appendChild(el('span', 'ar', '→')); }
+            t.appendChild(el('span', 'n', newV));
+            return t;
+        }
+
+        function classify(e) {
+            const a = parseVal(e.from), b = parseVal(e.to);
+            const hasVal = !isNaN(a) && !isNaN(b) && a !== b;
+            return { hasVal, a, b, dir: hasVal ? (b > a ? 'up' : 'down') : 'adj' };
+        }
+
+        function buildRow(e) {
+            const c = classify(e), name = e.name || e.item;
+            const row = el('li', 'row ' + c.dir + (c.hasVal ? '' : ' no-val'));
+            row.dataset.name = (name + ' ' + e.item).toLowerCase();
+            row.dataset.tags = [c.dir, e.stability ? 'stability' : '', e.tierMove ? 'tier' : ''].join(' ');
+
+            const th = el('div', 'thumb'), src = e.image || lookupImage(e.item);
+            if (src) {
+                const img = document.createElement('img');
+                img.src = src; img.alt = ''; img.loading = 'lazy';
+                img.addEventListener('error', () => { img.remove(); th.textContent = name[0]; });
+                th.appendChild(img);
+            } else th.textContent = name[0];
+            row.appendChild(th);
+
+            const main = el('div', 'r-main'), nm = el('div', 'r-name', name);
+            if (e.tier && !e.tierMove) nm.appendChild(el('span', 'tier-tag', e.tier + ' tier'));
+            main.appendChild(nm);
+            const tags = el('div', 'r-tags');
+            if (e.stability) { const [o, n] = Array.isArray(e.stability) ? e.stability : [null, e.stability]; tags.appendChild(tag(stClass(n), 'Stability', o, n)); }
+            if (e.demand) tags.appendChild(tag(e.demand[1] > e.demand[0] ? 'tag-up' : 'tag-down', 'Demand', e.demand[0], e.demand[1]));
+            if (e.rarity) tags.appendChild(tag('tag-move', 'Rarity', e.rarity[0], e.rarity[1]));
+            if (e.tierMove) tags.appendChild(tag('tag-move', 'Tier', e.tierMove[0], e.tierMove[1]));
+            if (e.note) tags.appendChild(el('span', 'tier-tag', e.note));
+            if (tags.childNodes.length) main.appendChild(tags);
+            row.appendChild(main);
+
+            if (c.hasVal) {
+                const v = el('div', 'r-val'), vals = el('div', 'r-vals');
+                vals.append(el('span', 'r-old', e.from), el('span', 'r-ar', '→'), el('span', 'r-new', e.to));
+                const sign = c.dir === 'up' ? '+' : '−', pct = trim(Math.abs((c.b - c.a) / c.a * 100), 1);
+                v.append(vals, el('span', 'delta', (c.dir === 'up' ? '▲ ' : '▼ ') + sign + fmt(c.b - c.a) + ' · ' + sign + pct + '%'));
+                row.appendChild(v);
+            }
+            return { row, c };
+        }
+
+        function setOpen(art, open) {
+            art.classList.toggle('open', open);
+            art.querySelector('.u-head').setAttribute('aria-expanded', open);
+        }
+
+        function buildUpdate(u, idx) {
+            const art = el('article', 'u' + (idx === 0 ? ' latest' : ''));
+            const card = el('div', 'u-card'), h = el('h3', 'u-title'), btn = el('button', 'u-head');
+            btn.type = 'button'; btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'p-' + u.date);
+            btn.appendChild(el('span', 'u-date', dateLabel(u.date)));
+            if (idx === 0) btn.appendChild(el('span', 'u-new', 'Latest'));
+
+            const groups = { up: [], down: [], adj: [] };
+            u.entries.forEach(e => { const r = buildRow(e); r.pct = r.c.hasVal ? Math.abs((r.c.b - r.c.a) / r.c.a) : 0; groups[r.c.dir].push(r); });
+            const labels = { up: 'raised', down: 'lowered', adj: 'adjusted' };
+            const sum = el('span', 'u-sum');
+            ['up', 'down', 'adj'].forEach(k => { if (groups[k].length) { const s = el('span', k, groups[k].length + ' ' + labels[k]); s.prepend(el('i')); sum.appendChild(s); } });
+            btn.append(sum, el('span', 'chev'));
+            h.appendChild(btn);
+
+            const panel = el('div', 'u-panel'); panel.id = 'p-' + u.date;
+            const body = el('div', 'u-body');
+            [['up', 'Raised'], ['down', 'Lowered'], ['adj', 'Other changes']].forEach(([k, label]) => {
+                if (!groups[k].length) return;
+                if (k !== 'adj') groups[k].sort((x, y) => y.pct - x.pct);
+                const g = el('section', 'grp ' + k), gh = el('h4', 'grp-h');
+                gh.append(el('i'), document.createTextNode(label + ' '), el('b', null, groups[k].length));
+                const ul = el('ul', 'rows');
+                groups[k].forEach(r => ul.appendChild(r.row));
+                g.append(gh, ul); body.appendChild(g);
+            });
+            const inner = el('div', 'u-inner'); inner.appendChild(body); panel.appendChild(inner);
+            card.append(h, panel); art.appendChild(card);
+            btn.addEventListener('click', () => setOpen(art, !art.classList.contains('open')));
+            return art;
+        }
+
+        let filter = 'all', query = '';
+        function applyFilters() {
+            const active = filter !== 'all' || query !== '';
+            let shown = 0, visibleUpdates = 0;
+            document.querySelectorAll('.u').forEach(art => {
+                let n = 0;
+                art.querySelectorAll('.grp').forEach(g => {
+                    let gn = 0;
+                    g.querySelectorAll('.row').forEach(r => {
+                        const ok = (filter === 'all' || r.dataset.tags.split(' ').includes(filter)) && (!query || r.dataset.name.includes(query));
+                        r.hidden = !ok; if (ok) gn++;
+                    });
+                    g.hidden = gn === 0; n += gn;
+                });
+                art.hidden = n === 0; shown += n;
+                if (n) visibleUpdates++;
+                if (active && n) setOpen(art, true);
+            });
+            document.getElementById('clEmpty').hidden = shown > 0;
+            document.getElementById('clStatus').textContent = active
+                ? shown + (shown === 1 ? ' matching change' : ' matching changes')
+                : shown + ' changes across ' + visibleUpdates + (visibleUpdates === 1 ? ' update' : ' updates');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const list = document.getElementById('clList');
+            CHANGELOG.slice().sort((a, b) => b.date.localeCompare(a.date)).forEach((u, i) => list.appendChild(buildUpdate(u, i)));
+            const first = list.querySelector('.u'); if (first) setOpen(first, true);
+
+            document.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => {
+                filter = b.dataset.f;
+                document.querySelectorAll('[data-f]').forEach(x => x.setAttribute('aria-pressed', x === b));
+                applyFilters();
+            }));
+            const search = document.getElementById('clSearch');
+            search.addEventListener('input', () => { query = search.value.toLowerCase().trim(); applyFilters(); });
+            document.getElementById('expandAll').addEventListener('click', () => document.querySelectorAll('.u').forEach(a => setOpen(a, true)));
+            document.getElementById('collapseAll').addEventListener('click', () => document.querySelectorAll('.u').forEach(a => setOpen(a, false)));
+            document.getElementById('clClear').addEventListener('click', () => {
+                search.value = ''; query = ''; filter = 'all';
+                document.querySelectorAll('[data-f]').forEach(x => x.setAttribute('aria-pressed', x.dataset.f === 'all'));
+                applyFilters();
+            });
+            applyFilters();
+        });
+    })();
+    </script>
 </body>
 </html>
