@@ -1615,3 +1615,17 @@ body {
 [data-theme="light"] .item-card .card-meta {
     border-top: 1px solid rgba(26, 26, 26, 0.2);
 }
+
+.item-card .meta-value.id-value {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    opacity: 0.85;
+    cursor: pointer;
+}
+.item-card .meta-value.id-value:hover { text-decoration: underline; opacity: 1; }
+.item-card .meta-value.id-value:focus-visible { outline: 2px solid #7a8aff; outline-offset: 2px; }

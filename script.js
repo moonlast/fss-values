@@ -63,6 +63,7 @@ const ITEMS = [
     },
     {
         name: "Mimimimi",
+        customId: "135283034264289",
         value: "875K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 8, rarity: "Exotic",
         origin: "Developer Gift", tier: "tier4",
@@ -73,6 +74,7 @@ const ITEMS = [
     // ===== HIGH TIER =====
     {
         name: "Hava Nagila",
+        customId: "1845924914",
         value: "550K", range: "[N/A]", stability: "Overpaid", demand: 6,
         rarityScore: 8, rarity: "Legendary",
         origin: "Developer Gift", tier: "high",
@@ -99,6 +101,7 @@ const ITEMS = [
     },
     {
         name: "Party Time",
+        customId: "99571085238770",
         value: "270K", range: "[N/A]", stability: "Overpaid", demand: 7,
         rarityScore: 6, rarity: "Legendary",
         origin: "Limited Quantity Code", tier: "high",
@@ -267,6 +270,13 @@ const ITEMS = [
         origin: "Robux Battlepass Reward", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
         numericValue: 47500
+    }, {
+        name: "Headless Bone Head",
+        value: "45K", range: "[N/A]", stability: "Fluctuating", demand: 3,
+        rarityScore: 3, rarity: "Limited",
+        origin: "Robux Pack", tier: "high", new: true,
+        image: "/images/bonehead.png",
+        numericValue: 45000
     },
     {
         name: "The Panther",
@@ -703,7 +713,7 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Oct 29, 2026";
+const LAST_UPDATED = "Oct 31, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
     "Kawaii Card": 712500,
@@ -760,6 +770,7 @@ function getRarityClass(rarityString) {
 // =============================================================
 const SECRET_ITEMS = [
     { name: "Helicopter Flip ☠️", value: "50M", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 999, rarityScore: 10, rarity: "Limited", origin: "idk", tier: "secret", image: "/images/helicopterflip.png", numericValue: 50000000 },
+    { name: "Pumpkin Wristband", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/pumpkinband.png", numericValue: 0 },
     { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
     { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
     { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", fire: true, demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
@@ -770,8 +781,8 @@ const SECRET_ITEMS = [
         { name: "EzraArcanum Card", value: "N/A", image: "/images/ezracard.png", numericValue: 0 },
         { name: "EzraArcanum Frame", value: "N/A", image: "/images/ezraframe.png", numericValue: 0 }
       ] },
-    { name: "SL Glory", value: "450K", range: "[N/A]", stability: "Unstable", demand: 4, rarityScore: 8, rarity: "Rare", origin: "Art Contest Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter", numericValue: 450000 },
-    { name: "El Skullcito", value: "450K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 8, rarity: "Rare", origin: "STOP ASKING TO VALUE THIS", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", numericValue: 450000 },
+    { name: "SL Glory", value: "425K", range: "[N/A]", stability: "Unstable", demand: 4, rarityScore: 8, rarity: "Rare", origin: "Art Contest Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter", numericValue: 425000 },
+    { name: "El Skullcito", value: "400K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 8, rarity: "Rare", origin: "STOP ASKING TO VALUE THIS", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", numericValue: 400000 },
     { name: "WC26 Germany Megaphone", value: "70K (?)", range: "[N/A]", stability: "Fluctuating", demand: 2, rarityScore: 5, rarity: "Epic", origin: "WC26 Event", tier: "secret", image: "/images/germanymegaphone.png", numericValue: 70000 },
     { name: "WC26 Ball Frame", value: "0", range: "[N/A]", stability: "Dropping", demand: 0, rarityScore: 1, rarity: "Common", origin: "straight from hell", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
 ];
@@ -1053,9 +1064,30 @@ function createCard(item) {
     rarityValueMeta.textContent = rarityString;
     rarityRowMeta.appendChild(rarityValueMeta);
     meta.appendChild(rarityRowMeta);
-
+        if (item.customId) {
+        const idRow = document.createElement('div');
+        idRow.className = 'meta-row';
+        const idLabel = document.createElement('span');
+        idLabel.className = 'meta-label';
+        idLabel.textContent = 'Custom ID';
+        idRow.appendChild(idLabel);
+        const idValue = document.createElement('button');
+        idValue.type = 'button';
+        idValue.className = 'meta-value id-value';
+        idValue.textContent = item.customId;
+        idValue.title = 'Click to copy';
+        idValue.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navigator.clipboard?.writeText(String(item.customId)).then(() => {
+                idValue.textContent = 'Copied!';
+                setTimeout(() => { idValue.textContent = item.customId; }, 1200);
+            }).catch(() => {});
+        });
+        idRow.appendChild(idValue);
+        meta.appendChild(idRow);
+    }
     card.appendChild(meta);
-
+    
     return card;
 }
 
