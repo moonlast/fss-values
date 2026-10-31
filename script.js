@@ -90,6 +90,22 @@ const ITEMS = [
             { name: "MATSbxb Card", value: "325K", image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter", numericValue: 325000 },
             { name: "MATSbxb Frame", value: "100K", image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter", numericValue: 100000 }
         ]
+    }, 
+    {   
+        name: "SL Glory", 
+        value: "400K", range: "[N/A]", stability: "Unstable", 
+        demand: 4, rarityScore: 8, 
+        rarity: "Rare", origin: "Art Contest Gift", 
+        tier: "high", image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter", 
+        numericValue: 400000 
+    },
+    { 
+        name: "El Skullcito", 
+        value: "375K", range: "[N/A]", stability: "Unstable", 
+        demand: 3, rarityScore: 8, 
+        rarity: "Rare", origin: "Art Contest Gift", 
+        tier: "high", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", 
+        numericValue: 375000 
     },
     {
         name: "Sakura Spirit",
@@ -98,7 +114,16 @@ const ITEMS = [
         origin: "Credit Shop", tier: "high", new: true,
         image: "/images/sakuraspirit.png",
         numericValue: 300000
-    },
+    }, { 
+        name: "Pumpkin Wristband", 
+        value: "275K", range: "[N/A]", stability: "Doing Well", 
+        new: true, 
+        demand: 5, rarityScore: 7, 
+        rarity: "Limited", origin: "Limited Quantity Code", 
+        tier: "high", 
+        image: "/images/pumpkinband.png", 
+        numericValue: 275000 
+    }, 
     {
         name: "Party Time",
         customId: "99571085238770",
@@ -193,7 +218,8 @@ const ITEMS = [
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
         numericValue: 132500
-    }, {
+    },
+    {
         name: "67",
         value: "120K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 5, rarity: "Limited",
@@ -419,6 +445,14 @@ const ITEMS = [
         origin: "Chosen One Pack", tier: "low",
         image: "/images/rivalrydrib.png",
         numericValue: 27500
+    }, {
+        name: "Cooking Music",
+        value: "25K", range: "[N/A]", stability: "Unstable", demand: 2,
+        new: true,
+        rarityScore: 4, rarity: "Limited",
+        origin: "Limited Quantity Code", tier: "low",
+        image: "/images/cookingmusic.png",
+        numericValue: 25000
     },
     {
         name: "Gold Champion Band [R]",
@@ -764,7 +798,6 @@ function getRarityClass(rarityString) {
 // =============================================================
 const SECRET_ITEMS = [
     { name: "Helicopter Flip ☠️", value: "50M", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 999, rarityScore: 10, rarity: "Limited", origin: "idk", tier: "secret", image: "/images/helicopterflip.png", numericValue: 50000000 },
-    { name: "Pumpkin Wristband", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/pumpkinband.png", numericValue: 0 },
     { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
     { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
     { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", fire: true, demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
@@ -775,8 +808,6 @@ const SECRET_ITEMS = [
         { name: "EzraArcanum Card", value: "N/A", image: "/images/ezracard.png", numericValue: 0 },
         { name: "EzraArcanum Frame", value: "N/A", image: "/images/ezraframe.png", numericValue: 0 }
       ] },
-    { name: "SL Glory", value: "425K", range: "[N/A]", stability: "Unstable", demand: 4, rarityScore: 8, rarity: "Rare", origin: "Art Contest Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-9d2f35449a8a56132185ff213e1ed513/420/420/Image/Webp/noFilter", numericValue: 425000 },
-    { name: "El Skullcito", value: "400K", range: "[N/A]", stability: "Unstable", demand: 3, rarityScore: 8, rarity: "Rare", origin: "STOP ASKING TO VALUE THIS", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", numericValue: 400000 },
     { name: "WC26 Germany Megaphone", value: "70K (?)", range: "[N/A]", stability: "Fluctuating", demand: 2, rarityScore: 5, rarity: "Epic", origin: "WC26 Event", tier: "secret", image: "/images/germanymegaphone.png", numericValue: 70000 },
     { name: "WC26 Ball Frame", value: "0", range: "[N/A]", stability: "Dropping", demand: 0, rarityScore: 1, rarity: "Common", origin: "straight from hell", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
 ];
