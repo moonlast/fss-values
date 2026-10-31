@@ -1169,6 +1169,13 @@ function formatValue(val) {
 let calcItems = { your: [], their: [] };
 let currentPickerSide = 'your';
 
+const CALC_LABELS = [
+    { name: "Adds", image: "/images/adds.png" },
+    { name: "Downgrade", image: "/images/downgrade.png" },
+    { name: "Offers", image: "/images/offers.png" },
+    { name: "Upgrade", image: "/images/upgrade.png" },
+].map(l => ({ ...l, value: "", numericValue: 0, tier: "label", isLabel: true }));
+
 function getAllItemsForPicker() {
     const items = [];
     ITEMS.forEach(item => {
@@ -1267,8 +1274,7 @@ function renderModalItems(search = '') {
     if (isSecretSearch) {
         filtered = getSpecialCalcItems();
     } else {
-        const allItems = getAllItemsForPicker();
-        filtered = allItems.filter(item =>
+        filtered = getAllItemsForPicker().filter(item =>
             !searchLower || item.name.toLowerCase().includes(searchLower)
         );
     }
@@ -1281,9 +1287,20 @@ function renderModalItems(search = '') {
         return b.numericValue - a.numericValue;
     });
 
-    filtered.forEach(item => {
+    const labels = isSecretSearch ? [] : CALC_LABELS.filter(l =>
+        !searchLower || l.name.toLowerCase().includes(searchLower)
+    );
+
+    const heading = text => {
+        const h = document.createElement('div');
+        h.className = 'modal-heading';
+        h.textContent = text;
+        grid.appendChild(h);
+    };
+
+    const tile = item => {
         const div = document.createElement('div');
-        div.className = 'modal-item';
+        div.className = 'modal-item' + (item.isLabel ? ' label-item' : '');
         div.onclick = () => addItemToCalc(currentPickerSide, item);
 
         const img = document.createElement('img');
@@ -1296,18 +1313,26 @@ function renderModalItems(search = '') {
         nameSpan.textContent = item.name;
         div.appendChild(nameSpan);
 
-        const valueSpan = document.createElement('span');
-        valueSpan.className = 'modal-item-value';
-        let valueText = item.value;
-        const tokenVal = getTokenValue(item);
-        if (tokenVal) valueText += ` · 🪙${formatTokenValue(tokenVal)}`;
-        valueSpan.textContent = valueText;
-        div.appendChild(valueSpan);
-
+        if (!item.isLabel) {
+            const valueSpan = document.createElement('span');
+            valueSpan.className = 'modal-item-value';
+            let valueText = item.value;
+            const tokenVal = getTokenValue(item);
+            if (tokenVal) valueText += ` · 🪙${formatTokenValue(tokenVal)}`;
+            valueSpan.textContent = valueText;
+            div.appendChild(valueSpan);
+        }
         grid.appendChild(div);
-    });
+    };
 
-    if (filtered.length === 0) {
+    if (labels.length) {
+        heading('Labels (no value)');
+        labels.forEach(tile);
+        if (filtered.length) heading('Items');
+    }
+    filtered.forEach(tile);
+
+    if (!labels.length && !filtered.length) {
         const empty = document.createElement('div');
         empty.style.cssText = 'grid-column:1/-1;text-align:center;color:var(--text-muted);padding:30px 0;';
         empty.textContent = 'No items found';
@@ -1316,6 +1341,7 @@ function renderModalItems(search = '') {
 }
 
 function addItemToCalc(side, item) {
+    if (item.isLabel && calcItems[side].some(i => i.name === item.name)) { closeItemPicker(); return; }
     const existing = calcItems[side].find(i => i.name === item.name);
     if (existing) existing.qty = (existing.qty || 1) + 1;
     else calcItems[side].push({ ...item, qty: 1 });
@@ -1356,7 +1382,7 @@ function renderCalcItems() {
 
                 const tooltip = document.createElement('div');
                 tooltip.className = 'item-tooltip';
-                tooltip.textContent = `${item.name} · ${item.value}`;
+                tooltip.textContent = item.isLabel ? item.name : `${item.name} · ${item.value}`;
                 div.appendChild(tooltip);
 
                 if (item.qty > 1) {
