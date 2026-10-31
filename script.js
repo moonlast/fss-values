@@ -272,7 +272,7 @@ const ITEMS = [
         name: "Headless Bone Head",
         value: "45K", range: "[N/A]", stability: "Fluctuating", demand: 3,
         rarityScore: 3, rarity: "Limited",
-        origin: "Robux Pack", tier: "high", new: true,
+        origin: "Robux Pack", tier: "mid", new: true,
         image: "/images/bonehead.png",
         numericValue: 45000
     },
