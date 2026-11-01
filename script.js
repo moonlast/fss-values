@@ -294,13 +294,6 @@ const ITEMS = [
         origin: "Robux Battlepass Reward", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
         numericValue: 47500
-    }, {
-        name: "Headless Bone Head",
-        value: "45K", range: "[N/A]", stability: "Fluctuating", demand: 3,
-        rarityScore: 3, rarity: "Limited",
-        origin: "Robux Pack", tier: "mid", new: true,
-        image: "/images/bonehead.png",
-        numericValue: 45000
     },
     {
         name: "The Panther",
@@ -309,6 +302,13 @@ const ITEMS = [
         origin: "Prehistoric Battlepass", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter",
         numericValue: 45000
+    }, {
+        name: "Headless Bone Head",
+        value: "40K", range: "[N/A]", stability: "Fluctuating", demand: 3,
+        rarityScore: 3, rarity: "Limited",
+        origin: "Robux Pack", tier: "mid", new: true,
+        image: "/images/bonehead.png",
+        numericValue: 40000
     },
     {
         name: "Grinch Shoes",
