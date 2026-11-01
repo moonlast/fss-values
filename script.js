@@ -226,7 +226,17 @@ const ITEMS = [
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
         numericValue: 125000
-    },
+    }, { 
+        name: "Are You Lost?", 
+        customId: "134959834418523",
+        value: "120K", range: "[N/A]", stability: "Fluctuating", 
+        new: true, 
+        demand: 4, rarityScore: 6, 
+        rarity: "Limited", origin: "Limited Quantity Code", 
+        tier: "mid", 
+        image: "/images/areyoulost.png", 
+        numericValue: 120000
+    }, 
     {
         name: "FCWC Shoes Red/Black",
         value: "120K", range: "[N/A]", stability: "Stable", demand: 3,
@@ -286,16 +296,7 @@ const ITEMS = [
             { name: "Kawaii Card", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter", numericValue: 50000 },
             { name: "Kawaii Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter", numericValue: 40000 }
         ]
-    }, { 
-        name: "Are You Lost?", 
-        value: "70K", range: "[N/A]", stability: "Fluctuating", 
-        new: true, 
-        demand: 4, rarityScore: 5, 
-        rarity: "Limited", origin: "Limited Quantity Code", 
-        tier: "mid", 
-        image: "/images/areyoulost.png", 
-        numericValue: 70000
-    }, 
+    },
     {
         name: "Lightning Wolf Shoes",
         value: "47.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
@@ -311,13 +312,6 @@ const ITEMS = [
         origin: "Prehistoric Battlepass", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-20fa459c08ff31fdfb37ea8b91027760/420/420/Image/Webp/noFilter",
         numericValue: 45000
-    }, {
-        name: "Headless Bone Head",
-        value: "40K", range: "[N/A]", stability: "Fluctuating", demand: 3,
-        rarityScore: 3, rarity: "Limited",
-        origin: "Robux Pack", tier: "mid", new: true,
-        image: "/images/bonehead.png",
-        numericValue: 40000
     },
     {
         name: "Grinch Shoes",
@@ -369,6 +363,13 @@ const ITEMS = [
         rarityScore: 3, rarity: "Limited",
         origin: "Robux Item", tier: "mid",
         image: "/images/verity.png",
+        numericValue: 35000
+    }, {
+        name: "Headless Bone Head",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 3, rarity: "Limited",
+        origin: "Robux Pack", tier: "mid", new: true,
+        image: "/images/bonehead.png",
         numericValue: 35000
     },
     {
@@ -737,8 +738,8 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) return 25;
-    if (numericValue >= 180000) return 23;
+    if (numericValue >= 951000) return 24;
+    if (numericValue >= 180000) return 22;
     if (numericValue >= 141000) return 20;
     if (numericValue >= 130000) return 18;
     if (numericValue >= 100001) return 14.7;
