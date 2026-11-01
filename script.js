@@ -106,24 +106,24 @@ const ITEMS = [
         rarity: "Rare", origin: "Art Contest Gift", 
         tier: "high", image: "https://tr.rbxcdn.com/180DAY-e055b71e4fce7e428f7644f5447b5bb7/420/420/Image/Webp/noFilter", 
         numericValue: 375000 
-    },
-    {
-        name: "Sakura Spirit",
-        value: "300K", range: "[N/A]", stability: "Stable", demand: 4,
-        rarityScore: 7, rarity: "Limited",
-        origin: "Credit Shop", tier: "high", new: true,
-        image: "/images/sakuraspirit.png",
-        numericValue: 300000
     }, { 
         name: "Pumpkin Wristband", 
-        value: "275K", range: "[N/A]", stability: "Doing Well", 
+        value: "305K", range: "[N/A]", stability: "Overpaid", 
         new: true, 
         demand: 5, rarityScore: 7, 
         rarity: "Limited", origin: "Limited Quantity Code", 
         tier: "high", 
         image: "/images/pumpkinband.png", 
-        numericValue: 275000 
+        numericValue: 305000 
     }, 
+    {
+        name: "Sakura Spirit",
+        value: "300K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 7, rarity: "Limited",
+        origin: "Credit Shop", tier: "high",
+        image: "/images/sakuraspirit.png",
+        numericValue: 300000
+    },
     {
         name: "Party Time",
         customId: "99571085238770",
@@ -142,19 +142,19 @@ const ITEMS = [
         numericValue: 230000
     }, {
         name: "Ghosdeeri",
-        value: "230K", range: "[N/A]", stability: "Unstable", demand: 3,
+        value: "215K", range: "[N/A]", stability: "Unstable", demand: 3,
         rarityScore: 6, rarity: "Exotic",
         origin: "Mystic Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
-        numericValue: 230000
+        numericValue: 215000
     },
     {
         name: "WC26 Backwards Celebration",
-        value: "195K", range: "[N/A]", stability: "Unstable", demand: 4,
+        value: "190K", range: "[N/A]", stability: "Unstable", demand: 4,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 195000
+        numericValue: 190000
     },
     {
         name: "Penguin Dance",
@@ -221,11 +221,11 @@ const ITEMS = [
     },
     {
         name: "67",
-        value: "120K", range: "[N/A]", stability: "Doing Well", demand: 5,
+        value: "125K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
-        numericValue: 120000
+        numericValue: 125000
     },
     {
         name: "FCWC Shoes Red/Black",
@@ -286,7 +286,16 @@ const ITEMS = [
             { name: "Kawaii Card", value: "50K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter", numericValue: 50000 },
             { name: "Kawaii Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter", numericValue: 40000 }
         ]
-    },
+    }, { 
+        name: "Are You Lost?", 
+        value: "70K", range: "[N/A]", stability: "Fluctuating", 
+        new: true, 
+        demand: 4, rarityScore: 5, 
+        rarity: "Limited", origin: "Limited Quantity Code", 
+        tier: "mid", 
+        image: "/images/areyoulost.png", 
+        numericValue: 70000
+    }, 
     {
         name: "Lightning Wolf Shoes",
         value: "47.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
@@ -357,7 +366,7 @@ const ITEMS = [
     {
         name: "Innocent Smiley",
         value: "35K", range: "[N/A]", stability: "Doing Well", demand: 4,
-        rarityScore: 3, rarity: "Limited", new: true,
+        rarityScore: 3, rarity: "Limited",
         origin: "Robux Item", tier: "mid",
         image: "/images/verity.png",
         numericValue: 35000
@@ -365,7 +374,7 @@ const ITEMS = [
     {
         name: "Solar Monarch",
         value: "32.5K", range: "[N/A]", stability: "Stable", demand: 3,
-        rarityScore: 3, rarity: "Limited", new: true,
+        rarityScore: 3, rarity: "Limited",
         origin: "Credit Shop", tier: "mid",
         image: "/images/solarmonarch.png",
         numericValue: 32500
@@ -648,7 +657,7 @@ const ITEMS = [
     }, {
         name: "Crimson Gaze",
         value: "6.5K", range: "[N/A]", stability: "Unstable", demand: 3,
-        rarityScore: 3, rarity: "Power", new: true,
+        rarityScore: 3, rarity: "Power",
         origin: "Power Pack V3", tier: "low",
         image: "/images/crimsongaze.png",
         numericValue: 6500
@@ -656,7 +665,7 @@ const ITEMS = [
     {
         name: "Crimson Flame",
         value: "6.5K", range: "[N/A]", stability: "Unstable", demand: 3,
-        rarityScore: 3, rarity: "Power", new: true,
+        rarityScore: 3, rarity: "Power",
         origin: "Power Pack V3", tier: "low",
         image: "/images/crimsonflame.png",
         numericValue: 6500
@@ -671,7 +680,7 @@ const ITEMS = [
     }, {
         name: "Raijin",
         value: "5K", range: "[N/A]", stability: "Unstable", demand: 2,
-        rarityScore: 3, rarity: "Power", new: true,
+        rarityScore: 3, rarity: "Power",
         origin: "Power Pack V3", tier: "low",
         image: "/images/raijin.png",
         numericValue: 5000
@@ -679,7 +688,7 @@ const ITEMS = [
     {
         name: "Eternality",
         value: "5K", range: "[N/A]", stability: "Unstable", demand: 2,
-        rarityScore: 3, rarity: "Power", new: true,
+        rarityScore: 3, rarity: "Power",
         origin: "Power Pack V3", tier: "low",
         image: "/images/eternality.png",
         numericValue: 5000
@@ -741,7 +750,7 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Oct 31, 2026";
+const LAST_UPDATED = "Nov 1, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
     "Kawaii Card": 712500,
@@ -798,6 +807,16 @@ function getRarityClass(rarityString) {
 // =============================================================
 const SECRET_ITEMS = [
     { name: "Helicopter Flip ☠️", value: "50M", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 999, rarityScore: 10, rarity: "Limited", origin: "idk", tier: "secret", image: "/images/helicopterflip.png", numericValue: 50000000 },
+    { 
+        name: "Spooky Anthem", 
+        value: "O/C", range: "[N/A]", stability: "Overpaid", 
+        new: true, 
+        demand: 10, rarityScore: 10, 
+        rarity: "Limited", origin: "Unreleased", 
+        tier: "secret", 
+        image: "/images/spookyanthem.png", 
+        numericValue: 0
+    }, 
     { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
     { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Unreleased", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
     { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", fire: true, demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
