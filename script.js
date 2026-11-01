@@ -233,7 +233,7 @@ const ITEMS = [
         new: true, 
         demand: 4, rarityScore: 6, 
         rarity: "Limited", origin: "Limited Quantity Code", 
-        tier: "mid", 
+        tier: "high", 
         image: "/images/areyoulost.png", 
         numericValue: 120000
     }, 
