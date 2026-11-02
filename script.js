@@ -64,22 +64,22 @@ const ITEMS = [
     {
         name: "Mimimimi",
         customId: "135283034264289",
-        value: "875K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "1M", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 8, rarity: "Exotic",
         origin: "Developer Gift", tier: "tier4",
         image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter",
-        numericValue: 875000
+        numericValue: 1000000
     },
 
     // ===== HIGH TIER =====
     {
         name: "Hava Nagila",
         customId: "1845924914",
-        value: "550K", range: "[N/A]", stability: "Overpaid", demand: 6,
+        value: "850K", range: "[N/A]", stability: "Overpaid", demand: 6,
         rarityScore: 8, rarity: "Legendary",
         origin: "Developer Gift", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
-        numericValue: 550000
+        numericValue: 850000
     },
     {
         name: "MATSbxb Developer Set",
@@ -108,13 +108,13 @@ const ITEMS = [
         numericValue: 375000 
     }, { 
         name: "Pumpkin Wristband", 
-        value: "305K", range: "[N/A]", stability: "Overpaid", 
+        value: "365K", range: "[N/A]", stability: "Overpaid", 
         new: true, 
-        demand: 5, rarityScore: 7, 
+        demand: 6, rarityScore: 7, 
         rarity: "Limited", origin: "Limited Quantity Code", 
         tier: "high", 
         image: "/images/pumpkinband.png", 
-        numericValue: 305000 
+        numericValue: 365000 
     }, 
     {
         name: "Sakura Spirit",
@@ -239,11 +239,11 @@ const ITEMS = [
     }, 
     {
         name: "FCWC Shoes Red/Black",
-        value: "120K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "115K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 5, rarity: "Epic",
         origin: "FCWC Event", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 120000
+        numericValue: 115000
     },
     {
         name: "Gold Champion Band [B]",
@@ -366,11 +366,11 @@ const ITEMS = [
         numericValue: 35000
     }, {
         name: "Headless Bone Head",
-        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "32.5K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 3, rarity: "Limited",
         origin: "Robux Pack", tier: "mid", new: true,
         image: "/images/bonehead.png",
-        numericValue: 35000
+        numericValue: 32500
     },
     {
         name: "Solar Monarch",
@@ -751,7 +751,7 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 1, 2026";
+const LAST_UPDATED = "Nov 2, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
     "Kawaii Card": 712500,
