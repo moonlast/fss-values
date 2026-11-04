@@ -150,11 +150,11 @@ const ITEMS = [
     },
     {
         name: "WC26 Backwards Celebration",
-        value: "190K", range: "[N/A]", stability: "Unstable", demand: 4,
+        value: "195K", range: "[N/A]", stability: "Stable", demand: 5,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 190000
+        numericValue: 195000
     },
     {
         name: "Penguin Dance",
