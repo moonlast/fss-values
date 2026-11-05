@@ -239,11 +239,11 @@ const ITEMS = [
     }, 
     {
         name: "FCWC Shoes Red/Black",
-        value: "115K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "105K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 5, rarity: "Epic",
         origin: "FCWC Event", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 115000
+        numericValue: 105000
     },
     {
         name: "Gold Champion Band [B]",
@@ -751,7 +751,7 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 2, 2026";
+const LAST_UPDATED = "Nov 5, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
     "Kawaii Card": 712500,
