@@ -150,11 +150,11 @@ const ITEMS = [
     },
     {
         name: "WC26 Backwards Celebration",
-        value: "195K", range: "[N/A]", stability: "Stable", demand: 5,
+        value: "210K", range: "[N/A]", stability: "Doing Well", demand: 6,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-978cff2d7d7ab20ce9287b76a3c8be24/420/420/Image/Webp/noFilter",
-        numericValue: 195000
+        numericValue: 210000
     },
     {
         name: "Penguin Dance",
@@ -210,6 +210,13 @@ const ITEMS = [
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
         numericValue: 150000
+    }, {
+        name: "67",
+        value: "135K", range: "[N/A]", stability: "Doing Well", demand: 6,
+        rarityScore: 5, rarity: "Limited",
+        origin: "Robux Pack", tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
+        numericValue: 135000
     },
     {
         name: "Super Dodge",
@@ -218,24 +225,16 @@ const ITEMS = [
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
         numericValue: 132500
-    },
-    {
-        name: "67",
-        value: "125K", range: "[N/A]", stability: "Doing Well", demand: 5,
-        rarityScore: 5, rarity: "Limited",
-        origin: "Robux Pack", tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
-        numericValue: 125000
     }, { 
         name: "Are You Lost?", 
         customId: "134959834418523",
-        value: "120K", range: "[N/A]", stability: "Fluctuating", 
+        value: "110K", range: "[N/A]", stability: "Fluctuating", 
         new: true, 
         demand: 4, rarityScore: 6, 
         rarity: "Limited", origin: "Limited Quantity Code", 
         tier: "high", 
         image: "/images/areyoulost.png", 
-        numericValue: 120000
+        numericValue: 110000
     }, 
     {
         name: "FCWC Shoes Red/Black",
@@ -503,6 +502,13 @@ const ITEMS = [
         origin: "FCWC Event", tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-4fc060f7416dc7bfd4114a6171b614da/420/420/Image/Webp/noFilter",
         numericValue: 20000
+    }, {
+        name: "T-Rex",
+        value: "17.5K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 2, rarity: "Epic",
+        origin: "Prehistoric Battlepass", tier: "low",
+        image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
+        numericValue: 17500
     },
     {
         name: "Unfinished Business",
@@ -539,6 +545,13 @@ const ITEMS = [
             { name: "Biohazard Card", value: "13K", image: "https://tr.rbxcdn.com/180DAY-37b521d2cf6c475f1cd2974832831829/420/420/Image/Png/noFilter", numericValue: 13000 },
             { name: "Biohazard Frame", value: "10.5K", image: "https://tr.rbxcdn.com/180DAY-09b2307f7cf33dc4e0e59b23b5a4ea3c/420/420/Image/Webp/noFilter", numericValue: 10500 }
         ]
+    }, {
+        name: "adidas Taunt",
+        value: "12.5K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 3, rarity: "Legendary",
+        origin: "adidas Event", tier: "low",
+        image: "https://tr.rbxcdn.com/180DAY-ce219eff72405cee76c3947bfeeb1296/420/420/Image/Webp/noFilter",
+        numericValue: 12500
     },
     {
         name: "Silver Arm Bracelet [B]",
@@ -546,14 +559,6 @@ const ITEMS = [
         rarityScore: 2, rarity: "Exotic",
         origin: "1.0 SLS Clans Reward", tier: "low",
         image: "/images/silverb.png",
-        numericValue: 12000
-    },
-    {
-        name: "T-Rex",
-        value: "12K", range: "[N/A]", stability: "Stable", demand: 2,
-        rarityScore: 2, rarity: "Epic",
-        origin: "Prehistoric Battlepass", tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-bdeb6a2f9b3a226ef9f2dd9becee3067/420/420/Image/Webp/noFilter",
         numericValue: 12000
     },
     {
@@ -621,14 +626,6 @@ const ITEMS = [
         origin: "Robux Battlepass Reward", tier: "low",
         image: "https://tr.rbxcdn.com/180DAY-8d5f87202a391aca1e44a8ab882b342b/420/420/Image/Webp/noFilter",
         numericValue: 8500
-    },
-    {
-        name: "adidas Taunt",
-        value: "8K", range: "[N/A]", stability: "Stable", demand: 1,
-        rarityScore: 3, rarity: "Legendary",
-        origin: "adidas Event", tier: "low",
-        image: "https://tr.rbxcdn.com/180DAY-ce219eff72405cee76c3947bfeeb1296/420/420/Image/Webp/noFilter",
-        numericValue: 8000
     },
     {
         name: "Evil Pumpkin",
@@ -738,24 +735,24 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) return 24;
-    if (numericValue >= 180000) return 22;
-    if (numericValue >= 141000) return 20;
-    if (numericValue >= 130000) return 18;
-    if (numericValue >= 100001) return 14.7;
-    if (numericValue >= 64999) return 14.25;
-    if (numericValue >= 37001) return 11.25;
-    if (numericValue >= 33001) return 9.6;
+    if (numericValue >= 951000) return 20;
+    if (numericValue >= 180000) return 19;
+    if (numericValue >= 141000) return 17.8;
+    if (numericValue >= 130000) return 16;
+    if (numericValue >= 100001) return 13;
+    if (numericValue >= 64999) return 11.6;
+    if (numericValue >= 37001) return 9.5;
+    if (numericValue >= 33001) return 7.5;
     return 3.6;
 }
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 5, 2026";
+const LAST_UPDATED = "Nov 7, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 712500,
-    "Kawaii Frame": 570000
+    "Kawaii Card": 580000,
+    "Kawaii Frame": 464000
 };
 
 function updateLastUpdatedDisplay() {
