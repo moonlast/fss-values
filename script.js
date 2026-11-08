@@ -780,11 +780,11 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 7, 2026";
+const LAST_UPDATED = "Nov 8, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 580000,
-    "Kawaii Frame": 464000
+    "Kawaii Card": 500000,
+    "Kawaii Frame": 400000
 };
 
 function updateLastUpdatedDisplay() {
