@@ -694,14 +694,6 @@ const ITEMS = [
         numericValue: 25000
     },
     {
-        name: "WC26 Amplify Card",
-        value: "22.5K", range: "[N/A]", stability: "Stable", demand: 2,
-        rarityScore: 4, rarity: "Legendary",
-        origin: "WC26 Event", tier: "low",
-        image: "/images/amplify.png",
-        numericValue: 22500
-    },
-    {
         name: "Dino Shoes",
         value: "21.5K", stability: "Stable", demand: 1,
         rarityScore: 3, rarity: "Uncommon",
