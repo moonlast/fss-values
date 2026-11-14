@@ -1656,3 +1656,20 @@ body {
     background: rgba(200, 140, 0, 0.12);
     border-color: rgba(200, 140, 0, 0.45);
 }
+
+/* ===== COLLECTOR TIER (collapsible) ===== */
+.tier-collector .tier-heading { color: #f0c040; }
+.tier-collector .tier-heading span { background: #2a2208; color: #f0c040; }
+[data-theme="light"] .tier-collector .tier-heading { color: #a37a00; }
+[data-theme="light"] .tier-collector .tier-heading span { background: #f3e7b8; color: #7a5a00; }
+.tier-toggle { display: flex; align-items: center; gap: 4px; cursor: pointer; user-select: none; }
+.tier-toggle:hover { border-bottom-color: #f0c040; }
+.tier-toggle:focus-visible { outline: 2px solid #7a8aff; outline-offset: 4px; border-radius: 6px; }
+.tier-chev {
+    margin-left: auto; width: 12px; height: 12px; flex-shrink: 0;
+    border-right: 3px solid currentColor; border-bottom: 3px solid currentColor;
+    transform: rotate(45deg); transition: transform 0.25s;
+}
+.tier-collector.open .tier-chev { transform: rotate(-135deg); }
+.tier-collector:not(.open) .grid { display: none; }
+.tier-collector:not(.open) .tier-heading { margin-bottom: 0; }

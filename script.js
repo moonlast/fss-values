@@ -111,7 +111,7 @@ const ITEMS = [
         rarityScore: 6, rarity: "Limited",
         origin: "Robux Pack", tier: "high", isDual: true,
         items: [
-            { name: "MATSbxb Card", value: "335K", image: "https://tr.rbxcdn.com/180DAY-f8ebb39e75374ccca999869360977baf/420/420/Image/Png/noFilter", numericValue: 335000 },
+            { name: "MATSbxb Card", value: "335K", image: "/images/matscardfix.png", numericValue: 335000 },
             { name: "MATSbxb Frame", value: "105K", image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter", numericValue: 105000 }
         ]
     },
@@ -235,6 +235,216 @@ const ITEMS = [
         origin: "1.0 SLS Clans Reward", tier: "high",
         image: "/images/goldb.png",
         numericValue: 100000
+    },
+
+    // ===== COLLECTOR TIER =====
+    {
+        name: "WC26 Golden Cape",
+        value: "65K", range: "[N/A]", stability: "Doing Well", demand: 5,
+        rarityScore: 6, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem1.png",
+        numericValue: 65000
+    },
+    {
+        name: "WC26 USMEXCAN Card",
+        value: "60K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        rarityScore: 7, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem2.png",
+        numericValue: 60000
+    },
+    {
+        name: "WC26 Germany Megaphone",
+        value: "55K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Collector Item", tier: "collector",
+        image: "/images/CollectorItem3.png",
+        numericValue: 55000
+    },
+    {
+        name: "WC26 Tri Nation Goalie Gloves",
+        value: "55K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Collector Item", tier: "collector",
+        image: "/images/CollectorItem4.png",
+        numericValue: 55000
+    },
+    {
+        name: "WC26 Amplify Card",
+        value: "50K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        rarityScore: 6, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem5.png",
+        numericValue: 50000
+    },
+    {
+        name: "WC26 Gold Crossbody Bag",
+        value: "45K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem6.png",
+        numericValue: 45000
+    },
+    {
+        name: "WC26 Mexico Card",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem7.png",
+        numericValue: 40000
+    },
+    {
+        name: "WC26 USA Cowboy Hat",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem8.png",
+        numericValue: 40000
+    },
+    {
+        name: "WC26 Korea Republic Shoes",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem9.png",
+        numericValue: 40000
+    },
+    {
+        name: "WC26 Argentina Shoes",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem10.png",
+        numericValue: 40000
+    },
+    {
+        name: "WC26 🇦🇷 Soccer Ball",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem11.png",
+        numericValue: 40000
+    },
+    {
+        name: "WC26 Canada Shoes",
+        value: "37.5K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem12.png",
+        numericValue: 37500
+    },
+    {
+        name: "🇪🇸 Soccer Shoes",
+        value: "37.5K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem13.png",
+        numericValue: 37500
+    },
+    {
+        name: "WC26 Gold Shoes",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem14.png",
+        numericValue: 35000
+    },
+    {
+        name: "WC26 USA Headband",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem15.png",
+        numericValue: 35000
+    },
+    {
+        name: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Soccer Shoes",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem16.png",
+        numericValue: 35000
+    },
+    {
+        name: "WC26 Casablanca Sport Shades",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem17.png",
+        numericValue: 35000
+    },
+    {
+        name: "WC26 Colombia Sombrero Vueltiao",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem18.png",
+        numericValue: 35000
+    },
+    {
+        name: "WC26 England Ball",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem19.png",
+        numericValue: 35000
+    },
+    {
+        name: "WC26 Portugal Goalie Gloves",
+        value: "35K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem20.png",
+        numericValue: 35000
+    },
+    {
+        name: "🇪🇸 Soccer Ball",
+        value: "30K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Exotic",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem21.png",
+        numericValue: 30000
+    },
+    {
+        name: "WC26 Canada Card",
+        value: "30K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 6, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem22.png",
+        numericValue: 30000
+    },
+    {
+        name: "WC26 Argentina Gloves",
+        value: "25K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem23.png",
+        numericValue: 25000
+    },
+    {
+        name: "WC26 🇧🇷 Ball",
+        value: "25K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem24.png",
+        numericValue: 25000
+    },
+    {
+        name: "🇫🇷 Goalie Gloves",
+        value: "20K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem25.png",
+        numericValue: 20000
+    },
+    {
+        name: "WC26 Three Lion Blast Goal Explosion",
+        value: "20K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem26.png",
+        numericValue: 20000
     },
 
     // ===== MID TIER =====
@@ -897,6 +1107,15 @@ const SECRET_ITEMS = [
 let mimimimiClicks = 0;
 let secretTierUnlocked = false;
 let showBaseValue = false; // false = tokens by default
+let collectorOpen = false;
+function setCollectorOpen(open, remember = true) {
+    const section = document.getElementById('collectorTier');
+    const toggle = document.getElementById('collectorToggle');
+    if (!section) return;
+    section.classList.toggle('open', open);
+    if (toggle) toggle.setAttribute('aria-expanded', open);
+    if (remember) collectorOpen = open;
+}
 
 // =============================================================
 // RENDER ITEMS
@@ -908,6 +1127,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     const midGrid = document.getElementById('midGrid');
     const lowGrid = document.getElementById('lowGrid');
     const secretGrid = document.getElementById('secretGrid');
+    const collectorGrid = document.getElementById('collectorGrid');
 
     if (!tier4Grid || !highGrid || !midGrid || !lowGrid) return;
 
@@ -917,6 +1137,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     midGrid.innerHTML = '';
     lowGrid.innerHTML = '';
     if (secretGrid) secretGrid.innerHTML = '';
+    if (collectorGrid) collectorGrid.innerHTML = '';
 
     const searchLower = search.toLowerCase().trim();
 
@@ -935,6 +1156,7 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     const high = filtered.filter(i => i.tier === 'high');
     const mid = filtered.filter(i => i.tier === 'mid');
     const low = filtered.filter(i => i.tier === 'low');
+    const collector = filtered.filter(i => i.tier === 'collector');
 
     const newTierSection = document.getElementById('newTier');
     if (newTierSection) {
@@ -946,6 +1168,12 @@ function renderItems(filterTier = 'all', filterStab = 'all', search = '') {
     high.forEach(item => highGrid.appendChild(createCard(item)));
     mid.forEach(item => midGrid.appendChild(createCard(item)));
     low.forEach(item => lowGrid.appendChild(createCard(item)));
+    if (collectorGrid) {
+        collector.forEach(item => collectorGrid.appendChild(createCard(item)));
+        const countEl = document.getElementById('collectorCount');
+        if (countEl) countEl.textContent = `(${collector.length})`;
+        setCollectorOpen(collectorOpen || filterTier === 'collector' || (searchLower !== '' && collector.length > 0), false);
+    }
 
     if (secretGrid && secretTierUnlocked) {
         const secretFiltered = SECRET_ITEMS.filter(item => {
@@ -1389,7 +1617,7 @@ function renderModalItems(search = '') {
         );
     }
 
-    const tierOrder = { tier4: 0, high: 1, mid: 2, low: 3, secret: 4 };
+    const tierOrder = { tier4: 0, high: 1, collector: 2, mid: 3, low: 4, secret: 5 };
     filtered.sort((a, b) => {
         const tierA = tierOrder[a.tier] !== undefined ? tierOrder[a.tier] : 999;
         const tierB = tierOrder[b.tier] !== undefined ? tierOrder[b.tier] : 999;
@@ -1452,7 +1680,7 @@ function renderModalItems(search = '') {
 
 function addItemToCalc(side, item) {
     if (item.isLabel && calcItems[side].some(i => i.name === item.name)) { closeItemPicker(); return; }
-    const existing = calcItems[side].find(i => i.name === item.name);
+    const existing = calcItems[side].find(i => i.name === item.name && i.tier === item.tier);
     if (existing) existing.qty = (existing.qty || 1) + 1;
     else calcItems[side].push({ ...item, qty: 1 });
     closeItemPicker();
@@ -1636,6 +1864,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('stabilityFilter')?.addEventListener('change', applyFilters);
     document.getElementById('searchInput')?.addEventListener('input', applyFilters);
     document.getElementById('resetFiltersBtn')?.addEventListener('click', resetFilters);
+
+    const collectorToggle = document.getElementById('collectorToggle');
+    if (collectorToggle) {
+        const flip = () => setCollectorOpen(!document.getElementById('collectorTier').classList.contains('open'));
+        collectorToggle.addEventListener('click', flip);
+        collectorToggle.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+        });
+    }
 
     // Calculator inputs
     const yourTokens = document.getElementById('calcYourTokens');
