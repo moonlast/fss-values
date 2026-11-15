@@ -34,11 +34,11 @@ const ITEMS = [
     {
         name: "Bunny Set",
         stability: "Rising", demand: 7,
-        rarityScore: 9, rarity: "Exotic",
+        rarityScore: 10, rarity: "Exotic",
         origin: "2025 Easter Puzzle", tier: "tier4", isDual: true,
         items: [
-            { name: "Bunny Card", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter", numericValue: 1300000 },
-            { name: "Bunny Frame", value: "1.3M", image: "https://tr.rbxcdn.com/180DAY-0c33b2d8786b0bbf6ab9d0292905f6ea/420/420/Image/Png/noFilter", numericValue: 1300000 }
+            { name: "Bunny Card", value: "1.55M", image: "https://tr.rbxcdn.com/180DAY-8ac467d583734ca4d8101a8b87171758/420/420/Image/Webp/noFilter", numericValue: 1550000 },
+            { name: "Bunny Frame", value: "1.55M", image: "https://tr.rbxcdn.com/180DAY-0c33b2d8786b0bbf6ab9d0292905f6ea/420/420/Image/Png/noFilter", numericValue: 1550000 }
         ]
     },
     {
@@ -65,7 +65,7 @@ const ITEMS = [
         name: "Mimimimi",
         customId: "135283034264289",
         value: "1M", range: "[N/A]", stability: "Doing Well", demand: 5,
-        rarityScore: 8, rarity: "Exotic",
+        rarityScore: 9, rarity: "Exotic",
         origin: "Developer Gift", tier: "tier4",
         image: "https://tr.rbxcdn.com/180DAY-1f250e5125c954fe56ae6d2ba660b407/420/420/Image/Png/noFilter",
         numericValue: 1000000
@@ -74,7 +74,7 @@ const ITEMS = [
         name: "Hava Nagila",
         customId: "1845924914",
         value: "850K", range: "[N/A]", stability: "Overpaid", demand: 6,
-        rarityScore: 8, rarity: "Legendary",
+        rarityScore: 9, rarity: "Legendary",
         origin: "Developer Gift", tier: "tier4",
         image: "https://tr.rbxcdn.com/180DAY-6bcf89e94316a7dc888ac4a7013ff28a/420/420/Image/Png/noFilter",
         numericValue: 850000
@@ -359,7 +359,7 @@ const ITEMS = [
         numericValue: 35000
     },
     {
-        name: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 Soccer Shoes",
+        name: "England Soccer Shoes",
         value: "35K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 5, rarity: "Legendary",
         origin: "Robux Pack", tier: "collector",
@@ -481,15 +481,6 @@ const ITEMS = [
         numericValue: 85000
     }, 
     {
-        name: "Are You Lost?",
-        customId: "134959834418523",
-        value: "82.5K", range: "[N/A]", stability: "Unstable", demand: 2,
-        rarityScore: 5, rarity: "Limited", new: true,
-        origin: "Limited Quantity Code", tier: "mid",
-        image: "/images/areyoulost.png",
-        numericValue: 82500
-    },
-    {
         name: "Dragon Shoes",
         value: "80K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 4, rarity: "Limited",
@@ -517,6 +508,15 @@ const ITEMS = [
         image: "/images/pgloves.png", 
         numericValue: 65000
     }, 
+    {
+        name: "Are You Lost?",
+        customId: "134959834418523",
+        value: "62.5K", range: "[N/A]", stability: "Unstable", demand: 2,
+        rarityScore: 5, rarity: "Limited", new: true,
+        origin: "Limited Quantity Code", tier: "mid",
+        image: "/images/areyoulost.png",
+        numericValue: 62500
+    },
     {
         name: "Lightning Wolf Shoes",
         value: "50K", range: "[N/A]", stability: "Doing Well", demand: 4,
@@ -979,24 +979,24 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) return 14.5;
-    if (numericValue >= 180000) return 13.5;
-    if (numericValue >= 141000) return 12.5;
-    if (numericValue >= 130000) return 10.5;
-    if (numericValue >= 100001) return 8.65;
-    if (numericValue >= 64999) return 7.3;
-    if (numericValue >= 37001) return 6.7;
+    if (numericValue >= 951000) return 11;
+    if (numericValue >= 180000) return 10;
+    if (numericValue >= 141000) return 9;
+    if (numericValue >= 130000) return 7.4;
+    if (numericValue >= 100001) return 6.65;
+    if (numericValue >= 64999) return 5.6;
+    if (numericValue >= 37001) return 5;
     if (numericValue >= 33001) return 4.2;
-    return 3.6;
+    return 3.4;
 }
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 14, 2026";
+const LAST_UPDATED = "Nov 15, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 383250,
-    "Kawaii Frame": 310250
+    "Kawaii Card": 294000,
+    "Kawaii Frame": 238000
 };
 
 function updateLastUpdatedDisplay() {
