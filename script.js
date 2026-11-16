@@ -117,7 +117,7 @@ const ITEMS = [
     },
     {
         name: "Sakura Spirit",
-        value: "300K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "300K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 7, rarity: "Limited",
         origin: "Credit Shop", tier: "high",
         image: "/images/sakuraspirit.png",
@@ -131,6 +131,16 @@ const ITEMS = [
         origin: "Limited Quantity Code", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
         numericValue: 265000
+    },
+    { 
+        name: "EzraArcanum Developer Set", 
+        stability: "Fluctuating", demand: 4, rarityScore: 6, 
+        rarity: "Exotic", origin: "Gold Pack & Free Pack", 
+        tier: "high", isDual: true, new: true,
+        items: [
+            { name: "EzraArcanum Card", value: "250K", image: "/images/ezracard.png", numericValue: 250000 },
+            { name: "EzraArcanum Frame", value: "150K", image: "/images/ezraframe.png", numericValue: 150000 }
+        ] 
     },
     {
         name: "Orange Dance",
@@ -166,7 +176,7 @@ const ITEMS = [
     },
     {
         name: "Penguin Dance",
-        value: "170K", range: "[N/A]", stability: "Stable", demand: 6,
+        value: "170K", range: "[N/A]", stability: "Doing Well", demand: 6,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
@@ -240,59 +250,67 @@ const ITEMS = [
     // ===== COLLECTOR TIER =====
     {
         name: "WC26 Golden Cape",
-        value: "65K", range: "[N/A]", stability: "Doing Well", demand: 5,
+        value: "85K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 6, rarity: "Epic",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem1.png",
-        numericValue: 65000
+        numericValue: 85000
     },
     {
         name: "WC26 USMEXCAN Card",
-        value: "60K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        value: "80K", range: "[N/A]", stability: "Doing Well", demand: 4,
         rarityScore: 7, rarity: "Legendary",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem2.png",
-        numericValue: 60000
+        numericValue: 80000
     },
     {
         name: "WC26 Germany Megaphone",
-        value: "55K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "75K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 5, rarity: "Epic",
         origin: "Collector Item", tier: "collector",
         image: "/images/CollectorItem3.png",
-        numericValue: 55000
+        numericValue: 75000
     },
     {
         name: "WC26 Tri Nation Goalie Gloves",
-        value: "55K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "75K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 5, rarity: "Epic",
         origin: "Collector Item", tier: "collector",
         image: "/images/CollectorItem4.png",
-        numericValue: 55000
+        numericValue: 75000
     },
     {
         name: "WC26 Amplify Card",
-        value: "50K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        value: "70K", range: "[N/A]", stability: "Doing Well", demand: 4,
         rarityScore: 6, rarity: "Legendary",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem5.png",
-        numericValue: 50000
+        numericValue: 70000
     },
     {
         name: "WC26 Gold Crossbody Bag",
-        value: "45K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "60K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 5, rarity: "Epic",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem6.png",
-        numericValue: 45000
+        numericValue: 60000
     },
     {
         name: "WC26 Mexico Card",
-        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "50K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 5, rarity: "Legendary",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem7.png",
-        numericValue: 40000
+        numericValue: 50000
+    },
+    {
+        name: "WC26 Argentina Shoes",
+        value: "45K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem10.png",
+        numericValue: 45000
     },
     {
         name: "WC26 USA Cowboy Hat",
@@ -308,14 +326,6 @@ const ITEMS = [
         rarityScore: 5, rarity: "Legendary",
         origin: "Robux Pack", tier: "collector",
         image: "/images/CollectorItem9.png",
-        numericValue: 40000
-    },
-    {
-        name: "WC26 Argentina Shoes",
-        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
-        rarityScore: 5, rarity: "Legendary",
-        origin: "Robux Pack", tier: "collector",
-        image: "/images/CollectorItem10.png",
         numericValue: 40000
     },
     {
@@ -519,11 +529,11 @@ const ITEMS = [
     },
     {
         name: "Lightning Wolf Shoes",
-        value: "50K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        value: "51.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
         rarityScore: 3, rarity: "Exotic",
         origin: "Robux Battlepass Reward", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
-        numericValue: 50000
+        numericValue: 51500
     },
     {
         name: "The Panther",
@@ -992,7 +1002,7 @@ function getTokenMultiplier(numericValue) {
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 15, 2026";
+const LAST_UPDATED = "Nov 16, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
     "Kawaii Card": 294000,
@@ -1063,22 +1073,18 @@ const SECRET_ITEMS = [
         name: "Spooky Anthem", 
         value: "O/C", range: "[N/A]", stability: "Overpaid", 
         new: true, 
-        demand: 10, rarityScore: 10, 
-        rarity: "Limited", origin: "Unreleased", 
+        demand: 6, rarityScore: 10, 
+        rarity: "Limited", origin: "Limited Quantity Code", 
         tier: "secret", 
         image: "/images/spookyanthem.png", 
         numericValue: 0
     }, 
-    { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
-    { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Rising", fire: true, new: true, demand: 10, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
-    { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", fire: true, demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
+    { name: "WC26 Ball Frame", value: "O/C", range: "[N/A]", stability: "Overpaid", demand: 3, rarityScore: 10, rarity: "Common", origin: "Developer Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
+    { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Overpaid", new: true, demand: 5, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
+    { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Overpaid", new: true, demand: 5, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
+    { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
     { name: "Ski Goggles", value: "O/C", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 10, rarity: "Exotic", origin: "1.0 Christmas Battlepass", tier: "secret", image: "/images/skigogs.png", numericValue: 0 },
     { name: "SL Hall of Fame", value: "O/C", range: "[N/A]", stability: "Stable", demand: 5, rarityScore: 10, rarity: "Rare", origin: "Art Contest", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter", numericValue: 0 },
-    { name: "EzraArcanum Developer Set", stability: "Stable", demand: 4, rarityScore: 9, rarity: "Exotic", origin: "Unreleased", tier: "secret", isDual: true,
-      items: [
-        { name: "EzraArcanum Card", value: "O/C", image: "/images/ezracard.png", numericValue: 0 },
-        { name: "EzraArcanum Frame", value: "O/C", image: "/images/ezraframe.png", numericValue: 0 }
-      ] },
     { 
         name: "Prestige Ball Skin", 
         value: "???", range: "[N/A]", stability: "Doing Well", 
@@ -1089,8 +1095,6 @@ const SECRET_ITEMS = [
         image: "/images/pball.png", 
         numericValue: 0
     }, 
-    { name: "WC26 Germany Megaphone", value: "??", range: "[N/A]", stability: "Fluctuating", demand: 2, rarityScore: 5, rarity: "Epic", origin: "WC26 Event", tier: "secret", image: "/images/germanymegaphone.png", numericValue: 0 },
-    { name: "WC26 Ball Frame", value: "0", range: "[N/A]", stability: "Dropping", demand: 0, rarityScore: 1, rarity: "Common", origin: "straight from hell", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
 ];
 
 // =============================================================
