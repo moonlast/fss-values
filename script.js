@@ -1079,22 +1079,22 @@ const SECRET_ITEMS = [
         image: "/images/spookyanthem.png", 
         numericValue: 0
     }, 
+    { 
+        name: "Prestige Ball Skin", 
+        value: "O/C", range: "[N/A]", stability: "Overpaid", 
+        new: true, 
+        demand: 4, rarityScore: 9, 
+        rarity: "Limited", origin: "Gold Pack", 
+        tier: "secret", 
+        image: "/images/pball.png", 
+        numericValue: 0
+    }, 
     { name: "WC26 Ball Frame", value: "O/C", range: "[N/A]", stability: "Overpaid", demand: 3, rarityScore: 10, rarity: "Common", origin: "Developer Gift", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c98d4370f6f8a5181b98e69d98d57aca/420/420/Image/Webp/noFilter", numericValue: 0 },
     { name: "Shinigami Mantle", value: "O/C", range: "[N/A]", stability: "Overpaid", new: true, demand: 5, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shinigami.png", numericValue: 0 },
     { name: "Shogun Halo", value: "O/C", range: "[N/A]", stability: "Overpaid", new: true, demand: 5, rarityScore: 10, rarity: "Limited", origin: "Battlepass Leaderboard", tier: "secret", image: "/images/shogun.png", numericValue: 0 },
     { name: "Tech Visor", value: "O/C", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 10, rarity: "Legendary", origin: "gift from feller", tier: "secret", image: "/images/techvisor.png", numericValue: 0 },
     { name: "Ski Goggles", value: "O/C", range: "[N/A]", stability: "Stable", demand: 1, rarityScore: 10, rarity: "Exotic", origin: "1.0 Christmas Battlepass", tier: "secret", image: "/images/skigogs.png", numericValue: 0 },
     { name: "SL Hall of Fame", value: "O/C", range: "[N/A]", stability: "Stable", demand: 5, rarityScore: 10, rarity: "Rare", origin: "Art Contest", tier: "secret", image: "https://tr.rbxcdn.com/180DAY-c4682f5e603631cd4f4b743199b1649e/420/420/Image/Webp/noFilter", numericValue: 0 },
-    { 
-        name: "Prestige Ball Skin", 
-        value: "???", range: "[N/A]", stability: "Doing Well", 
-        new: true, 
-        demand: 4, rarityScore: 8, 
-        rarity: "Limited", origin: "Gold Pack", 
-        tier: "secret", 
-        image: "/images/pball.png", 
-        numericValue: 0
-    }, 
 ];
 
 // =============================================================
