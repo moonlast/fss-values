@@ -152,7 +152,7 @@ const ITEMS = [
     },
     {
         name: "Ghosdeeri",
-        value: "225K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "225K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 6, rarity: "Exotic",
         origin: "Mystic Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
