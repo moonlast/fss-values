@@ -152,11 +152,11 @@ const ITEMS = [
     },
     {
         name: "Ghosdeeri",
-        value: "215K", range: "[N/A]", stability: "Stable", demand: 3,
+        value: "225K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 6, rarity: "Exotic",
         origin: "Mystic Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-82ce43f5ffad45ef29697754aa98d5f3/420/420/Hat/Webp/noFilter",
-        numericValue: 215000
+        numericValue: 225000
     },
     {
         name: "WC26 Backwards Celebration",
@@ -522,7 +522,7 @@ const ITEMS = [
         name: "Are You Lost?",
         customId: "134959834418523",
         value: "62.5K", range: "[N/A]", stability: "Unstable", demand: 2,
-        rarityScore: 5, rarity: "Limited", new: true,
+        rarityScore: 5, rarity: "Limited",
         origin: "Limited Quantity Code", tier: "mid",
         image: "/images/areyoulost.png",
         numericValue: 62500
@@ -616,7 +616,7 @@ const ITEMS = [
     {
         name: "Headless Bone Head",
         value: "32.5K", range: "[N/A]", stability: "Stable", demand: 3,
-        rarityScore: 3, rarity: "Limited", new: true,
+        rarityScore: 3, rarity: "Limited",
         origin: "Robux Pack", tier: "mid",
         image: "/images/bonehead.png",
         numericValue: 32500
@@ -714,7 +714,6 @@ const ITEMS = [
     {
         name: "Cooking Music",
         value: "20K", range: "[N/A]", stability: "Unstable", demand: 2,
-        new: true,
         rarityScore: 4, rarity: "Limited",
         origin: "Limited Quantity Code", tier: "low",
         image: "/images/cookingmusic.png",
