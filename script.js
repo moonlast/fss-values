@@ -91,7 +91,7 @@ const ITEMS = [
     },
     {
         name: "Pumpkin Wristband",
-        value: "385K", range: "[N/A]", stability: "Overpaid", demand: 6,
+        value: "385K", range: "[N/A]", stability: "Doing Well", demand: 6,
         rarityScore: 7, rarity: "Limited", new: true,
         origin: "Limited Quantity Code", tier: "high",
         image: "/images/pumpkinband.png",
@@ -111,7 +111,7 @@ const ITEMS = [
         rarityScore: 6, rarity: "Limited",
         origin: "Robux Pack", tier: "high", isDual: true,
         items: [
-            { name: "MATSbxb Card", value: "335K", image: "/images/matscardfix.png", numericValue: 335000 },
+            { name: "MATSbxb Card", value: "340K", image: "/images/matscardfix.png", numericValue: 340000 },
             { name: "MATSbxb Frame", value: "105K", image: "https://tr.rbxcdn.com/180DAY-b860f0eb2d9ef0633796818c6c87d27b/420/420/Image/Png/noFilter", numericValue: 105000 }
         ]
     },
@@ -126,11 +126,11 @@ const ITEMS = [
     {
         name: "Party Time",
         customId: "99571085238770",
-        value: "265K", range: "[N/A]", stability: "Doing Well", demand: 6,
+        value: "262.5K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 6, rarity: "Legendary",
         origin: "Limited Quantity Code", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-7114b0ad6050b37eeecefe238138b4f0/420/420/Image/Webp/noFilter",
-        numericValue: 265000
+        numericValue: 262500
     },
     { 
         name: "EzraArcanum Developer Set", 
@@ -144,7 +144,7 @@ const ITEMS = [
     },
     {
         name: "Orange Dance",
-        value: "230K", range: "[N/A]", stability: "Overpaid", demand: 6,
+        value: "230K", range: "[N/A]", stability: "Doing Well", demand: 6,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "/images/orange.png",
@@ -167,36 +167,36 @@ const ITEMS = [
         numericValue: 210000
     },
     {
+        name: "Penguin Dance",
+        value: "175K", range: "[N/A]", stability: "Doing Well", demand: 6,
+        rarityScore: 5, rarity: "Limited",
+        origin: "Robux Pack", tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
+        numericValue: 175000
+    },
+    {
         name: "Devil's Gift",
-        value: "170K", range: "[N/A]", stability: "Overpaid", demand: 7,
+        value: "170K", range: "[N/A]", stability: "Overpaid", demand: 5,
         rarityScore: 6, rarity: "Exotic",
         origin: "Limited Quantity Code", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-4694b2e973dce652ac90d2956beca69b/420/420/Model/Webp/noFilter",
         numericValue: 170000
     },
     {
-        name: "Penguin Dance",
-        value: "170K", range: "[N/A]", stability: "Doing Well", demand: 6,
-        rarityScore: 5, rarity: "Limited",
-        origin: "Robux Pack", tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-3d1dec4970d91a70f714bad890137e41/420/420/Image/Webp/noFilter",
-        numericValue: 170000
-    },
-    {
-        name: "WC26 Trophy Celebration",
-        value: "165K", range: "[N/A]", stability: "Doing Well", demand: 4,
-        rarityScore: 5, rarity: "Limited",
-        origin: "Robux Pack", tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
-        numericValue: 165000
-    },
-    {
         name: "Float",
-        value: "165K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "167.5K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-54d520be01198073c66893158ca6c3a0/420/420/Image/Webp/noFilter",
-        numericValue: 165000
+        numericValue: 167500
+    },
+    {
+        name: "WC26 Trophy Celebration",
+        value: "162.5K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 5, rarity: "Limited",
+        origin: "Robux Pack", tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-4e200221c73296ecf8a01099565b13bd/420/420/Image/Png/noFilter",
+        numericValue: 162500
     },
     {
         name: "Telamon's Chicken Hat",
@@ -207,6 +207,14 @@ const ITEMS = [
         numericValue: 155000
     },
     {
+        name: "Penguin Slide",
+        value: "150K", range: "[N/A]", stability: "Stable", demand: 5,
+        rarityScore: 5, rarity: "Limited",
+        origin: "Robux Pack", tier: "high",
+        image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
+        numericValue: 150000
+    },
+    {
         name: "Crown of Opulentum",
         value: "150K", range: "[N/A]", stability: "Underpaid", demand: 1,
         rarityScore: 7, rarity: "Limited",
@@ -215,20 +223,12 @@ const ITEMS = [
         numericValue: 150000
     },
     {
-        name: "Penguin Slide",
-        value: "145K", range: "[N/A]", stability: "Stable", demand: 5,
-        rarityScore: 5, rarity: "Limited",
-        origin: "Robux Pack", tier: "high",
-        image: "https://tr.rbxcdn.com/180DAY-83183faeca6714bcd6130fa695a78d31/420/420/Image/Webp/noFilter",
-        numericValue: 145000
-    },
-    {
         name: "67",
-        value: "140K", range: "[N/A]", stability: "Doing Well", demand: 6,
+        value: "142.5K", range: "[N/A]", stability: "Doing Well", demand: 6,
         rarityScore: 5, rarity: "Limited",
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-e332d112e5b4a3dc5d99db76c0b5452b/420/420/Image/Webp/noFilter",
-        numericValue: 140000
+        numericValue: 142500
     },
     {
         name: "Super Dodge",
@@ -237,14 +237,6 @@ const ITEMS = [
         origin: "Robux Pack", tier: "high",
         image: "https://tr.rbxcdn.com/180DAY-b4c516140428840f9a23943a3df8f85f/420/420/Image/Webp/noFilter",
         numericValue: 132500
-    },
-    {
-        name: "Gold Champion Band [B]",
-        value: "100K", range: "[N/A]", stability: "Stable", demand: 3,
-        rarityScore: 4, rarity: "Exotic",
-        origin: "1.0 SLS Clans Reward", tier: "high",
-        image: "/images/goldb.png",
-        numericValue: 100000
     },
 
     // ===== COLLECTOR TIER =====
@@ -337,6 +329,14 @@ const ITEMS = [
         numericValue: 40000
     },
     {
+        name: "WC26 Canada Card",
+        value: "40K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 6, rarity: "Legendary",
+        origin: "Robux Pack", tier: "collector",
+        image: "/images/CollectorItem22.png",
+        numericValue: 40000
+    },
+    {
         name: "WC26 Canada Shoes",
         value: "37.5K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 5, rarity: "Epic",
@@ -417,14 +417,6 @@ const ITEMS = [
         numericValue: 30000
     },
     {
-        name: "WC26 Canada Card",
-        value: "30K", range: "[N/A]", stability: "Stable", demand: 4,
-        rarityScore: 6, rarity: "Legendary",
-        origin: "Robux Pack", tier: "collector",
-        image: "/images/CollectorItem22.png",
-        numericValue: 30000
-    },
-    {
         name: "WC26 Argentina Gloves",
         value: "25K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 5, rarity: "Legendary",
@@ -459,44 +451,52 @@ const ITEMS = [
 
     // ===== MID TIER =====
     {
-        name: "Front Flip",
-        value: "97.5K", range: "[N/A]", stability: "Stable", demand: 4,
-        rarityScore: 4, rarity: "Limited",
-        origin: "Robux Battlepass", tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
-        numericValue: 97500
-    },
-    {
-        name: "FCWC Shoes Red/Black",
-        value: "97.5K", range: "[N/A]", stability: "Stable", demand: 3,
-        rarityScore: 5, rarity: "Epic",
-        origin: "FCWC Event", tier: "mid",
-        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
-        numericValue: 97500
-    },
-    {
         name: "Shark Shoes",
-        value: "95K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        value: "97.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
         rarityScore: 4, rarity: "Limited",
         origin: "Robux Pack", tier: "mid",
         image: "/images/shark.png",
+        numericValue: 97500
+    },
+    {
+        name: "Gold Champion Band [B]",
+        value: "97.5K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Exotic",
+        origin: "1.0 SLS Clans Reward", tier: "mid",
+        image: "/images/goldb.png",
+        numericValue: 97500
+    },
+    {
+        name: "Front Flip",
+        value: "95K", range: "[N/A]", stability: "Stable", demand: 4,
+        rarityScore: 4, rarity: "Limited",
+        origin: "Robux Battlepass", tier: "mid",
+        image: "https://tr.rbxcdn.com/180DAY-875c220d586bd555e66f951a9cb42add/420/420/Image/Webp/noFilter",
+        numericValue: 95000
+    },
+    {
+        name: "FCWC Shoes Red/Black",
+        value: "95K", range: "[N/A]", stability: "Stable", demand: 3,
+        rarityScore: 5, rarity: "Epic",
+        origin: "FCWC Event", tier: "mid",
+        image: "https://tr.rbxcdn.com/180DAY-54be9b36829e6ed8f8803061045bd67e/420/420/Image/Webp/noFilter",
         numericValue: 95000
     },
     {
         name: "Flip",
-        value: "85K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "82.5K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 3, rarity: "Limited",
         origin: "Robux Pack", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-2e555b216403fccd10c74f6100fffb26/420/420/Image/Png/noFilter",
-        numericValue: 85000
+        numericValue: 82500
     }, 
     {
         name: "Dragon Shoes",
-        value: "80K", range: "[N/A]", stability: "Stable", demand: 4,
+        value: "77.5K", range: "[N/A]", stability: "Stable", demand: 4,
         rarityScore: 4, rarity: "Limited",
         origin: "Robux Pack", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-13d9286ffadf4082e990779293451158/420/420/Image/Webp/noFilter",
-        numericValue: 80000
+        numericValue: 77500
     },
     {
         name: "Kawaii Set",
@@ -504,8 +504,8 @@ const ITEMS = [
         rarityScore: 4, rarity: "Legendary",
         origin: "OG Premium Card", tier: "mid", isDual: true,
         items: [
-            { name: "Kawaii Card", value: "52.5K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter", numericValue: 52500 },
-            { name: "Kawaii Frame", value: "42.5K", image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter", numericValue: 42500 }
+            { name: "Kawaii Card", value: "55K", image: "https://tr.rbxcdn.com/180DAY-6c9ca67f584bd53fd408303a2ef86aa1/420/420/Image/Png/noFilter", numericValue: 55000 },
+            { name: "Kawaii Frame", value: "45K", image: "https://tr.rbxcdn.com/180DAY-fe88ec3178eaec8fe6faac886c7c9b0d/420/420/Image/Png/noFilter", numericValue: 45000 }
         ]
     },
     { 
@@ -529,11 +529,11 @@ const ITEMS = [
     },
     {
         name: "Lightning Wolf Shoes",
-        value: "51.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
+        value: "52.5K", range: "[N/A]", stability: "Doing Well", demand: 4,
         rarityScore: 3, rarity: "Exotic",
         origin: "Robux Battlepass Reward", tier: "mid",
         image: "https://tr.rbxcdn.com/180DAY-bd82cd6716f30918d1b60f54cfab4a57/420/420/Image/Png/noFilter",
-        numericValue: 51500
+        numericValue: 52500
     },
     {
         name: "The Panther",
@@ -565,8 +565,8 @@ const ITEMS = [
         rarityScore: 4, rarity: "Exotic",
         origin: "OG Premium Card", tier: "mid", isDual: true,
         items: [
-            { name: "Dragon Card", value: "35K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter", numericValue: 35000 },
-            { name: "Dragon Frame", value: "40K", image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter", numericValue: 40000 }
+            { name: "Dragon Card", value: "40K", image: "https://tr.rbxcdn.com/180DAY-7095a98743c555638750ceefec64c1a8/420/420/Image/Png/noFilter", numericValue: 40000 },
+            { name: "Dragon Frame", value: "45K", image: "https://tr.rbxcdn.com/180DAY-899bfb7e6c12bf4299f04f5bc2ec36e8/420/420/Image/Png/noFilter", numericValue: 45000 }
         ]
     },
     {
@@ -777,12 +777,12 @@ const ITEMS = [
     },
     {
         name: "Fairytale Set",
-        stability: "Stable", demand: 2,
+        stability: "Stable", demand: 3,
         rarityScore: 3, rarity: "Exotic",
         origin: "Credit Shop", tier: "low", isDual: true,
         items: [
-            { name: "Fairytale Card", value: "15K", image: "/images/fairycard.png", numericValue: 15000 },
-            { name: "Fairytale Frame", value: "17.5K", image: "https://tr.rbxcdn.com/180DAY-2dfdaec95d797bf96a661d4b005566c2/420/420/Image/Webp/noFilter", numericValue: 17500 }
+            { name: "Fairytale Card", value: "17.5K", image: "/images/fairycard.png", numericValue: 15000 },
+            { name: "Fairytale Frame", value: "20K", image: "https://tr.rbxcdn.com/180DAY-2dfdaec95d797bf96a661d4b005566c2/420/420/Image/Webp/noFilter", numericValue: 17500 }
         ]
     },
     {
@@ -993,19 +993,19 @@ function getTokenMultiplier(numericValue) {
     if (numericValue >= 141000) return 9;
     if (numericValue >= 130000) return 7.4;
     if (numericValue >= 100001) return 6.65;
-    if (numericValue >= 64999) return 5.6;
-    if (numericValue >= 37001) return 5;
-    if (numericValue >= 33001) return 4.2;
-    return 3.4;
+    if (numericValue >= 64999) return 4.632;
+    if (numericValue >= 37001) return 4.632;
+    if (numericValue >= 33001) return 3.7;
+    return 3;
 }
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 16, 2026";
+const LAST_UPDATED = "Nov 18, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 294000,
-    "Kawaii Frame": 238000
+    "Kawaii Card": 254760,
+    "Kawaii Frame": 208440
 };
 
 function updateLastUpdatedDisplay() {
@@ -1612,13 +1612,7 @@ function renderModalItems(search = '') {
         );
     }
 
-    const tierOrder = { tier4: 0, high: 1, collector: 2, mid: 3, low: 4, secret: 5 };
-    filtered.sort((a, b) => {
-        const tierA = tierOrder[a.tier] !== undefined ? tierOrder[a.tier] : 999;
-        const tierB = tierOrder[b.tier] !== undefined ? tierOrder[b.tier] : 999;
-        if (tierA !== tierB) return tierA - tierB;
-        return b.numericValue - a.numericValue;
-    });
+    filtered.sort((a, b) => b.numericValue - a.numericValue);
 
     const labels = isSecretSearch ? [] : CALC_LABELS.filter(l =>
         !searchLower || l.name.toLowerCase().includes(searchLower)
