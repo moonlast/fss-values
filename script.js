@@ -988,11 +988,11 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) return 11;
-    if (numericValue >= 180000) return 10;
-    if (numericValue >= 141000) return 9;
-    if (numericValue >= 130000) return 7.4;
-    if (numericValue >= 100001) return 6.65;
+    if (numericValue >= 951000) return 9.6;
+    if (numericValue >= 180000) return 9;
+    if (numericValue >= 141000) return 7.25;
+    if (numericValue >= 130000) return 6;
+    if (numericValue >= 100001) return 5.65;
     if (numericValue >= 64999) return 4.632;
     if (numericValue >= 37001) return 4.632;
     if (numericValue >= 33001) return 3.7;
