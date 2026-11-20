@@ -139,7 +139,7 @@ const ITEMS = [
         tier: "high", isDual: true, new: true,
         items: [
             { name: "EzraArcanum Card", value: "250K", image: "/images/ezracard.png", numericValue: 250000 },
-            { name: "EzraArcanum Frame", value: "150K", image: "/images/ezraframe.png", numericValue: 150000 }
+            { name: "EzraArcanum Frame", value: "105K", image: "/images/ezraframe.png", numericValue: 105000 }
         ] 
     },
     {
@@ -988,24 +988,24 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 951000) return 9.6;
-    if (numericValue >= 180000) return 9;
-    if (numericValue >= 141000) return 7.25;
-    if (numericValue >= 130000) return 6;
+    if (numericValue >= 951000) return 8;
+    if (numericValue >= 180000) return 7.6;
+    if (numericValue >= 141000) return 6.5;
+    if (numericValue >= 130000) return 5.6;
     if (numericValue >= 100001) return 5.65;
-    if (numericValue >= 64999) return 4.632;
-    if (numericValue >= 37001) return 4.632;
-    if (numericValue >= 33001) return 3.7;
-    return 3;
+    if (numericValue >= 64999) return 4.15;
+    if (numericValue >= 37001) return 4.15;
+    if (numericValue >= 33001) return 3.6;
+    return 2.6;
 }
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 18, 2026";
+const LAST_UPDATED = "Nov 20, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 254760,
-    "Kawaii Frame": 208440
+    "Kawaii Card": 228250,
+    "Kawaii Frame": 186750
 };
 
 function updateLastUpdatedDisplay() {
