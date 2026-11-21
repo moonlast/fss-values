@@ -139,7 +139,7 @@ const ITEMS = [
         tier: "high", isDual: true, new: true,
         items: [
             { name: "EzraArcanum Card", value: "250K", image: "/images/ezracard.png", numericValue: 250000 },
-            { name: "EzraArcanum Frame", value: "135K", image: "/images/ezraframe.png", numericValue: 135000 }
+            { name: "EzraArcanum Frame", value: "105K", image: "/images/ezraframe.png", numericValue: 105000 }
         ] 
     },
     {
