@@ -903,6 +903,7 @@ const ITEMS = [
     },
     {
         name: "Rudolph",
+        customId: "15508332594",
         value: "7.5K", range: "[N/A]", stability: "Stable", demand: 3,
         rarityScore: 2, rarity: "Exotic",
         origin: "1.0 SLS Reward", tier: "low",
