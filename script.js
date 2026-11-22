@@ -1087,6 +1087,7 @@ const SECRET_ITEMS = [
     }, 
     { 
         name: "Spooky Anthem", 
+        customId: "88819978103762",
         value: "O/C", range: "[N/A]", stability: "Overpaid", 
         new: true, 
         demand: 6, rarityScore: 10, 
