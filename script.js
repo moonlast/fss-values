@@ -1017,24 +1017,24 @@ const ITEMS = [
 // 1.5 TOKEN CALCULATIONS
 // =============================================================
 function getTokenMultiplier(numericValue) {
-    if (numericValue >= 849000) return 7.7;
-    if (numericValue >= 180000) return 7.2;
-    if (numericValue >= 141000) return 6.5;
-    if (numericValue >= 130000) return 5.6;
-    if (numericValue >= 100001) return 5.65;
-    if (numericValue >= 64999) return 3.45;
-    if (numericValue >= 37001) return 3.8;
-    if (numericValue >= 33001) return 3.2;
-    return 2.2;
+    if (numericValue >= 849000) return 7.25;
+    if (numericValue >= 180000) return 6.8;
+    if (numericValue >= 141000) return 6.15;
+    if (numericValue >= 130000) return 5.275;
+    if (numericValue >= 100001) return 5.35;
+    if (numericValue >= 64999) return 3.25;
+    if (numericValue >= 37001) return 3.5;
+    if (numericValue >= 33001) return 3.1;
+    return 2.1;
 }
 
 const TOKEN_ICON = "https://tr.rbxcdn.com/180DAY-856c7b5695f735c2580bd299923d1a42/420/420/Image/Png/noFilter";
 const TOKEN_EMOJI = "🪙";
-const LAST_UPDATED = "Nov 23, 2026";
+const LAST_UPDATED = "Nov 25, 2026";
 
 const CUSTOM_TOKEN_VALUES = {
-    "Kawaii Card": 189750,
-    "Kawaii Frame": 155250
+    "Kawaii Card": 178750,
+    "Kawaii Frame": 146250
 };
 
 function updateLastUpdatedDisplay() {
