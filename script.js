@@ -128,11 +128,11 @@ const ITEMS = [
     },
     {
         name: "Sunbathing",
-        value: "275K", range: "[N/A]", stability: "Doing Well", demand: 5,
+        value: "295K", range: "[N/A]", stability: "Doing Well", demand: 5,
         rarityScore: 7, rarity: "Limited", new: true,
         origin: "Robux Pack", tier: "high",
         image: "/images/sunbathing.png",
-        numericValue: 275000
+        numericValue: 295000
     },
     {
         name: "Pumpkin Wristband",
